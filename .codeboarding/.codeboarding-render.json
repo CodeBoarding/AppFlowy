@@ -1,0 +1,34 @@
+{
+  "outputs": {
+    "md": [
+      "AI_Assistant_Service.md",
+      "AI_Assistant_Services.md",
+      "Application_Bootstrap_and_Lifecycle.md",
+      "Cloud_and_Local_Server.md",
+      "Core_Application_Orchestration.md",
+      "Core_Foundation_Utilities.md",
+      "Core_Platform_Services.md",
+      "Core_UI_and_Backend_Infrastructure.md",
+      "Database_Management_Engine.md",
+      "Document_Management_Engine.md",
+      "Document_and_Database_Plugins.md",
+      "File_Storage_Service.md",
+      "Flutter_Client_Application.md",
+      "Foundation_Utilities_and_Extensions.md",
+      "Mobile_Client_Views.md",
+      "Platform_Bridge_and_Storage.md",
+      "Protocol_Code_Generator.md",
+      "Request_Dispatch_Runtime.md",
+      "Rust_Core_Engine.md",
+      "Search_and_Indexing_Engine.md",
+      "Shared_Presentation_Utilities.md",
+      "Sharing_and_Access_Control.md",
+      "User_Account_Service.md",
+      "User_Authentication_and_Reminders.md",
+      "Workspace_Navigation_Service.md",
+      "Workspace_and_Navigation_Manager.md",
+      "overview.md"
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,755 @@
+```mermaid
+graph LR
+    User_Session_and_Workspace_Manager["User Session and Workspace Manager"]
+    User_Domain_Contracts_and_Entities["User Domain Contracts and Entities"]
+    User_Session_and_Workspace_Manager -- "uses domain models and cloud interfaces" --> User_Domain_Contracts_and_Entities
+```
+
+[![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
+
+## Details
+
+Manages user authentication, profile settings, workspace memberships, encryption keys, and session data migrations.
+
+### User Session and Workspace Manager
+Coordinates user authentication, session lifecycles, workspace membership, migrations, and event routing for local and cloud users.
+
+
+**Related Classes/Methods**:
+
+- `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager`:45-56
+- `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser`:21-27
+- `frontend.rust-lib.flowy-user.src.event_map.UserEvent`:88-277
+- `frontend.rust-lib.flowy-user.src.event_map.init`:17-84
+
+
+
+**Source Files:**
+
+- `frontend/rust-lib/flowy-user/build.rs`
+  - `frontend.rust-lib.flowy-user.build.main` (L1-L7) - Function
+- `frontend/rust-lib/flowy-user/src/entities/auth.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.auth.SignInPayloadPB` (L12-L27) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.SignInPayloadPB.try_into` (L32-L41) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.auth.SignUpPayloadPB` (L45-L60) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.SignUpPayloadPB.try_into` (L65-L77) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.auth.MagicLinkSignInPB` (L81-L87) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.PasscodeSignInPB` (L90-L96) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.GotrueTokenResponsePB` (L99-L120) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.GotrueTokenResponsePB.from` (L123-L133) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.auth.OauthSignInPB` (L137-L148) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.SignInUrlPayloadPB` (L151-L157) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.SignInUrlPB` (L160-L163) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.OauthProviderPB` (L166-L169) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.ProviderTypePB` (L172-L195) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.auth.ProviderTypePB.as_str` (L198-L222) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.auth.OauthProviderDataPB` (L226-L229) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.UserStatePB` (L232-L235) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.AuthStateChangedPB` (L238-L244) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.auth.AuthStatePB` (L247-L253) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.auth.AuthStatePB.default` (L256-L258) - Function
+- `frontend/rust-lib/flowy-user/src/entities/date_time.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserDateFormatPB` (L6-L13) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserDateFormatPB.from` (L16-L28) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserDateFormatPB.value` (L32-L34) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserDateFormatPB.format_str` (L36-L44) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserTimeFormatPB` (L48-L52) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserTimeFormatPB.from` (L55-L64) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserTimeFormatPB.value` (L68-L70) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.date_time.UserTimeFormatPB.format_str` (L73-L78) - Method
+- `frontend/rust-lib/flowy-user/src/entities/import_data.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.import_data.ImportAppFlowyDataPB` (L6-L16) - Struct
+- `frontend/rust-lib/flowy-user/src/entities/parser/mod.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.validate_not_empty_str` (L20-L25) - Function
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_email.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.UserEmail` (L5-L5) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.UserEmail.parse` (L8-L18) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.UserEmail.as_ref` (L22-L24) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.tests.empty_string_is_rejected` (L36-L39) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.tests.email_missing_at_symbol_is_rejected` (L42-L45) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.tests.email_missing_subject_is_rejected` (L48-L51) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.tests.ValidEmailFixture` (L54-L54) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.tests.ValidEmailFixture.arbitrary` (L57-L66) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_email.tests.valid_emails_are_parsed_successfully` (L70-L72) - Function
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_icon.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_icon.UserIcon` (L4-L4) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_icon.UserIcon.parse` (L7-L9) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_icon.UserIcon.as_ref` (L13-L15) - Method
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_id.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_id.UserId` (L4-L4) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_id.UserId.parse` (L7-L13) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_id.UserId.as_ref` (L17-L19) - Method
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_name.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.UserName` (L6-L6) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.UserName.parse` (L9-L34) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.UserName.as_ref` (L38-L40) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.tests.a_256_grapheme_long_name_is_valid` (L48-L51) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.tests.a_name_longer_than_256_graphemes_is_rejected` (L54-L57) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.tests.whitespace_only_names_are_rejected` (L60-L63) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.tests.empty_string_is_rejected` (L66-L69) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.tests.names_containing_an_invalid_character_are_rejected` (L72-L77) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_name.tests.a_valid_name_is_parsed_successfully` (L80-L83) - Function
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_openai_key.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_openai_key.UserOpenaiKey` (L4-L4) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_openai_key.UserOpenaiKey.parse` (L7-L9) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_openai_key.UserOpenaiKey.as_ref` (L13-L15) - Method
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_password.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_password.UserPassword` (L8-L8) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_password.UserPassword.parse` (L11-L31) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_password.UserPassword.as_ref` (L35-L37) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_password.validate_password` (L57-L65) - Function
+- `frontend/rust-lib/flowy-user/src/entities/parser/user_stability_ai_key.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_stability_ai_key.UserStabilityAIKey` (L4-L4) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_stability_ai_key.UserStabilityAIKey.parse` (L7-L9) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.parser.user_stability_ai_key.UserStabilityAIKey.as_ref` (L13-L15) - Method
+- `frontend/rust-lib/flowy-user/src/entities/realtime.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.realtime.RealtimePayloadPB` (L4-L7) - Struct
+- `frontend/rust-lib/flowy-user/src/entities/reminder.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.reminder.ReminderPB` (L6-L30) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.reminder.RepeatedReminderPB` (L33-L36) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.reminder.Reminder.from` (L39-L51) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.reminder.ReminderPB.from` (L55-L66) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.reminder.RepeatedReminderPB.from` (L70-L72) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.reminder.ReminderIdentifierPB` (L76-L79) - Struct
+- `frontend/rust-lib/flowy-user/src/entities/user_profile.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UserTokenPB` (L13-L16) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UserSettingPB` (L19-L22) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UserProfilePB` (L25-L46) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.EncryptionTypePB` (L49-L52) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.EncryptionTypePB.default` (L55-L57) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UserProfilePB.from` (L61-L71) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB` (L75-L90) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB.new` (L93-L98) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB.name` (L100-L103) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB.email` (L105-L108) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB.password` (L110-L113) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB.icon_url` (L115-L118) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UpdateUserProfilePayloadPB.try_into` (L124-L150) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.RepeatedUserWorkspacePB` (L154-L157) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.RepeatedUserWorkspacePB.from` (L160-L164) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UserWorkspacePB` (L168-L190) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.UserWorkspacePB.from` (L207-L217) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_profile.ResetWorkspacePB` (L221-L227) - Struct
+- `frontend/rust-lib/flowy-user/src/entities/user_setting.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.UserPreferencesPB` (L12-L21) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.AppearanceSettingsPB` (L24-L75) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.ThemeModePB` (L80-L85) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.LayoutDirectionPB` (L88-L92) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.TextDirectionPB` (L95-L101) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.LocaleSettingsPB` (L104-L110) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.LocaleSettingsPB.default` (L113-L118) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.DocumentSettingsPB` (L122-L128) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.AppearanceSettingsPB.default` (L139-L155) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.CloudSettingPB` (L159-L171) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.UpdateCloudConfigPB` (L174-L180) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.UserSecretPB` (L183-L195) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.UserEncryptionConfigurationPB` (L198-L201) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.NetworkTypePB` (L204-L212) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.NetworkTypePB.is_reachable` (L215-L222) - Method
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.NetworkStatePB` (L226-L229) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.DateTimeSettingsPB` (L232-L241) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.DateTimeSettingsPB.default` (L244-L250) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.NotificationSettingsPB` (L254-L258) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.NotificationSettingsPB.default` (L261-L265) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.user_setting.AppFlowyCloudSettingPB` (L269-L278) - Struct
+- `frontend/rust-lib/flowy-user/src/entities/workspace.rs`
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceMemberPB` (L16-L31) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceMemberPB.from` (L34-L42) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RepeatedWorkspaceMemberPB` (L46-L49) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceMemberInvitationPB` (L52-L63) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RepeatedWorkspaceInvitationPB` (L66-L69) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceInvitationPB` (L72-L87) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceInvitationPB.from` (L90-L100) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AcceptWorkspaceInvitationPB` (L104-L108) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AddWorkspaceMemberPB` (L112-L120) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.QueryWorkspacePB` (L123-L127) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RemoveWorkspaceMemberPB` (L130-L138) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.UpdateWorkspaceMemberPB` (L141-L152) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AFRolePB` (L156-L161) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.Role.from` (L175-L181) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AFRolePB.from` (L185-L191) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.UserWorkspaceIdPB` (L195-L199) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.OpenUserWorkspacePB` (L202-L209) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.CancelWorkspaceSubscriptionPB` (L212-L222) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SuccessWorkspaceSubscriptionPB` (L225-L232) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceMemberIdPB` (L235-L238) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.CreateWorkspacePB` (L241-L248) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceTypePB` (L252-L256) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceTypePB.from` (L269-L274) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceType.from` (L278-L283) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AuthTypePB` (L288-L292) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AuthTypePB.from` (L305-L310) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AuthType.from` (L314-L319) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RenameWorkspacePB` (L323-L331) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.ChangeWorkspaceIconPB` (L334-L341) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SubscribeWorkspacePB` (L344-L357) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RecurringIntervalPB` (L360-L364) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RecurringInterval.from` (L367-L372) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RecurringIntervalPB.from` (L376-L381) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SubscriptionPlanPB` (L385-L394) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SubscriptionPlan.from` (L407-L415) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SubscriptionPlanPB.from` (L419-L427) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.PaymentLinkPB` (L431-L434) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceUsagePB` (L437-L456) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceUsagePB.from` (L459-L471) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.BillingPortalPB` (L475-L478) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSettingsPB` (L481-L490) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSettingsPB.from` (L493-L499) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.UpdateUserWorkspaceSettingPB` (L503-L513) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.AFWorkspaceSettingsChange.from` (L516-L525) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionInfoPB` (L529-L536) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionInfoPB.default_from_workspace_id` (L539-L551) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionInfoPB.from` (L555-L601) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspacePlanPB` (L605-L610) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspacePlanPB.from` (L619-L626) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceAddOnPB` (L630-L635) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceAddOnPBType` (L638-L642) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionV2PB` (L645-L660) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionV2PB.default_with_workspace_id` (L663-L671) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionV2PB.from` (L675-L687) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionStatusPB` (L691-L695) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.i64.from` (L698-L700) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.WorkspaceSubscriptionStatusPB.from` (L704-L709) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.UpdateWorkspaceSubscriptionPaymentPeriodPB` (L713-L723) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.RepeatedSubscriptionPlanDetailPB` (L726-L729) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SubscriptionPlanDetailPB` (L732-L741) - Struct
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.SubscriptionPlanDetailPB.from` (L744-L751) - Function
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.CurrencyPB` (L755-L758) - Enum
+  - `frontend.rust-lib.flowy-user.src.entities.workspace.CurrencyPB.from` (L761-L765) - Function
+- `frontend/rust-lib/flowy-user/src/event_handler.rs`
+  - `frontend.rust-lib.flowy-user.src.event_handler.upgrade_manager` (L21-L26) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.upgrade_store_preferences` (L28-L35) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.sign_in_with_email_password_handler` (L40-L54) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.sign_up` (L66-L78) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.init_user_handler` (L81-L87) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_user_profile_handler` (L90-L120) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.sign_out_handler` (L123-L136) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.delete_account_handler` (L139-L145) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.update_user_profile_handler` (L148-L156) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.set_appearance_setting` (L161-L172) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_appearance_setting` (L175-L192) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.set_date_time_settings` (L197-L209) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_date_time_settings` (L212-L232) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.set_notification_settings` (L237-L245) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_notification_settings` (L248-L265) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.import_appflowy_data_folder_handler` (L268-L293) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_user_setting` (L296-L302) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.sign_in_with_magic_link_handler` (L305-L315) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.sign_in_with_passcode_handler` (L318-L328) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.oauth_sign_in_handler` (L331-L342) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.gen_sign_in_url_handler` (L345-L356) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.sign_in_with_provider_handler` (L359-L370) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.set_cloud_config_handler` (L373-L408) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_cloud_config_handler` (L411-L427) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_all_workspace_handler` (L430-L443) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.open_workspace_handler` (L446-L457) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_user_workspace_handler` (L460-L470) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.update_network_state_handler` (L473-L486) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_anon_user_handler` (L489-L495) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.open_anon_user_handler` (L498-L504) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.push_realtime_event_handler` (L506-L520) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.create_reminder_event_handler` (L523-L531) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_all_reminder_event_handler` (L534-L547) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.remove_reminder_event_handler` (L550-L560) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.update_reminder_event_handler` (L563-L571) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.delete_workspace_member_handler` (L574-L585) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_workspace_members_handler` (L588-L602) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.update_workspace_member_handler` (L605-L616) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.create_workspace_handler` (L619-L628) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.delete_workspace_handler` (L631-L640) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.rename_workspace_handler` (L643-L659) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.change_workspace_icon_handler` (L662-L678) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.invite_workspace_member_handler` (L681-L692) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.list_workspace_invitations_handler` (L695-L707) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.accept_workspace_invitations_handler` (L710-L718) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.leave_workspace_handler` (L720-L729) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.subscribe_workspace_handler` (L732-L740) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_workspace_subscription_info_handler` (L743-L753) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.cancel_workspace_subscription_handler` (L756-L766) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_workspace_usage_handler` (L769-L777) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_billing_portal_handler` (L780-L786) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.update_workspace_subscription_payment_period_handler` (L789-L803) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_subscription_plan_details_handler` (L806-L817) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_workspace_member_info` (L820-L830) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.update_workspace_setting_handler` (L833-L841) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.get_workspace_setting_handler` (L844-L853) - Function
+  - `frontend.rust-lib.flowy-user.src.event_handler.notify_did_switch_plan_handler` (L856-L864) - Function
+- `frontend/rust-lib/flowy-user/src/event_map.rs`
+  - `frontend.rust-lib.flowy-user.src.event_map.init` (L17-L84) - Function
+  - `frontend.rust-lib.flowy-user.src.event_map.UserEvent` (L88-L277) - Enum
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle` (L280-L355) - Interface
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_launch_if_authenticated` (L282-L292) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.did_launch` (L294-L296) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_sign_in` (L299-L308) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_sign_up` (L311-L321) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_token_expired` (L324-L326) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_workspace_closed` (L328-L330) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_workspace_opened` (L333-L343) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_workspace_deleted` (L345-L347) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_network_status_changed` (L348-L348) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_subscription_plans_updated` (L349-L349) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.on_storage_permission_updated` (L350-L350) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.AppLifeCycle.subscribe_full_indexed_finish` (L352-L354) - Method
+  - `frontend.rust-lib.flowy-user.src.event_map.DefaultUserStatusCallback` (L358-L358) - Struct
+- `frontend/rust-lib/flowy-user/src/migrations/anon_user_workspace.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.anon_user_workspace.AnonUserWorkspaceTableMigration` (L16-L16) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.anon_user_workspace.AnonUserWorkspaceTableMigration.name` (L19-L21) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.anon_user_workspace.AnonUserWorkspaceTableMigration.run_when` (L23-L32) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.anon_user_workspace.AnonUserWorkspaceTableMigration.run` (L35-L55) - Method
+- `frontend/rust-lib/flowy-user/src/migrations/doc_key_with_workspace.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.doc_key_with_workspace.CollabDocKeyWithWorkspaceIdMigration` (L17-L17) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.doc_key_with_workspace.CollabDocKeyWithWorkspaceIdMigration.name` (L20-L22) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.doc_key_with_workspace.CollabDocKeyWithWorkspaceIdMigration.run_when` (L24-L37) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.doc_key_with_workspace.CollabDocKeyWithWorkspaceIdMigration.run` (L40-L57) - Method
+- `frontend/rust-lib/flowy-user/src/migrations/document_empty_content.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.document_empty_content.HistoricalEmptyDocumentMigration` (L23-L23) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.document_empty_content.HistoricalEmptyDocumentMigration.name` (L26-L28) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.document_empty_content.HistoricalEmptyDocumentMigration.run_when` (L30-L39) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.document_empty_content.HistoricalEmptyDocumentMigration.run` (L42-L94) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.document_empty_content.migrate_empty_document` (L97-L128) - Function
+- `frontend/rust-lib/flowy-user/src/migrations/migration.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserLocalDataMigration` (L19-L24) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserLocalDataMigration.new` (L27-L39) - Function
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserLocalDataMigration.run` (L54-L94) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserDataMigration` (L97-L111) - Interface
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserDataMigration.name` (L99-L99) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserDataMigration.run_when` (L102-L102) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserDataMigration.run` (L103-L110) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.save_migration_record` (L113-L121) - Function
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.get_all_records` (L123-L129) - Function
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.UserDataMigrationRecord` (L133-L137) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.migration.NewUserDataMigrationRecord` (L141-L143) - Struct
+- `frontend/rust-lib/flowy-user/src/migrations/mod.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.AnonUser` (L14-L16) - Struct
+- `frontend/rust-lib/flowy-user/src/migrations/session_migration.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.migrate_session` (L16-L43) - Function
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.SessionBackup` (L46-L50) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.get_v0_session_workspace` (L51-L57) - Function
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.SessionVisitor` (L59-L59) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.SessionVisitor.expecting` (L63-L65) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.SessionVisitor.visit_map` (L67-L121) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.session_migration.SessionBackup.deserialize` (L125-L130) - Function
+- `frontend/rust-lib/flowy-user/src/migrations/util.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.util.load_collab` (L6-L19) - Function
+- `frontend/rust-lib/flowy-user/src/migrations/workspace_and_favorite_v1.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_and_favorite_v1.FavoriteV1AndWorkspaceArrayMigration` (L21-L21) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_and_favorite_v1.FavoriteV1AndWorkspaceArrayMigration.name` (L24-L26) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_and_favorite_v1.FavoriteV1AndWorkspaceArrayMigration.run_when` (L28-L37) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_and_favorite_v1.FavoriteV1AndWorkspaceArrayMigration.run` (L40-L89) - Method
+- `frontend/rust-lib/flowy-user/src/migrations/workspace_trash_v1.rs`
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_trash_v1.WorkspaceTrashMapToSectionMigration` (L19-L19) - Struct
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_trash_v1.WorkspaceTrashMapToSectionMigration.name` (L22-L24) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_trash_v1.WorkspaceTrashMapToSectionMigration.run_when` (L26-L35) - Method
+  - `frontend.rust-lib.flowy-user.src.migrations.workspace_trash_v1.WorkspaceTrashMapToSectionMigration.run` (L38-L83) - Method
+- `frontend/rust-lib/flowy-user/src/notification.rs`
+  - `frontend.rust-lib.flowy-user.src.notification.UserNotification` (L11-L24) - Enum
+  - `frontend.rust-lib.flowy-user.src.notification.send_notification` (L27-L30) - Function
+  - `frontend.rust-lib.flowy-user.src.notification.send_auth_state_notification` (L33-L41) - Function
+- `frontend/rust-lib/flowy-user/src/services/authenticate_user.rs`
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser` (L21-L27) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.drop` (L30-L35) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.new` (L39-L50) - Function
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.user_id` (L52-L55) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.is_local_mode` (L57-L62) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.device_id` (L64-L66) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.workspace_id` (L68-L72) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.workspace_type` (L74-L79) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.workspace_database_object_id` (L81-L87) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_collab_db` (L89-L91) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_sqlite_connection` (L93-L95) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_index_path` (L97-L100) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_user_data_dir` (L102-L105) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_application_root_dir` (L107-L109) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.close_db` (L111-L116) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.is_collab_on_disk` (L118-L127) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.set_session` (L129-L148) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.set_user_workspace` (L150-L157) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_session` (L159-L178) - Method
+  - `frontend.rust-lib.flowy-user.src.services.authenticate_user.AuthenticateUser.get_active_user_workspace` (L180-L185) - Method
+- `frontend/rust-lib/flowy-user/src/services/billing_check.rs`
+  - `frontend.rust-lib.flowy-user.src.services.billing_check.PeriodicallyCheckBillingState` (L16-L21) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.billing_check.PeriodicallyCheckBillingState.new` (L24-L36) - Function
+  - `frontend.rust-lib.flowy-user.src.services.billing_check.PeriodicallyCheckBillingState.start` (L38-L88) - Method
+- `frontend/rust-lib/flowy-user/src/services/cloud_config.rs`
+  - `frontend.rust-lib.flowy-user.src.services.cloud_config.generate_cloud_config` (L10-L15) - Function
+  - `frontend.rust-lib.flowy-user.src.services.cloud_config.save_cloud_config` (L17-L26) - Function
+  - `frontend.rust-lib.flowy-user.src.services.cloud_config.cache_key_for_cloud_config` (L28-L30) - Function
+  - `frontend.rust-lib.flowy-user.src.services.cloud_config.get_cloud_config` (L32-L38) - Function
+  - `frontend.rust-lib.flowy-user.src.services.cloud_config.get_or_create_cloud_config` (L40-L48) - Function
+  - `frontend.rust-lib.flowy-user.src.services.cloud_config.get_encrypt_secret` (L50-L55) - Function
+- `frontend/rust-lib/flowy-user/src/services/collab_interact.rs`
+  - `frontend.rust-lib.flowy-user.src.services.collab_interact.UserReminder` (L6-L16) - Interface
+  - `frontend.rust-lib.flowy-user.src.services.collab_interact.UserReminder.add_reminder` (L7-L9) - Method
+  - `frontend.rust-lib.flowy-user.src.services.collab_interact.UserReminder.remove_reminder` (L10-L12) - Method
+  - `frontend.rust-lib.flowy-user.src.services.collab_interact.UserReminder.update_reminder` (L13-L15) - Method
+  - `frontend.rust-lib.flowy-user.src.services.collab_interact.DefaultCollabInteract` (L18-L18) - Struct
+- `frontend/rust-lib/flowy-user/src/services/data_import/appflowy_data_import.rs`
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.ImportedFolder` (L48-L55) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.ImportedSource` (L58-L60) - Enum
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.ImportedFolder.with_container_name` (L63-L66) - Method
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.prepare_import` (L69-L142) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.migrate_user_awareness` (L145-L154) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.generate_import_data` (L163-L416) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.create_empty_document_for_view` (L418-L451) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.create_new_container_view` (L454-L520) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.mapping_workspace_database_ids` (L523-L570) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.init_workspace_database` (L572-L584) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.MigrateDatabase` (L586-L589) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.migrate_databases` (L592-L721) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.migrate_database_rows` (L724-L789) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.write_collab_object` (L791-L839) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.GenCollab` (L841-L846) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.write_gen_collab` (L848-L865) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.gen_sv_and_doc_state` (L867-L924) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.MigrateViews` (L926-L932) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.migrate_folder_views` (L935-L1131) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.parent_view_from_view` (L1133-L1152) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.OldToNewIdMap` (L1155-L1155) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.OldToNewIdMap.new` (L1158-L1160) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.OldToNewIdMap.exchange_new_id` (L1161-L1167) - Method
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.OldToNewIdMap.get_exchanged_id` (L1169-L1171) - Method
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.OldToNewIdMap.deref` (L1177-L1179) - Method
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.OldToNewIdMap.deref_mut` (L1183-L1185) - Method
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.upload_collab_objects_data` (L1189-L1291) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.batch_create` (L1293-L1317) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.load_and_process_collab_data` (L1320-L1342) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.appflowy_data_import.replace_document_ref_ids` (L1344-L1409) - Function
+- `frontend/rust-lib/flowy-user/src/services/data_import/importer.rs`
+  - `frontend.rust-lib.flowy-user.src.services.data_import.importer.load_collab_by_object_ids` (L6-L31) - Function
+  - `frontend.rust-lib.flowy-user.src.services.data_import.importer.load_collab_by_object_id` (L34-L47) - Function
+- `frontend/rust-lib/flowy-user/src/services/db.rs`
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDBPath` (L17-L21) - Interface
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDBPath.sqlite_db_path` (L18-L18) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDBPath.collab_db_path` (L19-L19) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDBPath.collab_db_history` (L20-L20) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB` (L23-L27) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.new` (L30-L36) - Function
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.backup` (L40-L63) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.get_collab_backup_list` (L66-L74) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.close` (L77-L88) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.get_connection` (L90-L93) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.get_pool` (L95-L98) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.get_collab_db` (L100-L103) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.open_sqlite_db` (L105-L122) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.get_user_profile` (L124-L133) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.UserDB.open_collab_db` (L137-L163) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.CollabDBZipBackup` (L166-L169) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.db.CollabDBZipBackup.new` (L172-L177) - Function
+  - `frontend.rust-lib.flowy-user.src.services.db.CollabDBZipBackup.backup` (L180-L209) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.CollabDBZipBackup.get_backup_list` (L212-L225) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.CollabDBZipBackup.restore_latest_backup` (L229-L266) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.CollabDBZipBackup.clean_old_backups` (L268-L313) - Method
+  - `frontend.rust-lib.flowy-user.src.services.db.today_zip_timestamp` (L316-L318) - Function
+  - `frontend.rust-lib.flowy-user.src.services.db.zip_time_format` (L320-L322) - Function
+  - `frontend.rust-lib.flowy-user.src.services.db.validate_collab_db` (L324-L350) - Function
+- `frontend/rust-lib/flowy-user/src/services/entities.rs`
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserConfig` (L12-L24) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserConfig.new` (L29-L44) - Function
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserConfig.is_custom_storage_path` (L47-L49) - Method
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths` (L53-L55) - Struct
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.new` (L58-L60) - Function
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.user_data_dir` (L63-L65) - Method
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.tanvity_index_path` (L67-L69) - Method
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.root` (L72-L74) - Method
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.sqlite_db_path` (L78-L80) - Method
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.collab_db_path` (L82-L86) - Method
+  - `frontend.rust-lib.flowy-user.src.services.entities.UserPaths.collab_db_history` (L88-L94) - Method
+- `frontend/rust-lib/flowy-user/src/user_manager/manager.rs`
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager` (L45-L56) - Struct
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.drop` (L59-L61) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.new` (L65-L110) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.cloud_service` (L112-L117) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.close_db` (L119-L123) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.get_store_preferences` (L125-L127) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.init_with_callback` (L137-L317) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.set_first_time_installed_version` (L319-L336) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.get_session` (L338-L340) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.db_connection` (L342-L344) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.db_pool` (L346-L348) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.get_collab_db` (L350-L352) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.get_collab_backup_list` (L355-L357) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.sign_in` (L368-L413) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.sign_up` (L423-L438) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.continue_sign_up` (L441-L494) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.sign_out` (L497-L508) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.delete_account` (L511-L518) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.update_user_profile` (L527-L546) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.init_user` (L548-L550) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.prepare_user` (L552-L554) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.prepare_backup` (L556-L566) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.get_user_profile_from_disk` (L569-L576) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.refresh_user_profile` (L579-L638) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.user_dir` (L641-L643) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.token_from_auth_type` (L645-L654) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.user_setting` (L655-L661) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.user_id` (L663-L665) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.user_uuid` (L667-L669) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.workspace_id` (L671-L675) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.token` (L677-L679) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.save_user` (L681-L685) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.receive_realtime_event` (L687-L691) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.generate_sign_in_url_with_email` (L694-L705) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.sign_in_with_password` (L708-L719) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.sign_in_with_magic_link` (L722-L735) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.sign_in_with_passcode` (L738-L749) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.generate_oauth_url` (L752-L764) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.save_auth_data` (L767-L796) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.UserManager.handler_user_update` (L798-L812) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.upsert_user_profile_change` (L815-L832) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.save_user_token` (L835-L844) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.remove_user_token` (L847-L852) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.collab_migration_list` (L854-L864) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.mark_all_migrations_as_applied` (L866-L873) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.run_data_migration` (L875-L899) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager.sign_out` (L902-L924) - Function
+- `frontend/rust-lib/flowy-user/src/user_manager/manager_history_user.rs`
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_history_user.UserManager.get_migration_user` (L15-L32) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_history_user.UserManager.set_anon_user` (L34-L36) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_history_user.UserManager.remove_anon_user` (L38-L40) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_history_user.UserManager.get_anon_user` (L42-L54) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_history_user.UserManager.get_anon_user_id` (L56-L66) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_history_user.UserManager.open_anon_user` (L73-L83) - Method
+- `frontend/rust-lib/flowy-user/src/user_manager/manager_user_awareness.rs`
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.add_reminder` (L37-L50) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.remove_reminder` (L54-L70) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.update_reminder` (L74-L102) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.get_all_reminders` (L113-L123) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.initial_user_awareness` (L129-L209) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.load_awareness_from_server` (L214-L308) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.collab_for_user_awareness` (L315-L341) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_awareness.UserManager.get_awareness` (L343-L349) - Method
+- `frontend/rust-lib/flowy-user/src/user_manager/manager_user_encryption.rs`
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_encryption.UserManager.generate_encryption_sign` (L7-L10) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_encryption.UserManager.check_encryption_sign` (L12-L27) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_encryption.UserManager.check_encryption_sign_with_secret` (L29-L42) - Method
+- `frontend/rust-lib/flowy-user/src/user_manager/manager_user_workspace.rs`
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.perform_import` (L38-L74) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.upload_folder_data` (L76-L98) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.upload_collab_data` (L100-L139) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.open_workspace` (L142-L249) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.create_workspace` (L252-L278) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.patch_workspace` (L280-L303) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.leave_workspace` (L306-L326) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.delete_workspace` (L329-L348) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.invite_member_to_workspace` (L350-L362) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.list_pending_workspace_invitations` (L364-L372) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.accept_workspace_invitation` (L374-L381) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.remove_workspace_member` (L383-L394) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_members` (L396-L406) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_member` (L408-L419) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.update_workspace_member` (L421-L433) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_user_workspace_from_db` (L435-L442) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_all_user_workspaces` (L444-L504) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.subscribe_workspace` (L507-L524) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_subscription_info` (L527-L539) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.cancel_workspace_subscription` (L542-L554) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.update_workspace_subscription_payment_period` (L557-L569) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_subscription_plan_details` (L572-L579) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_usage` (L582-L608) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_billing_portal_url` (L611-L618) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.update_workspace_setting` (L620-L645) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_settings` (L647-L691) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_member_info` (L693-L721) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.get_workspace_member_info_from_remote` (L723-L749) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.UserManager.notify_did_switch_plan` (L751-L773) - Method
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.is_older_than_n_minutes` (L776-L782) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.sync_workspace_settings` (L784-L807) - Function
+  - `frontend.rust-lib.flowy-user.src.user_manager.manager_user_workspace.sync_workspace` (L809-L821) - Function
+
+
+### User Domain Contracts and Entities
+Defines shared user domain models, session structures, cloud service provider interfaces, and SQL persistence queries.
+
+
+**Related Classes/Methods**:
+
+- `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider`:62-118
+- `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService`:124-347
+- `frontend.rust-lib.flowy-user-pub.src.session.Session`:8-12
+- `frontend.rust-lib.flowy-user-pub.src.entities.UserWorkspace`:104-119
+- `frontend.rust-lib.flowy-user-pub.src.workspace_service.UserWorkspaceService`:8-20
+
+
+
+**Source Files:**
+
+- `frontend/rust-lib/flowy-user-pub/src/cloud.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudConfig` (L28-L33) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudConfig.new` (L36-L42) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudConfig.with_enable_encrypt` (L44-L49) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudConfig.fmt` (L53-L59) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider` (L62-L118) - Interface
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.set_token` (L70-L70) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.set_ai_model` (L71-L71) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.subscribe_token_state` (L78-L78) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.set_enable_sync` (L85-L85) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.set_server_auth_type` (L87-L91) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.get_server_auth_type` (L93-L93) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.set_network_reachable` (L99-L99) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.set_encrypt_secret` (L105-L105) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.get_user_service` (L111-L111) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudServiceProvider.service_url` (L117-L117) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService` (L124-L347) - Interface
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.sign_up` (L128-L128) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.sign_in` (L132-L132) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.sign_out` (L135-L135) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.delete_account` (L138-L140) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.generate_sign_in_url_with_email` (L144-L144) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.create_user` (L146-L146) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.sign_in_with_password` (L148-L152) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.sign_in_with_magic_link` (L154-L155) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.sign_in_with_passcode` (L157-L161) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.generate_oauth_url_with_provider` (L168-L168) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.update_user` (L171-L171) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_user_profile` (L175-L176) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.open_workspace` (L178-L178) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_all_workspace` (L181-L181) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.create_workspace` (L185-L185) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.patch_workspace` (L188-L193) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.delete_workspace` (L196-L196) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.invite_workspace_member` (L198-L205) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.list_workspace_invitations` (L207-L212) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.accept_workspace_invitations` (L214-L216) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.remove_workspace_member` (L218-L224) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.update_workspace_member` (L226-L233) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_members` (L235-L238) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_user_awareness_doc_state` (L240-L245) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.receive_realtime_event` (L247-L247) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.subscribe_user_update` (L249-L251) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.create_collab_object` (L253-L257) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.batch_create_collab_object` (L259-L263) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.leave_workspace` (L265-L267) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.subscribe_workspace` (L269-L277) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_member` (L279-L283) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_subscriptions` (L285-L289) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_subscription_one` (L292-L297) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.cancel_workspace_subscription` (L299-L306) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_plan` (L308-L313) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_usage` (L315-L318) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_billing_portal_url` (L320-L322) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.update_workspace_subscription_payment_period` (L324-L331) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_subscription_plan_details` (L333-L335) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.get_workspace_setting` (L337-L340) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCloudService.update_workspace_setting` (L342-L346) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserUpdate` (L352-L357) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.uuid_from_map` (L359-L365) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.cloud.UserCollabParams` (L368-L372) - Struct
+- `frontend/rust-lib/flowy-user-pub/src/entities.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse` (L16-L27) - Interface
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.user_id` (L17-L17) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.user_uuid` (L18-L18) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.user_name` (L19-L19) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.latest_workspace` (L20-L20) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.user_workspaces` (L21-L21) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.user_token` (L22-L22) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.user_email` (L23-L23) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.encryption_type` (L24-L24) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.metadata` (L25-L25) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserAuthResponse.updated_at` (L26-L26) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.SignInParams` (L30-L35) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.SignUpParams` (L38-L44) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse` (L47-L59) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.user_id` (L62-L64) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.user_uuid` (L66-L68) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.user_name` (L70-L72) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.latest_workspace` (L74-L76) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.user_workspaces` (L78-L80) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.user_token` (L82-L84) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.user_email` (L86-L88) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.encryption_type` (L90-L92) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.metadata` (L94-L96) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthResponse.updated_at` (L98-L100) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserWorkspace` (L104-L119) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.default_workspace_type` (L121-L123) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserWorkspace.workspace_id` (L126-L129) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserWorkspace.new_local` (L131-L142) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserProfile` (L146-L155) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.EncryptionType` (L158-L162) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.entities.EncryptionType.from_sign` (L165-L171) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.EncryptionType.require_encrypt_secret` (L173-L178) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.EncryptionType.sign` (L180-L185) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.EncryptionType.from_str` (L191-L193) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserProfile.from` (L200-L222) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams` (L226-L233) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams.new` (L236-L241) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams.with_token` (L243-L246) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams.with_name` (L248-L251) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams.with_email` (L253-L256) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams.with_password` (L258-L261) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UpdateUserProfileParams.with_icon_url` (L263-L266) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceType` (L271-L274) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceType.default` (L277-L279) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceType.is_local` (L283-L285) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceType.from` (L299-L304) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthType` (L309-L315) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthType.fmt` (L327-L332) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthType.default` (L336-L338) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthType.is_local` (L342-L344) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthType.is_appflowy_cloud` (L346-L348) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AuthType.from` (L352-L358) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.SupabaseOAuthParams` (L360-L363) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.AFCloudOAuthParams` (L365-L367) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.UserTokenState` (L370-L374) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.entities.Role` (L379-L383) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.entities.i32.from` (L397-L403) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.Role.from` (L407-L413) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceMember` (L416-L422) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.entities.user_awareness_object_id` (L425-L430) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceInvitationStatus` (L433-L437) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.entities.WorkspaceInvitation` (L439-L447) - Struct
+- `frontend/rust-lib/flowy-user-pub/src/session.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.session.Session` (L8-L12) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.session.Session.fmt` (L15-L21) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.session.Session.from` (L28-L34) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.session.String.from` (L38-L43) - Function
+- `frontend/rust-lib/flowy-user-pub/src/sql/member_sql.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.sql.member_sql.WorkspaceMemberTable` (L11-L20) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.member_sql.WorkspaceMember.from` (L23-L31) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.member_sql.upsert_workspace_member` (L34-L51) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.member_sql.select_workspace_member` (L53-L64) - Function
+- `frontend/rust-lib/flowy-user-pub/src/sql/user_sql.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.UserTable` (L17-L25) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.UserTable.from` (L29-L41) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.UserTableChangeset` (L46-L52) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.UserTableChangeset.new` (L55-L63) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.UserTableChangeset.from_user_profile` (L65-L73) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.UserTableChangeset.from` (L77-L84) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.update_user_profile` (L87-L97) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.insert_local_workspace` (L99-L125) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.select_user_table_row` (L127-L138) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.select_user_profile` (L140-L161) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.select_user_auth_type` (L163-L169) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.select_user_token` (L171-L174) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.user_sql.upsert_user` (L176-L188) - Function
+- `frontend/rust-lib/flowy-user-pub/src/sql/workspace_setting_sql.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_setting_sql.WorkspaceSettingsTable` (L11-L15) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_setting_sql.WorkspaceSettingsChangeset` (L19-L23) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_setting_sql.WorkspaceSettingsTable.from_workspace_settings` (L26-L32) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_setting_sql.update_workspace_setting` (L35-L44) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_setting_sql.upsert_workspace_setting` (L47-L61) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_setting_sql.select_workspace_setting` (L64-L72) - Function
+- `frontend/rust-lib/flowy-user-pub/src/sql/workspace_sql.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.UserWorkspaceTable` (L13-L23) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.UserWorkspaceChangeset` (L27-L33) - Struct
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.UserWorkspaceChangeset.has_changes` (L36-L38) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.UserWorkspaceChangeset.from_version` (L39-L62) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.UserWorkspaceTable.from_workspace` (L66-L89) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.select_user_workspace` (L92-L100) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.select_user_workspace_type` (L102-L111) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.select_all_user_workspace` (L113-L122) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.update_user_workspace` (L124-L134) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.delete_user_workspace` (L136-L148) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.UserWorkspace.from` (L151-L165) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.delete_user_all_workspace` (L169-L185) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.WorkspaceChange` (L188-L191) - Enum
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.upsert_user_workspace` (L193-L216) - Function
+  - `frontend.rust-lib.flowy-user-pub.src.sql.workspace_sql.sync_user_workspaces_with_diff` (L218-L276) - Function
+- `frontend/rust-lib/flowy-user-pub/src/workspace_service.rs`
+  - `frontend.rust-lib.flowy-user-pub.src.workspace_service.UserWorkspaceService` (L8-L20) - Interface
+  - `frontend.rust-lib.flowy-user-pub.src.workspace_service.UserWorkspaceService.import_views` (L9-L15) - Method
+  - `frontend.rust-lib.flowy-user-pub.src.workspace_service.UserWorkspaceService.import_database_views` (L16-L19) - Method
+
+
+
+
+### [FAQ](https://github.com/CodeBoarding/GeneratedOnBoardings/tree/main?tab=readme-ov-file#faq)
