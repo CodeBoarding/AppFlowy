@@ -1,10 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-12T16:43:48.394766+00:00",
+  "generated_at": "2026-11-15T16:26:02.925367+00:00",
   "analyzed_files": [
-    "frontend/appflowy_flutter/android/app/src/main/Classes/binding.h",
-    "frontend/appflowy_flutter/android/app/src/main/kotlin/com/example/app_flowy/MainActivity.kt",
-    "frontend/appflowy_flutter/ios/Runner/Runner-Bridging-Header.h",
     "frontend/appflowy_flutter/lib/ai/ai.dart",
     "frontend/appflowy_flutter/lib/ai/service/ai_entities.dart",
     "frontend/appflowy_flutter/lib/ai/service/ai_model_state_notifier.dart",
@@ -1526,24 +1523,7 @@
     "frontend/appflowy_flutter/lib/workspace/presentation/widgets/toggle/toggle.dart",
     "frontend/appflowy_flutter/lib/workspace/presentation/widgets/user_avatar.dart",
     "frontend/appflowy_flutter/lib/workspace/presentation/widgets/view_title_bar.dart",
-    "frontend/appflowy_flutter/linux/flutter/dart_ffi/binding.h",
-    "frontend/appflowy_flutter/linux/main.cc",
-    "frontend/appflowy_flutter/linux/my_application.cc",
-    "frontend/appflowy_flutter/linux/my_application.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/android/src/main/kotlin/com/plugin/appflowy_backend/AppFlowyBackendPlugin.kt",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/android/app/src/main/kotlin/com/plugin/flowy_sdk_example/MainActivity.kt",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/ios/Runner/Runner-Bridging-Header.h",
     "frontend/appflowy_flutter/packages/appflowy_backend/example/lib/main.dart",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/flutter_window.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/flutter_window.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/main.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/resource.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/utils.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/utils.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/win32_window.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/win32_window.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/ios/Classes/AppFlowyBackendPlugin.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/ios/Classes/binding.h",
     "frontend/appflowy_flutter/packages/appflowy_backend/lib/appflowy_backend.dart",
     "frontend/appflowy_flutter/packages/appflowy_backend/lib/appflowy_backend_method_channel.dart",
     "frontend/appflowy_flutter/packages/appflowy_backend/lib/appflowy_backend_platform_interface.dart",
@@ -1552,28 +1532,8 @@
     "frontend/appflowy_flutter/packages/appflowy_backend/lib/ffi.dart",
     "frontend/appflowy_flutter/packages/appflowy_backend/lib/log.dart",
     "frontend/appflowy_flutter/packages/appflowy_backend/lib/rust_stream.dart",
-    "frontend/appflowy_flutter/packages/appflowy_backend/linux/Classes/binding.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/macos/Classes/binding.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/windows/app_flowy_backend_plugin.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/windows/appflowy_backend_plugin.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_backend/windows/appflowy_backend_plugin_c_api.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_backend/windows/include/appflowy_backend/app_flowy_backend_plugin.h",
-    "frontend/appflowy_flutter/packages/appflowy_backend/windows/include/appflowy_backend/appflowy_backend_plugin_c_api.h",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/ios/Runner/Runner-Bridging-Header.h",
     "frontend/appflowy_flutter/packages/appflowy_popover/example/lib/example_button.dart",
     "frontend/appflowy_flutter/packages/appflowy_popover/example/lib/main.dart",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/main.cc",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/my_application.cc",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/my_application.h",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/flutter_window.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/flutter_window.h",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/main.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/resource.h",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/utils.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/utils.h",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/win32_window.cpp",
-    "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/win32_window.h",
     "frontend/appflowy_flutter/packages/appflowy_popover/lib/appflowy_popover.dart",
     "frontend/appflowy_flutter/packages/appflowy_popover/lib/src/follower.dart",
     "frontend/appflowy_flutter/packages/appflowy_popover/lib/src/layout.dart",
@@ -1670,32 +1630,14 @@
     "frontend/appflowy_flutter/packages/flowy_infra/lib/time/prelude.dart",
     "frontend/appflowy_flutter/packages/flowy_infra/lib/utils/color_converter.dart",
     "frontend/appflowy_flutter/packages/flowy_infra/lib/uuid.dart",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/FlowyInfraUIPlugin.java",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/event/KeyboardEventHandler.java",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/kotlin/com/example/flowy_infra_ui/FlowyInfraUiPlugin.kt",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/flowy_infra_ui_example/MainActivity.kt",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Runner-Bridging-Header.h",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/home/demo_item.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/home/home_screen.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/keyboard/keyboard_screen.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/main.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/overlay/overlay_screen.dart",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/main.cc",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.cc",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/flutter_window.cpp",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/flutter_window.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/main.cpp",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/resource.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/utils.cpp",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/utils.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.cpp",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.h",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/flowy_infra_ui_platform_interface/lib/flowy_infra_ui_platform_interface.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/flowy_infra_ui_platform_interface/lib/src/method_channel_flowy_infra_ui.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/flowy_infra_ui_web/lib/flowy_infra_ui_web.dart",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/ios/Classes/FlowyInfraUIPlugin.h",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/lib/basis.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/lib/flowy_infra_ui.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/lib/flowy_infra_ui_web.dart",
@@ -1744,632 +1686,10 @@
     "frontend/appflowy_flutter/packages/flowy_infra_ui/lib/widget/route/animation.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/lib/widget/separated_flex.dart",
     "frontend/appflowy_flutter/packages/flowy_infra_ui/lib/widget/spacing.dart",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/flowy_infra_u_i_plugin.cc",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/flowy_infra_ui_plugin.cc",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/include/flowy_infra_ui/flowy_infra_u_i_plugin.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/include/flowy_infra_ui/flowy_infra_ui_plugin.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/flowy_infra_ui_plugin.cpp",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/include/flowy_infra_ui/flowy_infra_u_i_plugin.h",
-    "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/include/flowy_infra_ui/flowy_infra_ui_plugin.h",
     "frontend/appflowy_flutter/packages/flowy_svg/bin/flowy_svg.dart",
     "frontend/appflowy_flutter/packages/flowy_svg/bin/options.dart",
     "frontend/appflowy_flutter/packages/flowy_svg/lib/flowy_svg.dart",
     "frontend/appflowy_flutter/packages/flowy_svg/lib/src/flowy_svg.dart",
-    "frontend/appflowy_flutter/windows/runner/flutter_window.cpp",
-    "frontend/appflowy_flutter/windows/runner/flutter_window.h",
-    "frontend/appflowy_flutter/windows/runner/main.cpp",
-    "frontend/appflowy_flutter/windows/runner/resource.h",
-    "frontend/appflowy_flutter/windows/runner/utils.cpp",
-    "frontend/appflowy_flutter/windows/runner/utils.h",
-    "frontend/appflowy_flutter/windows/runner/win32_window.cpp",
-    "frontend/appflowy_flutter/windows/runner/win32_window.h",
-    "frontend/rust-lib/build-tool/flowy-ast/src/ast.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/ctxt.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/event_attrs.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/lib.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/node_attrs.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/pb_attrs.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/symbol.rs",
-    "frontend/rust-lib/build-tool/flowy-ast/src/ty_ext.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/ast.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/dart_event.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/event_template.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/flowy_toml.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/lib.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/ast.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_gen.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_info.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/derive_meta.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/enum_template.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/struct_template.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/event_template.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-codegen/src/util.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/dart_event/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/lib.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/node/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/deserialize.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/enum_serde.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/mod.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/serialize.rs",
-    "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/util.rs",
-    "frontend/rust-lib/collab-integrate/src/collab_builder.rs",
-    "frontend/rust-lib/collab-integrate/src/config.rs",
-    "frontend/rust-lib/collab-integrate/src/instant_indexed_data_provider.rs",
-    "frontend/rust-lib/collab-integrate/src/lib.rs",
-    "frontend/rust-lib/collab-integrate/src/plugin_provider.rs",
-    "frontend/rust-lib/covtest.rs",
-    "frontend/rust-lib/dart-ffi/binding.h",
-    "frontend/rust-lib/dart-ffi/build.rs",
-    "frontend/rust-lib/dart-ffi/src/appflowy_yaml.rs",
-    "frontend/rust-lib/dart-ffi/src/c.rs",
-    "frontend/rust-lib/dart-ffi/src/env_serde.rs",
-    "frontend/rust-lib/dart-ffi/src/lib.rs",
-    "frontend/rust-lib/dart-ffi/src/model/ffi_request.rs",
-    "frontend/rust-lib/dart-ffi/src/model/ffi_response.rs",
-    "frontend/rust-lib/dart-ffi/src/model/mod.rs",
-    "frontend/rust-lib/dart-ffi/src/notification/mod.rs",
-    "frontend/rust-lib/dart-ffi/src/notification/sender.rs",
-    "frontend/rust-lib/event-integration-test/src/chat_event.rs",
-    "frontend/rust-lib/event-integration-test/src/database_event.rs",
-    "frontend/rust-lib/event-integration-test/src/document/document_event.rs",
-    "frontend/rust-lib/event-integration-test/src/document/mod.rs",
-    "frontend/rust-lib/event-integration-test/src/document/utils.rs",
-    "frontend/rust-lib/event-integration-test/src/document_event.rs",
-    "frontend/rust-lib/event-integration-test/src/event_builder.rs",
-    "frontend/rust-lib/event-integration-test/src/folder_event.rs",
-    "frontend/rust-lib/event-integration-test/src/lib.rs",
-    "frontend/rust-lib/event-integration-test/src/user_event.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/entities.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/persistence/chat_message_sql.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/persistence/chat_sql.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/persistence/collab_metadata_sql.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/persistence/collab_sql.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/persistence/local_model_sql.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/persistence/mod.rs",
-    "frontend/rust-lib/flowy-ai-pub/src/user_service.rs",
-    "frontend/rust-lib/flowy-ai/build.rs",
-    "frontend/rust-lib/flowy-ai/src/ai_manager.rs",
-    "frontend/rust-lib/flowy-ai/src/ai_tool/markdown.rs",
-    "frontend/rust-lib/flowy-ai/src/ai_tool/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/ai_tool/pdf.rs",
-    "frontend/rust-lib/flowy-ai/src/chat.rs",
-    "frontend/rust-lib/flowy-ai/src/completion.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/context.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/document_indexer.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/embedder.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/indexer.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/scheduler.rs",
-    "frontend/rust-lib/flowy-ai/src/embeddings/store.rs",
-    "frontend/rust-lib/flowy-ai/src/entities.rs",
-    "frontend/rust-lib/flowy-ai/src/event_handler.rs",
-    "frontend/rust-lib/flowy-ai/src/event_map.rs",
-    "frontend/rust-lib/flowy-ai/src/lib.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/context_question_chain.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/conversation_chain.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/related_question_chain.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/format_prompt.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/llm.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/llm_chat.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/retriever/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/retriever/multi_source_retriever.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/retriever/sqlite_retriever.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/chat/summary_memory.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/completion/chain.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/completion/impls.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/completion/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/completion/stream_interpreter.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/completion/writer.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/controller.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/database/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/database/summary.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/database/translate.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/prompt/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/request.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/resource.rs",
-    "frontend/rust-lib/flowy-ai/src/local_ai/stream_util.rs",
-    "frontend/rust-lib/flowy-ai/src/mcp/manager.rs",
-    "frontend/rust-lib/flowy-ai/src/mcp/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/middleware/chat_service_mw.rs",
-    "frontend/rust-lib/flowy-ai/src/middleware/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/model_select.rs",
-    "frontend/rust-lib/flowy-ai/src/notification.rs",
-    "frontend/rust-lib/flowy-ai/src/offline/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/offline/offline_message_sync.rs",
-    "frontend/rust-lib/flowy-ai/src/search/mod.rs",
-    "frontend/rust-lib/flowy-ai/src/search/summary.rs",
-    "frontend/rust-lib/flowy-ai/src/stream_message.rs",
-    "frontend/rust-lib/flowy-core/src/app_life_cycle.rs",
-    "frontend/rust-lib/flowy-core/src/config.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/chat_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/cloud_service_impl.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/collab_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/database_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/document_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/file_storage_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/folder_deps_chat_impl.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/folder_deps_database_impl.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/folder_deps_doc_impl.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/mod.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/mod.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/reminder_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/search_deps.rs",
-    "frontend/rust-lib/flowy-core/src/deps_resolve/user_deps.rs",
-    "frontend/rust-lib/flowy-core/src/folder_view_observer.rs",
-    "frontend/rust-lib/flowy-core/src/full_indexed_data_provider.rs",
-    "frontend/rust-lib/flowy-core/src/indexed_data_consumer.rs",
-    "frontend/rust-lib/flowy-core/src/indexing_data_runner.rs",
-    "frontend/rust-lib/flowy-core/src/lib.rs",
-    "frontend/rust-lib/flowy-core/src/log_filter.rs",
-    "frontend/rust-lib/flowy-core/src/module.rs",
-    "frontend/rust-lib/flowy-core/src/server_layer.rs",
-    "frontend/rust-lib/flowy-database-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-database-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-database2/build.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/board_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_changeset.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/calculation/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/calendar_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/cell_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/database_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/field_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/field_settings_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/file_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/checkbox_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/checklist_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/date_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/filter_changeset.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/media_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/number_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/relation_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/select_option_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/text_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/time_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/filter_entities/util.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/group_entities/configuration.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/group_entities/group.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/group_entities/group_changeset.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/group_entities/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/macros.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/parser.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/position_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/row_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/setting_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/share_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/sort_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checkbox_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checklist_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/date_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/media_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/number_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/relation_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/select_option_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/summary_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/text_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/time_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/timestamp_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/translate_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/url_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/entities/view_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/event_handler.rs",
-    "frontend/rust-lib/flowy-database2/src/event_map.rs",
-    "frontend/rust-lib/flowy-database2/src/lib.rs",
-    "frontend/rust-lib/flowy-database2/src/manager.rs",
-    "frontend/rust-lib/flowy-database2/src/notification.rs",
-    "frontend/rust-lib/flowy-database2/src/services/calculations/cache.rs",
-    "frontend/rust-lib/flowy-database2/src/services/calculations/controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/calculations/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/calculations/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/calculations/service.rs",
-    "frontend/rust-lib/flowy-database2/src/services/calculations/task.rs",
-    "frontend/rust-lib/flowy-database2/src/services/cell/cell_data_cache.rs",
-    "frontend/rust-lib/flowy-database2/src/services/cell/cell_operation.rs",
-    "frontend/rust-lib/flowy-database2/src/services/cell/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/cell/type_cell_data.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database/database_editor.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database/database_observe.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database/util.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/layout_deps.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/notifier.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/view_calculations.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/view_editor.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/view_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/view_group.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/view_operation.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/view_sort.rs",
-    "frontend/rust-lib/flowy-database2/src/services/database_view/views.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/field_builder.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/field_operation.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_option_transform.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_tests.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_type_option_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checklist_type_option/checklist_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checklist_type_option/checklist_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/checklist_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/date_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/date_tests.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/date_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/media_file.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/media_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/media_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/number_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/number_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/number_type_option_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/relation_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/relation_type_option/relation.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/relation_type_option/relation_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/multi_select_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/select_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/select_option_tests.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/select_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/single_select_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/type_option_transform.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/summary_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/summary_type_option/summary.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/text_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/text_tests.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/text_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/time_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/time_type_option/time.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/time_type_option/time_filter.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/timestamp_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/timestamp_type_option/timestamp_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/translate_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/translate_type_option/translate.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/type_option_cell.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/url_tests.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/url_type_option.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/url_type_option_entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field/type_options/util.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field_settings/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field_settings/field_settings_builder.rs",
-    "frontend/rust-lib/flowy-database2/src/services/field_settings/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/filter/controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/filter/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/filter/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/filter/task.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/action.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/configuration.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/checkbox_controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/date_controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/default_controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/multi_select_controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/single_select_controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/util.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/url_controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/group_builder.rs",
-    "frontend/rust-lib/flowy-database2/src/services/group/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/setting/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/setting/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/share/csv/export.rs",
-    "frontend/rust-lib/flowy-database2/src/services/share/csv/import.rs",
-    "frontend/rust-lib/flowy-database2/src/services/share/csv/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/share/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/snapshot/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/snapshot/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/sort/controller.rs",
-    "frontend/rust-lib/flowy-database2/src/services/sort/entities.rs",
-    "frontend/rust-lib/flowy-database2/src/services/sort/mod.rs",
-    "frontend/rust-lib/flowy-database2/src/services/sort/task.rs",
-    "frontend/rust-lib/flowy-database2/src/template.rs",
-    "frontend/rust-lib/flowy-database2/src/utils/cache.rs",
-    "frontend/rust-lib/flowy-database2/src/utils/mod.rs",
-    "frontend/rust-lib/flowy-date/build.rs",
-    "frontend/rust-lib/flowy-date/src/entities.rs",
-    "frontend/rust-lib/flowy-date/src/event_handler.rs",
-    "frontend/rust-lib/flowy-date/src/event_map.rs",
-    "frontend/rust-lib/flowy-date/src/lib.rs",
-    "frontend/rust-lib/flowy-document-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-document-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-document/build.rs",
-    "frontend/rust-lib/flowy-document/src/deps.rs",
-    "frontend/rust-lib/flowy-document/src/document.rs",
-    "frontend/rust-lib/flowy-document/src/document_data.rs",
-    "frontend/rust-lib/flowy-document/src/entities.rs",
-    "frontend/rust-lib/flowy-document/src/event_handler.rs",
-    "frontend/rust-lib/flowy-document/src/event_map.rs",
-    "frontend/rust-lib/flowy-document/src/lib.rs",
-    "frontend/rust-lib/flowy-document/src/manager.rs",
-    "frontend/rust-lib/flowy-document/src/notification.rs",
-    "frontend/rust-lib/flowy-document/src/parse.rs",
-    "frontend/rust-lib/flowy-document/src/parser/constant.rs",
-    "frontend/rust-lib/flowy-document/src/parser/document_data_parser.rs",
-    "frontend/rust-lib/flowy-document/src/parser/external/mod.rs",
-    "frontend/rust-lib/flowy-document/src/parser/external/parser.rs",
-    "frontend/rust-lib/flowy-document/src/parser/external/utils.rs",
-    "frontend/rust-lib/flowy-document/src/parser/json/block.rs",
-    "frontend/rust-lib/flowy-document/src/parser/json/mod.rs",
-    "frontend/rust-lib/flowy-document/src/parser/json/parser.rs",
-    "frontend/rust-lib/flowy-document/src/parser/mod.rs",
-    "frontend/rust-lib/flowy-document/src/parser/parser_entities.rs",
-    "frontend/rust-lib/flowy-document/src/parser/utils.rs",
-    "frontend/rust-lib/flowy-document/src/reminder.rs",
-    "frontend/rust-lib/flowy-error/build.rs",
-    "frontend/rust-lib/flowy-error/src/code.rs",
-    "frontend/rust-lib/flowy-error/src/errors.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/cloud.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/collab.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/collab_persistence.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/database.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/dispatch.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/mod.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/reqwest.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/serde.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/tantivy.rs",
-    "frontend/rust-lib/flowy-error/src/impl_from/url.rs",
-    "frontend/rust-lib/flowy-error/src/lib.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/entities.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/query.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/sql/mod.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/sql/workspace_shared_user_sql.rs",
-    "frontend/rust-lib/flowy-folder-pub/src/sql/workspace_shared_view_sql.rs",
-    "frontend/rust-lib/flowy-folder/build.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/icon.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/import.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/mod.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/empty_str.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/mod.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/trash/mod.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/trash/trash_id.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/view/mod.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/view/view_id.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/view/view_name.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/view/view_thumbnail.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/mod.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/workspace_desc.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/workspace_id.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/workspace_name.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/publish.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/trash.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/view.rs",
-    "frontend/rust-lib/flowy-folder/src/entities/workspace.rs",
-    "frontend/rust-lib/flowy-folder/src/event_handler.rs",
-    "frontend/rust-lib/flowy-folder/src/event_map.rs",
-    "frontend/rust-lib/flowy-folder/src/lib.rs",
-    "frontend/rust-lib/flowy-folder/src/manager.rs",
-    "frontend/rust-lib/flowy-folder/src/manager_init.rs",
-    "frontend/rust-lib/flowy-folder/src/manager_observer.rs",
-    "frontend/rust-lib/flowy-folder/src/notification.rs",
-    "frontend/rust-lib/flowy-folder/src/publish_util.rs",
-    "frontend/rust-lib/flowy-folder/src/share/import.rs",
-    "frontend/rust-lib/flowy-folder/src/share/mod.rs",
-    "frontend/rust-lib/flowy-folder/src/user_default.rs",
-    "frontend/rust-lib/flowy-folder/src/util.rs",
-    "frontend/rust-lib/flowy-folder/src/view_operation.rs",
-    "frontend/rust-lib/flowy-notification/build.rs",
-    "frontend/rust-lib/flowy-notification/src/builder.rs",
-    "frontend/rust-lib/flowy-notification/src/debounce.rs",
-    "frontend/rust-lib/flowy-notification/src/entities/mod.rs",
-    "frontend/rust-lib/flowy-notification/src/entities/subject.rs",
-    "frontend/rust-lib/flowy-notification/src/lib.rs",
-    "frontend/rust-lib/flowy-search-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-search-pub/src/entities.rs",
-    "frontend/rust-lib/flowy-search-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-search-pub/src/schema.rs",
-    "frontend/rust-lib/flowy-search-pub/src/tantivy_state.rs",
-    "frontend/rust-lib/flowy-search-pub/src/tantivy_state_init.rs",
-    "frontend/rust-lib/flowy-search/build.rs",
-    "frontend/rust-lib/flowy-search/src/document/cloud_search_handler.rs",
-    "frontend/rust-lib/flowy-search/src/document/local_search_handler.rs",
-    "frontend/rust-lib/flowy-search/src/document/mod.rs",
-    "frontend/rust-lib/flowy-search/src/entities/mod.rs",
-    "frontend/rust-lib/flowy-search/src/entities/notification.rs",
-    "frontend/rust-lib/flowy-search/src/entities/query.rs",
-    "frontend/rust-lib/flowy-search/src/entities/result.rs",
-    "frontend/rust-lib/flowy-search/src/entities/search_filter.rs",
-    "frontend/rust-lib/flowy-search/src/event_handler.rs",
-    "frontend/rust-lib/flowy-search/src/event_map.rs",
-    "frontend/rust-lib/flowy-search/src/lib.rs",
-    "frontend/rust-lib/flowy-search/src/services/manager.rs",
-    "frontend/rust-lib/flowy-search/src/services/mod.rs",
-    "frontend/rust-lib/flowy-server-pub/src/af_cloud_config.rs",
-    "frontend/rust-lib/flowy-server-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-server-pub/src/native/af_cloud_config.rs",
-    "frontend/rust-lib/flowy-server-pub/src/native/mod.rs",
-    "frontend/rust-lib/flowy-server-pub/src/wasm/af_cloud_config.rs",
-    "frontend/rust-lib/flowy-server-pub/src/wasm/mod.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/define.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/chat.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/database.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/document.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/file_storage.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/folder.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/mod.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/search.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/cloud_service_impl.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/dto.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/mod.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/util.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/impls/util.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/mod.rs",
-    "frontend/rust-lib/flowy-server/src/af_cloud/server.rs",
-    "frontend/rust-lib/flowy-server/src/lib.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/chat.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/database.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/document.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/folder.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/mod.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/search.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/impls/user.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/mod.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/server.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/template/create_workspace.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/template/mod.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/uid.rs",
-    "frontend/rust-lib/flowy-server/src/local_server/util.rs",
-    "frontend/rust-lib/flowy-server/src/response.rs",
-    "frontend/rust-lib/flowy-server/src/server.rs",
-    "frontend/rust-lib/flowy-server/src/util.rs",
-    "frontend/rust-lib/flowy-sqlite-vec/src/db.rs",
-    "frontend/rust-lib/flowy-sqlite-vec/src/entities.rs",
-    "frontend/rust-lib/flowy-sqlite-vec/src/lib.rs",
-    "frontend/rust-lib/flowy-sqlite-vec/src/migration.rs",
-    "frontend/rust-lib/flowy-sqlite/src/kv/kv.rs",
-    "frontend/rust-lib/flowy-sqlite/src/kv/mod.rs",
-    "frontend/rust-lib/flowy-sqlite/src/kv/schema.rs",
-    "frontend/rust-lib/flowy-sqlite/src/lib.rs",
-    "frontend/rust-lib/flowy-sqlite/src/schema.rs",
-    "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/conn_ext.rs",
-    "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/database.rs",
-    "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/errors.rs",
-    "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/mod.rs",
-    "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/pool.rs",
-    "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/pragma.rs",
-    "frontend/rust-lib/flowy-storage-pub/src/chunked_byte.rs",
-    "frontend/rust-lib/flowy-storage-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-storage-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-storage-pub/src/storage.rs",
-    "frontend/rust-lib/flowy-storage/build.rs",
-    "frontend/rust-lib/flowy-storage/src/entities.rs",
-    "frontend/rust-lib/flowy-storage/src/event_handler.rs",
-    "frontend/rust-lib/flowy-storage/src/event_map.rs",
-    "frontend/rust-lib/flowy-storage/src/file_cache.rs",
-    "frontend/rust-lib/flowy-storage/src/lib.rs",
-    "frontend/rust-lib/flowy-storage/src/manager.rs",
-    "frontend/rust-lib/flowy-storage/src/notification.rs",
-    "frontend/rust-lib/flowy-storage/src/sqlite_sql.rs",
-    "frontend/rust-lib/flowy-storage/src/uploader.rs",
-    "frontend/rust-lib/flowy-user-pub/src/cloud.rs",
-    "frontend/rust-lib/flowy-user-pub/src/entities.rs",
-    "frontend/rust-lib/flowy-user-pub/src/lib.rs",
-    "frontend/rust-lib/flowy-user-pub/src/session.rs",
-    "frontend/rust-lib/flowy-user-pub/src/sql/member_sql.rs",
-    "frontend/rust-lib/flowy-user-pub/src/sql/mod.rs",
-    "frontend/rust-lib/flowy-user-pub/src/sql/user_sql.rs",
-    "frontend/rust-lib/flowy-user-pub/src/sql/workspace_setting_sql.rs",
-    "frontend/rust-lib/flowy-user-pub/src/sql/workspace_sql.rs",
-    "frontend/rust-lib/flowy-user-pub/src/workspace_service.rs",
-    "frontend/rust-lib/flowy-user/build.rs",
-    "frontend/rust-lib/flowy-user/src/entities/auth.rs",
-    "frontend/rust-lib/flowy-user/src/entities/date_time.rs",
-    "frontend/rust-lib/flowy-user/src/entities/import_data.rs",
-    "frontend/rust-lib/flowy-user/src/entities/mod.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/mod.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_email.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_icon.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_id.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_name.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_openai_key.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_password.rs",
-    "frontend/rust-lib/flowy-user/src/entities/parser/user_stability_ai_key.rs",
-    "frontend/rust-lib/flowy-user/src/entities/realtime.rs",
-    "frontend/rust-lib/flowy-user/src/entities/reminder.rs",
-    "frontend/rust-lib/flowy-user/src/entities/user_profile.rs",
-    "frontend/rust-lib/flowy-user/src/entities/user_setting.rs",
-    "frontend/rust-lib/flowy-user/src/entities/workspace.rs",
-    "frontend/rust-lib/flowy-user/src/event_handler.rs",
-    "frontend/rust-lib/flowy-user/src/event_map.rs",
-    "frontend/rust-lib/flowy-user/src/lib.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/anon_user_workspace.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/doc_key_with_workspace.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/document_empty_content.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/migration.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/mod.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/session_migration.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/util.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/workspace_and_favorite_v1.rs",
-    "frontend/rust-lib/flowy-user/src/migrations/workspace_trash_v1.rs",
-    "frontend/rust-lib/flowy-user/src/notification.rs",
-    "frontend/rust-lib/flowy-user/src/services/authenticate_user.rs",
-    "frontend/rust-lib/flowy-user/src/services/billing_check.rs",
-    "frontend/rust-lib/flowy-user/src/services/cloud_config.rs",
-    "frontend/rust-lib/flowy-user/src/services/collab_interact.rs",
-    "frontend/rust-lib/flowy-user/src/services/data_import/appflowy_data_import.rs",
-    "frontend/rust-lib/flowy-user/src/services/data_import/importer.rs",
-    "frontend/rust-lib/flowy-user/src/services/data_import/mod.rs",
-    "frontend/rust-lib/flowy-user/src/services/db.rs",
-    "frontend/rust-lib/flowy-user/src/services/entities.rs",
-    "frontend/rust-lib/flowy-user/src/services/mod.rs",
-    "frontend/rust-lib/flowy-user/src/user_manager/manager.rs",
-    "frontend/rust-lib/flowy-user/src/user_manager/manager_history_user.rs",
-    "frontend/rust-lib/flowy-user/src/user_manager/manager_user_awareness.rs",
-    "frontend/rust-lib/flowy-user/src/user_manager/manager_user_encryption.rs",
-    "frontend/rust-lib/flowy-user/src/user_manager/manager_user_workspace.rs",
-    "frontend/rust-lib/flowy-user/src/user_manager/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/byte_trait.rs",
-    "frontend/rust-lib/lib-dispatch/src/data.rs",
-    "frontend/rust-lib/lib-dispatch/src/dispatcher.rs",
-    "frontend/rust-lib/lib-dispatch/src/errors/errors.rs",
-    "frontend/rust-lib/lib-dispatch/src/errors/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/lib.rs",
-    "frontend/rust-lib/lib-dispatch/src/macros.rs",
-    "frontend/rust-lib/lib-dispatch/src/module/container.rs",
-    "frontend/rust-lib/lib-dispatch/src/module/data.rs",
-    "frontend/rust-lib/lib-dispatch/src/module/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/module/module.rs",
-    "frontend/rust-lib/lib-dispatch/src/request/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/request/payload.rs",
-    "frontend/rust-lib/lib-dispatch/src/request/request.rs",
-    "frontend/rust-lib/lib-dispatch/src/response/builder.rs",
-    "frontend/rust-lib/lib-dispatch/src/response/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/response/responder.rs",
-    "frontend/rust-lib/lib-dispatch/src/response/response.rs",
-    "frontend/rust-lib/lib-dispatch/src/runtime.rs",
-    "frontend/rust-lib/lib-dispatch/src/service/boxed.rs",
-    "frontend/rust-lib/lib-dispatch/src/service/handler.rs",
-    "frontend/rust-lib/lib-dispatch/src/service/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/service/service.rs",
-    "frontend/rust-lib/lib-dispatch/src/util/mod.rs",
-    "frontend/rust-lib/lib-dispatch/src/util/ready.rs",
-    "frontend/rust-lib/lib-infra/src/box_any.rs",
-    "frontend/rust-lib/lib-infra/src/compression.rs",
-    "frontend/rust-lib/lib-infra/src/encryption/mod.rs",
-    "frontend/rust-lib/lib-infra/src/file_util.rs",
-    "frontend/rust-lib/lib-infra/src/isolate_stream.rs",
-    "frontend/rust-lib/lib-infra/src/lib.rs",
-    "frontend/rust-lib/lib-infra/src/native/future.rs",
-    "frontend/rust-lib/lib-infra/src/native/mod.rs",
-    "frontend/rust-lib/lib-infra/src/priority_task/mod.rs",
-    "frontend/rust-lib/lib-infra/src/priority_task/queue.rs",
-    "frontend/rust-lib/lib-infra/src/priority_task/scheduler.rs",
-    "frontend/rust-lib/lib-infra/src/priority_task/store.rs",
-    "frontend/rust-lib/lib-infra/src/priority_task/task.rs",
-    "frontend/rust-lib/lib-infra/src/ref_map.rs",
-    "frontend/rust-lib/lib-infra/src/stream_util.rs",
-    "frontend/rust-lib/lib-infra/src/util.rs",
-    "frontend/rust-lib/lib-infra/src/validator_fn.rs",
-    "frontend/rust-lib/lib-infra/src/wasm/future.rs",
-    "frontend/rust-lib/lib-infra/src/wasm/mod.rs",
-    "frontend/rust-lib/lib-log/src/layer.rs",
-    "frontend/rust-lib/lib-log/src/lib.rs",
-    "frontend/rust-lib/lib-log/src/stream_log.rs",
     "frontend/scripts/flutter_release_build/build_flowy.dart",
     "frontend/scripts/flutter_release_build/tool.dart"
   ],
@@ -2453,6 +1773,14 @@
     {
       "path": "frontend/appflowy_flutter/android/app/src/main/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/android/app/src/main/Classes/binding.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/android/app/src/main/kotlin/com/example/app_flowy/MainActivity.kt",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/android/app/src/main/res/drawable/launcher_background.xml",
@@ -3355,6 +2683,10 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/ios/Runner/Runner-Bridging-Header.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/lib/env/backend_env.dart",
       "reason": "codeboardingignore"
     },
@@ -3385,6 +2717,22 @@
     {
       "path": "frontend/appflowy_flutter/linux/flutter/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/linux/flutter/dart_ffi/binding.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/linux/main.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/linux/my_application.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/linux/my_application.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/linux/packaging/deb/make_config.yaml",
@@ -3447,6 +2795,10 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/android/src/main/kotlin/com/plugin/appflowy_backend/AppFlowyBackendPlugin.kt",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/README.md",
       "reason": "other"
     },
@@ -3461,6 +2813,10 @@
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/android/app/src/main/AndroidManifest.xml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/android/app/src/main/kotlin/com/plugin/flowy_sdk_example/MainActivity.kt",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/android/app/src/main/res/drawable/launch_background.xml",
@@ -3513,6 +2869,10 @@
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/ios/Runner/Runner-Bridging-Header.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/macos/Flutter/Flutter-Debug.xcconfig",
@@ -3571,6 +2931,42 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/flutter_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/flutter_window.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/main.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/resource.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/utils.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/utils.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/win32_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/win32_window.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/ios/Classes/AppFlowyBackendPlugin.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/ios/Classes/AppFlowyBackendPlugin.m",
       "reason": "other"
     },
@@ -3579,8 +2975,20 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/ios/Classes/binding.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/linux/Classes/binding.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/macos/Classes/AppFlowyBackendPlugin.swift",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/macos/Classes/binding.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/pubspec.yaml",
@@ -3597,6 +3005,26 @@
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_backend/windows/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/windows/app_flowy_backend_plugin.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/windows/appflowy_backend_plugin.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/windows/appflowy_backend_plugin_c_api.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/windows/include/appflowy_backend/app_flowy_backend_plugin.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_backend/windows/include/appflowy_backend/appflowy_backend_plugin_c_api.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/CHANGELOG.md",
@@ -3625,6 +3053,10 @@
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/android/app/src/main/AndroidManifest.xml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/android/app/src/main/res/drawable/launch_background.xml",
@@ -3671,12 +3103,28 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/ios/Runner/Runner-Bridging-Header.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/CMakeLists.txt",
       "reason": "other"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/flutter/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/main.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/my_application.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/linux/my_application.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/macos/Flutter/Flutter-Debug.xcconfig",
@@ -3737,6 +3185,38 @@
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/flutter_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/flutter_window.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/main.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/resource.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/utils.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/utils.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/win32_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/appflowy_popover/example/windows/runner/win32_window.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/appflowy_popover/pubspec.yaml",
@@ -3879,6 +3359,18 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/FlowyInfraUIPlugin.java",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/event/KeyboardEventHandler.java",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/kotlin/com/example/flowy_infra_ui/FlowyInfraUiPlugin.kt",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/README.md",
       "reason": "other"
     },
@@ -3893,6 +3385,14 @@
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/AndroidManifest.xml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/flowy_infra_ui_example/MainActivity.kt",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/res/drawable/launch_background.xml",
@@ -3916,7 +3416,7 @@
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/example/android/app/src/main/java/com/example/flowy_infra_ui_example/FlutterActivity.java",
-      "reason": "other"
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Flutter/Debug.xcconfig",
@@ -3943,12 +3443,28 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/ios/Runner/Runner-Bridging-Header.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/CMakeLists.txt",
       "reason": "other"
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/flutter/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/main.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/macos/Flutter/Flutter-Debug.xcconfig",
@@ -4015,6 +3531,38 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/flutter_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/flutter_window.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/main.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/resource.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/utils.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/utils.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/flowy_infra_ui_platform_interface/CHANGELOG.md",
       "reason": "other"
     },
@@ -4059,6 +3607,10 @@
       "reason": "other"
     },
     {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/ios/Classes/FlowyInfraUIPlugin.h",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/ios/Classes/FlowyInfraUIPlugin.m",
       "reason": "other"
     },
@@ -4069,6 +3621,22 @@
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/flowy_infra_u_i_plugin.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/flowy_infra_ui_plugin.cc",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/include/flowy_infra_ui/flowy_infra_u_i_plugin.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/linux/include/flowy_infra_ui/flowy_infra_ui_plugin.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/macos/Classes/FlowyInfraUiPlugin.swift",
@@ -4085,6 +3653,18 @@
     {
       "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/flowy_infra_ui_plugin.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/include/flowy_infra_ui/flowy_infra_u_i_plugin.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/packages/flowy_infra_ui/windows/include/flowy_infra_ui/flowy_infra_ui_plugin.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/appflowy_flutter/packages/flowy_svg/analysis_options.yaml",
@@ -4497,6 +4077,38 @@
     {
       "path": "frontend/appflowy_flutter/windows/runner/CMakeLists.txt",
       "reason": "other"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/flutter_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/flutter_window.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/main.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/resource.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/utils.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/utils.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/win32_window.cpp",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/appflowy_flutter/windows/runner/win32_window.h",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/resources/flowy_icons/16x/add.svg",
@@ -7619,36 +7231,200 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/ast.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/ctxt.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/event_attrs.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/node_attrs.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/pb_attrs.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/symbol.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-ast/src/ty_ext.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/build-tool/flowy-codegen/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/ast.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/dart_event.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/event_template.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/event_template.tera",
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/dart_event/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/flowy_toml.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/ast.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_gen.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/proto_info.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/derive_meta.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/derive_meta.tera",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/derive_meta/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/mod.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/enum.tera",
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/enum_template.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/struct.tera",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/protobuf_file/template/proto_file/struct_template.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/event_template.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/event_template.tera",
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/ts_event/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-codegen/src/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/build-tool/flowy-derive/Cargo.toml",
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/dart_event/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/node/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/deserialize.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/enum_serde.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/serialize.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/build-tool/flowy-derive/src/proto_buf/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/collab-integrate/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/collab-integrate/src/collab_builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/collab-integrate/src/config.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/collab-integrate/src/instant_indexed_data_provider.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/collab-integrate/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/collab-integrate/src/plugin_provider.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/covtest.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/dart-ffi/Cargo.toml",
@@ -7659,8 +7435,92 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/dart-ffi/binding.h",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/appflowy_yaml.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/c.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/env_serde.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/model/ffi_request.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/model/ffi_response.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/model/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/notification/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/dart-ffi/src/notification/sender.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/event-integration-test/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/chat_event.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/database_event.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/document/document_event.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/document/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/document/utils.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/document_event.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/event_builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/folder_event.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/event-integration-test/src/user_event.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/event-integration-test/tests/asset/japan_trip.md",
@@ -7883,7 +7743,227 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-ai/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/ai_manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/ai_tool/markdown.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/ai_tool/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/ai_tool/pdf.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/chat.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/completion.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/context.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/document_indexer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/embedder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/indexer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/scheduler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/embeddings/store.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/context_question_chain.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/conversation_chain.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/chains/related_question_chain.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/format_prompt.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/llm.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/llm_chat.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/retriever/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/retriever/multi_source_retriever.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/retriever/sqlite_retriever.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/chat/summary_memory.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/completion/chain.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/completion/impls.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/completion/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/completion/stream_interpreter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/completion/writer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/database/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/database/summary.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/database/translate.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/prompt/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/request.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/resource.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/local_ai/stream_util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/mcp/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/mcp/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/middleware/chat_service_mw.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/middleware/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/model_select.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-ai/src/model_select_test.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/offline/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/offline/offline_message_sync.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/search/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/search/summary.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai/src/stream_message.rs",
       "reason": "codeboardingignore"
     },
     {
@@ -7923,6 +8003,46 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/persistence/chat_message_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/persistence/chat_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/persistence/collab_metadata_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/persistence/collab_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/persistence/local_model_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/persistence/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-ai-pub/src/user_service.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-core/Cargo.toml",
       "reason": "other"
     },
@@ -7931,8 +8051,112 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-core/src/app_life_cycle.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/config.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/chat_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/cloud_service_impl.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/collab_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/database_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/document_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/file_storage_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/folder_deps_chat_impl.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/folder_deps_database_impl.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/folder_deps_doc_impl.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/folder_deps/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/reminder_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/search_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/deps_resolve/user_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/folder_view_observer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/full_indexed_data_provider.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/indexed_data_consumer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/indexing_data_runner.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/log_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/module.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-core/src/server_layer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-database-pub/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database-pub/src/lib.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-database2/Cargo.toml",
@@ -7941,6 +8165,698 @@
     {
       "path": "frontend/rust-lib/flowy-database2/Flowy.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/board_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_changeset.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/calculation/calculation_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/calculation/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/calendar_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/cell_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/database_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/field_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/field_settings_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/file_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/checkbox_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/checklist_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/date_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/filter_changeset.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/media_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/number_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/relation_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/select_option_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/text_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/time_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/filter_entities/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/group_entities/configuration.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/group_entities/group.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/group_entities/group_changeset.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/group_entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/macros.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/parser.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/position_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/row_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/setting_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/share_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/sort_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checkbox_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/checklist_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/date_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/media_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/number_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/relation_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/select_option_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/summary_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/text_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/time_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/timestamp_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/translate_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/type_option_entities/url_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/entities/view_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/calculations/cache.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/calculations/controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/calculations/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/calculations/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/calculations/service.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/calculations/task.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/cell/cell_data_cache.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/cell/cell_operation.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/cell/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/cell/type_cell_data.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database/database_editor.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database/database_observe.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/layout_deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/notifier.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/view_calculations.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/view_editor.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/view_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/view_group.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/view_operation.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/view_sort.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/database_view/views.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/field_builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/field_operation.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_option_transform.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_tests.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/checkbox_type_option_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checkbox_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checklist_type_option/checklist_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checklist_type_option/checklist_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/checklist_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/date_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/date_tests.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/date_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/date_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/media_file.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/media_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/media_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/media_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/number_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/number_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/number_type_option/number_type_option_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/relation_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/relation_type_option/relation.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/relation_type_option/relation_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/multi_select_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/select_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/select_option_tests.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/select_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/single_select_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/selection_type_option/type_option_transform.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/summary_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/summary_type_option/summary.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/text_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/text_tests.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/text_type_option/text_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/time_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/time_type_option/time.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/time_type_option/time_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/timestamp_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/timestamp_type_option/timestamp_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/translate_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/translate_type_option/translate.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/type_option_cell.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/url_tests.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/url_type_option.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/url_type_option/url_type_option_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field/type_options/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field_settings/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field_settings/field_settings_builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/field_settings/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/filter/controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/filter/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/filter/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/filter/task.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/action.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/configuration.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/checkbox_controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/date_controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/default_controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/multi_select_controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/single_select_controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/select_option_controller/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/controller_impls/url_controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/group_builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/group/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/setting/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/setting/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/share/csv/export.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/share/csv/import.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/share/csv/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/share/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/snapshot/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/snapshot/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/sort/controller.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/sort/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/sort/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/services/sort/task.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/template.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/utils/cache.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-database2/src/utils/mod.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-database2/tests/database/block_test/mod.rs",
@@ -8155,12 +9071,124 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-date/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-date/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-date/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-date/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-date/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-document/Cargo.toml",
       "reason": "other"
     },
     {
       "path": "frontend/rust-lib/flowy-document/Flowy.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/deps.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/document.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/document_data.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parse.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/constant.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/document_data_parser.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/external/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/external/parser.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/external/utils.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/json/block.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/json/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/json/parser.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/parser_entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/parser/utils.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document/src/reminder.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-document/tests/assets/html/bulleted_list.html",
@@ -8427,12 +9455,76 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-document-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-document-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-error/Cargo.toml",
       "reason": "other"
     },
     {
       "path": "frontend/rust-lib/flowy-error/Flowy.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/code.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/errors.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/collab.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/collab_persistence.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/database.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/dispatch.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/reqwest.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/serde.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/tantivy.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/impl_from/url.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-error/src/lib.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-folder/Cargo.toml",
@@ -8443,8 +9535,168 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-folder/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/icon.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/import.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/empty_str.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/trash/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/trash/trash_id.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/view/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/view/view_id.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/view/view_name.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/view/view_thumbnail.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/workspace_desc.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/workspace_id.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/parser/workspace/workspace_name.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/publish.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/trash.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/view.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/entities/workspace.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/manager_init.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/manager_observer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/publish_util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/share/import.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/share/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/user_default.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder/src/view_operation.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-folder-pub/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/query.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/sql/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/sql/workspace_shared_user_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-folder-pub/src/sql/workspace_shared_view_sql.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-notification/Cargo.toml",
@@ -8455,12 +9707,92 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-notification/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-notification/src/builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-notification/src/debounce.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-notification/src/entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-notification/src/entities/subject.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-notification/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-search/Cargo.toml",
       "reason": "other"
     },
     {
       "path": "frontend/rust-lib/flowy-search/Flowy.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/document/cloud_search_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/document/local_search_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/document/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/entities/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/entities/query.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/entities/result.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/entities/search_filter.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/services/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search/src/services/mod.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-search/tests/main.rs",
@@ -8475,12 +9807,188 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-search-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search-pub/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search-pub/src/schema.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search-pub/src/tantivy_state.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-search-pub/src/tantivy_state_init.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-server/Cargo.toml",
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/define.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/chat.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/database.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/document.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/file_storage.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/folder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/search.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/cloud_service_impl.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/dto.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/user/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/impls/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/af_cloud/server.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/chat.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/database.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/document.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/folder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/search.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/impls/user.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/server.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/template/create_workspace.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/template/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/uid.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/local_server/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/response.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/server.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server/src/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-server-pub/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server-pub/src/af_cloud_config.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server-pub/src/native/af_cloud_config.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server-pub/src/native/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server-pub/src/wasm/af_cloud_config.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-server-pub/src/wasm/mod.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-sqlite/Cargo.toml",
@@ -8747,12 +10255,72 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-sqlite/src/kv/kv.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/kv/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/kv/schema.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/schema.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/conn_ext.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/database.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/errors.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/pool.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite/src/sqlite_impl/pragma.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-sqlite-vec/Cargo.toml",
       "reason": "other"
     },
     {
       "path": "frontend/rust-lib/flowy-sqlite-vec/migrations/001-init/up.sql",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite-vec/src/db.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite-vec/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite-vec/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-sqlite-vec/src/migration.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-sqlite-vec/tests/main.rs",
@@ -8767,12 +10335,68 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-storage/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/file_cache.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/sqlite_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage/src/uploader.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-storage/tests/multiple_part_upload_test.rs",
       "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-storage-pub/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage-pub/src/chunked_byte.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-storage-pub/src/storage.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/flowy-user/Cargo.toml",
@@ -8783,12 +10407,340 @@
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-user/build.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/auth.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/date_time.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/import_data.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_email.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_icon.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_id.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_name.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_openai_key.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_password.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/parser/user_stability_ai_key.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/realtime.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/reminder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/user_profile.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/user_setting.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/entities/workspace.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/event_handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/event_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/anon_user_workspace.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/doc_key_with_workspace.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/document_empty_content.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/migration.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/session_migration.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/workspace_and_favorite_v1.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/migrations/workspace_trash_v1.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/notification.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/authenticate_user.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/billing_check.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/cloud_config.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/collab_interact.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/data_import/appflowy_data_import.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/data_import/importer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/data_import/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/db.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/services/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/user_manager/manager.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/user_manager/manager_history_user.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/user_manager/manager_user_awareness.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/user_manager/manager_user_encryption.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/user_manager/manager_user_workspace.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user/src/user_manager/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/flowy-user-pub/Cargo.toml",
       "reason": "other"
     },
     {
+      "path": "frontend/rust-lib/flowy-user-pub/src/cloud.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/entities.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/session.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/sql/member_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/sql/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/sql/user_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/sql/workspace_setting_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/sql/workspace_sql.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/flowy-user-pub/src/workspace_service.rs",
+      "reason": "codeboardingignore"
+    },
+    {
       "path": "frontend/rust-lib/lib-dispatch/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/byte_trait.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/data.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/dispatcher.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/errors/errors.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/errors/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/macros.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/module/container.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/module/data.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/module/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/module/module.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/request/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/request/payload.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/request/request.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/response/builder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/response/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/response/responder.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/response/response.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/runtime.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/service/boxed.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/service/handler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/service/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/service/service.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/util/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-dispatch/src/util/ready.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/lib-dispatch/tests/api/main.rs",
@@ -8801,6 +10753,82 @@
     {
       "path": "frontend/rust-lib/lib-infra/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/box_any.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/compression.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/encryption/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/file_util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/isolate_stream.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/native/future.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/native/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/priority_task/mod.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/priority_task/queue.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/priority_task/scheduler.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/priority_task/store.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/priority_task/task.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/ref_map.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/stream_util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/util.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/validator_fn.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/wasm/future.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-infra/src/wasm/mod.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/lib-infra/tests/main.rs",
@@ -8825,6 +10853,18 @@
     {
       "path": "frontend/rust-lib/lib-log/Cargo.toml",
       "reason": "other"
+    },
+    {
+      "path": "frontend/rust-lib/lib-log/src/layer.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-log/src/lib.rs",
+      "reason": "codeboardingignore"
+    },
+    {
+      "path": "frontend/rust-lib/lib-log/src/stream_log.rs",
+      "reason": "codeboardingignore"
     },
     {
       "path": "frontend/rust-lib/rust-toolchain.toml",
@@ -9069,11 +11109,11 @@
   ],
   "summary": {
     "total_files": 4043,
-    "analyzed": 2370,
-    "not_analyzed": 1673,
+    "analyzed": 1690,
+    "not_analyzed": 2353,
     "not_analyzed_by_reason": {
-      "other": 1193,
-      "codeboardingignore": 480
+      "other": 1192,
+      "codeboardingignore": 1161
     }
   }
 }

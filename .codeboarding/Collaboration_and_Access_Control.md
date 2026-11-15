@@ -1,27 +1,29 @@
 ```mermaid
 graph LR
-    Document_Sharing_Panel["Document Sharing Panel"]
-    Shared_Navigation_Section["Shared Navigation Section"]
-    Page_Access_Control["Page Access Control"]
-    Data_Storage_Location_Settings["Data Storage Location Settings"]
+    Document_Sharing_and_Permissions["Document Sharing and Permissions"]
+    Shared_Pages_Section["Shared Pages Section"]
+    Page_Access_Level_Control["Page Access Level Control"]
+    User_Data_Storage_Settings["User Data Storage Settings"]
     User_Workspace_Management["User Workspace Management"]
-    Document_Sharing_Panel -- "maps view data to" --> Shared_Navigation_Section
+    Document_Sharing_and_Permissions -- "maps protobuf views to shared page models" --> Shared_Pages_Section
+    click Document_Sharing_and_Permissions href "./Document_Sharing_and_Permissions.md" "Details"
+    click Shared_Pages_Section href "./Shared_Pages_Section.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Coordinates page access permissions, sharing with users or groups, data location settings, and shared section logic.
+Handles page sharing, access level control, user invitations, and shared folder views.
 
-### Document Sharing Panel
-Provides UI widgets, business logic, and repositories for inviting collaborators, modifying permissions, and sharing documents.
+### Document Sharing and Permissions [[Expand]](./Document_Sharing_and_Permissions.md)
+Provides UI dialogs, data models, and BLoC logic for inviting users, managing access levels, and generating share links for documents.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.features.share_tab.presentation.share_tab.ShareTab`:20-43
 - `frontend.appflowy_flutter.lib.features.share_tab.logic.share_tab_bloc.ShareTabBloc`:19-420
+- `frontend.appflowy_flutter.lib.features.share_tab.presentation.share_tab.ShareTab`:20-43
 - `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.share_with_user_repository.ShareWithUserRepository`:10-60
 
 
@@ -254,16 +256,16 @@ Provides UI widgets, business logic, and repositories for inviting collaborators
   - `frontend.appflowy_flutter.lib.features.util.extensions.SharedSectionTypeExtension.sharedSectionType` (L114-L125) - Method
 
 
-### Shared Navigation Section
-Manages and displays the list of shared documents and sections in navigation, including page actions and refreshing.
+### Shared Pages Section [[Expand]](./Shared_Pages_Section.md)
+Displays and manages the list of shared pages accessible to the user across desktop and mobile layouts.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.features.shared_section.presentation.shared_section.SharedSection`:26-159
 - `frontend.appflowy_flutter.lib.features.shared_section.logic.shared_section_bloc.SharedSectionBloc`:16-195
-- `frontend.appflowy_flutter.lib.features.shared_section.data.repositories.shared_pages_repository.SharedPagesRepository`:9-15
+- `frontend.appflowy_flutter.lib.features.shared_section.presentation.shared_section.SharedSection`:26-159
 - `frontend.appflowy_flutter.lib.features.shared_section.models.shared_page.SharedPage`:6-14
+- `frontend.appflowy_flutter.lib.features.shared_section.data.repositories.shared_pages_repository.SharedPagesRepository`:9-15
 
 
 
@@ -376,8 +378,8 @@ Manages and displays the list of shared documents and sections in navigation, in
   - `frontend.appflowy_flutter.lib.features.shared_section.presentation.widgets.shared_section_loading.SharedSectionLoading.build` (L8-L15) - Method
 
 
-### Page Access Control
-Coordinates page lock statuses, view permissions, and access level state for individual document views.
+### Page Access Level Control
+Tracks and resolves view lock states, section types, and permission levels for individual document views.
 
 
 **Related Classes/Methods**:
@@ -448,15 +450,14 @@ Coordinates page lock statuses, view permissions, and access level state for ind
   - `frontend.appflowy_flutter.lib.features.page_access_level.logic.page_access_level_state.PageAccessLevelState.toString` (L94-L96) - Method
 
 
-### Data Storage Location Settings
-Manages user data storage path configuration, defaults, and custom path preferences.
+### User Data Storage Settings
+Manages reading, resetting, and updating custom filesystem storage paths for local user data.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.features.settings.logic.data_location_bloc.DataLocationBloc`:8-76
 - `frontend.appflowy_flutter.lib.features.settings.data.repositories.settings_repository.SettingsRepository`:6-14
-- `frontend.appflowy_flutter.lib.features.settings.data.models.user_data_location.UserDataLocation`:3-14
 
 
 
@@ -505,7 +506,7 @@ Manages user data storage path configuration, defaults, and custom path preferen
 
 
 ### User Workspace Management
-Handles user workspace lifecycle operations including creating, opening, deleting, and updating workspaces.
+Coordinates workspace lifecycle operations including creating, deleting, opening, and synchronizing workspace subscriptions.
 
 
 **Related Classes/Methods**:

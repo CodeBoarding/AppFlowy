@@ -1,24 +1,21 @@
 ```mermaid
 graph LR
-    General_Application_Utilities["General Application Utilities"]
-    Color_and_Formatting_Utilities["Color and Formatting Utilities"]
-    Theme_Mode_Extensions["Theme Mode Extensions"]
+    General_Application_Helper_Utilities["General Application Helper Utilities"]
+    Color_and_Field_Presentation_Helpers["Color and Field Presentation Helpers"]
+    Theme_Mode_Presentation_Utilities["Theme Mode Presentation Utilities"]
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Offers formatting helpers, string/theme extensions, debounce utilities, and common Dart runtime extensions.
+Provides shared general utilities such as debounce, throttle, color conversion, string formatting, and date helpers.
 
-### General Application Utilities
-Provides general-purpose helper utilities and extensions for rate limiting, navigation context, time, and file handling.
+### General Application Helper Utilities
+Provides utility functions and extensions for rate limiting, execution timing, string metrics, file handling, and context navigation.
 
 
-**Related Classes/Methods**:
-
-- `frontend.appflowy_flutter.lib.util.share_log_files.shareLogFiles`:13-78
-
+**Related Classes/Methods**: _None_
 
 
 **Source Files:**
@@ -79,8 +76,8 @@ Provides general-purpose helper utilities and extensions for rate limiting, navi
   - `frontend.appflowy_flutter.lib.util.xfile_ext.ToMediaFileTypePB.toMediaFileTypePB` (L91-L108) - Method
 
 
-### Color and Formatting Utilities
-Provides utilities and extensions for color generation, hex conversions, string formatting, and field visualization.
+### Color and Field Presentation Helpers
+Provides extensions for color generation, hex string conversions, database field styling, and string transformations.
 
 
 **Related Classes/Methods**: _None_
@@ -118,8 +115,8 @@ Provides utilities and extensions for color generation, hex conversions, string 
   - `frontend.appflowy_flutter.lib.util.string_extension.CounterExtension.getCounter` (L89-L93) - Method
 
 
-### Theme Mode Extensions
-Provides helper extensions on Flutter ThemeData and ThemeMode to determine brightness states.
+### Theme Mode Presentation Utilities
+Provides convenience extensions on Flutter theme data and theme modes for brightness detection and localized label text.
 
 
 **Related Classes/Methods**:

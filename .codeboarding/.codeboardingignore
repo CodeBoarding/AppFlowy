@@ -1,3 +1,30 @@
+# Dart-only analysis: exclude the other engine-supported source languages.
+*.py
+*.ts
+*.tsx
+*.mts
+*.cts
+*.js
+*.jsx
+*.mjs
+*.cjs
+*.go
+*.java
+*.kt
+*.php
+*.rs
+*.cs
+*.c
+*.cpp
+*.cc
+*.cxx
+*.hpp
+*.hh
+*.hxx
+*.h
+*.cu
+*.cuh
+
 # CodeBoarding Ignore File
 # Add patterns here for files and directories that should be excluded from CodeBoarding analysis.
 # Use the same format as .gitignore (gitignore syntax / gitwildmatch patterns).

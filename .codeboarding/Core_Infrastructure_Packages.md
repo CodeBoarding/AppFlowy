@@ -1,166 +1,35 @@
 ```mermaid
 graph LR
-    Foundation_Widgets_and_Utilities["Foundation Widgets and Utilities"]
-    Design_System_and_Theming["Design System and Theming"]
-    Native_Backend_FFI_Bridge["Native Backend FFI Bridge"]
+    Foundational_Infrastructure_and_UI_Widgets["Foundational Infrastructure and UI Widgets"]
+    Design_System_UI_Components["Design System UI Components"]
+    Backend_Bridge_and_Result_Types["Backend Bridge and Result Types"]
+    Floating_Overlay_and_Popover_Engine["Floating Overlay and Popover Engine"]
+    Foundational_Infrastructure_and_UI_Widgets -- "delegates popover rendering to" --> Floating_Overlay_and_Popover_Engine
+    click Foundational_Infrastructure_and_UI_Widgets href "./Foundational_Infrastructure_and_UI_Widgets.md" "Details"
+    click Design_System_UI_Components href "./Design_System_UI_Components.md" "Details"
+    click Backend_Bridge_and_Result_Types href "./Backend_Bridge_and_Result_Types.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides cross-platform UI widget libraries, backend FFI bridges, popovers, design system components, and foundation services.
+Houses shared foundation packages including appflowy_backend, UI design system components, popover overlays, and result types.
 
-### Foundation Widgets and Utilities
-Provides foundational UI widgets, popover overlays, SVG rendering, and low-level infrastructure utilities such as color schemes, file pickers, and plugin management.
+### Foundational Infrastructure and UI Widgets [[Expand]](./Foundational_Infrastructure_and_UI_Widgets.md)
+Provides low-level Flutter infrastructure, theme definitions, file pickers, SVG rendering, and styled UI widgets.
 
 
-**Related Classes/Methods**: _None_
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.src.flowy_overlay.appflowy_popover.AppFlowyPopover`:24-133
+- `frontend.appflowy_flutter.packages.flowy_infra.lib.colorscheme.colorscheme.FlowyColorScheme`:37-199
+- `frontend.appflowy_flutter.packages.flowy_svg.lib.src.flowy_svg.FlowySvg`:20-146
+
 
 
 **Source Files:**
 
-- `frontend/appflowy_flutter/packages/appflowy_popover/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.android.app.src.main.kotlin.com.example.example.MainActivity` (L5-L6) - Class
-- `frontend/appflowy_flutter/packages/appflowy_popover/example/lib/example_button.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.PopoverMenu` (L4-L9) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.PopoverMenu.PopoverMenu` (L5-L5) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.PopoverMenu.createState` (L8-L8) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button._PopoverMenuState` (L11-L80) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button._PopoverMenuState.build` (L15-L79) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.ExampleButton` (L82-L111) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.ExampleButton.ExampleButton` (L83-L88) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.ExampleButton.build` (L95-L110) - Method
-- `frontend/appflowy_flutter/packages/appflowy_popover/example/lib/main.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.main` (L6-L8) - Function
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyApp` (L10-L23) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyApp.MyApp` (L11-L11) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyApp.build` (L14-L22) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyHomePage` (L25-L32) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyHomePage.MyHomePage` (L26-L26) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyHomePage.createState` (L31-L31) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main._MyHomePageState` (L34-L116) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main._MyHomePageState.build` (L36-L115) - Method
-- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/follower.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower` (L4-L42) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower.PopoverCompositedTransformFollower` (L5-L13) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower.createRenderObject` (L16-L26) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower.updateRenderObject` (L29-L41) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverRenderFollowerLayer` (L44-L65) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverRenderFollowerLayer.PopoverRenderFollowerLayer` (L45-L53) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverRenderFollowerLayer.paint` (L58-L64) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.EdgeFollowerLayer` (L67-L74) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.EdgeFollowerLayer.EdgeFollowerLayer` (L68-L73) - Constructor
-- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/layout.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate` (L8-L231) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.PopoverLayoutDelegate` (L9-L16) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.shouldRelayout` (L33-L51) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.getSize` (L54-L59) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.getConstraintsForChild` (L62-L68) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.getPositionForChild` (L71-L212) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.copyWith` (L214-L230) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget` (L233-L256) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget.PopoverTarget` (L234-L238) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget.createRenderObject` (L243-L247) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget.updateRenderObject` (L250-L255) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox` (L258-L305) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.PopoverTargetRenderBox` (L259-L262) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.alwaysNeedsCompositing` (L267-L267) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.performLayout` (L270-L273) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.paint` (L276-L279) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.detach` (L282-L286) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.attach` (L289-L298) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.debugFillProperties` (L301-L304) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLink` (L307-L310) - Class
-- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/mask.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry` (L8-L61) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.contains` (L11-L11) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.isEmpty` (L13-L13) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.isNotEmpty` (L14-L14) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.addEntry` (L16-L32) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.removeEntry` (L34-L37) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.popEntry` (L39-L52) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.isLastEntryAsBarrier` (L54-L60) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.OverlayEntryContext` (L63-L82) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.OverlayEntryContext.OverlayEntryContext` (L64-L70) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.OverlayEntryContext.toString` (L79-L81) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.PopoverMask` (L84-L103) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.PopoverMask.PopoverMask` (L85-L89) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.PopoverMask.build` (L95-L102) - Method
-- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/mutex.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex` (L7-L33) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.PopoverMutex` (L8-L8) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.addPopoverListener` (L12-L14) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.removePopoverListener` (L16-L18) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.close` (L20-L20) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.state` (L22-L22) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.state=` (L24-L24) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.removeState` (L26-L28) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.dispose` (L30-L32) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex._PopoverStateNotifier` (L35-L47) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex._PopoverStateNotifier.state` (L38-L38) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex._PopoverStateNotifier.state=` (L40-L46) - Method
-- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/popover.dart`
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController` (L9-L15) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController.close` (L12-L12) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController.show` (L13-L13) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController.showAt` (L14-L14) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverTriggerFlags` (L17-L22) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection` (L24-L47) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topLeft` (L26-L26) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topRight` (L27-L27) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomLeft` (L28-L28) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomRight` (L29-L29) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.center` (L30-L30) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topWithLeftAligned` (L33-L33) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topWithCenterAligned` (L34-L34) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topWithRightAligned` (L35-L35) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.rightWithTopAligned` (L36-L36) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.rightWithCenterAligned` (L37-L37) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.rightWithBottomAligned` (L38-L38) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomWithLeftAligned` (L39-L39) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomWithCenterAligned` (L40-L40) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomWithRightAligned` (L41-L41) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.leftWithTopAligned` (L42-L42) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.leftWithCenterAligned` (L43-L43) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.leftWithBottomAligned` (L44-L44) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.custom` (L46-L46) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverClickHandler` (L49-L52) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverClickHandler.listener` (L50-L50) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverClickHandler.gestureDetector` (L51-L51) - Enum
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover` (L54-L153) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover.Popover` (L55-L82) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover.createState` (L152-L152) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState` (L155-L507) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.initState` (L177-L182) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.deactivate` (L185-L189) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.dispose` (L192-L197) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.build` (L200-L205) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.reassemble` (L208-L215) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.showOverlay` (L217-L247) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.close` (L249-L269) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.close.callback` (L254-L259) - Function
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._removeRootOverlay` (L271-L277) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildChild` (L279-L306) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildClickHandler` (L308-L342) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._callHandler` (L344-L350) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildOverlayContent` (L352-L366) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildMask` (L368-L377) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildPopoverContainer` (L379-L406) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildAnimations` (L408-L416) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildFadeAnimation` (L418-L428) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildScaleAnimation` (L430-L440) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildSlideAnimation` (L442-L453) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._getSlideAnimationValues` (L455-L506) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer` (L509-L541) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.PopoverContainer` (L510-L517) - Constructor
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.createState` (L526-L526) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.of` (L528-L533) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.maybeOf` (L535-L540) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState` (L543-L559) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState.build` (L545-L554) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState.close` (L556-L556) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState.closeAll` (L558-L558) - Method
 - `frontend/appflowy_flutter/packages/flowy_infra/lib/colorscheme/colorscheme.dart`
   - `frontend.appflowy_flutter.packages.flowy_infra.lib.colorscheme.colorscheme.FlowyColorScheme` (L37-L199) - Class
   - `frontend.appflowy_flutter.packages.flowy_infra.lib.colorscheme.colorscheme.FlowyColorScheme.FlowyColorScheme` (L38-L94) - Constructor
@@ -358,32 +227,6 @@ Provides foundational UI widgets, popover overlays, SVG rendering, and low-level
   - `frontend.appflowy_flutter.packages.flowy_infra.lib.uuid.UuidType` (L15-L19) - Enum
   - `frontend.appflowy_flutter.packages.flowy_infra.lib.uuid.UuidType.publicSpace` (L17-L17) - Enum
   - `frontend.appflowy_flutter.packages.flowy_infra.lib.uuid.UuidType.privateSpace` (L18-L18) - Enum
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/FlowyInfraUIPlugin.java`
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin` (L19-L81) - Class
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onAttachedToEngine(FlutterPluginBinding)` (L33-L43) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onDetachedFromEngine(FlutterPluginBinding)` (L46-L49) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onAttachedToActivity(ActivityPluginBinding)` (L52-L54) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onDetachedFromActivityForConfigChanges()` (L57-L59) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onReattachedToActivityForConfigChanges(ActivityPluginBinding)` (L62-L64) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onDetachedFromActivity()` (L67-L69) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.FlowyInfraUIPlugin.onMethodCall(MethodCall, Result)` (L74-L80) - Method
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/java/com/example/flowy_infra_ui/event/KeyboardEventHandler.java`
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler` (L14-L53) - Class
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler.onListen(Object, EventSink)` (L20-L22) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler.onCancel(Object)` (L25-L27) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler.observeKeyboardAction(Activity)` (L32-L45) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler.observeKeyboardAction(Activity).new OnApplyWindowInsetsListener() {...}` (L35-L44) - Class
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler.observeKeyboardAction(Activity).new OnApplyWindowInsetsListener() {...}.onApplyWindowInsets(View, WindowInsetsCompat)` (L37-L43) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.java.com.example.flowy_infra_ui.event.KeyboardEventHandler.cancelObserveKeyboardAction()` (L47-L52) - Method
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/android/src/main/kotlin/com/example/flowy_infra_ui/FlowyInfraUiPlugin.kt`
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.kotlin.com.example.flowy_infra_ui.FlowyInfraUiPlugin.FlowyInfraUIPlugin` (L12-L35) - Class
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.kotlin.com.example.flowy_infra_ui.FlowyInfraUiPlugin.FlowyInfraUIPlugin.onAttachedToEngine(FlutterPlugin.FlutterPluginBinding)` (L19-L22) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.kotlin.com.example.flowy_infra_ui.FlowyInfraUiPlugin.FlowyInfraUIPlugin.onMethodCall(MethodCall, Result)` (L24-L30) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.android.src.main.kotlin.com.example.flowy_infra_ui.FlowyInfraUiPlugin.FlowyInfraUIPlugin.onDetachedFromEngine(FlutterPlugin.FlutterPluginBinding)` (L32-L34) - Method
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt`
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.android.app.src.main.kotlin.com.example.example.MainActivity` (L5-L6) - Class
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/example/android/app/src/main/kotlin/com/example/flowy_infra_ui_example/MainActivity.kt`
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.android.app.src.main.kotlin.com.example.flowy_infra_ui_example.MainActivity` (L5-L6) - Class
 - `frontend/appflowy_flutter/packages/flowy_infra_ui/example/lib/home/demo_item.dart`
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.lib.home.demo_item.ListItem` (L3-L3) - Class
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.lib.home.demo_item.DemoItem` (L5-L9) - Class
@@ -425,18 +268,6 @@ Provides foundational UI widgets, popover overlays, SVG rendering, and low-level
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.lib.overlay.overlay_screen.OverlayScreen` (L46-L269) - Class
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.lib.overlay.overlay_screen.OverlayScreen.OverlayScreen` (L47-L47) - Constructor
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.example.lib.overlay.overlay_screen.OverlayScreen.build` (L50-L268) - Method
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/main.cc`
-  - `main[c:@F@main#I#**C#]` (L3-L6) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/example/linux/my_application.cc`
-  - `_MyApplication[c:@S@_MyApplication]` (L10-L13) - Class
-  - `my_application_activate[c:my_application.cc@F@my_application_activate#*I#]` (L18-L63) - Function
-  - `my_application_local_command_line[c:my_application.cc@F@my_application_local_command_line#*I#**S0_#S0_#]` (L66-L82) - Function
-  - `my_application_dispose[c:my_application.cc@F@my_application_dispose#*I#]` (L85-L89) - Function
-  - `my_application_class_init[c:my_application.cc@F@my_application_class_init#*I#]` (L91-L95) - Function
-  - `my_application_init[c:my_application.cc@F@my_application_init#*I#]` (L97-L97) - Function
-  - `my_application_new[c:@F@my_application_new#]` (L99-L104) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/example/windows/runner/win32_window.cpp`
-  - `Win32Window.CreateAndShow[c:@S@Win32Window@F@CreateAndShow#&1I#&1$@S@Win32Window@S@Point#&1$@S@Win32Window@S@Size#]` (L105-L130) - Method
 - `frontend/appflowy_flutter/packages/flowy_infra_ui/flowy_infra_ui_platform_interface/lib/flowy_infra_ui_platform_interface.dart`
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.flowy_infra_ui_platform_interface.lib.flowy_infra_ui_platform_interface.FlowyInfraUIPlatform` (L6-L29) - Class
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.flowy_infra_ui_platform_interface.lib.flowy_infra_ui_platform_interface.FlowyInfraUIPlatform.FlowyInfraUIPlatform` (L7-L7) - Constructor
@@ -453,8 +284,6 @@ Provides foundational UI widgets, popover overlays, SVG rendering, and low-level
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.flowy_infra_ui_web.lib.flowy_infra_ui_web.FlowyInfraUIPlugin.registerWith` (L8-L10) - Method
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.flowy_infra_ui_web.lib.flowy_infra_ui_web.FlowyInfraUIPlugin.onKeyboardVisibilityChange` (L15-L18) - Method
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.flowy_infra_ui_web.lib.flowy_infra_ui_web.FlowyInfraUIPlugin.getPlatformVersion` (L21-L24) - Method
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/ios/Classes/FlowyInfraUIPlugin.h`
-  - `FlowyInfraUIPlugin[c:objc(cs)FlowyInfraUIPlugin]` (L3-L4) - Class
 - `frontend/appflowy_flutter/packages/flowy_infra_ui/lib/basis.dart`
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.basis.IndexedCallback` (L2-L2) - Class
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.basis.IndexedValueCallback` (L3-L3) - Class
@@ -897,43 +726,6 @@ Provides foundational UI widgets, popover overlays, SVG rendering, and low-level
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.widget.spacing.HSpace` (L39-L63) - Class
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.widget.spacing.HSpace.HSpace` (L40-L44) - Constructor
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.widget.spacing.HSpace.build` (L50-L62) - Method
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/linux/flowy_infra_u_i_plugin.cc`
-  - `G_DEFINE_TYPE[c:@F@G_DEFINE_TYPE#I#I#*FI()#]` (L17-L17) - Function
-  - `flowy_infra_u_i_plugin_handle_method_call[c:flowy_infra_u_i_plugin.cc@F@flowy_infra_u_i_plugin_handle_method_call#*I#S0_#]` (L20-L38) - Function
-  - `flowy_infra_u_i_plugin_dispose[c:flowy_infra_u_i_plugin.cc@F@flowy_infra_u_i_plugin_dispose#*I#]` (L40-L42) - Function
-  - `flowy_infra_u_i_plugin_class_init[c:flowy_infra_u_i_plugin.cc@F@flowy_infra_u_i_plugin_class_init#*$@S@flowy_infra_u_i_plugin.h@357#]` (L44-L46) - Function
-  - `flowy_infra_u_i_plugin_init[c:flowy_infra_u_i_plugin.cc@F@flowy_infra_u_i_plugin_init#*I#]` (L48-L48) - Function
-  - `method_call_cb[c:flowy_infra_u_i_plugin.cc@F@method_call_cb#*I#S0_#I#]` (L50-L54) - Function
-  - `flowy_infra_u_i_plugin_register_with_registrar[c:@F@flowy_infra_u_i_plugin_register_with_registrar#*I#]` (L56-L70) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/linux/flowy_infra_ui_plugin.cc`
-  - `_FlowyInfraUiPlugin[c:@S@_FlowyInfraUiPlugin]` (L13-L15) - Class
-  - `flowy_infra_ui_plugin_handle_method_call[c:flowy_infra_ui_plugin.cc@F@flowy_infra_ui_plugin_handle_method_call#*I#S0_#]` (L20-L38) - Function
-  - `flowy_infra_ui_plugin_dispose[c:flowy_infra_ui_plugin.cc@F@flowy_infra_ui_plugin_dispose#*I#]` (L40-L42) - Function
-  - `flowy_infra_ui_plugin_class_init[c:flowy_infra_ui_plugin.cc@F@flowy_infra_ui_plugin_class_init#*$@S@flowy_infra_ui_plugin.h@357#]` (L44-L46) - Function
-  - `flowy_infra_ui_plugin_init[c:flowy_infra_ui_plugin.cc@F@flowy_infra_ui_plugin_init#*I#]` (L48-L48) - Function
-  - `method_call_cb[c:flowy_infra_ui_plugin.cc@F@method_call_cb#*I#S0_#I#]` (L50-L54) - Function
-  - `flowy_infra_ui_plugin_register_with_registrar[c:@F@flowy_infra_ui_plugin_register_with_registrar#*I#]` (L56-L70) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/linux/include/flowy_infra_ui/flowy_infra_u_i_plugin.h`
-  - `FlowyInfraUiPlugin[c:flowy_infra_u_i_plugin.h@T@FlowyInfraUiPlugin]` (L14-L14) - Class
-  - `(unnamed struct)[c:flowy_infra_u_i_plugin.h@S@flowy_infra_u_i_plugin.h@357]` (L15-L17) - Class
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.linux.include.flowy_infra_ui.flowy_infra_u_i_plugin.h.FlowyInfraUiPluginClass` (L17-L17) - Class
-  - `flowy_infra_u_i_plugin_get_type[c:@F@flowy_infra_u_i_plugin_get_type#]` (L19-L19) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/linux/include/flowy_infra_ui/flowy_infra_ui_plugin.h`
-  - `FlowyInfraUiPlugin[c:flowy_infra_ui_plugin.h@T@FlowyInfraUiPlugin]` (L14-L14) - Class
-  - `(unnamed struct)[c:flowy_infra_ui_plugin.h@S@flowy_infra_ui_plugin.h@357]` (L15-L17) - Class
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.linux.include.flowy_infra_ui.flowy_infra_ui_plugin.h.FlowyInfraUiPluginClass` (L17-L17) - Class
-  - `flowy_infra_ui_plugin_get_type[c:@F@flowy_infra_ui_plugin_get_type#]` (L19-L19) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/windows/flowy_infra_ui_plugin.cpp`
-  - `(anonymous)FlowyInfraUIPlugin[c:flowy_infra_ui_plugin.cpp@aN@S@FlowyInfraUIPlugin]` (L19-L32) - Class
-  - `FlowyInfraUIPlugin.RegisterWithRegistrar[c:flowy_infra_ui_plugin.cpp@aN@S@FlowyInfraUIPlugin@F@RegisterWithRegistrar#*I#S]` (L21-L21) - Method
-  - `FlowyInfraUIPlugin.RegisterWithRegistrar[c:flowy_infra_ui_plugin.cpp@aN@S@FlowyInfraUIPlugin@F@RegisterWithRegistrar#*I#]` (L35-L50) - Method
-  - `frontend.appflowy_flutter.packages.flowy_infra_ui.windows.flowy_infra_ui_plugin.cpp.(anonymous).RegisterWithRegistrar.lambda@45:7` (L45-L47) - Function
-  - `FlowyInfraUIPlugin.FlowyInfraUIPlugin[c:flowy_infra_ui_plugin.cpp@aN@S@FlowyInfraUIPlugin@F@FlowyInfraUIPlugin#]` (L52-L52) - Constructor
-  - `FlowyInfraUIPlugin.~FlowyInfraUIPlugin[c:flowy_infra_ui_plugin.cpp@aN@S@FlowyInfraUIPlugin@F@~FlowyInfraUIPlugin#]` (L54-L54) - Constructor
-  - `FlowyInfraUIPlugin.HandleMethodCall[c:flowy_infra_ui_plugin.cpp@aN@S@FlowyInfraUIPlugin@F@HandleMethodCall#&1I#I#]` (L56-L73) - Method
-  - `FlowyInfraUIPluginRegisterWithRegistrar[c:@F@FlowyInfraUIPluginRegisterWithRegistrar#I#]` (L77-L82) - Function
-- `frontend/appflowy_flutter/packages/flowy_infra_ui/windows/include/flowy_infra_ui/flowy_infra_u_i_plugin.h`
-  - `FlowyInfraUIPluginRegisterWithRegistrar[c:@F@FlowyInfraUIPluginRegisterWithRegistrar]` (L16-L17) - Function
 - `frontend/appflowy_flutter/packages/flowy_svg/bin/flowy_svg.dart`
   - `frontend.appflowy_flutter.packages.flowy_svg.bin.flowy_svg.main` (L81-L87) - Function
   - `frontend.appflowy_flutter.packages.flowy_svg.bin.flowy_svg._isHelpCommand` (L89-L91) - Function
@@ -962,11 +754,15 @@ Provides foundational UI widgets, popover overlays, SVG rendering, and low-level
   - `frontend.appflowy_flutter.packages.flowy_svg.lib.src.flowy_svg.FlowySvg._normalized` (L133-L145) - Method
 
 
-### Design System and Theming
-Defines the application design system, including theme tokens, color palettes, typography, and reusable UI components such as buttons, menus, and modals.
+### Design System UI Components [[Expand]](./Design_System_UI_Components.md)
+Defines theme specifications, design tokens, and modular Flutter design system widgets.
 
 
-**Related Classes/Methods**: _None_
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.appflowy_theme.AppFlowyTheme`:5-53
+- `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.appflowy_theme.AppFlowyInheritedTheme`:55-72
+
 
 
 **Source Files:**
@@ -1700,8 +1496,8 @@ Defines the application design system, including theme tokens, color palettes, t
   - `frontend.appflowy_flutter.packages.appflowy_ui.script.generate_theme.<unnamed extension>.isColor` (L303-L306) - Method
 
 
-### Native Backend FFI Bridge
-Manages native Rust foreign function interface (FFI) bindings, asynchronous request dispatching, event streaming, and standardized result monads.
+### Backend Bridge and Result Types [[Expand]](./Backend_Bridge_and_Result_Types.md)
+Handles asynchronous FFI dispatch and communication to the Rust backend alongside structured Result types.
 
 
 **Related Classes/Methods**:
@@ -1712,13 +1508,6 @@ Manages native Rust foreign function interface (FFI) bindings, asynchronous requ
 
 **Source Files:**
 
-- `frontend/appflowy_flutter/packages/appflowy_backend/android/src/main/kotlin/com/plugin/appflowy_backend/AppFlowyBackendPlugin.kt`
-  - `frontend.appflowy_flutter.packages.appflowy_backend.android.src.main.kotlin.com.plugin.appflowy_backend.AppFlowyBackendPlugin` (L13-L36) - Class
-  - `frontend.appflowy_flutter.packages.appflowy_backend.android.src.main.kotlin.com.plugin.appflowy_backend.AppFlowyBackendPlugin.onAttachedToEngine(FlutterPlugin.FlutterPluginBinding)` (L20-L23) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_backend.android.src.main.kotlin.com.plugin.appflowy_backend.AppFlowyBackendPlugin.onMethodCall(MethodCall, Result)` (L25-L31) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_backend.android.src.main.kotlin.com.plugin.appflowy_backend.AppFlowyBackendPlugin.onDetachedFromEngine(FlutterPlugin.FlutterPluginBinding)` (L33-L35) - Method
-- `frontend/appflowy_flutter/packages/appflowy_backend/example/android/app/src/main/kotlin/com/plugin/flowy_sdk_example/MainActivity.kt`
-  - `frontend.appflowy_flutter.packages.appflowy_backend.example.android.app.src.main.kotlin.com.plugin.flowy_sdk_example.MainActivity` (L5-L6) - Class
 - `frontend/appflowy_flutter/packages/appflowy_backend/example/lib/main.dart`
   - `frontend.appflowy_flutter.packages.appflowy_backend.example.lib.main.main` (L8-L10) - Function
   - `frontend.appflowy_flutter.packages.appflowy_backend.example.lib.main.MyApp` (L12-L15) - Class
@@ -1727,10 +1516,6 @@ Manages native Rust foreign function interface (FFI) bindings, asynchronous requ
   - `frontend.appflowy_flutter.packages.appflowy_backend.example.lib.main._MyAppState.initState` (L21-L24) - Method
   - `frontend.appflowy_flutter.packages.appflowy_backend.example.lib.main._MyAppState.initPlatformState` (L27-L41) - Method
   - `frontend.appflowy_flutter.packages.appflowy_backend.example.lib.main._MyAppState.build` (L44-L51) - Method
-- `frontend/appflowy_flutter/packages/appflowy_backend/example/windows/runner/win32_window.h`
-  - `Win32Window.GetThisFromHandle[c:@S@Win32Window@F@GetThisFromHandle#I#S]` (L87-L87) - Method
-- `frontend/appflowy_flutter/packages/appflowy_backend/ios/Classes/AppFlowyBackendPlugin.h`
-  - `AppFlowyBackendPlugin[c:objc(cs)AppFlowyBackendPlugin]` (L3-L4) - Class
 - `frontend/appflowy_flutter/packages/appflowy_backend/lib/appflowy_backend.dart`
   - `frontend.appflowy_flutter.packages.appflowy_backend.lib.appflowy_backend.ExceptionType` (L17-L19) - Enum
   - `frontend.appflowy_flutter.packages.appflowy_backend.lib.appflowy_backend.ExceptionType.AppearanceSettingsIsEmpty` (L18-L18) - Enum
@@ -1843,33 +1628,6 @@ Manages native Rust foreign function interface (FFI) bindings, asynchronous requ
   - `frontend.appflowy_flutter.packages.appflowy_backend.lib.rust_stream.RustStreamReceiver.listen` (L34-L37) - Method
   - `frontend.appflowy_flutter.packages.appflowy_backend.lib.rust_stream.RustStreamReceiver._streamCallback` (L39-L49) - Method
   - `frontend.appflowy_flutter.packages.appflowy_backend.lib.rust_stream.RustStreamReceiver.dispose` (L51-L56) - Method
-- `frontend/appflowy_flutter/packages/appflowy_backend/linux/Classes/binding.h`
-  - `init_sdk[c:@F@init_sdk#*C#]` (L7-L7) - Function
-  - `async_command[c:@F@async_command#L#*1c#l#]` (L9-L9) - Function
-  - `sync_command[c:@F@sync_command#*1c#l#]` (L11-L11) - Function
-- `frontend/appflowy_flutter/packages/appflowy_backend/windows/app_flowy_backend_plugin.h`
-  - `appflowy_backend.AppFlowyBackendPlugin[c:@N@appflowy_backend@S@AppFlowyBackendPlugin]` (L11-L28) - Class
-  - `appflowy_backend.AppFlowyBackendPlugin.RegisterWithRegistrar[c:@N@appflowy_backend@S@AppFlowyBackendPlugin@F@RegisterWithRegistrar#*I#S]` (L13-L13) - Method
-  - `appflowy_backend.AppFlowyBackendPlugin.AppFlowyBackendPlugin[c:@N@appflowy_backend@S@AppFlowyBackendPlugin@F@AppFlowyBackendPlugin#]` (L15-L15) - Constructor
-  - `appflowy_backend.AppFlowyBackendPlugin.~AppFlowyBackendPlugin[c:@N@appflowy_backend@S@AppFlowyBackendPlugin@F@~AppFlowyBackendPlugin#]` (L17-L17) - Constructor
-  - `appflowy_backend.AppFlowyBackendPlugin.AppFlowyBackendPlugin[c:@N@appflowy_backend@S@AppFlowyBackendPlugin@F@AppFlowyBackendPlugin#&1$@N@appflowy_backend@S@AppFlowyBackendPlugin#]` (L20-L20) - Constructor
-  - `appflowy_backend.AppFlowyBackendPlugin.operator=[c:@N@appflowy_backend@S@AppFlowyBackendPlugin@F@operator=#&1$@N@appflowy_backend@S@AppFlowyBackendPlugin#]` (L21-L21) - Method
-  - `appflowy_backend.AppFlowyBackendPlugin.HandleMethodCall[c:@N@appflowy_backend@S@AppFlowyBackendPlugin@F@HandleMethodCall#&1I#I#]` (L25-L27) - Method
-- `frontend/appflowy_flutter/packages/appflowy_backend/windows/appflowy_backend_plugin.cpp`
-  - `(anonymous)AppFlowyBackendPlugin[c:appflowy_backend_plugin.cpp@aN@S@AppFlowyBackendPlugin]` (L20-L34) - Class
-  - `AppFlowyBackendPlugin.RegisterWithRegistrar[c:appflowy_backend_plugin.cpp@aN@S@AppFlowyBackendPlugin@F@RegisterWithRegistrar#*I#S]` (L23-L23) - Method
-  - `AppFlowyBackendPlugin.RegisterWithRegistrar[c:appflowy_backend_plugin.cpp@aN@S@AppFlowyBackendPlugin@F@RegisterWithRegistrar#*I#]` (L37-L54) - Method
-  - `frontend.appflowy_flutter.packages.appflowy_backend.windows.appflowy_backend_plugin.cpp.(anonymous).RegisterWithRegistrar.lambda@48:9` (L48-L51) - Function
-  - `AppFlowyBackendPlugin.AppFlowyBackendPlugin[c:appflowy_backend_plugin.cpp@aN@S@AppFlowyBackendPlugin@F@AppFlowyBackendPlugin#]` (L56-L56) - Constructor
-  - `AppFlowyBackendPlugin.~AppFlowyBackendPlugin[c:appflowy_backend_plugin.cpp@aN@S@AppFlowyBackendPlugin@F@~AppFlowyBackendPlugin#]` (L58-L58) - Constructor
-  - `AppFlowyBackendPlugin.HandleMethodCall[c:appflowy_backend_plugin.cpp@aN@S@AppFlowyBackendPlugin@F@HandleMethodCall#&1I#I#]` (L60-L86) - Method
-  - `AppFlowyBackendPluginRegisterWithRegistrar[c:@F@AppFlowyBackendPluginRegisterWithRegistrar#I#]` (L90-L96) - Function
-- `frontend/appflowy_flutter/packages/appflowy_backend/windows/appflowy_backend_plugin_c_api.cpp`
-  - `AppFlowyBackendPluginCApiRegisterWithRegistrar[c:@F@AppFlowyBackendPluginCApiRegisterWithRegistrar#I#]` (L7-L13) - Function
-- `frontend/appflowy_flutter/packages/appflowy_backend/windows/include/appflowy_backend/app_flowy_backend_plugin.h`
-  - `AppFlowyBackendPluginRegisterWithRegistrar[c:@F@AppFlowyBackendPluginRegisterWithRegistrar]` (L16-L17) - Function
-- `frontend/appflowy_flutter/packages/appflowy_backend/windows/include/appflowy_backend/appflowy_backend_plugin_c_api.h`
-  - `AppFlowyBackendPluginCApiRegisterWithRegistrar[c:@F@AppFlowyBackendPluginCApiRegisterWithRegistrar]` (L16-L17) - Function
 - `frontend/appflowy_flutter/packages/appflowy_result/lib/src/async_result.dart`
   - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.async_result.FlowyAsyncResultExtension.getOrElse` (L7-L9) - Method
   - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.async_result.FlowyAsyncResultExtension.toNullable` (L11-L13) - Method
@@ -1928,6 +1686,160 @@ Manages native Rust foreign function interface (FFI) bindings, asynchronous requ
   - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.result.FlowyFailure.getOrElse` (L154-L156) - Method
   - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.result.FlowyFailure.getOrThrow` (L159-L161) - Method
   - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.result.FlowyFailure.getFailure` (L164-L166) - Method
+
+
+### Floating Overlay and Popover Engine
+Manages floating popover widgets, overlay positioning, and mutual exclusion state.
+
+
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover`:54-153
+- `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController`:9-15
+
+
+
+**Source Files:**
+
+- `frontend/appflowy_flutter/packages/appflowy_popover/example/lib/example_button.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.PopoverMenu` (L4-L9) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.PopoverMenu.PopoverMenu` (L5-L5) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.PopoverMenu.createState` (L8-L8) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button._PopoverMenuState` (L11-L80) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button._PopoverMenuState.build` (L15-L79) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.ExampleButton` (L82-L111) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.ExampleButton.ExampleButton` (L83-L88) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.example_button.ExampleButton.build` (L95-L110) - Method
+- `frontend/appflowy_flutter/packages/appflowy_popover/example/lib/main.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.main` (L6-L8) - Function
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyApp` (L10-L23) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyApp.MyApp` (L11-L11) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyApp.build` (L14-L22) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyHomePage` (L25-L32) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyHomePage.MyHomePage` (L26-L26) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main.MyHomePage.createState` (L31-L31) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main._MyHomePageState` (L34-L116) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.example.lib.main._MyHomePageState.build` (L36-L115) - Method
+- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/follower.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower` (L4-L42) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower.PopoverCompositedTransformFollower` (L5-L13) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower.createRenderObject` (L16-L26) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverCompositedTransformFollower.updateRenderObject` (L29-L41) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverRenderFollowerLayer` (L44-L65) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverRenderFollowerLayer.PopoverRenderFollowerLayer` (L45-L53) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.PopoverRenderFollowerLayer.paint` (L58-L64) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.EdgeFollowerLayer` (L67-L74) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.follower.EdgeFollowerLayer.EdgeFollowerLayer` (L68-L73) - Constructor
+- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/layout.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate` (L8-L231) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.PopoverLayoutDelegate` (L9-L16) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.shouldRelayout` (L33-L51) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.getSize` (L54-L59) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.getConstraintsForChild` (L62-L68) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.getPositionForChild` (L71-L212) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLayoutDelegate.copyWith` (L214-L230) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget` (L233-L256) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget.PopoverTarget` (L234-L238) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget.createRenderObject` (L243-L247) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTarget.updateRenderObject` (L250-L255) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox` (L258-L305) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.PopoverTargetRenderBox` (L259-L262) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.alwaysNeedsCompositing` (L267-L267) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.performLayout` (L270-L273) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.paint` (L276-L279) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.detach` (L282-L286) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.attach` (L289-L298) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverTargetRenderBox.debugFillProperties` (L301-L304) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.layout.PopoverLink` (L307-L310) - Class
+- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/mask.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry` (L8-L61) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.contains` (L11-L11) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.isEmpty` (L13-L13) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.isNotEmpty` (L14-L14) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.addEntry` (L16-L32) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.removeEntry` (L34-L37) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.popEntry` (L39-L52) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.RootOverlayEntry.isLastEntryAsBarrier` (L54-L60) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.OverlayEntryContext` (L63-L82) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.OverlayEntryContext.OverlayEntryContext` (L64-L70) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.OverlayEntryContext.toString` (L79-L81) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.PopoverMask` (L84-L103) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.PopoverMask.PopoverMask` (L85-L89) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mask.PopoverMask.build` (L95-L102) - Method
+- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/mutex.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex` (L7-L33) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.PopoverMutex` (L8-L8) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.addPopoverListener` (L12-L14) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.removePopoverListener` (L16-L18) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.close` (L20-L20) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.state` (L22-L22) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.state=` (L24-L24) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.removeState` (L26-L28) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex.dispose` (L30-L32) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex._PopoverStateNotifier` (L35-L47) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex._PopoverStateNotifier.state` (L38-L38) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex._PopoverStateNotifier.state=` (L40-L46) - Method
+- `frontend/appflowy_flutter/packages/appflowy_popover/lib/src/popover.dart`
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController` (L9-L15) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController.close` (L12-L12) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController.show` (L13-L13) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController.showAt` (L14-L14) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverTriggerFlags` (L17-L22) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection` (L24-L47) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topLeft` (L26-L26) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topRight` (L27-L27) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomLeft` (L28-L28) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomRight` (L29-L29) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.center` (L30-L30) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topWithLeftAligned` (L33-L33) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topWithCenterAligned` (L34-L34) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.topWithRightAligned` (L35-L35) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.rightWithTopAligned` (L36-L36) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.rightWithCenterAligned` (L37-L37) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.rightWithBottomAligned` (L38-L38) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomWithLeftAligned` (L39-L39) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomWithCenterAligned` (L40-L40) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.bottomWithRightAligned` (L41-L41) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.leftWithTopAligned` (L42-L42) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.leftWithCenterAligned` (L43-L43) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.leftWithBottomAligned` (L44-L44) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverDirection.custom` (L46-L46) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverClickHandler` (L49-L52) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverClickHandler.listener` (L50-L50) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverClickHandler.gestureDetector` (L51-L51) - Enum
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover` (L54-L153) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover.Popover` (L55-L82) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover.createState` (L152-L152) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState` (L155-L507) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.initState` (L177-L182) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.deactivate` (L185-L189) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.dispose` (L192-L197) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.build` (L200-L205) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.reassemble` (L208-L215) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.showOverlay` (L217-L247) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.close` (L249-L269) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState.close.callback` (L254-L259) - Function
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._removeRootOverlay` (L271-L277) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildChild` (L279-L306) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildClickHandler` (L308-L342) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._callHandler` (L344-L350) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildOverlayContent` (L352-L366) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildMask` (L368-L377) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildPopoverContainer` (L379-L406) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildAnimations` (L408-L416) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildFadeAnimation` (L418-L428) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildScaleAnimation` (L430-L440) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._buildSlideAnimation` (L442-L453) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverState._getSlideAnimationValues` (L455-L506) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer` (L509-L541) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.PopoverContainer` (L510-L517) - Constructor
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.createState` (L526-L526) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.of` (L528-L533) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainer.maybeOf` (L535-L540) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState` (L543-L559) - Class
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState.build` (L545-L554) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState.close` (L556-L556) - Method
+  - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverContainerState.closeAll` (L558-L558) - Method
 
 
 

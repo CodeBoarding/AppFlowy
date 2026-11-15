@@ -1,56 +1,64 @@
 ```mermaid
 graph LR
-    Home_and_Workspace_Navigation["Home and Workspace Navigation"]
+    Mobile_Home_Dashboard["Mobile Home Dashboard"]
     Mobile_Database_Views["Mobile Database Views"]
-    Mobile_Settings_Management["Mobile Settings Management"]
-    Mobile_Bottom_Sheet_Modals["Mobile Bottom Sheet Modals"]
+    Mobile_Application_Settings["Mobile Application Settings"]
+    Mobile_Bottom_Sheet_Overlays["Mobile Bottom Sheet Overlays"]
     Mobile_Notification_Center["Mobile Notification Center"]
     Mobile_Editor_and_Chat["Mobile Editor and Chat"]
-    Mobile_Search_Interface["Mobile Search Interface"]
-    Mobile_View_Scaffolding["Mobile View Scaffolding"]
-    Mobile_Common_UI_Widgets["Mobile Common UI Widgets"]
-    Home_and_Workspace_Navigation -- "routes to database views" --> Mobile_Database_Views
-    Home_and_Workspace_Navigation -- "embeds configuration sections" --> Mobile_Settings_Management
-    Home_and_Workspace_Navigation -- "displays modal action sheets" --> Mobile_Bottom_Sheet_Modals
-    Home_and_Workspace_Navigation -- "routes to editors" --> Mobile_Editor_and_Chat
-    Home_and_Workspace_Navigation -- "uses view scaffolding" --> Mobile_View_Scaffolding
-    Home_and_Workspace_Navigation -- "renders common widgets" --> Mobile_Common_UI_Widgets
-    Mobile_Database_Views -- "navigates through router" --> Home_and_Workspace_Navigation
-    Mobile_Database_Views -- "presents field and action sheets" --> Mobile_Bottom_Sheet_Modals
-    Mobile_Database_Views -- "wraps with page scaffolding" --> Mobile_View_Scaffolding
-    Mobile_Database_Views -- "uses shared controls" --> Mobile_Common_UI_Widgets
-    Mobile_Settings_Management -- "opens selection bottom sheets" --> Mobile_Bottom_Sheet_Modals
-    Mobile_Settings_Management -- "uses app bar scaffolding" --> Mobile_View_Scaffolding
-    Mobile_Settings_Management -- "configures option tiles" --> Mobile_Common_UI_Widgets
-    Mobile_Bottom_Sheet_Modals -- "builds slide action buttons" --> Home_and_Workspace_Navigation
-    Mobile_Bottom_Sheet_Modals -- "uses shared option widgets" --> Mobile_Common_UI_Widgets
-    Mobile_Notification_Center -- "subscribes to notification state" --> Home_and_Workspace_Navigation
-    Mobile_Notification_Center -- "triggers notification action sheets" --> Mobile_Bottom_Sheet_Modals
-    Mobile_Notification_Center -- "uses gesture scaffolding" --> Mobile_View_Scaffolding
-    Mobile_Notification_Center -- "uses option tiles" --> Mobile_Common_UI_Widgets
-    Mobile_Editor_and_Chat -- "embeds page scaffolding" --> Mobile_View_Scaffolding
-    Mobile_Search_Interface -- "routes selected search items" --> Home_and_Workspace_Navigation
-    Mobile_Search_Interface -- "displays search bottom sheets" --> Mobile_Bottom_Sheet_Modals
-    Mobile_Search_Interface -- "hosts view page container" --> Mobile_View_Scaffolding
-    Mobile_View_Scaffolding -- "binds view page blocs" --> Home_and_Workspace_Navigation
-    Mobile_View_Scaffolding -- "displays view page bottom sheets" --> Mobile_Bottom_Sheet_Modals
-    Mobile_View_Scaffolding -- "renders state containers" --> Mobile_Common_UI_Widgets
+    Mobile_Workspace_Search["Mobile Workspace Search"]
+    Mobile_View_Page_Scaffolding["Mobile View Page Scaffolding"]
+    Mobile_Common_Widgets["Mobile Common Widgets"]
+    Mobile_Home_Dashboard -- "renders settings groups" --> Mobile_Application_Settings
+    Mobile_Home_Dashboard -- "calls" --> Mobile_Bottom_Sheet_Overlays
+    Mobile_Home_Dashboard -- "uses scaffolding and gesture controls" --> Mobile_View_Page_Scaffolding
+    Mobile_Home_Dashboard -- "calls" --> Mobile_Common_Widgets
+    Mobile_Home_Dashboard -- "calls" --> Mobile_Database_Views
+    Mobile_Home_Dashboard -- "routes to editor and chat screens" --> Mobile_Editor_and_Chat
+    Mobile_Database_Views -- "calls" --> Mobile_Bottom_Sheet_Overlays
+    Mobile_Database_Views -- "calls" --> Mobile_View_Page_Scaffolding
+    Mobile_Database_Views -- "calls" --> Mobile_Common_Widgets
+    Mobile_Database_Views -- "navigates to views via router" --> Mobile_Home_Dashboard
+    Mobile_Application_Settings -- "opens option bottom sheets" --> Mobile_Bottom_Sheet_Overlays
+    Mobile_Application_Settings -- "calls" --> Mobile_View_Page_Scaffolding
+    Mobile_Application_Settings -- "renders common option tiles" --> Mobile_Common_Widgets
+    Mobile_Bottom_Sheet_Overlays -- "calls" --> Mobile_Common_Widgets
+    Mobile_Bottom_Sheet_Overlays -- "triggers slide action items" --> Mobile_Home_Dashboard
+    Mobile_Notification_Center -- "calls" --> Mobile_Home_Dashboard
+    Mobile_Notification_Center -- "calls" --> Mobile_Bottom_Sheet_Overlays
+    Mobile_Notification_Center -- "uses gesture detection widgets" --> Mobile_View_Page_Scaffolding
+    Mobile_Notification_Center -- "uses common option tiles" --> Mobile_Common_Widgets
+    Mobile_Editor_and_Chat -- "embeds in base view scaffold" --> Mobile_View_Page_Scaffolding
+    Mobile_Workspace_Search -- "calls" --> Mobile_Bottom_Sheet_Overlays
+    Mobile_Workspace_Search -- "navigates views via mobile router" --> Mobile_Home_Dashboard
+    Mobile_Workspace_Search -- "embeds in base view scaffolding" --> Mobile_View_Page_Scaffolding
+    Mobile_View_Page_Scaffolding -- "binds view page state BLoCs" --> Mobile_Home_Dashboard
+    Mobile_View_Page_Scaffolding -- "displays common state containers" --> Mobile_Common_Widgets
+    Mobile_View_Page_Scaffolding -- "calls" --> Mobile_Bottom_Sheet_Overlays
+    click Mobile_Home_Dashboard href "./Mobile_Home_Dashboard.md" "Details"
+    click Mobile_Database_Views href "./Mobile_Database_Views.md" "Details"
+    click Mobile_Application_Settings href "./Mobile_Application_Settings.md" "Details"
+    click Mobile_Bottom_Sheet_Overlays href "./Mobile_Bottom_Sheet_Overlays.md" "Details"
+    click Mobile_Notification_Center href "./Mobile_Notification_Center.md" "Details"
+    click Mobile_Editor_and_Chat href "./Mobile_Editor_and_Chat.md" "Details"
+    click Mobile_Workspace_Search href "./Mobile_Workspace_Search.md" "Details"
+    click Mobile_View_Page_Scaffolding href "./Mobile_View_Page_Scaffolding.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Implements mobile-specific screens, bottom navigation, sheet dialogs, and mobile view adapters for documents and databases.
+Implements mobile screens, view navigation, bottom sheets, mobile settings, and notifications.
 
-### Home and Workspace Navigation
-Manages mobile navigation routing, workspace home structures, favorite views, recent items, and folder hierarchies.
+### Mobile Home Dashboard [[Expand]](./Mobile_Home_Dashboard.md)
+Coordinates mobile workspace navigation, home dashboard tabs, and top-level application BLoC routing.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.home.mobile_home_page.MobileHomePage`:88-100
-- `frontend.appflowy_flutter.lib.mobile.presentation.home.mobile_home_setting_page.MobileHomeSettingPage`:23-32
+- `frontend.appflowy_flutter.lib.mobile.application.base.mobile_view_page_bloc.MobileViewPageBloc`:14-87
+- `frontend.appflowy_flutter.lib.mobile.application.user_profile.user_profile_bloc.UserProfileBloc`:11-48
 
 
 
@@ -604,15 +612,15 @@ Manages mobile navigation routing, workspace home structures, favorite views, re
   - `frontend.appflowy_flutter.lib.mobile.presentation.page_item.mobile_view_item_add_button.MobileViewMoreButton.build` (L36-L45) - Method
 
 
-### Mobile Database Views
-Renders database grid, kanban board, and calendar screens along with record detail and field editing interfaces.
+### Mobile Database Views [[Expand]](./Mobile_Database_Views.md)
+Presents mobile database views including grid, board, calendar, and card field detail editors.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.database.board.mobile_board_screen.MobileBoardScreen`:5-28
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_calendar_screen.MobileCalendarScreen`:5-28
 - `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_grid_screen.MobileGridScreen`:6-33
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_calendar_screen.MobileCalendarScreen`:5-28
 
 
 
@@ -1118,15 +1126,15 @@ Renders database grid, kanban board, and calendar screens along with record deta
   - `frontend.appflowy_flutter.lib.mobile.presentation.database.view.edit_database_view_screen.DatabaseViewSettingTile._onTap` (L207-L287) - Method
 
 
-### Mobile Settings Management
-Provides configuration interfaces for appearance, user profiles, AI preferences, workspace members, and app settings.
+### Mobile Application Settings [[Expand]](./Mobile_Application_Settings.md)
+Provides user settings pages for appearance, cloud sync, language, workspace members, and AI configurations.
 
 
 **Related Classes/Methods**:
 
+- `frontend.appflowy_flutter.lib.mobile.presentation.setting.about.about_setting_group.AboutSettingGroup`:13-58
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.ai.ai_settings_group.AiSettingsGroup`:14-90
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.appearance.appearance_setting_group.AppearanceSettingGroup`:10-27
-- `frontend.appflowy_flutter.lib.mobile.presentation.setting.workspace.workspace_setting_group.WorkspaceSettingGroup`:13-48
 
 
 
@@ -1355,15 +1363,15 @@ Provides configuration interfaces for appearance, user profiles, AI preferences,
   - `frontend.appflowy_flutter.lib.mobile.presentation.setting.workspace.workspace_setting_group.WorkspaceSettingGroup.build` (L19-L47) - Method
 
 
-### Mobile Bottom Sheet Modals
-Implements reusable mobile bottom sheet dialogs, action panels, and the bottom navigation bar.
+### Mobile Bottom Sheet Overlays [[Expand]](./Mobile_Bottom_Sheet_Overlays.md)
+Implements modal bottom sheet overlays, action panes, and bottom navigation bar components.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_view_page.ViewPageBottomSheet`:53-67
 - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.show_mobile_bottom_sheet.showMobileBottomSheet`:26-209
-- `frontend.appflowy_flutter.lib.mobile.presentation.mobile_bottom_navigation_bar.MobileBottomNavigationBar`:91-104
+- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.default_mobile_action_pane.buildEndActionPane`:196-218
+- `frontend.appflowy_flutter.lib.mobile.presentation.mobile_bottom_navigation_bar.BottomNavigationBarActionType`:25-28
 
 
 
@@ -1580,12 +1588,14 @@ Implements reusable mobile bottom sheet dialogs, action panels, and the bottom n
   - `frontend.appflowy_flutter.lib.mobile.presentation.mobile_bottom_navigation_bar.<unnamed extension>.border` (L399-L403) - Method
 
 
-### Mobile Notification Center
-Displays user notifications, reminder alerts, and bulk management options for workspace updates.
+### Mobile Notification Center [[Expand]](./Mobile_Notification_Center.md)
+Manages the mobile notification center, reminder updates, and batch notification actions.
 
 
 **Related Classes/Methods**:
 
+- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.mobile_notifications_page._MobileNotificationsScreenState`:29-65
+- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.multi_select_notification_item.MultiSelectNotificationItem`:11-86
 - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.notification_item.NotificationItem`:15-94
 
 
@@ -1743,8 +1753,8 @@ Displays user notifications, reminder alerts, and bulk management options for wo
   - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.tab_bar.MobileNotificationTabBar.build` (L19-L54) - Method
 
 
-### Mobile Editor and Chat
-Hosts mobile document editing canvases, chat interfaces, slash commands, and inline selection menus.
+### Mobile Editor and Chat [[Expand]](./Mobile_Editor_and_Chat.md)
+Delivers document editing interfaces, AI chat views, and contextual inline selection menus.
 
 
 **Related Classes/Methods**:
@@ -1854,14 +1864,14 @@ Hosts mobile document editing canvases, chat interfaces, slash commands, and inl
   - `frontend.appflowy_flutter.lib.mobile.presentation.selection_menu.slash_keyboard_service_interceptor.SlashKeyboardServiceInterceptor.interceptInsert` (L29-L41) - Method
 
 
-### Mobile Search Interface
-Coordinates mobile workspace full-text search, ancestor path resolution, and AI search entrances.
+### Mobile Workspace Search [[Expand]](./Mobile_Workspace_Search.md)
+Provides full-text search, AI search entry points, and workspace search result navigation.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_page.MobileSearchPage`:68-80
-- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_result.MobileSearchResult`:18-30
+- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_reference_bottom_sheet.SearchSourceReferenceBottomSheet`:16-59
+- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_result._goToView`:196-205
 
 
 
@@ -1990,15 +2000,15 @@ Coordinates mobile workspace full-text search, ancestor path resolution, and AI 
   - `frontend.appflowy_flutter.lib.mobile.presentation.search.view_ancestor_cache.ViewParent.fromViewPB` (L63-L64) - Method
 
 
-### Mobile View Scaffolding
-Supplies foundational mobile page layouts, app bars, action buttons, and standard view containers.
+### Mobile View Page Scaffolding [[Expand]](./Mobile_View_Page_Scaffolding.md)
+Supplies the base view page scaffold, mobile app bar headers, and view-level action sheets.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.base.animated_gesture.AnimatedGestureDetector`:4-27
-- `frontend.appflowy_flutter.lib.mobile.presentation.base.app_bar.app_bar.FlowyAppBar`:33-67
 - `frontend.appflowy_flutter.lib.mobile.presentation.base.mobile_view_page.MobileViewPage`:35-64
+- `frontend.appflowy_flutter.lib.mobile.presentation.base.app_bar.app_bar.FlowyAppBar`:33-67
+- `frontend.appflowy_flutter.lib.mobile.presentation.base.animated_gesture.AnimatedGestureDetector`:4-27
 
 
 
@@ -2120,14 +2130,14 @@ Supplies foundational mobile page layouts, app bars, action buttons, and standar
   - `frontend.appflowy_flutter.lib.mobile.presentation.base.view_page.more_bottom_sheet.MobileViewPageMoreBottomSheet._showToast` (L324-L358) - Method
 
 
-### Mobile Common UI Widgets
-Provides reusable mobile input fields, option tiles, confirmation dialogs, and state feedback containers.
+### Mobile Common Widgets
+Provides reusable mobile UI widgets including option tiles, confirm dialogs, and action buttons.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.widgets.flowy_mobile_state_container.FlowyMobileStateContainer`:17-109
 - `frontend.appflowy_flutter.lib.mobile.presentation.widgets.flowy_option_tile.FlowyOptionTile`:14-300
+- `frontend.appflowy_flutter.lib.mobile.presentation.widgets.flowy_mobile_state_container.FlowyMobileStateContainer`:17-109
 - `frontend.appflowy_flutter.lib.mobile.presentation.widgets.show_flowy_mobile_confirm_dialog.showFlowyMobileConfirmDialog`:22-89
 
 

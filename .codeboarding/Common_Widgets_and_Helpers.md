@@ -1,22 +1,26 @@
 ```mermaid
 graph LR
-    Common_Interface_Widgets_and_Helpers["Common Interface Widgets and Helpers"]
-    Error_Pages_and_Code_Mapping["Error Pages and Code Mapping"]
+    Application_Utilities_and_Extensions["Application Utilities and Extensions"]
+    Icon_and_Emoji_Picker["Icon and Emoji Picker"]
+    Application_Utilities_and_Extensions -- "delegates caching to" --> Icon_and_Emoji_Picker
+    Icon_and_Emoji_Picker -- "renders previews with" --> Application_Utilities_and_Extensions
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Supplies shared utilities, asset handling, custom markdown conversion, icon/emoji pickers, and reusable error pages.
+Provides reusable UI components, icon and emoji pickers, image rendering widgets, caching handlers, and utility extensions.
 
-### Common Interface Widgets and Helpers
-Supplies reusable UI widgets, icon and emoji pickers, popup menus, image caching helpers, and formatting extensions across the client application.
+### Application Utilities and Extensions
+Provides shared application utilities, network media display widgets, window controls, and formatting extensions.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.shared.settings.show_settings.showSettingsDialog`:16-55
+- `frontend.appflowy_flutter.lib.shared.appflowy_cache_manager.FlowyCacheManager`:5-42
+- `frontend.appflowy_flutter.lib.shared.appflowy_network_image.FlowyNetworkImage`:18-70
+- `frontend.appflowy_flutter.lib.shared.appflowy_network_svg.FlowyNetworkSvg`:10-82
 
 
 
@@ -104,9 +108,6 @@ Supplies reusable UI widgets, icon and emoji pickers, popup menus, image caching
   - `frontend.appflowy_flutter.lib.shared.clipboard_state.ClipboardState.didPaste` (L31-L33) - Method
   - `frontend.appflowy_flutter.lib.shared.clipboard_state.ClipboardState.startHandlingPaste` (L35-L38) - Method
   - `frontend.appflowy_flutter.lib.shared.clipboard_state.ClipboardState.endHandlingPaste` (L40-L45) - Method
-- `frontend/appflowy_flutter/lib/shared/colors.dart`
-  - `frontend.appflowy_flutter.lib.shared.colors.SharedColors.proPrimaryColor` (L5-L9) - Method
-  - `frontend.appflowy_flutter.lib.shared.colors.SharedColors.proSecondaryColor` (L11-L15) - Method
 - `frontend/appflowy_flutter/lib/shared/conditional_listenable_builder.dart`
   - `frontend.appflowy_flutter.lib.shared.conditional_listenable_builder.ConditionalListenableBuilder` (L4-L44) - Class
   - `frontend.appflowy_flutter.lib.shared.conditional_listenable_builder.ConditionalListenableBuilder.ConditionalListenableBuilder` (L5-L11) - Constructor
@@ -117,16 +118,6 @@ Supplies reusable UI widgets, icon and emoji pickers, popup menus, image caching
   - `frontend.appflowy_flutter.lib.shared.conditional_listenable_builder._ConditionalListenableBuilderState.dispose` (L68-L71) - Method
   - `frontend.appflowy_flutter.lib.shared.conditional_listenable_builder._ConditionalListenableBuilderState._valueChanged` (L73-L81) - Method
   - `frontend.appflowy_flutter.lib.shared.conditional_listenable_builder._ConditionalListenableBuilderState.build` (L84-L86) - Method
-- `frontend/appflowy_flutter/lib/shared/custom_image_cache_manager.dart`
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager` (L8-L36) - Class
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.CustomImageCacheManager._` (L11-L17) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.CustomImageCacheManager` (L19-L19) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.cacheSize` (L26-L30) - Method
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.clearAll` (L33-L35) - Method
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem` (L38-L61) - Class
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem.CustomIOFileSystem` (L39-L39) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem.createDirectory` (L43-L51) - Method
-  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem.createFile` (L54-L60) - Method
 - `frontend/appflowy_flutter/lib/shared/easy_localiation_service.dart`
   - `frontend.appflowy_flutter.lib.shared.easy_localiation_service.EasyLocalizationService` (L6-L26) - Class
   - `frontend.appflowy_flutter.lib.shared.easy_localiation_service.EasyLocalizationService.EasyLocalizationService` (L7-L7) - Constructor
@@ -164,6 +155,173 @@ Supplies reusable UI widgets, icon and emoji pickers, popup menus, image caching
   - `frontend.appflowy_flutter.lib.shared.feedback_gesture_detector.HapticFeedbackType.call` (L11-L29) - Method
   - `frontend.appflowy_flutter.lib.shared.feedback_gesture_detector.FeedbackGestureDetector` (L32-L47) - Class
   - `frontend.appflowy_flutter.lib.shared.feedback_gesture_detector.FeedbackGestureDetector.FeedbackGestureDetector` (L33-L46) - Constructor
+- `frontend/appflowy_flutter/lib/shared/google_fonts_extension.dart`
+  - `frontend.appflowy_flutter.lib.shared.google_fonts_extension.getGoogleFontSafely` (L12-L50) - Function
+- `frontend/appflowy_flutter/lib/shared/list_extension.dart`
+  - `frontend.appflowy_flutter.lib.shared.list_extension.Unique.unique` (L2-L7) - Method
+- `frontend/appflowy_flutter/lib/shared/loading.dart`
+  - `frontend.appflowy_flutter.lib.shared.loading.Loading` (L5-L49) - Class
+  - `frontend.appflowy_flutter.lib.shared.loading.Loading.Loading` (L6-L6) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.loading.Loading.start` (L13-L39) - Method
+  - `frontend.appflowy_flutter.lib.shared.loading.Loading.stop` (L41-L48) - Method
+- `frontend/appflowy_flutter/lib/shared/markdown_to_document.dart`
+  - `frontend.appflowy_flutter.lib.shared.markdown_to_document.customMarkdownToDocument` (L13-L24) - Function
+  - `frontend.appflowy_flutter.lib.shared.markdown_to_document.customDocumentToMarkdown` (L26-L97) - Function
+- `frontend/appflowy_flutter/lib/shared/patterns/date_time_patterns.dart`
+  - `frontend.appflowy_flutter.lib.shared.patterns.date_time_patterns.isTwelveHourTime` (L9-L9) - Function
+  - `frontend.appflowy_flutter.lib.shared.patterns.date_time_patterns.isTwentyFourHourTime` (L18-L19) - Function
+- `frontend/appflowy_flutter/lib/shared/popup_menu/appflowy_popup_menu.dart`
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.closePopupMenu` (L37-L40) - Function
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry` (L63-L89) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry.PopupMenuEntry` (L66-L66) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry.height` (L74-L74) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry.represents` (L88-L88) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider` (L101-L118) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider.PopupMenuDivider` (L105-L105) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider.represents` (L114-L114) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider.createState` (L117-L117) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDividerState` (L120-L123) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDividerState.build` (L122-L122) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem` (L129-L149) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem._MenuItem` (L130-L133) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem.createRenderObject` (L138-L140) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem.updateRenderObject` (L143-L148) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem` (L151-L173) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem._RenderMenuItem` (L152-L152) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem.computeDryLayout` (L157-L159) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem.performLayout` (L162-L172) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem` (L214-L308) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem.PopupMenuItem` (L218-L229) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem.represents` (L303-L303) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem.createState` (L306-L307) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState` (L326-L409) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState.buildChild` (L334-L334) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState.handleTap` (L343-L348) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState.build` (L351-L408) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem` (L472-L513) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem.CheckedPopupMenuItem` (L477-L488) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem.child` (L508-L508) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem.createState` (L511-L512) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState` (L515-L580) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState._opacity` (L520-L520) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.initState` (L523-L528) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState._updateState` (L531-L531) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.dispose` (L534-L538) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.handleTap` (L541-L549) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.buildChild` (L552-L579) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenu` (L582-L600) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenu._PopupMenu` (L583-L590) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenu.createState` (L599-L599) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState` (L602-L719) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState.build` (L604-L703) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState.dispose` (L706-L709) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState.dismiss` (L711-L718) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout` (L722-L847) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout._PopupMenuRouteLayout` (L723-L730) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout.getConstraintsForChild` (L757-L763) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout.getPositionForChild` (L766-L796) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout._closestScreen` (L798-L807) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout._fitInsideScreen` (L809-L831) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout.shouldRelayout` (L834-L846) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute` (L849-L1007) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute._PopupMenuRoute` (L850-L870) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.createAnimation` (L889-L899) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.scrollTo` (L901-L907) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.transitionDuration` (L910-L911) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.barrierDismissible` (L914-L914) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.barrierColor` (L917-L917) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.buildTransitions` (L923-L948) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.buildPage` (L951-L1002) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute._avoidBounds` (L1004-L1006) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.showMenu` (L1067-L1123) - Function
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemSelected` (L1130-L1130) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuCanceled` (L1136-L1136) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemBuilder` (L1142-L1144) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButton` (L1224-L1465) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButton.PopupMenuButton` (L1226-L1258) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButton.createState` (L1464-L1464) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButtonState` (L1471-L1580) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButtonState.showButtonMenu` (L1480-L1547) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButtonState.build` (L1550-L1579) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM2` (L1582-L1594) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM2._PopupMenuDefaultsM2` (L1583-L1583) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM2.textStyle` (L1590-L1590) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3` (L1603-L1640) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3._PopupMenuDefaultsM3` (L1604-L1604) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.labelTextStyle` (L1612-L1620) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.color` (L1623-L1623) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.shadowColor` (L1626-L1626) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.surfaceTintColor` (L1629-L1629) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.shape` (L1632-L1634) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuColors.popupMenuBackgroundColor` (L1644-L1649) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween` (L1652-L1667) - Class
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween._CurveTween` (L1654-L1654) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween.transform` (L1660-L1662) - Method
+  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween.toString` (L1665-L1666) - Method
+- `frontend/appflowy_flutter/lib/shared/settings/show_settings.dart`
+  - `frontend.appflowy_flutter.lib.shared.settings.show_settings.showSettingsDialog` (L16-L55) - Function
+  - `frontend.appflowy_flutter.lib.shared.settings.show_settings.showSimpleSettingsDialog` (L62-L67) - Function
+- `frontend/appflowy_flutter/lib/shared/text_field/text_filed_with_metric_lines.dart`
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines.TextFieldWithMetricLines` (L3-L26) - Class
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines.TextFieldWithMetricLines.TextFieldWithMetricLines` (L4-L13) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines.TextFieldWithMetricLines.createState` (L24-L25) - Method
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState` (L28-L91) - Class
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.initState` (L33-L39) - Method
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.dispose` (L42-L48) - Method
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.build` (L51-L62) - Method
+  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.updateDisplayedLineCount` (L65-L90) - Method
+- `frontend/appflowy_flutter/lib/shared/time_format.dart`
+  - `frontend.appflowy_flutter.lib.shared.time_format.formatTimestampWithContext` (L11-L42) - Function
+- `frontend/appflowy_flutter/lib/shared/version_checker/version_checker.dart`
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker` (L13-L96) - Class
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.VersionChecker` (L14-L14) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.VersionChecker._internal` (L16-L16) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.setFeedUrl` (L22-L30) - Method
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.checkForUpdateInformation` (L34-L61) - Method
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.checkForUpdate` (L66-L73) - Method
+  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker._parseAppcastItem` (L75-L95) - Method
+- `frontend/appflowy_flutter/lib/shared/window_title_bar.dart`
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener` (L6-L18) - Class
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.WindowsButtonListener` (L7-L7) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.onWindowMaximize` (L12-L12) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.onWindowUnmaximize` (L15-L15) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.dispose` (L17-L17) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar` (L20-L30) - Class
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar.WindowTitleBar` (L21-L24) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar.createState` (L29-L29) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState` (L32-L109) - Class
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.initState` (L37-L51) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState._isMaximizedChanged` (L53-L57) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.dispose` (L60-L68) - Method
+  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.build` (L71-L108) - Method
+
+
+### Icon and Emoji Picker
+Provides icon and emoji pickers, color palettes, asset uploading utilities, and custom image cache storage.
+
+
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager`:8-36
+- `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.icon_uploader.IconUploader`:31-45
+
+
+
+**Source Files:**
+
+- `frontend/appflowy_flutter/lib/shared/colors.dart`
+  - `frontend.appflowy_flutter.lib.shared.colors.SharedColors.proPrimaryColor` (L5-L9) - Method
+  - `frontend.appflowy_flutter.lib.shared.colors.SharedColors.proSecondaryColor` (L11-L15) - Method
+- `frontend/appflowy_flutter/lib/shared/custom_image_cache_manager.dart`
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager` (L8-L36) - Class
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.CustomImageCacheManager._` (L11-L17) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.CustomImageCacheManager` (L19-L19) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.cacheSize` (L26-L30) - Method
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager.clearAll` (L33-L35) - Method
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem` (L38-L61) - Class
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem.CustomIOFileSystem` (L39-L39) - Constructor
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem.createDirectory` (L43-L51) - Method
+  - `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomIOFileSystem.createFile` (L54-L60) - Method
 - `frontend/appflowy_flutter/lib/shared/flowy_error_page.dart`
   - `frontend.appflowy_flutter.lib.shared.flowy_error_page.AppFlowyErrorPage` (L16-L32) - Class
   - `frontend.appflowy_flutter.lib.shared.flowy_error_page.AppFlowyErrorPage.AppFlowyErrorPage` (L17-L20) - Constructor
@@ -186,8 +344,6 @@ Supplies reusable UI widgets, icon and emoji pickers, popup menus, image caching
   - `frontend.appflowy_flutter.lib.shared.flowy_gradient_colors.FlowyGradientColor.fromId` (L12-L17) - Method
   - `frontend.appflowy_flutter.lib.shared.flowy_gradient_colors.FlowyGradientColor.id` (L19-L37) - Method
   - `frontend.appflowy_flutter.lib.shared.flowy_gradient_colors.FlowyGradientColor.linear` (L39-L84) - Method
-- `frontend/appflowy_flutter/lib/shared/google_fonts_extension.dart`
-  - `frontend.appflowy_flutter.lib.shared.google_fonts_extension.getGoogleFontSafely` (L12-L50) - Function
 - `frontend/appflowy_flutter/lib/shared/icon_emoji_picker/colors.dart`
   - `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.colors.PickerColors.pickerTextColor` (L5-L9) - Method
   - `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.colors.PickerColors.pickerIconColor` (L11-L13) - Method
@@ -406,180 +562,10 @@ Supplies reusable UI widgets, icon and emoji pickers, popup menus, image caching
   - `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.tab.PickerTab` (L31-L80) - Class
   - `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.tab.PickerTab.PickerTab` (L32-L37) - Constructor
   - `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.tab.PickerTab.build` (L44-L79) - Method
-- `frontend/appflowy_flutter/lib/shared/list_extension.dart`
-  - `frontend.appflowy_flutter.lib.shared.list_extension.Unique.unique` (L2-L7) - Method
-- `frontend/appflowy_flutter/lib/shared/loading.dart`
-  - `frontend.appflowy_flutter.lib.shared.loading.Loading` (L5-L49) - Class
-  - `frontend.appflowy_flutter.lib.shared.loading.Loading.Loading` (L6-L6) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.loading.Loading.start` (L13-L39) - Method
-  - `frontend.appflowy_flutter.lib.shared.loading.Loading.stop` (L41-L48) - Method
-- `frontend/appflowy_flutter/lib/shared/markdown_to_document.dart`
-  - `frontend.appflowy_flutter.lib.shared.markdown_to_document.customMarkdownToDocument` (L13-L24) - Function
-  - `frontend.appflowy_flutter.lib.shared.markdown_to_document.customDocumentToMarkdown` (L26-L97) - Function
-- `frontend/appflowy_flutter/lib/shared/patterns/date_time_patterns.dart`
-  - `frontend.appflowy_flutter.lib.shared.patterns.date_time_patterns.isTwelveHourTime` (L9-L9) - Function
-  - `frontend.appflowy_flutter.lib.shared.patterns.date_time_patterns.isTwentyFourHourTime` (L18-L19) - Function
 - `frontend/appflowy_flutter/lib/shared/permission/permission_checker.dart`
   - `frontend.appflowy_flutter.lib.shared.permission.permission_checker.PermissionChecker` (L16-L103) - Class
   - `frontend.appflowy_flutter.lib.shared.permission.permission_checker.PermissionChecker.checkPhotoPermission` (L17-L63) - Method
   - `frontend.appflowy_flutter.lib.shared.permission.permission_checker.PermissionChecker.checkCameraPermission` (L65-L102) - Method
-- `frontend/appflowy_flutter/lib/shared/popup_menu/appflowy_popup_menu.dart`
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.closePopupMenu` (L37-L40) - Function
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry` (L63-L89) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry.PopupMenuEntry` (L66-L66) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry.height` (L74-L74) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuEntry.represents` (L88-L88) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider` (L101-L118) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider.PopupMenuDivider` (L105-L105) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider.represents` (L114-L114) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuDivider.createState` (L117-L117) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDividerState` (L120-L123) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDividerState.build` (L122-L122) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem` (L129-L149) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem._MenuItem` (L130-L133) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem.createRenderObject` (L138-L140) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._MenuItem.updateRenderObject` (L143-L148) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem` (L151-L173) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem._RenderMenuItem` (L152-L152) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem.computeDryLayout` (L157-L159) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._RenderMenuItem.performLayout` (L162-L172) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem` (L214-L308) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem.PopupMenuItem` (L218-L229) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem.represents` (L303-L303) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItem.createState` (L306-L307) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState` (L326-L409) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState.buildChild` (L334-L334) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState.handleTap` (L343-L348) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemState.build` (L351-L408) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem` (L472-L513) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem.CheckedPopupMenuItem` (L477-L488) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem.child` (L508-L508) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.CheckedPopupMenuItem.createState` (L511-L512) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState` (L515-L580) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState._opacity` (L520-L520) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.initState` (L523-L528) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState._updateState` (L531-L531) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.dispose` (L534-L538) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.handleTap` (L541-L549) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CheckedPopupMenuItemState.buildChild` (L552-L579) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenu` (L582-L600) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenu._PopupMenu` (L583-L590) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenu.createState` (L599-L599) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState` (L602-L719) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState.build` (L604-L703) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState.dispose` (L706-L709) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuState.dismiss` (L711-L718) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout` (L722-L847) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout._PopupMenuRouteLayout` (L723-L730) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout.getConstraintsForChild` (L757-L763) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout.getPositionForChild` (L766-L796) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout._closestScreen` (L798-L807) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout._fitInsideScreen` (L809-L831) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRouteLayout.shouldRelayout` (L834-L846) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute` (L849-L1007) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute._PopupMenuRoute` (L850-L870) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.createAnimation` (L889-L899) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.scrollTo` (L901-L907) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.transitionDuration` (L910-L911) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.barrierDismissible` (L914-L914) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.barrierColor` (L917-L917) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.buildTransitions` (L923-L948) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute.buildPage` (L951-L1002) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuRoute._avoidBounds` (L1004-L1006) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.showMenu` (L1067-L1123) - Function
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemSelected` (L1130-L1130) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuCanceled` (L1136-L1136) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuItemBuilder` (L1142-L1144) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButton` (L1224-L1465) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButton.PopupMenuButton` (L1226-L1258) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButton.createState` (L1464-L1464) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButtonState` (L1471-L1580) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButtonState.showButtonMenu` (L1480-L1547) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuButtonState.build` (L1550-L1579) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM2` (L1582-L1594) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM2._PopupMenuDefaultsM2` (L1583-L1583) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM2.textStyle` (L1590-L1590) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3` (L1603-L1640) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3._PopupMenuDefaultsM3` (L1604-L1604) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.labelTextStyle` (L1612-L1620) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.color` (L1623-L1623) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.shadowColor` (L1626-L1626) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.surfaceTintColor` (L1629-L1629) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._PopupMenuDefaultsM3.shape` (L1632-L1634) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu.PopupMenuColors.popupMenuBackgroundColor` (L1644-L1649) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween` (L1652-L1667) - Class
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween._CurveTween` (L1654-L1654) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween.transform` (L1660-L1662) - Method
-  - `frontend.appflowy_flutter.lib.shared.popup_menu.appflowy_popup_menu._CurveTween.toString` (L1665-L1666) - Method
-- `frontend/appflowy_flutter/lib/shared/settings/show_settings.dart`
-  - `frontend.appflowy_flutter.lib.shared.settings.show_settings.showSettingsDialog` (L16-L55) - Function
-  - `frontend.appflowy_flutter.lib.shared.settings.show_settings.showSimpleSettingsDialog` (L62-L67) - Function
-- `frontend/appflowy_flutter/lib/shared/text_field/text_filed_with_metric_lines.dart`
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines.TextFieldWithMetricLines` (L3-L26) - Class
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines.TextFieldWithMetricLines.TextFieldWithMetricLines` (L4-L13) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines.TextFieldWithMetricLines.createState` (L24-L25) - Method
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState` (L28-L91) - Class
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.initState` (L33-L39) - Method
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.dispose` (L42-L48) - Method
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.build` (L51-L62) - Method
-  - `frontend.appflowy_flutter.lib.shared.text_field.text_filed_with_metric_lines._TextFieldWithMetricLinesState.updateDisplayedLineCount` (L65-L90) - Method
-- `frontend/appflowy_flutter/lib/shared/time_format.dart`
-  - `frontend.appflowy_flutter.lib.shared.time_format.formatTimestampWithContext` (L11-L42) - Function
-- `frontend/appflowy_flutter/lib/shared/version_checker/version_checker.dart`
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker` (L13-L96) - Class
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.VersionChecker` (L14-L14) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.VersionChecker._internal` (L16-L16) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.setFeedUrl` (L22-L30) - Method
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.checkForUpdateInformation` (L34-L61) - Method
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker.checkForUpdate` (L66-L73) - Method
-  - `frontend.appflowy_flutter.lib.shared.version_checker.version_checker.VersionChecker._parseAppcastItem` (L75-L95) - Method
-- `frontend/appflowy_flutter/lib/shared/window_title_bar.dart`
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener` (L6-L18) - Class
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.WindowsButtonListener` (L7-L7) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.onWindowMaximize` (L12-L12) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.onWindowUnmaximize` (L15-L15) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowsButtonListener.dispose` (L17-L17) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar` (L20-L30) - Class
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar.WindowTitleBar` (L21-L24) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar.createState` (L29-L29) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState` (L32-L109) - Class
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.initState` (L37-L51) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState._isMaximizedChanged` (L53-L57) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.dispose` (L60-L68) - Method
-  - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.build` (L71-L108) - Method
-
-
-### Error Pages and Code Mapping
-Maps backend error codes to localized messages and renders structured error display pages with diagnostic details and issue reporting actions.
-
-
-**Related Classes/Methods**:
-
-- `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage`:17-145
-
-
-
-**Source Files:**
-
-- `frontend/appflowy_flutter/lib/shared/error_code/error_code_map.dart`
-  - `frontend.appflowy_flutter.lib.shared.error_code.error_code_map.PublishNameErrorCodeMap.publishErrorMessage` (L6-L21) - Method
-  - `frontend.appflowy_flutter.lib.shared.error_code.error_code_map.DomainErrorCodeMap.namespaceErrorMessage` (L25-L44) - Method
-- `frontend/appflowy_flutter/lib/shared/error_page/error_page.dart`
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage` (L17-L145) - Class
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage.FlowyErrorPage.error` (L18-L30) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage.FlowyErrorPage.message` (L32-L45) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage.FlowyErrorPage.exception` (L47-L60) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage.FlowyErrorPage._` (L62-L68) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.FlowyErrorPage.build` (L79-L144) - Method
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.StackTracePreview` (L147-L208) - Class
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.StackTracePreview.StackTracePreview` (L148-L151) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.StackTracePreview.build` (L156-L207) - Method
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.GitHubRedirectButton` (L210-L272) - Class
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.GitHubRedirectButton.GitHubRedirectButton` (L211-L216) - Constructor
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.GitHubRedirectButton._gitHubNewBugUri` (L224-L230) - Method
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.GitHubRedirectButton._contextString` (L232-L247) - Method
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.GitHubRedirectButton._platform` (L249-L255) - Method
-  - `frontend.appflowy_flutter.lib.shared.error_page.error_page.GitHubRedirectButton.build` (L258-L271) - Method
 
 
 

@@ -1,26 +1,28 @@
 ```mermaid
 graph LR
-    User_Presentation_Views["User Presentation Views"]
-    User_Application_Services["User Application Services"]
-    Authentication_Domain_Models["Authentication Domain Models"]
-    User_Presentation_Views -- "dispatches events to" --> User_Application_Services
-    User_Application_Services -- "models status with" --> Authentication_Domain_Models
+    Authentication_Presentation_Views["Authentication Presentation Views"]
+    Authentication_Application_Services["Authentication Application Services"]
+    Authentication_State_Domain["Authentication State Domain"]
+    Authentication_Presentation_Views -- "calls" --> Authentication_Application_Services
+    Authentication_Application_Services -- "represents session status using" --> Authentication_State_Domain
+    click Authentication_Presentation_Views href "./Authentication_Presentation_Views.md" "Details"
+    click Authentication_Application_Services href "./Authentication_Application_Services.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Handles user authentication, session state, accounts, cloud login, reminders, and profile management.
+Handles user authentication, account sessions, login/signup flows, passwords, and user profile management.
 
-### User Presentation Views
-Renders user authentication screens, onboarding flows, sign-in options, and workspace routing interfaces.
+### Authentication Presentation Views [[Expand]](./Authentication_Presentation_Views.md)
+Renders authentication interfaces, sign-in forms, password management views, splash screens, and workspace entry screens.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.user.presentation.anon_user.AnonUserList`:10-60
-- `frontend.appflowy_flutter.lib.user.presentation.anon_user.AnonUserItem`:62-96
+- `frontend.appflowy_flutter.lib.user.presentation.anon_user.AnonUserList.build`:16-59
+- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.sign_in_screen.SignInScreen`:11-44
 - `frontend.appflowy_flutter.lib.user.presentation.helpers.handle_open_workspace_error.handleOpenWorkspaceError`:10-36
 
 
@@ -367,8 +369,8 @@ Renders user authentication screens, onboarding flows, sign-in options, and work
   - `frontend.appflowy_flutter.lib.user.presentation.widgets.folder_widget._FolderCard.build` (L238-L318) - Method
 
 
-### User Application Services
-Coordinates user session state, sign-in and sign-up workflows, password management, and reminder services.
+### Authentication Application Services [[Expand]](./Authentication_Application_Services.md)
+Manages authentication workflows, session states, user reminders, and account service integrations via BLoCs and services.
 
 
 **Related Classes/Methods**:
@@ -695,8 +697,8 @@ Coordinates user session state, sign-in and sign-up workflows, password manageme
   - `frontend.appflowy_flutter.lib.user.application.workspace_error_bloc.WorkspaceState.WorkspaceState.restoreFromSnapshot` (L84-L84) - Constructor
 
 
-### Authentication Domain Models
-Defines domain representations for user authentication states across the application.
+### Authentication State Domain
+Defines the core domain representation of user authentication states.
 
 
 **Related Classes/Methods**:

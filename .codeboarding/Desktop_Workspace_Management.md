@@ -1,26 +1,27 @@
 ```mermaid
 graph LR
-    Workspace_Presentation_Interface["Workspace Presentation Interface"]
-    Workspace_Application_State["Workspace Application State"]
-    Workspace_Presentation_Interface -- "dispatches actions to" --> Workspace_Application_State
-    Workspace_Application_State -- "notifies and updates" --> Workspace_Presentation_Interface
+    Workspace_User_Interface["Workspace User Interface"]
+    Workspace_Application_Logic["Workspace Application Logic"]
+    Workspace_User_Interface -- "calls" --> Workspace_Application_Logic
+    Workspace_Application_Logic -- "calls" --> Workspace_User_Interface
+    click Workspace_User_Interface href "./Workspace_User_Interface.md" "Details"
+    click Workspace_Application_Logic href "./Workspace_Application_Logic.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Manages workspace hierarchies, navigation, views, sidebar layout, settings screens, command palette, and desktop home layout.
+Manages desktop workspaces, views, sidebars, navigation, user settings, and command palette.
 
-### Workspace Presentation Interface
-Renders desktop and mobile workspace UI components, including the home layout, sidebar, tabs, settings dialogs, notification panels, and command palette.
+### Workspace User Interface [[Expand]](./Workspace_User_Interface.md)
+Renders the desktop workspace UI including the home screen, sidebar navigation, command palette, tabs, settings dialogs, and notification panels.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.workspace.presentation.home.desktop_home_screen.DesktopHomeScreen`:44-331
-- `frontend.appflowy_flutter.lib.workspace.presentation.home.home_stack.PageManager`:652-803
 - `frontend.appflowy_flutter.lib.workspace.presentation.command_palette.command_palette.CommandPaletteModal`:175-269
+- `frontend.appflowy_flutter.lib.workspace.presentation.home.home_stack.PageManager`:652-803
 - `frontend.appflowy_flutter.lib.workspace.presentation.widgets.dialogs.showToastNotification`:262-298
 
 
@@ -2751,16 +2752,16 @@ Renders desktop and mobile workspace UI components, including the home layout, s
   - `frontend.appflowy_flutter.lib.workspace.presentation.widgets.view_title_bar.<unnamed extension>.lockedPageButtonBackground` (L601-L606) - Method
 
 
-### Workspace Application State
-Manages application state and business logic for workspace navigation, tabs, search, favorites, settings, and workspace data synchronization.
+### Workspace Application Logic [[Expand]](./Workspace_Application_Logic.md)
+Manages application state, BLoCs, cubits, and domain services for workspace navigation, sidebar interactions, tabs, search, and settings.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.workspace.application.tabs.tabs_bloc.TabsBloc`:23-304
-- `frontend.appflowy_flutter.lib.workspace.application.home.home_bloc.HomeBloc`:12-75
 - `frontend.appflowy_flutter.lib.workspace.application.action_navigation.action_navigation_bloc.ActionNavigationBloc`:12-58
 - `frontend.appflowy_flutter.lib.workspace.application.command_palette.command_palette_bloc.CommandPaletteBloc`:31-334
+- `frontend.appflowy_flutter.lib.workspace.application.tabs.tabs_bloc.TabsBloc`:23-304
+- `frontend.appflowy_flutter.lib.workspace.application.sidebar.space.space_bloc.SpaceBloc`:65-733
 
 
 
