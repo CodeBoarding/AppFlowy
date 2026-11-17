@@ -1,28 +1,27 @@
 ```mermaid
 graph LR
     Styled_UI_Component_Library["Styled UI Component Library"]
-    Theme_Tokens_and_Infrastructure_Services["Theme Tokens and Infrastructure Services"]
-    Vector_Graphic_Asset_Support["Vector Graphic Asset Support"]
-    Styled_UI_Component_Library -- "resolves theme and layout tokens" --> Theme_Tokens_and_Infrastructure_Services
-    Styled_UI_Component_Library -- "renders vector icons" --> Vector_Graphic_Asset_Support
+    Theme_and_Foundation_Services["Theme and Foundation Services"]
+    Vector_Icon_Rendering_Support["Vector Icon Rendering Support"]
+    Styled_UI_Component_Library -- "reads theme and layout tokens" --> Theme_and_Foundation_Services
+    Styled_UI_Component_Library -- "renders vector graphics with" --> Vector_Icon_Rendering_Support
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides low-level Flutter infrastructure, theme definitions, file pickers, SVG rendering, and styled UI widgets.
+Provides reusable UI styling widgets, overlays, theme color schemes, SVG rendering, and plugin infrastructure.
 
 ### Styled UI Component Library
-Provides styled UI primitives, customizable buttons, dialogs, overlays, popovers, and scrolling containers across platforms.
+Provides custom Flutter widgets, popovers, overlays, buttons, and input components configured for AppFlowy design guidelines.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.container.FlowyContainer.build`:29-42
-- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.divider.FlowyDivider.build`:13-22
-- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.color_picker.FlowyColorPicker._buildColorOption`:52-78
-- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.icon_button.FlowyDropdownButton.build`:113-119
+- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.container.FlowyContainer`:4-43
+- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.divider.FlowyDivider`:4-23
+- `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.style_widget.color_picker.FlowyColorPicker`:17-79
 
 
 
@@ -529,15 +528,15 @@ Provides styled UI primitives, customizable buttons, dialogs, overlays, popovers
   - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.widget.spacing.HSpace.build` (L50-L62) - Method
 
 
-### Theme Tokens and Infrastructure Services
-Supplies application theme configurations, sizing metrics, animation durations, plugin lifecycle management, and core utility services.
+### Theme and Foundation Services
+Manages theme configurations, color schemes, dimensions, animation durations, and foundational plugin utilities.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.flowy_infra.lib.theme_extension.AFThemeExtension`:4-226
-- `frontend.appflowy_flutter.packages.flowy_infra.lib.time.duration.FlowyDurations`:5-13
 - `frontend.appflowy_flutter.packages.flowy_infra.lib.size.Sizes`:54-60
+- `frontend.appflowy_flutter.packages.flowy_infra.lib.time.duration.FlowyDurations`:5-13
 
 
 
@@ -742,8 +741,8 @@ Supplies application theme configurations, sizing metrics, animation durations, 
   - `frontend.appflowy_flutter.packages.flowy_infra.lib.uuid.UuidType.privateSpace` (L18-L18) - Enum
 
 
-### Vector Graphic Asset Support
-Offers SVG rendering widgets and icon data bindings alongside generation utilities for vector graphics.
+### Vector Icon Rendering Support
+Provides SVG rendering widgets and vector asset code-generation tools.
 
 
 **Related Classes/Methods**:

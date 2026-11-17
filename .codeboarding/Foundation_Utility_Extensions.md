@@ -1,18 +1,18 @@
 ```mermaid
 graph LR
-    General_Application_Helper_Utilities["General Application Helper Utilities"]
-    Color_and_Field_Presentation_Helpers["Color and Field Presentation Helpers"]
-    Theme_Mode_Presentation_Utilities["Theme Mode Presentation Utilities"]
+    General_Helper_Utilities["General Helper Utilities"]
+    Color_And_String_Formatting["Color And String Formatting"]
+    Theme_Presentation_Helpers["Theme Presentation Helpers"]
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides shared general utilities such as debounce, throttle, color conversion, string formatting, and date helpers.
+Supplies general helper utilities, color and string conversion tools, debounce timers, and view expansion registries.
 
-### General Application Helper Utilities
-Provides utility functions and extensions for rate limiting, execution timing, string metrics, file handling, and context navigation.
+### General Helper Utilities
+Provides general-purpose utilities including debouncers, throttlers, time formatting, Levenshtein distance calculations, and navigation extensions.
 
 
 **Related Classes/Methods**: _None_
@@ -76,8 +76,8 @@ Provides utility functions and extensions for rate limiting, execution timing, s
   - `frontend.appflowy_flutter.lib.util.xfile_ext.ToMediaFileTypePB.toMediaFileTypePB` (L91-L108) - Method
 
 
-### Color and Field Presentation Helpers
-Provides extensions for color generation, hex string conversions, database field styling, and string transformations.
+### Color And String Formatting
+Generates colors from values, converts color hex strings, and extends strings with cover color, file naming, and icon helpers.
 
 
 **Related Classes/Methods**: _None_
@@ -115,8 +115,8 @@ Provides extensions for color generation, hex string conversions, database field
   - `frontend.appflowy_flutter.lib.util.string_extension.CounterExtension.getCounter` (L89-L93) - Method
 
 
-### Theme Mode Presentation Utilities
-Provides convenience extensions on Flutter theme data and theme modes for brightness detection and localized label text.
+### Theme Presentation Helpers
+Supplies extension helpers for checking ThemeData brightness and providing localized labels for ThemeMode selections.
 
 
 **Related Classes/Methods**:

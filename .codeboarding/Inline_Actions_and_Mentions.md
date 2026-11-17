@@ -1,23 +1,23 @@
 ```mermaid
 graph LR
-    Inline_Action_Command_Controller["Inline Action Command Controller"]
-    Inline_Action_Reference_Handlers["Inline Action Reference Handlers"]
-    Inline_Action_Menu_Widgets["Inline Action Menu Widgets"]
-    Inline_Action_Command_Controller -- "queries and disposes reference handlers" --> Inline_Action_Reference_Handlers
-    Inline_Action_Command_Controller -- "mounts selection overlay widget" --> Inline_Action_Menu_Widgets
-    Inline_Action_Reference_Handlers -- "populates action result models" --> Inline_Action_Command_Controller
-    Inline_Action_Menu_Widgets -- "dispatches search queries to delegates" --> Inline_Action_Command_Controller
-    Inline_Action_Menu_Widgets -- "executes searches against handlers" --> Inline_Action_Reference_Handlers
+    Action_Orchestration_and_Models["Action Orchestration and Models"]
+    Reference_Search_Handlers["Reference Search Handlers"]
+    Action_Menu_Presentation["Action Menu Presentation"]
+    Action_Orchestration_and_Models -- "queries search delegates" --> Reference_Search_Handlers
+    Action_Orchestration_and_Models -- "displays popup overlay" --> Action_Menu_Presentation
+    Reference_Search_Handlers -- "constructs action result items" --> Action_Orchestration_and_Models
+    Action_Menu_Presentation -- "triggers search via delegate" --> Action_Orchestration_and_Models
+    Action_Menu_Presentation -- "searches entity handlers" --> Reference_Search_Handlers
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Handles inline quick-actions and mentions for child pages, dates, reminders, and cross-page references.
+Handles inline slash and mention triggers for referencing pages, dates, reminders, and child documents.
 
-### Inline Action Command Controller
-Orchestrates inline action editor shortcut commands, overlay lifecycle management, and action delegate interfaces.
+### Action Orchestration and Models
+Orchestrates inline action commands, manages menu lifecycle and keyboard focus, and defines result models and handler delegate interfaces.
 
 
 **Related Classes/Methods**:
@@ -70,8 +70,8 @@ Orchestrates inline action editor shortcut commands, overlay lifecycle managemen
   - `frontend.appflowy_flutter.lib.plugins.inline_actions.service_handler.InlineActionsDelegate.dispose` (L6-L6) - Method
 
 
-### Inline Action Reference Handlers
-Implements search and creation handlers for references including child pages, dates, page links, and reminders.
+### Reference Search Handlers
+Implements inline search delegates that query child pages, date references, page links, and reminders.
 
 
 **Related Classes/Methods**:
@@ -127,13 +127,14 @@ Implements search and creation handlers for references including child pages, da
   - `frontend.appflowy_flutter.lib.plugins.inline_actions.handlers.reminder_reference.ReminderReferenceService._reminderFromDate` (L236-L251) - Method
 
 
-### Inline Action Menu Widgets
-Renders the interactive overlay popup menu, categorized result groups, and keyboard selection handling.
+### Action Menu Presentation
+Renders the pop-up inline actions menu overlay and groups search results into interactive selection tiles.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.inline_actions.widgets.inline_actions_handler.InlineActionsHandler`:54-80
+- `frontend.appflowy_flutter.lib.plugins.inline_actions.widgets.inline_actions_menu_group.InlineActionsGroup`:10-64
 
 
 

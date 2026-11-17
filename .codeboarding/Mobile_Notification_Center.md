@@ -1,20 +1,20 @@
 ```mermaid
 graph LR
-    Notification_Tab_and_Item_Views["Notification Tab and Item Views"]
-    Notification_Pages_and_Screens["Notification Pages and Screens"]
-    Notification_Content_Components["Notification Content Components"]
-    Notification_Tab_and_Item_Views -- "embeds shared content widgets" --> Notification_Content_Components
-    Notification_Pages_and_Screens -- "hosts notification list tabs" --> Notification_Tab_and_Item_Views
+    Notification_Tab_Views["Notification Tab Views"]
+    Notification_Screen_Pages["Notification Screen Pages"]
+    Shared_Notification_Elements["Shared Notification Elements"]
+    Notification_Tab_Views -- "renders shared visual elements" --> Shared_Notification_Elements
+    Notification_Screen_Pages -- "embeds notification tab views" --> Notification_Tab_Views
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Manages the mobile notification center, reminder updates, and batch notification actions.
+Displays user reminders and notifications with multi-selection management and contextual item actions.
 
-### Notification Tab and Item Views
-Renders tabbed notification list views and interactive notification items supporting multi-selection and slide actions.
+### Notification Tab Views
+Provides notification tabs, list views, and individual notification card widgets with swipe actions and empty states.
 
 
 **Related Classes/Methods**:
@@ -80,16 +80,16 @@ Renders tabbed notification list views and interactive notification items suppor
   - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.tab_bar.MobileNotificationTabBar.build` (L19-L54) - Method
 
 
-### Notification Pages and Screens
-Hosts top-level mobile notification screens, headers, settings menus, and multi-selection management views.
+### Notification Screen Pages
+Hosts the mobile notification screens, navigation headers, multi-select mode pages, and settings menus.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.mobile_notifications_screen.MobileNotificationsScreenV2`:17-25
 - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.mobile_notifications_screen.MobileNotificationsTab`:70-75
-- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.mobile_notifications_multiple_select_page.MobileNotificationMultiSelect`:23-31
-- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.header.MobileNotificationPageHeader`:9-34
+- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.mobile_notifications_multiple_select_page.MobileNotificationsMultiSelectScreen`:9-21
+- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.mobile_notifications_page.MobileNotificationsScreen`:19-27
 
 
 
@@ -168,15 +168,15 @@ Hosts top-level mobile notification screens, headers, settings menus, and multi-
   - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.settings_popup_menu._PopupButton.build` (L151-L166) - Method
 
 
-### Notification Content Components
-Provides reusable notification styling, status icons, check indicators, and rich document content preview widgets.
+### Shared Notification Elements
+Supplies shared visual elements, status indicators, badges, content preview renderers, and color helpers for notifications.
 
 
 **Related Classes/Methods**:
 
+- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.shared.NotificationContent`:115-125
 - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.shared.NotificationIcon`:24-69
 - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.shared.NotificationCheckIcon`:71-90
-- `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.shared.NotificationContent`:115-125
 - `frontend.appflowy_flutter.lib.mobile.presentation.notifications.widgets.shared.UnreadRedDot`:92-113
 
 

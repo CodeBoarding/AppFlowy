@@ -1,25 +1,25 @@
 ```mermaid
 graph LR
-    Rust_FFI_Dispatcher["Rust FFI Dispatcher"]
+    Backend_FFI_Dispatcher["Backend FFI Dispatcher"]
     Functional_Result_Types["Functional Result Types"]
-    Rust_FFI_Dispatcher -- "wraps responses in" --> Functional_Result_Types
+    Backend_FFI_Dispatcher -- "wraps responses in" --> Functional_Result_Types
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Handles asynchronous FFI dispatch and communication to the Rust backend alongside structured Result types.
+Handles Dart FFI communication and event dispatching to the Rust core engine alongside functional result handling.
 
-### Rust FFI Dispatcher
-Dispatches requests and event streams across Dart FFI to the native Rust backend library.
+### Backend FFI Dispatcher
+Dispatches asynchronous requests and manages event streams over foreign function interface bindings to the Rust engine.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.appflowy_backend.lib.dispatch.dispatch.Dispatch`:50-73
-- `frontend.appflowy_flutter.packages.appflowy_backend.lib.ffi.async_event`:39-45
 - `frontend.appflowy_flutter.packages.appflowy_backend.lib.dispatch.dispatch._extractPayload`:75-101
+- `frontend.appflowy_flutter.packages.appflowy_backend.lib.rust_stream.RustStreamReceiver`:11-57
 
 
 
@@ -148,7 +148,7 @@ Dispatches requests and event streams across Dart FFI to the native Rust backend
 
 
 ### Functional Result Types
-Provides generic synchronous and asynchronous result abstractions for functional success and error handling.
+Provides functional result encapsulation types for handling asynchronous and synchronous operation outcomes.
 
 
 **Related Classes/Methods**:

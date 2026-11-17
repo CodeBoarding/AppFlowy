@@ -1,23 +1,23 @@
 ```mermaid
 graph LR
-    Authentication_Provider_Clients["Authentication Provider Clients"]
-    User_Session_Lifecycle_Management["User Session Lifecycle Management"]
-    Account_Onboarding_and_Profile_Management["Account Onboarding and Profile Management"]
+    Authentication_Provider_Services["Authentication Provider Services"]
+    User_State_and_Preferences["User State and Preferences"]
+    User_Access_and_Profiles["User Access and Profiles"]
     User_Reminder_Management["User Reminder Management"]
-    Authentication_Provider_Clients -- "retrieves user profiles through" --> Account_Onboarding_and_Profile_Management
-    User_Session_Lifecycle_Management -- "verifies initial authentication using" --> Authentication_Provider_Clients
-    User_Session_Lifecycle_Management -- "manages anonymous user sessions via" --> Account_Onboarding_and_Profile_Management
-    Account_Onboarding_and_Profile_Management -- "authenticates users through" --> Authentication_Provider_Clients
+    Authentication_Provider_Services -- "retrieves user profile from" --> User_Access_and_Profiles
+    User_State_and_Preferences -- "verifies session authentication with" --> Authentication_Provider_Services
+    User_State_and_Preferences -- "loads anonymous user via" --> User_Access_and_Profiles
+    User_Access_and_Profiles -- "delegates authentication actions to" --> Authentication_Provider_Services
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Manages authentication workflows, session states, user reminders, and account service integrations via BLoCs and services.
+Manages authentication state machines, sign-in and sign-up workflows, cloud auth providers, and session lifecycle BLoCs.
 
-### Authentication Provider Clients
-Implements cloud, local backend, and mock authentication protocols including OAuth, magic links, passcode verification, and session state tracking.
+### Authentication Provider Services
+Provides backend and cloud authentication integrations for credentials, guest sessions, OAuth, and auth event streams.
 
 
 **Related Classes/Methods**:
@@ -87,8 +87,8 @@ Implements cloud, local backend, and mock authentication protocols including OAu
   - `frontend.appflowy_flutter.lib.user.application.user_auth_listener.UserAuthStateListener._userNotificationCallback` (L42-L68) - Method
 
 
-### User Session Lifecycle Management
-Coordinates splash authentication checks, anonymous user handling, workspace error states, and user configuration settings.
+### User State and Preferences
+Manages application splash verification, anonymous user state, workspace notifications, and user appearance and system settings.
 
 
 **Related Classes/Methods**:
@@ -96,6 +96,7 @@ Coordinates splash authentication checks, anonymous user handling, workspace err
 - `frontend.appflowy_flutter.lib.user.application.splash_bloc.SplashBloc`:9-24
 - `frontend.appflowy_flutter.lib.user.application.anon_user_bloc.AnonUserBloc`:10-41
 - `frontend.appflowy_flutter.lib.user.application.user_settings_service.UserSettingsBackendService`:8-62
+- `frontend.appflowy_flutter.lib.user.application.user_listener.UserListener`:29-119
 
 
 
@@ -173,8 +174,8 @@ Coordinates splash authentication checks, anonymous user handling, workspace err
   - `frontend.appflowy_flutter.lib.user.application.workspace_error_bloc.WorkspaceState.WorkspaceState.restoreFromSnapshot` (L84-L84) - Constructor
 
 
-### Account Onboarding and Profile Management
-Handles sign-in, account registration, password updates, and workspace profile management operations.
+### User Access and Profiles
+Coordinates sign-in, sign-up, and password BLoCs alongside user profile and workspace backend operations.
 
 
 **Related Classes/Methods**:
@@ -182,6 +183,7 @@ Handles sign-in, account registration, password updates, and workspace profile m
 - `frontend.appflowy_flutter.lib.user.application.sign_in_bloc.SignInBloc`:21-493
 - `frontend.appflowy_flutter.lib.user.application.sign_up_bloc.SignUpBloc`:14-149
 - `frontend.appflowy_flutter.lib.user.application.user_service.UserBackendService`:27-310
+- `frontend.appflowy_flutter.lib.user.application.password.password_bloc.PasswordBloc`:15-193
 
 
 
@@ -311,13 +313,13 @@ Handles sign-in, account registration, password updates, and workspace profile m
 
 
 ### User Reminder Management
-Provides services and state management for creating, updating, retrieving, and listening to user reminders.
+Manages user reminder scheduling, notification listeners, and backend reminder synchronization.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.user.application.reminder.reminder_service.ReminderService`:25-65
 - `frontend.appflowy_flutter.lib.user.application.reminder.reminder_bloc.ReminderBloc`:31-561
+- `frontend.appflowy_flutter.lib.user.application.reminder.reminder_service.ReminderService`:25-65
 
 
 

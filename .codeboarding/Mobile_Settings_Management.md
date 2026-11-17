@@ -1,37 +1,38 @@
 ```mermaid
 graph LR
-    General_Application_Preferences["General Application Preferences"]
-    Workspace_Membership_Management["Workspace Membership Management"]
-    Appearance_and_Theme_Settings["Appearance and Theme Settings"]
+    General_Application_Settings["General Application Settings"]
+    Workspace_Member_Management["Workspace Member Management"]
+    Visual_Appearance_Settings["Visual Appearance Settings"]
     Settings_Layout_Widgets["Settings Layout Widgets"]
-    Cloud_and_Self_Host_Settings["Cloud and Self Host Settings"]
-    Font_Configuration_Settings["Font Configuration Settings"]
-    User_Profile_Settings["User Profile Settings"]
-    General_Application_Preferences -- "renders with layout widgets" --> Settings_Layout_Widgets
-    General_Application_Preferences -- "opens self host modal" --> Cloud_and_Self_Host_Settings
-    Workspace_Membership_Management -- "renders with layout widgets" --> Settings_Layout_Widgets
-    Appearance_and_Theme_Settings -- "renders with layout widgets" --> Settings_Layout_Widgets
-    Appearance_and_Theme_Settings -- "embeds font settings" --> Font_Configuration_Settings
-    Cloud_and_Self_Host_Settings -- "renders with layout widgets" --> Settings_Layout_Widgets
-    Font_Configuration_Settings -- "renders with layout widgets" --> Settings_Layout_Widgets
-    User_Profile_Settings -- "renders with layout widgets" --> Settings_Layout_Widgets
+    Cloud_Connection_Settings["Cloud Connection Settings"]
+    Typography_and_Font_Preferences["Typography and Font Preferences"]
+    Personal_Profile_Settings["Personal Profile Settings"]
+    General_Application_Settings -- "builds setting sections with" --> Settings_Layout_Widgets
+    General_Application_Settings -- "opens configuration modal in" --> Cloud_Connection_Settings
+    Workspace_Member_Management -- "builds setting sections with" --> Settings_Layout_Widgets
+    Visual_Appearance_Settings -- "builds setting sections with" --> Settings_Layout_Widgets
+    Visual_Appearance_Settings -- "embeds font preferences via" --> Typography_and_Font_Preferences
+    Cloud_Connection_Settings -- "builds setting sections with" --> Settings_Layout_Widgets
+    Typography_and_Font_Preferences -- "builds setting items with" --> Settings_Layout_Widgets
+    Personal_Profile_Settings -- "builds setting items with" --> Settings_Layout_Widgets
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides user settings pages for appearance, cloud sync, language, workspace members, and AI configurations.
+Provides preference screens and bottom sheets for appearance, AI, cloud sync, fonts, languages, and workspace members.
 
-### General Application Preferences
-Provides general configuration groups and screens for language, notifications, AI, about info, user sessions, and launch settings.
+### General Application Settings
+Provides setting groups and screens for language, notifications, AI features, application information, user sessions, and launch setup.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.setting.about.about_setting_group.AboutSettingGroup`:13-58
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.launch_settings_page.MobileLaunchSettingsPage`:11-39
+- `frontend.appflowy_flutter.lib.mobile.presentation.setting.about.about_setting_group.AboutSettingGroup`:13-58
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.self_host_setting_group.SelfHostSettingGroup`:11-18
+- `frontend.appflowy_flutter.lib.mobile.presentation.setting.language_setting_group.LanguageSettingGroup`:13-20
 
 
 
@@ -95,8 +96,8 @@ Provides general configuration groups and screens for language, notifications, A
   - `frontend.appflowy_flutter.lib.mobile.presentation.setting.user_session_setting_group._DeleteAccountBottomSheetState._buildCheckbox` (L203-L234) - Method
 
 
-### Workspace Membership Management
-Manages workspace settings, member listings, invitations, and member addition interfaces.
+### Workspace Member Management
+Manages workspace member invitations, collaborator lists, and workspace-level configuration views.
 
 
 **Related Classes/Methods**:
@@ -175,8 +176,8 @@ Manages workspace settings, member listings, invitations, and member addition in
   - `frontend.appflowy_flutter.lib.mobile.presentation.setting.workspace.workspace_setting_group.WorkspaceSettingGroup.build` (L19-L47) - Method
 
 
-### Appearance and Theme Settings
-Configures mobile display appearance options including themes, text scaling, and right-to-left layout.
+### Visual Appearance Settings
+Controls application visual styling including theme modes, text scaling, and right-to-left layout preferences.
 
 
 **Related Classes/Methods**:
@@ -213,7 +214,7 @@ Configures mobile display appearance options including themes, text scaling, and
 
 
 ### Settings Layout Widgets
-Provides reusable layout wrappers, item rows, trailing icons, and support links across settings screens.
+Supplies shared UI widgets and group containers for rendering mobile settings rows, trailing icons, and support links.
 
 
 **Related Classes/Methods**:
@@ -221,6 +222,7 @@ Provides reusable layout wrappers, item rows, trailing icons, and support links 
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.widgets.mobile_setting_group_widget.MobileSettingGroup`:5-38
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.widgets.mobile_setting_item_widget.MobileSettingItem`:5-60
 - `frontend.appflowy_flutter.lib.mobile.presentation.setting.widgets.mobile_setting_trailing.MobileSettingTrailing`:6-42
+- `frontend.appflowy_flutter.lib.mobile.presentation.setting.support_setting_group.SupportSettingGroup`:20-96
 
 
 
@@ -248,8 +250,8 @@ Provides reusable layout wrappers, item rows, trailing icons, and support links 
   - `frontend.appflowy_flutter.lib.mobile.presentation.setting.widgets.mobile_setting_trailing.MobileSettingTrailing.build` (L17-L41) - Method
 
 
-### Cloud and Self Host Settings
-Handles AppFlowy Cloud synchronization pages and self-hosted server endpoint configuration sheets.
+### Cloud Connection Settings
+Configures AppFlowy Cloud synchronization settings and self-hosted server connection endpoints.
 
 
 **Related Classes/Methods**:
@@ -283,8 +285,8 @@ Handles AppFlowy Cloud synchronization pages and self-hosted server endpoint con
   - `frontend.appflowy_flutter.lib.mobile.presentation.setting.self_host.self_host_bottom_sheet._SelfHostUrlBottomSheetState._saveSelfHostUrl` (L80-L98) - Method
 
 
-### Font Configuration Settings
-Provides font family customization and typography picker screens for the mobile client.
+### Typography and Font Preferences
+Provides font family selection screens and setting items for customizing mobile typography.
 
 
 **Related Classes/Methods**:
@@ -318,8 +320,8 @@ Provides font family customization and typography picker screens for the mobile 
   - `frontend.appflowy_flutter.lib.mobile.presentation.setting.font.font_setting.FontSetting.build` (L22-L42) - Method
 
 
-### User Profile Settings
-Presents user account details and modal bottom sheets for editing user profile information.
+### Personal Profile Settings
+Manages user profile details, email display, password updates, and username editing dialogs.
 
 
 **Related Classes/Methods**:

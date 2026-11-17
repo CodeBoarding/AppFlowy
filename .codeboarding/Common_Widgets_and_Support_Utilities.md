@@ -1,26 +1,27 @@
 ```mermaid
 graph LR
-    Application_Utilities_and_Extensions["Application Utilities and Extensions"]
+    Application_Widgets_and_Helpers["Application Widgets and Helpers"]
     Icon_and_Emoji_Picker["Icon and Emoji Picker"]
-    Application_Utilities_and_Extensions -- "delegates caching to" --> Icon_and_Emoji_Picker
-    Icon_and_Emoji_Picker -- "renders previews with" --> Application_Utilities_and_Extensions
+    Application_Widgets_and_Helpers -- "delegates image caching to" --> Icon_and_Emoji_Picker
+    Icon_and_Emoji_Picker -- "renders preview images using" --> Application_Widgets_and_Helpers
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides reusable UI components, icon and emoji pickers, image rendering widgets, caching handlers, and utility extensions.
+Provides reusable interface components including icon and emoji pickers, cached network image widgets, and utilities for permissions, localization, and feature flags.
 
-### Application Utilities and Extensions
-Provides shared application utilities, network media display widgets, window controls, and formatting extensions.
+### Application Widgets and Helpers
+Supplies shared presentation widgets and utilities including network image rendering, window title bars, popup menus, and date formatting.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.shared.appflowy_cache_manager.FlowyCacheManager`:5-42
 - `frontend.appflowy_flutter.lib.shared.appflowy_network_image.FlowyNetworkImage`:18-70
 - `frontend.appflowy_flutter.lib.shared.appflowy_network_svg.FlowyNetworkSvg`:10-82
+- `frontend.appflowy_flutter.lib.shared.appflowy_cache_manager.FlowyCacheManager`:5-42
+- `frontend.appflowy_flutter.lib.shared.window_title_bar.WindowTitleBar`:20-30
 
 
 
@@ -297,13 +298,16 @@ Provides shared application utilities, network media display widgets, window con
 
 
 ### Icon and Emoji Picker
-Provides icon and emoji pickers, color palettes, asset uploading utilities, and custom image cache storage.
+Provides icon and emoji selection interfaces, icon uploading with permission checks, and custom image caching.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager`:8-36
+- `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.flowy_icon_emoji_picker.FlowyIconEmojiPicker`:109-130
+- `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.icon_picker.FlowyIconPicker`:90-106
 - `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.icon_uploader.IconUploader`:31-45
+- `frontend.appflowy_flutter.lib.shared.custom_image_cache_manager.CustomImageCacheManager`:8-36
+- `frontend.appflowy_flutter.lib.shared.permission.permission_checker.PermissionChecker`:16-103
 
 
 

@@ -1,29 +1,28 @@
 ```mermaid
 graph LR
-    Foundational_Infrastructure_and_UI_Widgets["Foundational Infrastructure and UI Widgets"]
-    Design_System_UI_Components["Design System UI Components"]
-    Backend_Bridge_and_Result_Types["Backend Bridge and Result Types"]
-    Floating_Overlay_and_Popover_Engine["Floating Overlay and Popover Engine"]
-    Foundational_Infrastructure_and_UI_Widgets -- "delegates popover rendering to" --> Floating_Overlay_and_Popover_Engine
-    click Foundational_Infrastructure_and_UI_Widgets href "./Foundational_Infrastructure_and_UI_Widgets.md" "Details"
-    click Design_System_UI_Components href "./Design_System_UI_Components.md" "Details"
-    click Backend_Bridge_and_Result_Types href "./Backend_Bridge_and_Result_Types.md" "Details"
+    UI_Infrastructure_and_Widgets["UI Infrastructure and Widgets"]
+    Design_System_and_Theming["Design System and Theming"]
+    Rust_Backend_Bridge["Rust Backend Bridge"]
+    Popover_Overlay_Manager["Popover Overlay Manager"]
+    UI_Infrastructure_and_Widgets -- "renders popovers using" --> Popover_Overlay_Manager
+    click UI_Infrastructure_and_Widgets href "./UI_Infrastructure_and_Widgets.md" "Details"
+    click Design_System_and_Theming href "./Design_System_and_Theming.md" "Details"
+    click Rust_Backend_Bridge href "./Rust_Backend_Bridge.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Houses shared foundation packages including appflowy_backend, UI design system components, popover overlays, and result types.
+Supplies reusable UI widgets, popovers, backend FFI bindings, result abstractions, and styling infrastructure across packages.
 
-### Foundational Infrastructure and UI Widgets [[Expand]](./Foundational_Infrastructure_and_UI_Widgets.md)
-Provides low-level Flutter infrastructure, theme definitions, file pickers, SVG rendering, and styled UI widgets.
+### UI Infrastructure and Widgets [[Expand]](./UI_Infrastructure_and_Widgets.md)
+Provides reusable UI styling widgets, overlays, theme color schemes, SVG rendering, and plugin infrastructure.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.flowy_infra_ui.lib.src.flowy_overlay.appflowy_popover.AppFlowyPopover`:24-133
-- `frontend.appflowy_flutter.packages.flowy_infra.lib.colorscheme.colorscheme.FlowyColorScheme`:37-199
 - `frontend.appflowy_flutter.packages.flowy_svg.lib.src.flowy_svg.FlowySvg`:20-146
 
 
@@ -754,14 +753,14 @@ Provides low-level Flutter infrastructure, theme definitions, file pickers, SVG 
   - `frontend.appflowy_flutter.packages.flowy_svg.lib.src.flowy_svg.FlowySvg._normalized` (L133-L145) - Method
 
 
-### Design System UI Components [[Expand]](./Design_System_UI_Components.md)
-Defines theme specifications, design tokens, and modular Flutter design system widgets.
+### Design System and Theming [[Expand]](./Design_System_and_Theming.md)
+Defines theme specifications, design tokens, and modular UI components including buttons, menus, and text fields.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.appflowy_theme.AppFlowyTheme`:5-53
-- `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.appflowy_theme.AppFlowyInheritedTheme`:55-72
+- `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.definition.theme_data.AppFlowyThemeData`:9-107
 
 
 
@@ -1496,13 +1495,14 @@ Defines theme specifications, design tokens, and modular Flutter design system w
   - `frontend.appflowy_flutter.packages.appflowy_ui.script.generate_theme.<unnamed extension>.isColor` (L303-L306) - Method
 
 
-### Backend Bridge and Result Types [[Expand]](./Backend_Bridge_and_Result_Types.md)
-Handles asynchronous FFI dispatch and communication to the Rust backend alongside structured Result types.
+### Rust Backend Bridge [[Expand]](./Rust_Backend_Bridge.md)
+Handles Dart FFI communication and event dispatching to the Rust core engine alongside functional result handling.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.appflowy_backend.lib.dispatch.dispatch.Dispatch`:50-73
+- `frontend.appflowy_flutter.packages.appflowy_result.lib.src.result.FlowyResult`:1-25
 
 
 
@@ -1688,14 +1688,15 @@ Handles asynchronous FFI dispatch and communication to the Rust backend alongsid
   - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.result.FlowyFailure.getFailure` (L164-L166) - Method
 
 
-### Floating Overlay and Popover Engine
-Manages floating popover widgets, overlay positioning, and mutual exclusion state.
+### Popover Overlay Manager
+Manages floating popover positioning, overlay entry lifecycles, mutual exclusion, and follower layouts.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.Popover`:54-153
 - `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.popover.PopoverController`:9-15
+- `frontend.appflowy_flutter.packages.appflowy_popover.lib.src.mutex.PopoverMutex`:7-33
 
 
 

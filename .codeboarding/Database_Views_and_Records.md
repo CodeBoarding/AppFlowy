@@ -1,68 +1,69 @@
 ```mermaid
 graph LR
-    Database_Cell_and_Row_Widgets["Database Cell and Row Widgets"]
-    Database_Grid_View["Database Grid View"]
-    Database_Application_State["Database Application State"]
-    Database_Board_and_Sharing["Database Board and Sharing"]
-    Database_Domain_Services["Database Domain Services"]
-    Database_Calendar_View["Database Calendar View"]
-    Base_User_Interface_Pickers["Base User Interface Pickers"]
-    Database_Tab_Bar_Navigation["Database Tab Bar Navigation"]
-    Database_Document_Integration["Database Document Integration"]
-    Database_Cell_and_Row_Widgets -- "references grid layout sizes and action menus" --> Database_Grid_View
-    Database_Cell_and_Row_Widgets -- "manages cell state through row controllers" --> Database_Application_State
-    Database_Cell_and_Row_Widgets -- "converts cover image representations" --> Database_Board_and_Sharing
-    Database_Cell_and_Row_Widgets -- "invokes backend field and view services" --> Database_Domain_Services
-    Database_Cell_and_Row_Widgets -- "renders calendar layout and cell settings" --> Database_Calendar_View
-    Database_Cell_and_Row_Widgets -- "displays base drag handles in mobile editors" --> Base_User_Interface_Pickers
-    Database_Cell_and_Row_Widgets -- "embeds database tab view plugins" --> Database_Tab_Bar_Navigation
-    Database_Cell_and_Row_Widgets -- "initializes database document view plugins" --> Database_Document_Integration
-    Database_Grid_View -- "renders row details and editable cell widgets" --> Database_Cell_and_Row_Widgets
-    Database_Grid_View -- "binds calculations and row state listeners" --> Database_Application_State
-    Database_Grid_View -- "dispatches filtering operations to backend services" --> Database_Domain_Services
-    Database_Grid_View -- "registers tab bar items and setting extensions" --> Database_Tab_Bar_Navigation
-    Database_Application_State -- "references select option tag components" --> Database_Cell_and_Row_Widgets
-    Database_Application_State -- "formats date filter values using grid helpers" --> Database_Grid_View
-    Database_Application_State -- "disposes board page tab builders" --> Database_Board_and_Sharing
-    Database_Application_State -- "persists cell and filter operations via domain services" --> Database_Domain_Services
-    Database_Application_State -- "disposes calendar page tab builders" --> Database_Calendar_View
-    Database_Application_State -- "coordinates tab bar item lifecycles" --> Database_Tab_Bar_Navigation
-    Database_Board_and_Sharing -- "renders row cards and card cell styles" --> Database_Cell_and_Row_Widgets
-    Database_Board_and_Sharing -- "reuses filter bloc and toolbar buttons" --> Database_Grid_View
-    Database_Board_and_Sharing -- "loads row data via database controller" --> Database_Application_State
-    Database_Board_and_Sharing -- "dispatches group management actions" --> Database_Domain_Services
-    Database_Board_and_Sharing -- "registers board tab bar view plugins" --> Database_Tab_Bar_Navigation
-    Database_Calendar_View -- "renders row cards and cell builders" --> Database_Cell_and_Row_Widgets
-    Database_Calendar_View -- "reuses grid sizing and header field icons" --> Database_Grid_View
-    Database_Calendar_View -- "manages row data using backend service builders" --> Database_Application_State
-    Database_Calendar_View -- "listens for database layout setting changes" --> Database_Domain_Services
-    Database_Calendar_View -- "registers calendar tab bar view plugins" --> Database_Tab_Bar_Navigation
-    Database_Tab_Bar_Navigation -- "displays mobile database controls" --> Database_Cell_and_Row_Widgets
-    Database_Tab_Bar_Navigation -- "opens grid filter and view setting menus" --> Database_Grid_View
-    Database_Tab_Bar_Navigation -- "dispatches tab bar events to application bloc" --> Database_Application_State
-    Database_Tab_Bar_Navigation -- "provides sharing action button" --> Database_Board_and_Sharing
-    Database_Document_Integration -- "embeds row banner and property list widgets" --> Database_Cell_and_Row_Widgets
-    Database_Document_Integration -- "configures row detail bloc and separators" --> Database_Grid_View
-    Database_Document_Integration -- "loads related row details and cell contexts" --> Database_Application_State
-    Database_Document_Integration -- "listens for row metadata and primary field queries" --> Database_Domain_Services
+    Database_Cell_and_Field_Widgets["Database Cell and Field Widgets"]
+    Database_Grid_Table_View["Database Grid Table View"]
+    Database_Application_State_Management["Database Application State Management"]
+    Kanban_Board_and_Export_Sharing["Kanban Board and Export Sharing"]
+    Database_Backend_Domain_Services["Database Backend Domain Services"]
+    Database_Calendar_Schedule_View["Database Calendar Schedule View"]
+    Plugin_Shared_UI_Controls["Plugin Shared UI Controls"]
+    Database_Layout_Navigation_Bar["Database Layout Navigation Bar"]
+    Database_Document_Page_Integration["Database Document Page Integration"]
+    Database_Cell_and_Field_Widgets -- "references grid row actions and layouts" --> Database_Grid_Table_View
+    Database_Cell_and_Field_Widgets -- "dispatches cell events and retrieves row state" --> Database_Application_State_Management
+    Database_Cell_and_Field_Widgets -- "converts row cover configurations" --> Kanban_Board_and_Export_Sharing
+    Database_Cell_and_Field_Widgets -- "invokes backend database view and field operations" --> Database_Backend_Domain_Services
+    Database_Cell_and_Field_Widgets -- "configures calendar layout settings" --> Database_Calendar_Schedule_View
+    Database_Cell_and_Field_Widgets -- "embeds shared drag handles" --> Plugin_Shared_UI_Controls
+    Database_Cell_and_Field_Widgets -- "initiates related database tab views" --> Database_Layout_Navigation_Bar
+    Database_Cell_and_Field_Widgets -- "opens database row document views" --> Database_Document_Page_Integration
+    Database_Grid_Table_View -- "renders editable cells and row details" --> Database_Cell_and_Field_Widgets
+    Database_Grid_Table_View -- "manages calculations and filtering state" --> Database_Application_State_Management
+    Database_Grid_Table_View -- "persists grid filter conditions" --> Database_Backend_Domain_Services
+    Database_Grid_Table_View -- "registers grid view tab bar items" --> Database_Layout_Navigation_Bar
+    Database_Application_State_Management -- "formats select option cell tags" --> Database_Cell_and_Field_Widgets
+    Database_Application_State_Management -- "formats date filter values" --> Database_Grid_Table_View
+    Database_Application_State_Management -- "disposes board tab bar builders" --> Kanban_Board_and_Export_Sharing
+    Database_Application_State_Management -- "executes backend checklist and cell operations" --> Database_Backend_Domain_Services
+    Database_Application_State_Management -- "disposes calendar tab bar builders" --> Database_Calendar_Schedule_View
+    Database_Application_State_Management -- "disposes tab bar item builders" --> Database_Layout_Navigation_Bar
+    Kanban_Board_and_Export_Sharing -- "renders row cards within board columns" --> Database_Cell_and_Field_Widgets
+    Kanban_Board_and_Export_Sharing -- "reuses grid filter toolbar controls" --> Database_Grid_Table_View
+    Kanban_Board_and_Export_Sharing -- "queries row cache for card details" --> Database_Application_State_Management
+    Kanban_Board_and_Export_Sharing -- "dispatches column group mutations to backend" --> Database_Backend_Domain_Services
+    Kanban_Board_and_Export_Sharing -- "registers board view tab bar items" --> Database_Layout_Navigation_Bar
+    Database_Calendar_Schedule_View -- "renders event cards and cell styling" --> Database_Cell_and_Field_Widgets
+    Database_Calendar_Schedule_View -- "reuses grid sizes and field header icons" --> Database_Grid_Table_View
+    Database_Calendar_Schedule_View -- "dispatches row date updates and event creation" --> Database_Application_State_Management
+    Database_Calendar_Schedule_View -- "listens to calendar layout setting changes" --> Database_Backend_Domain_Services
+    Database_Calendar_Schedule_View -- "registers calendar view tab bar items" --> Database_Layout_Navigation_Bar
+    Database_Layout_Navigation_Bar -- "renders mobile database controls" --> Database_Cell_and_Field_Widgets
+    Database_Layout_Navigation_Bar -- "embeds view setting menus and filter popups" --> Database_Grid_Table_View
+    Database_Layout_Navigation_Bar -- "dispatches view switching and creation events" --> Database_Application_State_Management
+    Database_Layout_Navigation_Bar -- "renders share and export action buttons" --> Kanban_Board_and_Export_Sharing
+    Database_Document_Page_Integration -- "builds editable cells and row banner within document" --> Database_Cell_and_Field_Widgets
+    Database_Document_Page_Integration -- "initializes row detail BLoC and formatting separators" --> Database_Grid_Table_View
+    Database_Document_Page_Integration -- "binds document title to cell controller context" --> Database_Application_State_Management
+    Database_Document_Page_Integration -- "fetches primary field info from backend service" --> Database_Backend_Domain_Services
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides database view presentations including grid, board, and calendar layouts, along with row/cell controllers and sharing capabilities.
+Manages structured database layouts (grid, board, calendar), records, cell editors, and shared view controls.
 
-### Database Cell and Row Widgets
-Provides reusable visual components including cell formatters, cell editors, row details, and property configuration panels across views.
+### Database Cell and Field Widgets
+Renders reusable cell editors, card skeletons, field configurations, row details, and database settings.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.plugins.database.widgets.card.card.RowCard`:28-83
 - `frontend.appflowy_flutter.lib.plugins.database.widgets.cell.editable_cell_builder.EditableCellBuilder`:34-247
 - `frontend.appflowy_flutter.lib.plugins.database.widgets.row.row_detail.RowDetailPage`:26-42
-- `frontend.appflowy_flutter.lib.plugins.database.widgets.field.field_editor.FieldEditor`:35-55
+- `frontend.appflowy_flutter.lib.plugins.database.widgets.card.card.RowCard`:28-83
+- `frontend.appflowy_flutter.lib.plugins.database.widgets.field.field_editor.FieldAction`:233-379
+- `frontend.appflowy_flutter.lib.plugins.database.widgets.row.row_banner.RowBanner`:49-67
 
 
 
@@ -1578,8 +1579,8 @@ Provides reusable visual components including cell formatters, cell editors, row
   - `frontend.appflowy_flutter.lib.plugins.database.widgets.share_button.ShareActionWrapper.name` (L149-L154) - Method
 
 
-### Database Grid View
-Implements the tabular grid layout with column calculation bars, filtering controls, sorting menus, and grid row rendering.
+### Database Grid Table View
+Implements tabular grid rendering, cell layout sizing, calculations, filtering, and sorting controllers.
 
 
 **Related Classes/Methods**:
@@ -1588,6 +1589,7 @@ Implements the tabular grid layout with column calculation bars, filtering contr
 - `frontend.appflowy_flutter.lib.plugins.database.grid.application.grid_bloc.GridBloc`:22-199
 - `frontend.appflowy_flutter.lib.plugins.database.grid.application.filter.filter_editor_bloc.FilterEditorBloc`:16-182
 - `frontend.appflowy_flutter.lib.plugins.database.grid.application.calculations.calculations_bloc.CalculationsBloc`:12-151
+- `frontend.appflowy_flutter.lib.plugins.database.grid.presentation.layout.sizes.GridSize`:4-53
 
 
 
@@ -2394,8 +2396,8 @@ Implements the tabular grid layout with column calculation bars, filtering contr
   - `frontend.appflowy_flutter.lib.plugins.database.grid.presentation.widgets.toolbar.view_database_button.ViewDatabaseButton.build` (L17-L36) - Method
 
 
-### Database Application State
-Coordinates business logic, state management BLoCs, and controllers for database rows, fields, layouts, and sync events.
+### Database Application State Management
+Coordinates database application state, cell BLoCs, row caches, field definitions, and view lifecycle listeners.
 
 
 **Related Classes/Methods**:
@@ -3440,15 +3442,15 @@ Coordinates business logic, state management BLoCs, and controllers for database
   - `frontend.appflowy_flutter.lib.plugins.database.application.view.view_listener.DatabaseViewListener.stop` (L99-L102) - Method
 
 
-### Database Board and Sharing
-Renders the kanban board layout grouped by column values and provides document sharing and export workflows.
+### Kanban Board and Export Sharing
+Manages kanban board layouts, grouping columns, card drag actions, and shared document export utilities.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.database.board.application.board_bloc.BoardBloc`:31-575
 - `frontend.appflowy_flutter.lib.plugins.database.board.application.board_actions_bloc.BoardActionsCubit`:9-60
-- `frontend.appflowy_flutter.lib.plugins.shared.share.share_bloc.ShareBloc`:22-351
+- `frontend.appflowy_flutter.lib.plugins.shared.share.share_button.ShareButton`:19-110
 
 
 
@@ -3911,16 +3913,16 @@ Renders the kanban board layout grouped by column values and provides document s
   - `frontend.appflowy_flutter.lib.plugins.shared.sync_indicator.DatabaseSyncIndicator.build` (L79-L125) - Method
 
 
-### Database Domain Services
-Provides backend services, event listeners, and communication channels interfacing with the underlying database storage engine.
+### Database Backend Domain Services
+Bridges database domain operations, backend listeners, and entity services to core data storage.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.database.domain.field_service.FieldBackendService`:11-217
+- `frontend.appflowy_flutter.lib.plugins.database.domain.database_view_service.DatabaseViewBackendService`:10-136
 - `frontend.appflowy_flutter.lib.plugins.database.domain.filter_service.FilterBackendService`:8-320
 - `frontend.appflowy_flutter.lib.plugins.database.domain.group_service.GroupBackendService`:6-61
-- `frontend.appflowy_flutter.lib.plugins.database.domain.database_view_service.DatabaseViewBackendService`:10-136
 
 
 
@@ -4106,15 +4108,15 @@ Provides backend services, event listeners, and communication channels interfaci
   - `frontend.appflowy_flutter.lib.plugins.database.domain.type_option_service.TypeOptionBackendService.newOption` (L15-L24) - Method
 
 
-### Database Calendar View
-Provides calendar-based visualization of database rows mapped to dates, scheduling controls, and event card editing.
+### Database Calendar Schedule View
+Displays calendar month and day layouts, event scheduling workflows, and date-based row editing interfaces.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.database.calendar.presentation.calendar_page.CalendarPage`:85-99
 - `frontend.appflowy_flutter.lib.plugins.database.calendar.application.calendar_bloc.CalendarBloc`:22-430
-- `frontend.appflowy_flutter.lib.plugins.database.calendar.presentation.calendar_event_editor.CalendarEventEditor`:23-71
+- `frontend.appflowy_flutter.lib.plugins.database.calendar.application.calendar_setting_bloc.CalendarSettingBloc`:11-115
 
 
 
@@ -4359,8 +4361,8 @@ Provides calendar-based visualization of database rows mapped to dates, scheduli
   - `frontend.appflowy_flutter.lib.plugins.database.calendar.presentation.toolbar.calendar_setting_bar.CalendarSettingBar.build` (L24-L60) - Method
 
 
-### Base User Interface Pickers
-Supplies shared fundamental UI components including color pickers, emoji selectors, drag handles, and icon widgets.
+### Plugin Shared UI Controls
+Provides common UI selector pickers for color selection, emojis, icons, and draggable handles.
 
 
 **Related Classes/Methods**:
@@ -4415,15 +4417,13 @@ Supplies shared fundamental UI components including color pickers, emoji selecto
   - `frontend.appflowy_flutter.lib.plugins.base.icon.icon_widget.IconWidget.build` (L14-L33) - Method
 
 
-### Database Tab Bar Navigation
-Manages tab switching, view additions, view renaming, and tab bar header controls across different database layouts.
+### Database Layout Navigation Bar
+Manages layout switching tabs, view header controls, and configuration menus across database views.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.database.tab_bar.tab_bar_view.DatabaseTabBarViewPlugin`:336-383
-- `frontend.appflowy_flutter.lib.plugins.database.tab_bar.tab_bar_view.DatabaseTabBarItemBuilder`:38-68
-- `frontend.appflowy_flutter.lib.plugins.database.tab_bar.desktop.tab_bar_header.DatabaseTabBar`:82-87
 - `frontend.appflowy_flutter.lib.plugins.database.tab_bar.desktop.setting_menu.DatabaseViewSettingExtension`:12-45
 
 
@@ -4527,14 +4527,14 @@ Manages tab switching, view additions, view renaming, and tab bar header control
   - `frontend.appflowy_flutter.lib.plugins.database.tab_bar.tab_bar_view.DatabasePluginWidgetBuilder.contentPadding` (L501-L501) - Method
 
 
-### Database Document Integration
-Integrates embedded database views within document pages, managing document headers and linked row details.
+### Database Document Page Integration
+Embeds database rows into dedicated document pages and synchronizes document header titles with row data.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.plugins.database_document.database_document_plugin.DatabaseDocumentPlugin`:57-83
 - `frontend.appflowy_flutter.lib.plugins.database_document.database_document_page.DatabaseDocumentPage`:33-51
+- `frontend.appflowy_flutter.lib.plugins.database_document.database_document_plugin.DatabaseDocumentPlugin`:57-83
 - `frontend.appflowy_flutter.lib.plugins.database_document.presentation.database_document_title_bloc.DatabaseDocumentTitleBloc`:19-142
 
 

@@ -1,51 +1,49 @@
 ```mermaid
 graph LR
-    Database_Views_and_Shared_Tools["Database Views and Shared Tools"]
-    Rich_Text_Document_Editor["Rich Text Document Editor"]
-    Conversational_AI_Assistant["Conversational AI Assistant"]
+    Database_Views_and_Records["Database Views and Records"]
+    Rich_Document_Editor["Rich Document Editor"]
+    AI_Chat_Assistant["AI Chat Assistant"]
     Inline_Actions_and_Mentions["Inline Actions and Mentions"]
-    Trash_and_Recovery_Management["Trash and Recovery Management"]
-    Inline_Emoji_Command_Handler["Inline Emoji Command Handler"]
-    Blank_Canvas_and_View_Utilities["Blank Canvas and View Utilities"]
-    Database_Views_and_Shared_Tools -- "calls" --> Rich_Text_Document_Editor
-    Database_Views_and_Shared_Tools -- "embeds and delegates view display to" --> Conversational_AI_Assistant
-    Database_Views_and_Shared_Tools -- "renders trash views via" --> Trash_and_Recovery_Management
-    Database_Views_and_Shared_Tools -- "calls" --> Blank_Canvas_and_View_Utilities
-    Rich_Text_Document_Editor -- "calls" --> Database_Views_and_Shared_Tools
-    Rich_Text_Document_Editor -- "integrates markdown components and styles from" --> Conversational_AI_Assistant
-    Rich_Text_Document_Editor -- "calls" --> Inline_Actions_and_Mentions
-    Rich_Text_Document_Editor -- "invokes inline emoji commands from" --> Inline_Emoji_Command_Handler
-    Rich_Text_Document_Editor -- "manages view deletion and restoration via" --> Trash_and_Recovery_Management
-    Rich_Text_Document_Editor -- "tracks view lifecycle through" --> Blank_Canvas_and_View_Utilities
-    Conversational_AI_Assistant -- "inspects open view IDs from" --> Database_Views_and_Shared_Tools
-    Conversational_AI_Assistant -- "calls" --> Rich_Text_Document_Editor
-    Conversational_AI_Assistant -- "verifies target view against" --> Trash_and_Recovery_Management
-    Conversational_AI_Assistant -- "calls" --> Blank_Canvas_and_View_Utilities
-    Inline_Actions_and_Mentions -- "calls" --> Rich_Text_Document_Editor
-    click Database_Views_and_Shared_Tools href "./Database_Views_and_Shared_Tools.md" "Details"
-    click Rich_Text_Document_Editor href "./Rich_Text_Document_Editor.md" "Details"
-    click Conversational_AI_Assistant href "./Conversational_AI_Assistant.md" "Details"
+    Trash_and_Recovery_Manager["Trash and Recovery Manager"]
+    Inline_Emoji_Picker["Inline Emoji Picker"]
+    Blank_View_and_Utilities["Blank View and Utilities"]
+    Database_Views_and_Records -- "renders document icons and compact events" --> Rich_Document_Editor
+    Database_Views_and_Records -- "hosts AI chat plugin within view" --> AI_Chat_Assistant
+    Database_Views_and_Records -- "embeds trash plugin view" --> Trash_and_Recovery_Manager
+    Database_Views_and_Records -- "notifies view lifecycle and builds blank view" --> Blank_View_and_Utilities
+    Rich_Document_Editor -- "uses shared buttons and cell styling" --> Database_Views_and_Records
+    Rich_Document_Editor -- "applies AI chat editor styles and rendered text" --> AI_Chat_Assistant
+    Rich_Document_Editor -- "registers inline reference and action handlers" --> Inline_Actions_and_Mentions
+    Rich_Document_Editor -- "invokes emoji command and selection menu" --> Inline_Emoji_Picker
+    Rich_Document_Editor -- "moves deleted views to trash service" --> Trash_and_Recovery_Manager
+    Rich_Document_Editor -- "notifies plugin lifecycle events" --> Blank_View_and_Utilities
+    AI_Chat_Assistant -- "queries database view identifiers" --> Database_Views_and_Records
+    AI_Chat_Assistant -- "saves chat messages into document pages" --> Rich_Document_Editor
+    AI_Chat_Assistant -- "references trash plugin identifier" --> Trash_and_Recovery_Manager
+    AI_Chat_Assistant -- "manages plugin notifications and blank view id" --> Blank_View_and_Utilities
+    Inline_Actions_and_Mentions -- "constructs document mention block attributes" --> Rich_Document_Editor
+    click Database_Views_and_Records href "./Database_Views_and_Records.md" "Details"
+    click Rich_Document_Editor href "./Rich_Document_Editor.md" "Details"
+    click AI_Chat_Assistant href "./AI_Chat_Assistant.md" "Details"
     click Inline_Actions_and_Mentions href "./Inline_Actions_and_Mentions.md" "Details"
-    click Trash_and_Recovery_Management href "./Trash_and_Recovery_Management.md" "Details"
+    click Trash_and_Recovery_Manager href "./Trash_and_Recovery_Manager.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides interactive plugins for documents, databases (grid, board, calendar), AI chat, and inline actions.
+Implements document editing, database representations such as grid and board views, AI chat, and inline actions.
 
-### Database Views and Shared Tools [[Expand]](./Database_Views_and_Shared_Tools.md)
-Provides database view presentations including grid, board, and calendar layouts, along with row/cell controllers and sharing capabilities.
+### Database Views and Records [[Expand]](./Database_Views_and_Records.md)
+Manages structured database layouts (grid, board, calendar), records, cell editors, and shared view controls.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.plugins.database.tab_bar.tab_bar_view.DatabaseTabBarViewPlugin`:336-383
 - `frontend.appflowy_flutter.lib.plugins.database.application.tab_bar_bloc.DatabaseTabBarController`:308-340
 - `frontend.appflowy_flutter.lib.plugins.database.widgets.database_view_widget.DatabaseViewWidget`:10-28
-- `frontend.appflowy_flutter.lib.plugins.database_document.database_document_plugin.DatabaseDocumentPlugin`:57-83
-- `frontend.appflowy_flutter.lib.plugins.shared.share.share_button.ShareButton`:19-110
+- `frontend.appflowy_flutter.lib.plugins.database.tab_bar.tab_bar_view.DatabaseTabBarViewPlugin`:336-383
 
 
 
@@ -4464,14 +4462,14 @@ Provides database view presentations including grid, board, and calendar layouts
   - `frontend.appflowy_flutter.lib.plugins.shared.sync_indicator.DatabaseSyncIndicator.build` (L79-L125) - Method
 
 
-### Rich Text Document Editor [[Expand]](./Rich_Text_Document_Editor.md)
-Implements the block-based document editor workspace, formatting toolbars, transaction handling, and collaborative document structures.
+### Rich Document Editor [[Expand]](./Rich_Document_Editor.md)
+Provides the block-based rich text document editor, including editing toolbars, block components, and collaborative document state.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.plugins.document.document.DocumentPlugin`:52-104
 - `frontend.appflowy_flutter.lib.plugins.document.application.document_bloc.DocumentBloc`:47-451
+- `frontend.appflowy_flutter.lib.plugins.document.document.DocumentPlugin`:52-104
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_page.AppFlowyEditorPage`:43-74
 
 
@@ -8455,8 +8453,8 @@ Implements the block-based document editor workspace, formatting toolbars, trans
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_style.EditorStyleCustomizer._buildTextSpanOverlay` (L559-L605) - Method
 
 
-### Conversational AI Assistant [[Expand]](./Conversational_AI_Assistant.md)
-Manages the conversational AI interface, message streaming, chat threads, and saving AI outputs to documents.
+### AI Chat Assistant [[Expand]](./AI_Chat_Assistant.md)
+Delivers the conversational AI assistant interface, managing chat streams, message histories, and document export actions.
 
 
 **Related Classes/Methods**:
@@ -8464,7 +8462,6 @@ Manages the conversational AI interface, message streaming, chat threads, and sa
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.chat.AIChatPagePlugin`:52-94
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_bloc.ChatBloc`:31-542
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_edit_document_service.ChatEditDocumentService`:16-107
-- `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.message.ai_markdown_text.AIMarkdownText`:18-39
 
 
 
@@ -9177,13 +9174,12 @@ Manages the conversational AI interface, message streaming, chat threads, and sa
 
 
 ### Inline Actions and Mentions [[Expand]](./Inline_Actions_and_Mentions.md)
-Handles inline quick-actions and mentions for child pages, dates, reminders, and cross-page references.
+Handles inline slash and mention triggers for referencing pages, dates, reminders, and child documents.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.inline_actions.inline_actions_service.InlineActionsService`:9-32
-- `frontend.appflowy_flutter.lib.plugins.inline_actions.inline_actions_command.inlineActionsCommand`:10-22
 - `frontend.appflowy_flutter.lib.plugins.inline_actions.handlers.child_page.InlineChildPageService`:15-83
 - `frontend.appflowy_flutter.lib.plugins.inline_actions.handlers.date_reference.DateReferenceService`:15-214
 
@@ -9301,8 +9297,8 @@ Handles inline quick-actions and mentions for child pages, dates, reminders, and
   - `frontend.appflowy_flutter.lib.plugins.inline_actions.widgets.inline_actions_menu_group._InlineActionsWidgetState._onPressed` (L125-L133) - Method
 
 
-### Trash and Recovery Management [[Expand]](./Trash_and_Recovery_Management.md)
-Handles discarded workspace items, trash views, and view restoration or permanent deletion.
+### Trash and Recovery Manager [[Expand]](./Trash_and_Recovery_Manager.md)
+Manages the deleted items view, listing trashed views and pages and offering recovery or permanent deletion.
 
 
 **Related Classes/Methods**:
@@ -9405,8 +9401,8 @@ Handles discarded workspace items, trash views, and view restoration or permanen
   - `frontend.appflowy_flutter.lib.plugins.trash.trash_page._TrashPageState._renderListBody` (L150-L186) - Method
 
 
-### Inline Emoji Command Handler
-Provides inline emoji shortcut commands, popup selection menus, and insertion handlers.
+### Inline Emoji Picker
+Provides inline keyboard shortcuts and popups for searching and selecting emoji icons.
 
 
 **Related Classes/Methods**:
@@ -9459,8 +9455,8 @@ Provides inline emoji shortcut commands, popup selection menus, and insertion ha
   - `frontend.appflowy_flutter.lib.plugins.emoji.emoji_menu.EmojiMenu.calculateSelectionMenuOffset` (L182-L230) - Method
 
 
-### Blank Canvas and View Utilities
-Provides blank view fallbacks and shared view plugin lifecycle notification utilities.
+### Blank View and Utilities
+Provides fallback empty page placeholders and shared view lifecycle change notifiers across plugins.
 
 
 **Related Classes/Methods**:

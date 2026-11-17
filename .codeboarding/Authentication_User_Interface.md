@@ -1,37 +1,39 @@
 ```mermaid
 graph LR
-    Email_and_Password_Flow["Email and Password Flow"]
-    Common_Authentication_Controls["Common Authentication Controls"]
-    Workspace_Startup_Navigation["Workspace Startup Navigation"]
-    Adaptive_Sign_In_Screens["Adaptive Sign In Screens"]
-    Mobile_and_Social_Sign_In["Mobile and Social Sign In"]
-    Splash_and_Guest_Flow["Splash and Guest Flow"]
-    Anonymous_User_Selection["Anonymous User Selection"]
-    Email_and_Password_Flow -- "displays branding logo" --> Common_Authentication_Controls
-    Adaptive_Sign_In_Screens -- "embeds email and password login" --> Email_and_Password_Flow
-    Adaptive_Sign_In_Screens -- "renders common authentication controls" --> Common_Authentication_Controls
-    Adaptive_Sign_In_Screens -- "navigates home on successful authentication" --> Workspace_Startup_Navigation
-    Adaptive_Sign_In_Screens -- "delegates mobile layout and renders social buttons" --> Mobile_and_Social_Sign_In
-    Mobile_and_Social_Sign_In -- "embeds email authentication view" --> Email_and_Password_Flow
-    Mobile_and_Social_Sign_In -- "renders anonymous login buttons" --> Common_Authentication_Controls
-    Splash_and_Guest_Flow -- "renders branding and folder picker" --> Common_Authentication_Controls
-    Splash_and_Guest_Flow -- "navigates workspace or handles errors" --> Workspace_Startup_Navigation
+    Email_and_Password_Authentication["Email and Password Authentication"]
+    Shared_Authentication_UI_Components["Shared Authentication UI Components"]
+    Workspace_Initialization_and_Navigation["Workspace Initialization and Navigation"]
+    Adaptive_Sign_In_Shell["Adaptive Sign In Shell"]
+    Mobile_Sign_In_and_Third_Party_Auth["Mobile Sign In and Third Party Auth"]
+    Splash_and_Guest_Onboarding["Splash and Guest Onboarding"]
+    Anonymous_Profile_Selector["Anonymous Profile Selector"]
+    Email_and_Password_Authentication -- "renders branding widget" --> Shared_Authentication_UI_Components
+    Adaptive_Sign_In_Shell -- "embeds email authentication forms" --> Email_and_Password_Authentication
+    Adaptive_Sign_In_Shell -- "displays agreement and anonymous options" --> Shared_Authentication_UI_Components
+    Adaptive_Sign_In_Shell -- "navigates upon sign-in events" --> Workspace_Initialization_and_Navigation
+    Adaptive_Sign_In_Shell -- "delegates to mobile screen and OAuth buttons" --> Mobile_Sign_In_and_Third_Party_Auth
+    Mobile_Sign_In_and_Third_Party_Auth -- "embeds email sign-in forms" --> Email_and_Password_Authentication
+    Mobile_Sign_In_and_Third_Party_Auth -- "presents cloud and anonymous buttons" --> Shared_Authentication_UI_Components
+    Splash_and_Guest_Onboarding -- "renders header logo and folder components" --> Shared_Authentication_UI_Components
+    Splash_and_Guest_Onboarding -- "routes authenticated users to workspace" --> Workspace_Initialization_and_Navigation
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Renders authentication interfaces, sign-in forms, password management views, splash screens, and workspace entry screens.
+Renders authentication and onboarding UI screens, login forms, password management views, and workspace entry widgets.
 
-### Email and Password Flow
-Provides input forms, verification views, and password reset flows for email-based authentication and magic links.
+### Email and Password Authentication
+Provides form controls, passcode verification, and password reset workflows for email and password authentication.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.continue_with.continue_with_email_and_password.ContinueWithEmailAndPassword`:14-20
-- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.continue_with.title_logo.TitleLogo`:6-54
+- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.continue_with.continue_with_magic_link_or_passcode_page.ContinueWithMagicLinkOrPasscodePage`:14-29
+- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.continue_with.forgot_password_page.ForgotPasswordPage`:17-31
+- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.continue_with.reset_password_page.ResetPasswordPage`:10-24
 
 
 
@@ -134,19 +136,16 @@ Provides input forms, verification views, and password reset flows for email-bas
   - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.continue_with.verifying_button.VerifyingButton.build` (L11-L41) - Method
 
 
-### Common Authentication Controls
-Renders reusable authentication UI elements including logos, agreement terms, anonymous mode buttons, and form containers.
+### Shared Authentication UI Components
+Supplies shared presentation widgets including logos, terms agreements, container frames, and anonymous login triggers.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.anonymous_sign_in_button.SignInAnonymousButtonV3`:10-57
 - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.sign_in_agreement.SignInAgreement`:8-52
-- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.sign_in_anonymous_button.SignInAnonymousButtonV2`:12-71
-- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.sign_in_anonymous_button.ChangeCloudModeButton`:73-107
-- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.logo.logo.AFLogo`:4-20
+- `frontend.appflowy_flutter.lib.user.presentation.widgets.auth_form_container.AuthFormContainer`:3-24
 - `frontend.appflowy_flutter.lib.user.presentation.widgets.flowy_logo_title.FlowyLogoTitle`:6-36
-- `frontend.appflowy_flutter.lib.user.presentation.widgets.folder_widget.FolderWidget`:24-34
 
 
 
@@ -231,8 +230,8 @@ Renders reusable authentication UI elements including logos, agreement terms, an
   - `frontend.appflowy_flutter.lib.user.presentation.widgets.folder_widget._FolderCard.build` (L238-L318) - Method
 
 
-### Workspace Startup Navigation
-Coordinates auth-related router transitions, workspace initialization screens across desktop and mobile, and workspace loading error dialogs.
+### Workspace Initialization and Navigation
+Manages post-authentication navigation routers, initial workspace launch screens, and workspace initialization error handling.
 
 
 **Related Classes/Methods**:
@@ -240,6 +239,7 @@ Coordinates auth-related router transitions, workspace initialization screens ac
 - `frontend.appflowy_flutter.lib.user.presentation.router.AuthRouter`:14-73
 - `frontend.appflowy_flutter.lib.user.presentation.router.SplashRouter`:75-123
 - `frontend.appflowy_flutter.lib.user.presentation.helpers.handle_open_workspace_error.handleOpenWorkspaceError`:10-36
+- `frontend.appflowy_flutter.lib.user.presentation.screens.workspace_start_screen.workspace_start_screen.WorkspaceStartScreen`:11-39
 
 
 
@@ -292,14 +292,15 @@ Coordinates auth-related router transitions, workspace initialization screens ac
   - `frontend.appflowy_flutter.lib.user.presentation.screens.workspace_start_screen.workspace_start_screen.WorkspaceStartScreen.build` (L21-L38) - Method
 
 
-### Adaptive Sign In Screens
-Orchestrates top-level sign-in page rendering and desktop presentation layouts while reacting to authentication state changes.
+### Adaptive Sign In Shell
+Implements the adaptive root sign-in screen dispatch and dedicated desktop layout.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.sign_in_screen.SignInScreen`:11-44
 - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.desktop_sign_in_screen.DesktopSignInScreen`:19-26
+- `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.mobile_loading_screen.MobileLoadingScreen`:9-37
 
 
 
@@ -330,8 +331,8 @@ Orchestrates top-level sign-in page rendering and desktop presentation layouts w
   - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.sign_in_screen.SignInScreen._showSignInError` (L31-L43) - Method
 
 
-### Mobile and Social Sign In
-Provides the mobile sign-in screen layout alongside OAuth and third-party federated login action buttons.
+### Mobile Sign In and Third Party Auth
+Renders the mobile authentication interface and buttons for third-party OAuth providers.
 
 
 **Related Classes/Methods**:
@@ -391,8 +392,8 @@ Provides the mobile sign-in screen layout alongside OAuth and third-party federa
   - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.widgets.third_party_sign_in_button.third_party_sign_in_buttons._MobileThirdPartySignInState._buildCollapsedButtons` (L184-L203) - Method
 
 
-### Splash and Guest Flow
-Presents initial app startup splash animations and onboarding views for skipping sign-in to register as a guest user.
+### Splash and Guest Onboarding
+Coordinates application startup splash checks and the skip-login guest onboarding screen.
 
 
 **Related Classes/Methods**:
@@ -451,8 +452,8 @@ Presents initial app startup splash animations and onboarding views for skipping
   - `frontend.appflowy_flutter.lib.user.presentation.screens.splash_screen._DesktopSplashBody.build` (L110-L128) - Method
 
 
-### Anonymous User Selection
-Renders selectable lists of existing local anonymous user profiles for resuming previous guest sessions.
+### Anonymous Profile Selector
+Presents selectable anonymous and local profile items for switching accounts.
 
 
 **Related Classes/Methods**:

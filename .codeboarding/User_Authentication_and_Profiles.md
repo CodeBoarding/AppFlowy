@@ -1,11 +1,11 @@
 ```mermaid
 graph LR
-    Authentication_Presentation_Views["Authentication Presentation Views"]
+    Authentication_User_Interface["Authentication User Interface"]
     Authentication_Application_Services["Authentication Application Services"]
     Authentication_State_Domain["Authentication State Domain"]
-    Authentication_Presentation_Views -- "calls" --> Authentication_Application_Services
-    Authentication_Application_Services -- "represents session status using" --> Authentication_State_Domain
-    click Authentication_Presentation_Views href "./Authentication_Presentation_Views.md" "Details"
+    Authentication_User_Interface -- "dispatches auth actions and binds BLoCs" --> Authentication_Application_Services
+    Authentication_Application_Services -- "maps session status to domain state" --> Authentication_State_Domain
+    click Authentication_User_Interface href "./Authentication_User_Interface.md" "Details"
     click Authentication_Application_Services href "./Authentication_Application_Services.md" "Details"
 ```
 
@@ -13,16 +13,16 @@ graph LR
 
 ## Details
 
-Handles user authentication, account sessions, login/signup flows, passwords, and user profile management.
+Handles user onboarding, authentication flows, session persistence, account profiles, and user reminders.
 
-### Authentication Presentation Views [[Expand]](./Authentication_Presentation_Views.md)
-Renders authentication interfaces, sign-in forms, password management views, splash screens, and workspace entry screens.
+### Authentication User Interface [[Expand]](./Authentication_User_Interface.md)
+Renders authentication and onboarding UI screens, login forms, password management views, and workspace entry widgets.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.user.presentation.anon_user.AnonUserList.build`:16-59
 - `frontend.appflowy_flutter.lib.user.presentation.screens.sign_in_screen.sign_in_screen.SignInScreen`:11-44
+- `frontend.appflowy_flutter.lib.user.presentation.anon_user.AnonUserList`:10-60
 - `frontend.appflowy_flutter.lib.user.presentation.helpers.handle_open_workspace_error.handleOpenWorkspaceError`:10-36
 
 
@@ -370,14 +370,14 @@ Renders authentication interfaces, sign-in forms, password management views, spl
 
 
 ### Authentication Application Services [[Expand]](./Authentication_Application_Services.md)
-Manages authentication workflows, session states, user reminders, and account service integrations via BLoCs and services.
+Manages authentication state machines, sign-in and sign-up workflows, cloud auth providers, and session lifecycle BLoCs.
 
 
 **Related Classes/Methods**:
 
+- `frontend.appflowy_flutter.lib.user.application.splash_bloc.SplashBloc`:9-24
 - `frontend.appflowy_flutter.lib.user.application.anon_user_bloc.AnonUserBloc`:10-41
 - `frontend.appflowy_flutter.lib.user.application.auth.af_cloud_auth_service.AppFlowyCloudAuthService`:17-129
-- `frontend.appflowy_flutter.lib.user.application.splash_bloc.SplashBloc`:9-24
 
 
 
@@ -698,7 +698,7 @@ Manages authentication workflows, session states, user reminders, and account se
 
 
 ### Authentication State Domain
-Defines the core domain representation of user authentication states.
+Defines immutable domain models representing authenticated, unauthenticated, and initial user session states.
 
 
 **Related Classes/Methods**:

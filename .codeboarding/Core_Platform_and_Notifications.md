@@ -1,19 +1,19 @@
 ```mermaid
 graph LR
-    Backend_Notification_Parsers["Backend Notification Parsers"]
-    Native_Window_and_Connectivity["Native Window and Connectivity"]
-    Key_Value_Storage_Configuration["Key Value Storage Configuration"]
-    Platform_and_URL_Helpers["Platform and URL Helpers"]
+    Backend_Notification_Handlers["Backend Notification Handlers"]
+    Desktop_Window_and_Connectivity["Desktop Window and Connectivity"]
+    Key_Value_Preference_Storage["Key Value Preference Storage"]
+    Platform_and_URI_Helpers["Platform and URI Helpers"]
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Supplies low-level key-value persistence, window framing, URL launching, and backend notification dispatchers.
+Provides fundamental runtime services including key-value storage, deep URL launching, and backend event notification parsers.
 
-### Backend Notification Parsers
-Decodes and dispatches asynchronous backend notification payloads and errors for user, document, folder, grid, and search domains.
+### Backend Notification Handlers
+Parses and routes asynchronous backend notifications for documents, folders, grids, search, and user updates.
 
 
 **Related Classes/Methods**: _None_
@@ -54,8 +54,8 @@ Decodes and dispatches asynchronous backend notification payloads and errors for
   - `frontend.appflowy_flutter.lib.core.notification.user_notification.UserNotificationParser.UserNotificationParser` (L11-L18) - Constructor
 
 
-### Native Window and Connectivity
-Manages desktop window movement and zooming channels alongside real-time network connectivity status monitoring.
+### Desktop Window and Connectivity
+Controls desktop frameless window movement and tracks device network connectivity status for backend synchronization.
 
 
 **Related Classes/Methods**:
@@ -85,15 +85,14 @@ Manages desktop window movement and zooming channels alongside real-time network
   - `frontend.appflowy_flutter.lib.core.network_monitor.NetworkListener._updateConnectionStatus` (L34-L56) - Method
 
 
-### Key Value Storage Configuration
-Provides persistent key-value configuration storage interfaces and key constants backed by shared preferences.
+### Key Value Preference Storage
+Provides an abstraction and shared-preferences implementation for persistent key-value configuration storage.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.core.config.kv.KeyValueStorage`:3-12
 - `frontend.appflowy_flutter.lib.core.config.kv.DartKeyValue`:14-65
-- `frontend.appflowy_flutter.lib.core.config.kv_keys.KVKeys`:1-128
 
 
 
@@ -119,11 +118,15 @@ Provides persistent key-value configuration storage interfaces and key constants
   - `frontend.appflowy_flutter.lib.core.config.kv_keys.KVKeys.KVKeys._` (L2-L2) - Constructor
 
 
-### Platform and URL Helpers
-Supplies cross-platform runtime environment detection and external URL launching helper utilities.
+### Platform and URI Helpers
+Offers target platform identification helpers and uniform URI launching routines for web links and local file paths.
 
 
-**Related Classes/Methods**: _None_
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.lib.core.helpers.url_launcher.afLaunchUri`:22-94
+- `frontend.appflowy_flutter.lib.core.helpers.url_launcher.afLaunchUrlString`:99-120
+
 
 
 **Source Files:**

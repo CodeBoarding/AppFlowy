@@ -1,18 +1,18 @@
 ```mermaid
 graph LR
-    Slash_Command_Selection_Menu["Slash Command Selection Menu"]
-    Document_And_Chat_Screens["Document And Chat Screens"]
-    Inline_Action_Suggestions_Menu["Inline Action Suggestions Menu"]
+    Mobile_Slash_Selection_Menu["Mobile Slash Selection Menu"]
+    Mobile_Screen_View_Containers["Mobile Screen View Containers"]
+    Mobile_Inline_Actions_Overlay["Mobile Inline Actions Overlay"]
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Delivers document editing interfaces, AI chat views, and contextual inline selection menus.
+Implements the mobile document editor, AI chat interface, inline action triggers, and slash selection menus.
 
-### Slash Command Selection Menu
-Presents mobile editor slash-command selection overlays, positioning menus and rendering command items.
+### Mobile Slash Selection Menu
+Displays and positions mobile slash-command selection overlays with keyboard interception and item selection.
 
 
 **Related Classes/Methods**: _None_
@@ -72,8 +72,8 @@ Presents mobile editor slash-command selection overlays, positioning menus and r
   - `frontend.appflowy_flutter.lib.mobile.presentation.selection_menu.slash_keyboard_service_interceptor.SlashKeyboardServiceInterceptor.interceptInsert` (L29-L41) - Method
 
 
-### Document And Chat Screens
-Hosts top-level mobile screen pages for document editing, chat interactions, and placeholder views.
+### Mobile Screen View Containers
+Provides mobile screen route wrappers for document editing, chat views, and placeholder landing pages.
 
 
 **Related Classes/Methods**: _None_
@@ -95,8 +95,8 @@ Hosts top-level mobile screen pages for document editing, chat interactions, and
   - `frontend.appflowy_flutter.lib.mobile.presentation.root_placeholder_page.RootPlaceholderScreen.build` (L24-L32) - Method
 
 
-### Inline Action Suggestions Menu
-Renders mobile editor overlay menus and manages search query filtering for inline action suggestions.
+### Mobile Inline Actions Overlay
+Renders floating inline action menus and manages filtered suggestion lists based on editor cursor positions.
 
 
 **Related Classes/Methods**: _None_

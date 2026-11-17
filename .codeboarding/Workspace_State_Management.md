@@ -1,42 +1,41 @@
 ```mermaid
 graph LR
-    Application_Settings_Management["Application Settings Management"]
-    Sidebar_and_Space_Navigation["Sidebar and Space Navigation"]
-    Command_Palette_Search["Command Palette Search"]
-    View_Hierarchy_Service["View Hierarchy Service"]
-    Favorite_Views_Management["Favorite Views Management"]
+    Application_Settings_and_Preferences["Application Settings and Preferences"]
+    Sidebar_Navigation_and_Workspace_Structure["Sidebar Navigation and Workspace Structure"]
+    Command_Palette_and_Global_Search["Command Palette and Global Search"]
+    Document_View_Operations["Document View Operations"]
+    Favorite_Views_Service["Favorite Views Service"]
     Recent_Views_Tracking["Recent Views Tracking"]
-    Edit_Panel_State["Edit Panel State"]
-    Action_Navigation_Handling["Action Navigation Handling"]
-    View_Title_Bar_State["View Title Bar State"]
-    Application_Settings_Management -- "subscribes to workspace plan and billing services" --> Sidebar_and_Space_Navigation
-    Sidebar_and_Space_Navigation -- "listens for storage notification updates" --> Application_Settings_Management
-    Sidebar_and_Space_Navigation -- "queries and manages space views" --> View_Hierarchy_Service
-    Command_Palette_Search -- "retrieves all views for search indexing" --> View_Hierarchy_Service
-    View_Hierarchy_Service -- "checks space permission attributes" --> Sidebar_and_Space_Navigation
-    View_Hierarchy_Service -- "observes favorite view status changes" --> Favorite_Views_Management
-    View_Hierarchy_Service -- "records view access into recent views cache" --> Recent_Views_Tracking
-    Favorite_Views_Management -- "updates view metadata on favorite toggle" --> View_Hierarchy_Service
-    Action_Navigation_Handling -- "fetches view details for action routing" --> View_Hierarchy_Service
-    View_Title_Bar_State -- "retrieves view ancestors and listens to view updates" --> View_Hierarchy_Service
+    Inline_Edit_Panel["Inline Edit Panel"]
+    Action_Navigation_Dispatcher["Action Navigation Dispatcher"]
+    View_Title_Bar_Management["View Title Bar Management"]
+    Application_Settings_and_Preferences -- "monitors subscription and workspace services" --> Sidebar_Navigation_and_Workspace_Structure
+    Sidebar_Navigation_and_Workspace_Structure -- "listens to storage notifications" --> Application_Settings_and_Preferences
+    Sidebar_Navigation_and_Workspace_Structure -- "queries and modifies view hierarchies" --> Document_View_Operations
+    Command_Palette_and_Global_Search -- "fetches views for search" --> Document_View_Operations
+    Document_View_Operations -- "checks space permissions" --> Sidebar_Navigation_and_Workspace_Structure
+    Document_View_Operations -- "manages favorite view listeners" --> Favorite_Views_Service
+    Document_View_Operations -- "records recently visited views" --> Recent_Views_Tracking
+    Favorite_Views_Service -- "updates favorite status on views" --> Document_View_Operations
+    Action_Navigation_Dispatcher -- "resolves navigation target views" --> Document_View_Operations
+    View_Title_Bar_Management -- "listens to view updates and queries ancestors" --> Document_View_Operations
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Manages application state, BLoCs, cubits, and domain services for workspace navigation, sidebar interactions, tabs, search, and settings.
+Coordinates business logic, state transitions, tab navigation, and service integrations for workspace features.
 
-### Application Settings Management
-Manages user and workspace settings including appearance, cloud sync, local AI configurations, billing plans, and keyboard shortcuts.
+### Application Settings and Preferences
+Manages application configuration, user preferences, AI integrations, appearance themes, billing, and cloud synchronization settings.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.workspace.application.settings.billing.settings_billing_bloc.SettingsBillingBloc`:25-263
 - `frontend.appflowy_flutter.lib.workspace.application.settings.ai.local_ai_on_boarding_bloc.LocalAIOnBoardingBloc`:16-107
+- `frontend.appflowy_flutter.lib.workspace.application.settings.billing.settings_billing_bloc.SettingsBillingBloc`:25-263
 - `frontend.appflowy_flutter.lib.workspace.application.settings.file_storage.file_storage_listener.StoreageNotificationListener`:24-68
-- `frontend.appflowy_flutter.lib.workspace.application.settings.plan.settings_plan_bloc.SettingsPlanBloc`:21-201
 
 
 
@@ -484,17 +483,17 @@ Manages user and workspace settings including appearance, cloud sync, local AI c
   - `frontend.appflowy_flutter.lib.workspace.application.settings.workspace.workspace_settings_bloc.WorkspaceSettingsState.WorkspaceSettingsState.initial` (L151-L151) - Constructor
 
 
-### Sidebar and Space Navigation
-Coordinates workspace structure, sidebar sections, space hierarchies, user session menus, and navigation tabs.
+### Sidebar Navigation and Workspace Structure
+Coordinates workspace tree structures, sidebar sections, user spaces, tabs, and workspace-level lifecycle services.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.application.sidebar.space.space_bloc.SpaceBloc`:65-733
-- `frontend.appflowy_flutter.lib.workspace.application.workspace.workspace_service.WorkspaceService`:10-95
+- `frontend.appflowy_flutter.lib.workspace.application.sidebar.billing.sidebar_plan_bloc.SidebarPlanBloc`:19-215
 - `frontend.appflowy_flutter.lib.workspace.application.menu.sidebar_sections_bloc.SidebarSectionsBloc`:47-273
+- `frontend.appflowy_flutter.lib.workspace.application.workspace.workspace_service.WorkspaceService`:10-95
 - `frontend.appflowy_flutter.lib.workspace.application.subscription_success_listenable.subscription_success_listenable.SubscriptionSuccessListenable`:6-25
-- `frontend.appflowy_flutter.lib.workspace.application.tabs.tabs_bloc.TabsBloc`:23-304
 
 
 
@@ -765,14 +764,13 @@ Coordinates workspace structure, sidebar sections, space hierarchies, user sessi
   - `frontend.appflowy_flutter.lib.workspace.application.workspace.workspace_service.WorkspaceService.getBillingPortal` (L92-L94) - Method
 
 
-### Command Palette Search
-Handles quick search queries, cached view lookups, and command palette navigation actions.
+### Command Palette and Global Search
+Executes workspace-wide searches and provides quick navigation and action dispatching via the command palette.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.application.command_palette.command_palette_bloc.CommandPaletteBloc`:31-334
-- `frontend.appflowy_flutter.lib.workspace.application.command_palette.search_result_list_bloc.SearchResultListBloc`:11-54
 
 
 
@@ -848,14 +846,14 @@ Handles quick search queries, cached view lookups, and command palette navigatio
   - `frontend.appflowy_flutter.lib.workspace.application.command_palette.search_service.SearchResponseStream.listen` (L102-L125) - Method
 
 
-### View Hierarchy Service
-Provides backend services, event listeners, and business logic for creating, updating, and querying workspace views.
+### Document View Operations
+Manages document and page view lifecycle events, view hierarchies, metadata mutations, and view backend services.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.workspace.application.view.view_service.ViewBackendService`:14-427
 - `frontend.appflowy_flutter.lib.workspace.application.view.view_bloc.ViewBloc`:27-455
+- `frontend.appflowy_flutter.lib.workspace.application.view.view_service.ViewBackendService`:14-427
 - `frontend.appflowy_flutter.lib.workspace.application.view.view_listener.ViewListener`:22-122
 
 
@@ -960,15 +958,15 @@ Provides backend services, event listeners, and business logic for creating, upd
   - `frontend.appflowy_flutter.lib.workspace.application.view.view_service.ViewBackendService.unlockView` (L423-L426) - Method
 
 
-### Favorite Views Management
-Tracks and updates pinned or favorited workspace views and listens for changes across spaces.
+### Favorite Views Service
+Tracks, pins, unpins, and synchronizes user favorite views and pages across the workspace.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.application.favorite.favorite_bloc.FavoriteBloc`:14-115
-- `frontend.appflowy_flutter.lib.workspace.application.favorite.favorite_service.FavoriteService`:11-62
 - `frontend.appflowy_flutter.lib.workspace.application.favorite.favorite_listener.FavoriteListener`:17-67
+- `frontend.appflowy_flutter.lib.workspace.application.favorite.favorite_service.FavoriteService`:11-62
 
 
 
@@ -1006,7 +1004,7 @@ Tracks and updates pinned or favorited workspace views and listens for changes a
 
 
 ### Recent Views Tracking
-Caches and maintains the list of recently accessed views in the workspace.
+Records and provides access to recently opened views and document browsing history.
 
 
 **Related Classes/Methods**:
@@ -1054,8 +1052,8 @@ Caches and maintains the list of recently accessed views in the workspace.
   - `frontend.appflowy_flutter.lib.workspace.application.recent.recent_views_bloc.RecentViewsState.RecentViewsState.initial` (L83-L83) - Constructor
 
 
-### Edit Panel State
-Manages the state and context for opening and editing properties in workspace side panels.
+### Inline Edit Panel
+Manages editing context and active state transitions for document edit panels.
 
 
 **Related Classes/Methods**:
@@ -1082,8 +1080,8 @@ Manages the state and context for opening and editing properties in workspace si
   - `frontend.appflowy_flutter.lib.workspace.application.edit_panel.edit_panel_bloc.EditPanelState.EditPanelState.initial` (L36-L39) - Constructor
 
 
-### Action Navigation Handling
-Resolves navigation actions and deep links targeting specific workspace views.
+### Action Navigation Dispatcher
+Handles action-driven navigation requests and resolves target views across workspace workflows.
 
 
 **Related Classes/Methods**:
@@ -1116,8 +1114,8 @@ Resolves navigation actions and deep links targeting specific workspace views.
   - `frontend.appflowy_flutter.lib.workspace.application.action_navigation.navigation_action.NavigationAction.copyWith` (L31-L40) - Method
 
 
-### View Title Bar State
-Handles title bar presentation, ancestor breadcrumb resolution, and title editing events for active views.
+### View Title Bar Management
+Controls view header titles, breadcrumb paths, and title bar interaction state.
 
 
 **Related Classes/Methods**:

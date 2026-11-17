@@ -1,28 +1,29 @@
 ```mermaid
 graph LR
-    Database_View_Settings["Database View Settings"]
-    Database_Card_Detail["Database Card Detail"]
-    Database_Field_Editors["Database Field Editors"]
-    Database_Grid_and_Calendar["Database Grid and Calendar"]
-    Database_Board_View["Database Board View"]
-    Database_View_Settings -- "opens field management sheets" --> Database_Field_Editors
-    Database_Card_Detail -- "triggers field configuration sheets" --> Database_Field_Editors
-    Database_Field_Editors -- "embeds card option text fields" --> Database_Card_Detail
+    Database_View_Configuration["Database View Configuration"]
+    Card_Detail_Presentation["Card Detail Presentation"]
+    Database_Field_Editing["Database Field Editing"]
+    Grid_and_Calendar_Views["Grid and Calendar Views"]
+    Kanban_Board_View["Kanban Board View"]
+    Database_View_Configuration -- "opens field management sheets" --> Database_Field_Editing
+    Card_Detail_Presentation -- "triggers field creation" --> Database_Field_Editing
+    Database_Field_Editing -- "uses option text field" --> Card_Detail_Presentation
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Presents mobile database views including grid, board, calendar, and card field detail editors.
+Implements mobile grid, board, calendar screens, card details, and database view filtering and sorting.
 
-### Database View Settings
-Manages database view layouts, filter and sort bottom sheets, field lists, and view configurations.
+### Database View Configuration
+Manages database view settings including filter conditions, sort rules, layout selections, and field visibility.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.view.database_view_layout.DatabaseViewLayoutPicker`:18-52
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.view.database_field_list.DatabaseFieldListTile.build`:152-184
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.view.database_view_layout._CalendarLayoutField.build`:148-187
 
 
 
@@ -268,15 +269,14 @@ Manages database view layouts, filter and sort bottom sheets, field lists, and v
   - `frontend.appflowy_flutter.lib.mobile.presentation.database.view.edit_database_view_screen.DatabaseViewSettingTile._onTap` (L207-L287) - Method
 
 
-### Database Card Detail
-Presents mobile database row cards, card detail screens, and row property input components.
+### Card Detail Presentation
+Renders full database card details, cell properties, and row actions on mobile devices.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.card.card_detail.widgets.mobile_row_property_list.MobileRowPropertyList`:11-47
 - `frontend.appflowy_flutter.lib.mobile.presentation.database.card.card_detail.widgets.option_text_field.OptionTextField`:10-67
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.card.card_detail.widgets.mobile_create_field_button.MobileRowDetailCreateFieldButton`:10-52
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.card.card_detail.widgets.mobile_create_field_button.MobileRowDetailCreateFieldButton.build`:21-51
 
 
 
@@ -343,11 +343,16 @@ Presents mobile database row cards, card detail screens, and row property input 
   - `frontend.appflowy_flutter.lib.mobile.presentation.database.card.mobile_card_content.MobileCardContent.build` (L27-L50) - Method
 
 
-### Database Field Editors
-Handles database field creation, editing screens, field pickers, and configuration bottom sheets.
+### Database Field Editing
+Provides bottom sheets, selection dialogs, and editor screens to define and update database fields and options.
 
 
-**Related Classes/Methods**: _None_
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.field.mobile_field_bottom_sheets.showEditFieldScreen`:104-116
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.field.mobile_field_bottom_sheets.mobileCreateFieldWorkflow`:77-101
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.field.mobile_full_field_editor._MobileFieldEditorState.build`:214-277
+
 
 
 **Source Files:**
@@ -478,15 +483,14 @@ Handles database field creation, editing screens, field pickers, and configurati
   - `frontend.appflowy_flutter.lib.mobile.presentation.database.field.mobile_quick_field_editor._Divider.build` (L190-L192) - Method
 
 
-### Database Grid and Calendar
-Renders mobile database calendar layouts, date pickers, calendar event views, and grid screens.
+### Grid and Calendar Views
+Displays mobile database records using table grid and calendar views alongside date selection workflows.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_calendar_screen.MobileCalendarScreen`:5-28
 - `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_grid_screen.MobileGridScreen`:6-33
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_calendar_events_screen.MobileCalendarEventsScreen`:13-41
+- `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_calendar_screen.MobileCalendarScreen`:5-28
 
 
 
@@ -521,16 +525,13 @@ Renders mobile database calendar layouts, date pickers, calendar event views, an
   - `frontend.appflowy_flutter.lib.mobile.presentation.database.mobile_grid_screen.MobileGridScreen.build` (L25-L32) - Method
 
 
-### Database Board View
-Implements mobile kanban board screens, board pages, column group cards, and hidden group toggles.
+### Kanban Board View
+Implements mobile Kanban board presentation with column grouping, hidden columns, and card arrangement.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.database.board.mobile_board_screen.MobileBoardScreen`:5-28
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.board.mobile_board_page.MobileBoardPage`:25-42
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.board.widgets.group_card_header.GroupCardHeader`:15-25
-- `frontend.appflowy_flutter.lib.mobile.presentation.database.board.widgets.mobile_hidden_groups_column.MobileHiddenGroupsColumn`:20-101
 
 
 

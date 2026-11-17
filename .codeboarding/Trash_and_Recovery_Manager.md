@@ -1,20 +1,20 @@
 ```mermaid
 graph LR
     Trash_State_Management["Trash State Management"]
-    Trash_Table_Components["Trash Table Components"]
-    Trash_Plugin_View["Trash Plugin View"]
-    Trash_Plugin_View -- "dispatches trash events to" --> Trash_State_Management
-    Trash_Plugin_View -- "renders items using" --> Trash_Table_Components
+    Trash_List_UI_Components["Trash List UI Components"]
+    Trash_Plugin_Presentation["Trash Plugin Presentation"]
+    Trash_Plugin_Presentation -- "dispatches events to" --> Trash_State_Management
+    Trash_Plugin_Presentation -- "renders items using" --> Trash_List_UI_Components
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Handles discarded workspace items, trash views, and view restoration or permanent deletion.
+Manages the deleted items view, listing trashed views and pages and offering recovery or permanent deletion.
 
 ### Trash State Management
-Manages trash state transitions, backend communication, and live trash update listeners for restoring or permanently deleting views.
+Manages trash state, coordinates restore and delete actions, and listens for backend trash updates.
 
 
 **Related Classes/Methods**:
@@ -61,8 +61,8 @@ Manages trash state transitions, backend communication, and live trash update li
   - `frontend.appflowy_flutter.lib.plugins.trash.application.trash_service.TrashService.deleteAll` (L32-L34) - Method
 
 
-### Trash Table Components
-Provides table row cells, persistent column headers, and layout dimensions for rendering deleted items.
+### Trash List UI Components
+Provides reusable table cells, column headers, and layout sizing constants for trash listings.
 
 
 **Related Classes/Methods**:
@@ -103,14 +103,15 @@ Provides table row cells, persistent column headers, and layout dimensions for r
   - `frontend.appflowy_flutter.lib.plugins.trash.src.trash_header.TrashHeader.build` (L58-L81) - Method
 
 
-### Trash Plugin View
-Registers the trash plugin in the workspace and renders the primary trash management page with action toolbars.
+### Trash Plugin Presentation
+Implements the trash plugin entry point and the main trash screen layout.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.plugins.trash.trash.TrashPlugin`:40-53
 - `frontend.appflowy_flutter.lib.plugins.trash.trash.TrashPluginBuilder`:16-33
+- `frontend.appflowy_flutter.lib.plugins.trash.trash.TrashPlugin`:40-53
+- `frontend.appflowy_flutter.lib.plugins.trash.trash.TrashPluginDisplay`:55-78
 - `frontend.appflowy_flutter.lib.plugins.trash.trash_page.TrashPage`:22-27
 
 

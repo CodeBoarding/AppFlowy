@@ -1,30 +1,31 @@
 ```mermaid
 graph LR
-    View_Item_Action_Sheets["View Item Action Sheets"]
-    Content_And_Block_Sheet_Actions["Content And Block Sheet Actions"]
-    Bottom_Sheet_Presentation_Framework["Bottom Sheet Presentation Framework"]
-    Modal_Header_And_Link_Editor["Modal Header And Link Editor"]
-    Action_Pane_And_Page_Creation["Action Pane And Page Creation"]
-    Modal_Header_And_Link_Editor -- "embeds modal header action controls" --> Bottom_Sheet_Presentation_Framework
-    Action_Pane_And_Page_Creation -- "opens view management sheets" --> View_Item_Action_Sheets
-    Action_Pane_And_Page_Creation -- "triggers modal presentation via" --> Bottom_Sheet_Presentation_Framework
+    View_and_Navigation_Sheets["View and Navigation Sheets"]
+    Block_and_Media_Sheets["Block and Media Sheets"]
+    Modal_Sheet_Presentation_Utilities["Modal Sheet Presentation Utilities"]
+    Sheet_Header_and_Link_Widgets["Sheet Header and Link Widgets"]
+    Mobile_Action_Pane_Controls["Mobile Action Pane Controls"]
+    Sheet_Header_and_Link_Widgets -- "renders header control buttons" --> Modal_Sheet_Presentation_Utilities
+    Mobile_Action_Pane_Controls -- "displays view item sheet" --> View_and_Navigation_Sheets
+    Mobile_Action_Pane_Controls -- "invokes modal sheet presenter" --> Modal_Sheet_Presentation_Utilities
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Implements modal bottom sheet overlays, action panes, and bottom navigation bar components.
+Provides reusable modal bottom sheets, contextual slide action panes, and bottom navigation bar components.
 
-### View Item Action Sheets
-Renders bottom sheets and navigation widgets for viewing, renaming, favoriting, and managing workspace view items on mobile.
+### View and Navigation Sheets
+Renders view item action sheets, page configuration options, renaming modals, and mobile navigation bar items.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_view_item.MobileViewItemBottomSheet`:21-36
+- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_view_page.ViewPageBottomSheet`:53-67
 - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_rename_widget.MobileBottomSheetRenameWidget`:6-21
-- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_view_item_body.MobileViewItemBottomSheetBody`:20-159
+- `frontend.appflowy_flutter.lib.mobile.presentation.mobile_bottom_navigation_bar.MobileBottomNavigationBar`:91-104
 
 
 
@@ -140,14 +141,14 @@ Renders bottom sheets and navigation widgets for viewing, renaming, favoriting, 
   - `frontend.appflowy_flutter.lib.mobile.presentation.mobile_bottom_navigation_bar.<unnamed extension>.border` (L399-L403) - Method
 
 
-### Content And Block Sheet Actions
-Provides specialized bottom sheet content widgets for block operations, action list items, media uploading, and drag handling.
+### Block and Media Sheets
+Provides bottom sheet widgets and content handlers for block operations, action buttons, drag handlers, and media uploads.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_block_action_widget.BlockActionBottomSheet`:15-78
 - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_action_widget.BottomSheetActionWidget`:6-56
+- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_block_action_widget.BlockActionBottomSheet`:15-78
 - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_media_upload.MobileMediaUploadSheetContent`:12-96
 
 
@@ -178,8 +179,8 @@ Provides specialized bottom sheet content widgets for block operations, action l
   - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_media_upload.MobileMediaUploadSheetContent._onInsertNetworkFile` (L62-L95) - Method
 
 
-### Bottom Sheet Presentation Framework
-Supplies core modal bottom sheet presentation functions, transition animations, and standard navigation buttons.
+### Modal Sheet Presentation Utilities
+Encapsulates bottom sheet presentation functions, animated modal transitions, and reusable header action buttons.
 
 
 **Related Classes/Methods**:
@@ -231,8 +232,8 @@ Supplies core modal bottom sheet presentation functions, transition animations, 
   - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.show_transition_bottom_sheet.CupertinoSheetBottomRouteTransition.build` (L294-L345) - Method
 
 
-### Modal Header And Link Editor
-Provides standardized header bars and link editing widgets for mobile bottom sheets.
+### Sheet Header and Link Widgets
+Constructs standardized modal bottom sheet headers with action buttons and provides link editing interfaces.
 
 
 **Related Classes/Methods**:
@@ -273,14 +274,13 @@ Provides standardized header bars and link editing widgets for mobile bottom she
   - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.bottom_sheet_header.BottomSheetHeader.build` (L20-L48) - Method
 
 
-### Action Pane And Page Creation
-Implements quick action panes and creation sheets for adding pages and triggering mobile actions.
+### Mobile Action Pane Controls
+Configures action pane options and bottom sheet controls for quick actions and creating new workspace pages.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.default_mobile_action_pane.MobilePaneActionType`:20-194
-- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.default_mobile_action_pane.MobilePaneActionType.actionButton`:27-153
 
 
 

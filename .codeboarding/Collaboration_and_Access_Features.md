@@ -1,30 +1,30 @@
 ```mermaid
 graph LR
-    Document_Sharing_and_Permissions["Document Sharing and Permissions"]
-    Shared_Pages_Section["Shared Pages Section"]
-    Page_Access_Level_Control["Page Access Level Control"]
-    User_Data_Storage_Settings["User Data Storage Settings"]
-    User_Workspace_Management["User Workspace Management"]
-    Document_Sharing_and_Permissions -- "maps protobuf views to shared page models" --> Shared_Pages_Section
-    click Document_Sharing_and_Permissions href "./Document_Sharing_and_Permissions.md" "Details"
-    click Shared_Pages_Section href "./Shared_Pages_Section.md" "Details"
+    Document_Sharing_Panel["Document Sharing Panel"]
+    Shared_Documents_Navigation["Shared Documents Navigation"]
+    Document_Permission_and_Locking["Document Permission and Locking"]
+    Data_Storage_Location_Settings["Data Storage Location Settings"]
+    Workspace_Lifecycle_Management["Workspace Lifecycle Management"]
+    Document_Sharing_Panel -- "maps shared views to shared page models" --> Shared_Documents_Navigation
+    click Document_Sharing_Panel href "./Document_Sharing_Panel.md" "Details"
+    click Shared_Documents_Navigation href "./Shared_Documents_Navigation.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Handles page sharing, access level control, user invitations, and shared folder views.
+Coordinates collaboration features including page access levels, link sharing, shared workspace sections, and data storage locations.
 
-### Document Sharing and Permissions [[Expand]](./Document_Sharing_and_Permissions.md)
-Provides UI dialogs, data models, and BLoC logic for inviting users, managing access levels, and generating share links for documents.
+### Document Sharing Panel [[Expand]](./Document_Sharing_Panel.md)
+Provides user interfaces, state management, and repositories for inviting collaborators, managing page permissions, and generating share links.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.features.share_tab.logic.share_tab_bloc.ShareTabBloc`:19-420
-- `frontend.appflowy_flutter.lib.features.share_tab.presentation.share_tab.ShareTab`:20-43
 - `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.share_with_user_repository.ShareWithUserRepository`:10-60
+- `frontend.appflowy_flutter.lib.features.share_tab.presentation.share_tab.ShareTab`:20-43
 
 
 
@@ -256,16 +256,16 @@ Provides UI dialogs, data models, and BLoC logic for inviting users, managing ac
   - `frontend.appflowy_flutter.lib.features.util.extensions.SharedSectionTypeExtension.sharedSectionType` (L114-L125) - Method
 
 
-### Shared Pages Section [[Expand]](./Shared_Pages_Section.md)
-Displays and manages the list of shared pages accessible to the user across desktop and mobile layouts.
+### Shared Documents Navigation [[Expand]](./Shared_Documents_Navigation.md)
+Manages and renders the collection of pages shared with the current user across desktop and mobile navigation sidebars.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.features.shared_section.logic.shared_section_bloc.SharedSectionBloc`:16-195
-- `frontend.appflowy_flutter.lib.features.shared_section.presentation.shared_section.SharedSection`:26-159
-- `frontend.appflowy_flutter.lib.features.shared_section.models.shared_page.SharedPage`:6-14
 - `frontend.appflowy_flutter.lib.features.shared_section.data.repositories.shared_pages_repository.SharedPagesRepository`:9-15
+- `frontend.appflowy_flutter.lib.features.shared_section.models.shared_page.SharedPage`:6-14
+- `frontend.appflowy_flutter.lib.features.shared_section.presentation.shared_section.SharedSection`:26-159
 
 
 
@@ -378,8 +378,8 @@ Displays and manages the list of shared pages accessible to the user across desk
   - `frontend.appflowy_flutter.lib.features.shared_section.presentation.widgets.shared_section_loading.SharedSectionLoading.build` (L8-L15) - Method
 
 
-### Page Access Level Control
-Tracks and resolves view lock states, section types, and permission levels for individual document views.
+### Document Permission and Locking
+Tracks and mutates page lock states and user access levels for individual views and row detail pages.
 
 
 **Related Classes/Methods**:
@@ -450,14 +450,15 @@ Tracks and resolves view lock states, section types, and permission levels for i
   - `frontend.appflowy_flutter.lib.features.page_access_level.logic.page_access_level_state.PageAccessLevelState.toString` (L94-L96) - Method
 
 
-### User Data Storage Settings
-Manages reading, resetting, and updating custom filesystem storage paths for local user data.
+### Data Storage Location Settings
+Configures and persists the user data storage path, supporting custom storage directory selection and default resets.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.features.settings.logic.data_location_bloc.DataLocationBloc`:8-76
 - `frontend.appflowy_flutter.lib.features.settings.data.repositories.settings_repository.SettingsRepository`:6-14
+- `frontend.appflowy_flutter.lib.features.settings.data.models.user_data_location.UserDataLocation`:3-14
 
 
 
@@ -505,8 +506,8 @@ Manages reading, resetting, and updating custom filesystem storage paths for loc
   - `frontend.appflowy_flutter.lib.features.settings.logic.data_location_state.DataLocationState.copyWith` (L20-L28) - Method
 
 
-### User Workspace Management
-Coordinates workspace lifecycle operations including creating, deleting, opening, and synchronizing workspace subscriptions.
+### Workspace Lifecycle Management
+Handles workspace operations including creation, deletion, renaming, switching, and subscription status tracking.
 
 
 **Related Classes/Methods**:

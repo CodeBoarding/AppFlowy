@@ -1,29 +1,30 @@
 ```mermaid
 graph LR
-    AI_Chat_Presentation_Widgets["AI Chat Presentation Widgets"]
-    AI_Chat_State_Management["AI Chat State Management"]
-    AI_Chat_Plugin_Integration["AI Chat Plugin Integration"]
-    AI_Chat_Presentation_Widgets -- "consumes chat state and services" --> AI_Chat_State_Management
-    AI_Chat_Presentation_Widgets -- "queries plugin view identity" --> AI_Chat_Plugin_Integration
-    AI_Chat_Plugin_Integration -- "mounts content presentation page" --> AI_Chat_Presentation_Widgets
-    AI_Chat_Plugin_Integration -- "instantiates and configures state controllers" --> AI_Chat_State_Management
+    Chat_UI_Presentation["Chat UI Presentation"]
+    Chat_State_Management["Chat State Management"]
+    Chat_Plugin_Integration["Chat Plugin Integration"]
+    Chat_UI_Presentation -- "dispatches actions and manages heights" --> Chat_State_Management
+    Chat_UI_Presentation -- "reads plugin identifier" --> Chat_Plugin_Integration
+    Chat_Plugin_Integration -- "embeds chat content page" --> Chat_UI_Presentation
+    Chat_Plugin_Integration -- "initializes and provides blocs" --> Chat_State_Management
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Manages the conversational AI interface, message streaming, chat threads, and saving AI outputs to documents.
+Delivers the conversational AI assistant interface, managing chat streams, message histories, and document export actions.
 
-### AI Chat Presentation Widgets
-Renders the visual chat interface including message bubbles, animated lists, user prompt inputs, and action toolbars.
+### Chat UI Presentation
+Renders the chat interface including animated message lists, bubbles, action bars, input fields, and message layout calculations.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.chat_page.chat_content_page.ChatContentPage`:8-33
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.animated_chat_list._ChatAnimatedListState`:46-349
-- `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.message.ai_message_action_bar.AIMessageActionBar`:36-56
+- `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.chat_message_selector_banner._SaveToPageButtonState`:131-315
+- `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.message.ai_message_action_bar._SaveToPageButtonState`:511-686
 
 
 
@@ -389,16 +390,16 @@ Renders the visual chat interface including message bubbles, animated lists, use
   - `frontend.appflowy_flutter.lib.plugins.ai_chat.presentation.widgets.message_height_calculator._MessageHeightCalculatorState._measureHeight` (L88-L125) - Method
 
 
-### AI Chat State Management
-Manages business logic, message streaming, selection workflows, and layout dimension caches using BLoCs and services.
+### Chat State Management
+Manages chat state, message streaming, height caching, document editing, and selection workflows through BLoCs and services.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_bloc.ChatBloc`:31-542
-- `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_select_message_bloc.ChatSelectMessageBloc`:9-82
-- `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_ai_message_bloc.ChatAIMessageBloc`:14-170
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_message_height_manager.ChatMessageHeightManager`:21-160
+- `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_select_message_bloc.ChatSelectMessageBloc`:9-82
+- `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_member_bloc.ChatMemberBloc`:11-46
 
 
 
@@ -722,14 +723,15 @@ Manages business logic, message streaming, selection workflows, and layout dimen
   - `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_user_message_bloc.QuestionMessageStateX.isFinish` (L137-L137) - Method
 
 
-### AI Chat Plugin Integration
-Integrates the AI chat view into the AppFlowy plugin system and provides top-level page scaffolding and BLoC scoping.
+### Chat Plugin Integration
+Integrates the AI chat feature as a workspace plugin and initializes page-level BLoC providers.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.chat.AIChatPluginBuilder`:24-45
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.chat.AIChatPagePlugin`:52-94
+- `frontend.appflowy_flutter.lib.plugins.ai_chat.chat.AIChatPagePluginWidgetBuilder`:96-218
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.chat_page.AIChatPage`:13-89
 
 

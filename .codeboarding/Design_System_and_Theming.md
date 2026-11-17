@@ -1,28 +1,27 @@
 ```mermaid
 graph LR
-    Reusable_Widget_Components["Reusable Widget Components"]
-    Design_Tokens_and_Theming["Design Tokens and Theming"]
-    Component_Catalog_Example["Component Catalog Example"]
-    Reusable_Widget_Components -- "resolves styling from" --> Design_Tokens_and_Theming
-    Component_Catalog_Example -- "demonstrates and renders" --> Reusable_Widget_Components
-    Component_Catalog_Example -- "configures theme providers with" --> Design_Tokens_and_Theming
+    Reusable_UI_Components["Reusable UI Components"]
+    Design_Token_System["Design Token System"]
+    Component_Showcase_Gallery["Component Showcase Gallery"]
+    Reusable_UI_Components -- "resolves styling from" --> Design_Token_System
+    Component_Showcase_Gallery -- "demonstrates widgets from" --> Reusable_UI_Components
+    Component_Showcase_Gallery -- "configures theme using" --> Design_Token_System
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Defines theme specifications, design tokens, and modular Flutter design system widgets.
+Defines theme specifications, design tokens, and modular UI components including buttons, menus, and text fields.
 
-### Reusable Widget Components
-Provides reusable Flutter UI widgets including buttons, menus, dialogs, avatars, and input fields.
+### Reusable UI Components
+Provides reusable UI widgets including buttons, avatars, dialogs, dropdowns, menus, and text fields for the AppFlowy user interface.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.component.avatar.avatar.AFAvatar`:46-234
 - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.component.button.filled_button.filled_button.AFFilledButton`:11-127
-- `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.component.avatar.avatar.AFAvatarSize`:7-43
 
 
 
@@ -319,8 +318,8 @@ Provides reusable Flutter UI widgets including buttons, menus, dialogs, avatars,
   - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.component.textfield.textfield.AFTextFieldSize.borderRadius` (L285-L292) - Method
 
 
-### Design Tokens and Theming
-Defines color palettes, typography scales, spacing, shadows, and runtime theme providers.
+### Design Token System
+Defines design tokens, semantic color schemes, typography, spacing, border radiuses, and theme configurations.
 
 
 **Related Classes/Methods**:
@@ -328,7 +327,6 @@ Defines color palettes, typography scales, spacing, shadows, and runtime theme p
 - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.appflowy_theme.AppFlowyTheme`:5-53
 - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.appflowy_theme.AnimatedAppFlowyTheme`:92-116
 - `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.data.appflowy_default.semantic.AppFlowyDefaultTheme`:17-591
-- `frontend.appflowy_flutter.packages.appflowy_ui.lib.src.theme.definition.text_style.base.default_text_style.TextThemeBody`:419-477
 
 
 
@@ -723,8 +721,8 @@ Defines color palettes, typography scales, spacing, shadows, and runtime theme p
   - `frontend.appflowy_flutter.packages.appflowy_ui.script.generate_theme.<unnamed extension>.isColor` (L303-L306) - Method
 
 
-### Component Catalog Example
-Demonstrates and previews the design system widgets and theme modes in an interactive showcase app.
+### Component Showcase Gallery
+Demonstrates widget usage and theme variations through an interactive component catalog and example application.
 
 
 **Related Classes/Methods**:

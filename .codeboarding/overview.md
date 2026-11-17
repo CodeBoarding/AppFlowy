@@ -1,124 +1,124 @@
 ```mermaid
 graph LR
-    Content_Plugins_and_Editors["Content Plugins and Editors"]
+    Content_Editors_and_Plugins["Content Editors and Plugins"]
     Desktop_Workspace_Management["Desktop Workspace Management"]
-    Mobile_Workspace_Interface["Mobile Workspace Interface"]
-    Core_Infrastructure_Packages["Core Infrastructure Packages"]
-    User_Authentication_and_Accounts["User Authentication and Accounts"]
-    Collaboration_and_Access_Control["Collaboration and Access Control"]
-    Shared_UI_Components_and_Utilities["Shared UI Components and Utilities"]
-    Application_Lifecycle_and_Startup["Application Lifecycle and Startup"]
-    AI_Assistance_Service["AI Assistance Service"]
-    Common_Foundation_Utilities["Common Foundation Utilities"]
-    Core_Platform_and_Notification_Services["Core Platform and Notification Services"]
-    App_Entry_and_Build_Scripts["App Entry and Build Scripts"]
-    Content_Plugins_and_Editors -- "calls" --> Common_Foundation_Utilities
-    Content_Plugins_and_Editors -- "calls" --> Core_Platform_and_Notification_Services
-    Content_Plugins_and_Editors -- "calls" --> Desktop_Workspace_Management
-    Content_Plugins_and_Editors -- "calls" --> Mobile_Workspace_Interface
-    Content_Plugins_and_Editors -- "calls" --> Core_Infrastructure_Packages
-    Content_Plugins_and_Editors -- "calls" --> Shared_UI_Components_and_Utilities
-    Content_Plugins_and_Editors -- "calls" --> Application_Lifecycle_and_Startup
-    Content_Plugins_and_Editors -- "calls" --> Collaboration_and_Access_Control
-    Content_Plugins_and_Editors -- "calls" --> User_Authentication_and_Accounts
-    Content_Plugins_and_Editors -- "calls" --> AI_Assistance_Service
-    Content_Plugins_and_Editors -- "queries dates from" --> App_Entry_and_Build_Scripts
-    Common_Foundation_Utilities -- "launches urls via" --> Core_Platform_and_Notification_Services
-    Common_Foundation_Utilities -- "notifies workspace in" --> Desktop_Workspace_Management
-    Common_Foundation_Utilities -- "logs output to" --> Core_Infrastructure_Packages
-    Common_Foundation_Utilities -- "resolves font resources from" --> Shared_UI_Components_and_Utilities
-    Core_Platform_and_Notification_Services -- "calls" --> Core_Infrastructure_Packages
-    Core_Platform_and_Notification_Services -- "displays alerts in" --> Desktop_Workspace_Management
-    App_Entry_and_Build_Scripts -- "returns result types from" --> Core_Infrastructure_Packages
-    App_Entry_and_Build_Scripts -- "launches app through" --> Application_Lifecycle_and_Startup
-    Desktop_Workspace_Management -- "calls" --> Content_Plugins_and_Editors
-    Desktop_Workspace_Management -- "calls" --> Common_Foundation_Utilities
-    Desktop_Workspace_Management -- "calls" --> Core_Platform_and_Notification_Services
-    Desktop_Workspace_Management -- "renders widgets from" --> App_Entry_and_Build_Scripts
-    Desktop_Workspace_Management -- "calls" --> Mobile_Workspace_Interface
-    Desktop_Workspace_Management -- "calls" --> Core_Infrastructure_Packages
-    Desktop_Workspace_Management -- "calls" --> User_Authentication_and_Accounts
-    Desktop_Workspace_Management -- "calls" --> Collaboration_and_Access_Control
-    Desktop_Workspace_Management -- "calls" --> Shared_UI_Components_and_Utilities
-    Desktop_Workspace_Management -- "calls" --> Application_Lifecycle_and_Startup
-    Desktop_Workspace_Management -- "formats model names via" --> AI_Assistance_Service
-    Mobile_Workspace_Interface -- "calls" --> Content_Plugins_and_Editors
-    Mobile_Workspace_Interface -- "calls" --> Common_Foundation_Utilities
-    Mobile_Workspace_Interface -- "calls" --> Core_Platform_and_Notification_Services
-    Mobile_Workspace_Interface -- "calls" --> Desktop_Workspace_Management
-    Mobile_Workspace_Interface -- "calls" --> Core_Infrastructure_Packages
-    Mobile_Workspace_Interface -- "calls" --> User_Authentication_and_Accounts
-    Mobile_Workspace_Interface -- "calls" --> Collaboration_and_Access_Control
-    Mobile_Workspace_Interface -- "calls" --> Shared_UI_Components_and_Utilities
-    Mobile_Workspace_Interface -- "calls" --> Application_Lifecycle_and_Startup
-    Core_Infrastructure_Packages -- "displays labels from" --> AI_Assistance_Service
-    User_Authentication_and_Accounts -- "calls" --> Desktop_Workspace_Management
-    User_Authentication_and_Accounts -- "calls" --> Core_Infrastructure_Packages
-    User_Authentication_and_Accounts -- "calls" --> Core_Platform_and_Notification_Services
-    User_Authentication_and_Accounts -- "calls" --> Application_Lifecycle_and_Startup
-    User_Authentication_and_Accounts -- "calls" --> Shared_UI_Components_and_Utilities
-    User_Authentication_and_Accounts -- "renders app bars from" --> Mobile_Workspace_Interface
-    User_Authentication_and_Accounts -- "calls" --> Content_Plugins_and_Editors
-    Collaboration_and_Access_Control -- "calls" --> Desktop_Workspace_Management
-    Collaboration_and_Access_Control -- "calls" --> Core_Infrastructure_Packages
-    Collaboration_and_Access_Control -- "calls" --> Application_Lifecycle_and_Startup
-    Collaboration_and_Access_Control -- "persists preference flags in" --> Core_Platform_and_Notification_Services
-    Collaboration_and_Access_Control -- "calls" --> Content_Plugins_and_Editors
-    Collaboration_and_Access_Control -- "calls" --> Shared_UI_Components_and_Utilities
-    Collaboration_and_Access_Control -- "routes pages through" --> Mobile_Workspace_Interface
-    Collaboration_and_Access_Control -- "resolves workspaces with" --> User_Authentication_and_Accounts
-    Shared_UI_Components_and_Utilities -- "calls" --> Content_Plugins_and_Editors
-    Shared_UI_Components_and_Utilities -- "calls" --> Common_Foundation_Utilities
-    Shared_UI_Components_and_Utilities -- "persists toggles using" --> Core_Platform_and_Notification_Services
-    Shared_UI_Components_and_Utilities -- "calls" --> Desktop_Workspace_Management
-    Shared_UI_Components_and_Utilities -- "calls" --> Mobile_Workspace_Interface
-    Shared_UI_Components_and_Utilities -- "calls" --> Core_Infrastructure_Packages
-    Shared_UI_Components_and_Utilities -- "restarts application with" --> Application_Lifecycle_and_Startup
-    Shared_UI_Components_and_Utilities -- "identifies user via" --> User_Authentication_and_Accounts
-    Application_Lifecycle_and_Startup -- "calls" --> Content_Plugins_and_Editors
-    Application_Lifecycle_and_Startup -- "calls" --> Core_Platform_and_Notification_Services
-    Application_Lifecycle_and_Startup -- "calls" --> Desktop_Workspace_Management
-    Application_Lifecycle_and_Startup -- "calls" --> Mobile_Workspace_Interface
-    Application_Lifecycle_and_Startup -- "calls" --> Core_Infrastructure_Packages
-    Application_Lifecycle_and_Startup -- "calls" --> User_Authentication_and_Accounts
-    Application_Lifecycle_and_Startup -- "calls" --> Shared_UI_Components_and_Utilities
-    Application_Lifecycle_and_Startup -- "registers utilities with" --> Common_Foundation_Utilities
-    Application_Lifecycle_and_Startup -- "resolves ai services from" --> AI_Assistance_Service
-    AI_Assistance_Service -- "calls" --> Content_Plugins_and_Editors
-    AI_Assistance_Service -- "calls" --> Common_Foundation_Utilities
-    AI_Assistance_Service -- "calls" --> Desktop_Workspace_Management
-    AI_Assistance_Service -- "calls" --> Mobile_Workspace_Interface
-    AI_Assistance_Service -- "calls" --> Core_Infrastructure_Packages
-    AI_Assistance_Service -- "reads environment mode from" --> Application_Lifecycle_and_Startup
-    AI_Assistance_Service -- "calls" --> Shared_UI_Components_and_Utilities
-    click Content_Plugins_and_Editors href "./Content_Plugins_and_Editors.md" "Details"
+    Mobile_Application_Experience["Mobile Application Experience"]
+    Core_Framework_Packages["Core Framework Packages"]
+    User_Authentication_and_Profiles["User Authentication and Profiles"]
+    Collaboration_and_Access_Features["Collaboration and Access Features"]
+    Shared_UI_and_Utilities["Shared UI and Utilities"]
+    Application_Bootstrap_and_Lifecycle["Application Bootstrap and Lifecycle"]
+    AI_Assistant_and_Prompts["AI Assistant and Prompts"]
+    Foundation_Utility_Extensions["Foundation Utility Extensions"]
+    Core_Platform_and_Notifications["Core Platform and Notifications"]
+    Application_Entry_and_Build_Tooling["Application Entry and Build Tooling"]
+    Content_Editors_and_Plugins -- "utilizes utility functions" --> Foundation_Utility_Extensions
+    Content_Editors_and_Plugins -- "listens to backend notifications" --> Core_Platform_and_Notifications
+    Content_Editors_and_Plugins -- "updates workspace view models" --> Desktop_Workspace_Management
+    Content_Editors_and_Plugins -- "renders mobile options" --> Mobile_Application_Experience
+    Content_Editors_and_Plugins -- "invokes backend and UI packages" --> Core_Framework_Packages
+    Content_Editors_and_Plugins -- "converts markdown and displays shared icons" --> Shared_UI_and_Utilities
+    Content_Editors_and_Plugins -- "registers plugins" --> Application_Bootstrap_and_Lifecycle
+    Content_Editors_and_Plugins -- "observes page access permissions" --> Collaboration_and_Access_Features
+    Content_Editors_and_Plugins -- "fetches user profiles" --> User_Authentication_and_Profiles
+    Content_Editors_and_Plugins -- "requests AI generation and formats" --> AI_Assistant_and_Prompts
+    Content_Editors_and_Plugins -- "queries date service" --> Application_Entry_and_Build_Tooling
+    Foundation_Utility_Extensions -- "opens external URLs" --> Core_Platform_and_Notifications
+    Foundation_Utility_Extensions -- "shows notification toasts" --> Desktop_Workspace_Management
+    Foundation_Utility_Extensions -- "logs messages and reads theme styles" --> Core_Framework_Packages
+    Foundation_Utility_Extensions -- "resolves fonts and icons" --> Shared_UI_and_Utilities
+    Core_Platform_and_Notifications -- "logs operational errors" --> Core_Framework_Packages
+    Core_Platform_and_Notifications -- "displays status toasts" --> Desktop_Workspace_Management
+    Application_Entry_and_Build_Tooling -- "returns result structures" --> Core_Framework_Packages
+    Application_Entry_and_Build_Tooling -- "launches startup flow" --> Application_Bootstrap_and_Lifecycle
+    Desktop_Workspace_Management -- "accesses trash service and plugins" --> Content_Editors_and_Plugins
+    Desktop_Workspace_Management -- "applies color and string formatting" --> Foundation_Utility_Extensions
+    Desktop_Workspace_Management -- "subscribes to folder notifications" --> Core_Platform_and_Notifications
+    Desktop_Workspace_Management -- "embeds dropdown menus" --> Application_Entry_and_Build_Tooling
+    Desktop_Workspace_Management -- "coordinates mobile cover styles" --> Mobile_Application_Experience
+    Desktop_Workspace_Management -- "dispatches backend requests and renders UI components" --> Core_Framework_Packages
+    Desktop_Workspace_Management -- "monitors user authentication events" --> User_Authentication_and_Profiles
+    Desktop_Workspace_Management -- "initializes workspace collaboration blocs" --> Collaboration_and_Access_Features
+    Desktop_Workspace_Management -- "formats icons and markdown content" --> Shared_UI_and_Utilities
+    Desktop_Workspace_Management -- "registers plugins and resolves app directories" --> Application_Bootstrap_and_Lifecycle
+    Desktop_Workspace_Management -- "retrieves AI model localization" --> AI_Assistant_and_Prompts
+    Mobile_Application_Experience -- "opens documents and translates document data" --> Content_Editors_and_Plugins
+    Mobile_Application_Experience -- "formats fields and media types" --> Foundation_Utility_Extensions
+    Mobile_Application_Experience -- "launches external URLs and retrieves tab order" --> Core_Platform_and_Notifications
+    Mobile_Application_Experience -- "manages workspace view states" --> Desktop_Workspace_Management
+    Mobile_Application_Experience -- "executes backend operations and UI styles" --> Core_Framework_Packages
+    Mobile_Application_Experience -- "loads user profiles" --> User_Authentication_and_Profiles
+    Mobile_Application_Experience -- "controls page access permissions" --> Collaboration_and_Access_Features
+    Mobile_Application_Experience -- "displays feedback and picker icons" --> Shared_UI_and_Utilities
+    Mobile_Application_Experience -- "reads app context and navigates" --> Application_Bootstrap_and_Lifecycle
+    Core_Framework_Packages -- "configures prompt dropdown labels" --> AI_Assistant_and_Prompts
+    User_Authentication_and_Profiles -- "navigates to workspace views" --> Desktop_Workspace_Management
+    User_Authentication_and_Profiles -- "executes backend authentication calls" --> Core_Framework_Packages
+    User_Authentication_and_Profiles -- "listens to user awareness notifications" --> Core_Platform_and_Notifications
+    User_Authentication_and_Profiles -- "registers deep links and inspects runtime mode" --> Application_Bootstrap_and_Lifecycle
+    User_Authentication_and_Profiles -- "displays window title bars and settings dialogs" --> Shared_UI_and_Utilities
+    User_Authentication_and_Profiles -- "renders mobile app bars" --> Mobile_Application_Experience
+    User_Authentication_and_Profiles -- "validates document content for reminders" --> Content_Editors_and_Plugins
+    Collaboration_and_Access_Features -- "locks and unlocks workspace views" --> Desktop_Workspace_Management
+    Collaboration_and_Access_Features -- "queries backend and logs access results" --> Core_Framework_Packages
+    Collaboration_and_Access_Features -- "retrieves application data directories" --> Application_Bootstrap_and_Lifecycle
+    Collaboration_and_Access_Features -- "tracks user upgrade clicks via key-value storage" --> Core_Platform_and_Notifications
+    Collaboration_and_Access_Features -- "copies links using clipboard service" --> Content_Editors_and_Plugins
+    Collaboration_and_Access_Features -- "inspects collaboration feature flags" --> Shared_UI_and_Utilities
+    Collaboration_and_Access_Features -- "navigates mobile shared views" --> Mobile_Application_Experience
+    Collaboration_and_Access_Features -- "retrieves user workspace profiles" --> User_Authentication_and_Profiles
+    Shared_UI_and_Utilities -- "copies error traces with clipboard service" --> Content_Editors_and_Plugins
+    Shared_UI_and_Utilities -- "resolves theme colors and URLs" --> Foundation_Utility_Extensions
+    Shared_UI_and_Utilities -- "launches URLs and manages feature flags" --> Core_Platform_and_Notifications
+    Shared_UI_and_Utilities -- "displays toast messages and manages focus" --> Desktop_Workspace_Management
+    Shared_UI_and_Utilities -- "applies mobile feedback gestures" --> Mobile_Application_Experience
+    Shared_UI_and_Utilities -- "logs image caching and user profiles" --> Core_Framework_Packages
+    Shared_UI_and_Utilities -- "initializes custom image cache directories" --> Application_Bootstrap_and_Lifecycle
+    Shared_UI_and_Utilities -- "uploads user profile icons" --> User_Authentication_and_Profiles
+    Application_Bootstrap_and_Lifecycle -- "registers trash and clipboard dependencies" --> Content_Editors_and_Plugins
+    Application_Bootstrap_and_Lifecycle -- "configures network listeners and window positions" --> Core_Platform_and_Notifications
+    Application_Bootstrap_and_Lifecycle -- "registers workspace and appearance services" --> Desktop_Workspace_Management
+    Application_Bootstrap_and_Lifecycle -- "registers mobile view ancestors and routers" --> Mobile_Application_Experience
+    Application_Bootstrap_and_Lifecycle -- "initializes backend logger and popover controllers" --> Core_Framework_Packages
+    Application_Bootstrap_and_Lifecycle -- "resolves auth and reminder dependencies" --> User_Authentication_and_Profiles
+    Application_Bootstrap_and_Lifecycle -- "registers image cache and feature flag managers" --> Shared_UI_and_Utilities
+    Application_Bootstrap_and_Lifecycle -- "registers view expander utilities" --> Foundation_Utility_Extensions
+    Application_Bootstrap_and_Lifecycle -- "registers AI assistant services" --> AI_Assistant_and_Prompts
+    AI_Assistant_and_Prompts -- "listens to model switch events" --> Content_Editors_and_Plugins
+    AI_Assistant_and_Prompts -- "adapts prompt input theme styling" --> Foundation_Utility_Extensions
+    AI_Assistant_and_Prompts -- "tracks local AI model state changes" --> Desktop_Workspace_Management
+    AI_Assistant_and_Prompts -- "displays mobile prompt selector sheets" --> Mobile_Application_Experience
+    AI_Assistant_and_Prompts -- "executes AI backend completions and logs" --> Core_Framework_Packages
+    AI_Assistant_and_Prompts -- "evaluates integration mode during view selection" --> Application_Bootstrap_and_Lifecycle
+    AI_Assistant_and_Prompts -- "translates AI prompt categories" --> Shared_UI_and_Utilities
+    click Content_Editors_and_Plugins href "./Content_Editors_and_Plugins.md" "Details"
     click Desktop_Workspace_Management href "./Desktop_Workspace_Management.md" "Details"
-    click Mobile_Workspace_Interface href "./Mobile_Workspace_Interface.md" "Details"
-    click Core_Infrastructure_Packages href "./Core_Infrastructure_Packages.md" "Details"
-    click User_Authentication_and_Accounts href "./User_Authentication_and_Accounts.md" "Details"
-    click Collaboration_and_Access_Control href "./Collaboration_and_Access_Control.md" "Details"
-    click Shared_UI_Components_and_Utilities href "./Shared_UI_Components_and_Utilities.md" "Details"
-    click Application_Lifecycle_and_Startup href "./Application_Lifecycle_and_Startup.md" "Details"
-    click AI_Assistance_Service href "./AI_Assistance_Service.md" "Details"
-    click Common_Foundation_Utilities href "./Common_Foundation_Utilities.md" "Details"
-    click Core_Platform_and_Notification_Services href "./Core_Platform_and_Notification_Services.md" "Details"
+    click Mobile_Application_Experience href "./Mobile_Application_Experience.md" "Details"
+    click Core_Framework_Packages href "./Core_Framework_Packages.md" "Details"
+    click User_Authentication_and_Profiles href "./User_Authentication_and_Profiles.md" "Details"
+    click Collaboration_and_Access_Features href "./Collaboration_and_Access_Features.md" "Details"
+    click Shared_UI_and_Utilities href "./Shared_UI_and_Utilities.md" "Details"
+    click Application_Bootstrap_and_Lifecycle href "./Application_Bootstrap_and_Lifecycle.md" "Details"
+    click AI_Assistant_and_Prompts href "./AI_Assistant_and_Prompts.md" "Details"
+    click Foundation_Utility_Extensions href "./Foundation_Utility_Extensions.md" "Details"
+    click Core_Platform_and_Notifications href "./Core_Platform_and_Notifications.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-This scope encompasses the AppFlowy Flutter client application, orchestrating desktop and mobile workspace management, content plugins (documents, boards, grids, calendar, and AI chat), user authentication, AI assistant features, and collaboration controls on top of reusable UI and backend infrastructure packages.
+Top-level architecture of the AppFlowy Flutter client, organizing the desktop and mobile presentation layers, content editing and database plugins, collaboration features, AI assistant integration, user authentication, and shared foundation packages. The primary runtime flow initializes through the application startup bootstrap to configure dependency injection and platform services, before routing user interactions into desktop or mobile workspace shells that drive plugin editors, AI assistants, and backend communication.
 
-### Content Plugins and Editors [[Expand]](./Content_Plugins_and_Editors.md)
-Provides interactive plugins for documents, databases (grid, board, calendar), AI chat, and inline actions.
+### Content Editors and Plugins [[Expand]](./Content_Editors_and_Plugins.md)
+Implements document editing, database representations such as grid and board views, AI chat, and inline actions.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.ai_chat.chat.AIChatPagePlugin`:52-94
-- `frontend.appflowy_flutter.lib.plugins.database.grid.presentation.widgets.row.action.RowActionMenu.RowActionMenu.board`:23-28
-- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.image.multi_image_block_component.multi_image_block_component.MultiImageLayout.grid`
+- `frontend.appflowy_flutter.lib.plugins.trash.application.trash_service.TrashService`:8-35
+- `frontend.appflowy_flutter.lib.plugins.ai_chat.application.chat_bloc.ChatBloc`:31-542
 
 
 
@@ -9480,15 +9480,14 @@ Provides interactive plugins for documents, databases (grid, board, calendar), A
 
 
 ### Desktop Workspace Management [[Expand]](./Desktop_Workspace_Management.md)
-Manages desktop workspaces, views, sidebars, navigation, user settings, and command palette.
+Manages desktop workspace layouts, navigation, command palette, sidebar views, and application settings.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.application.view.view_service.ViewBackendService`:14-427
-- `frontend.appflowy_flutter.lib.workspace.application.tabs.tabs_bloc.TabsBloc`:23-304
-- `frontend.appflowy_flutter.lib.workspace.presentation.home.desktop_home_screen.DesktopHomeScreen`:44-331
 - `frontend.appflowy_flutter.lib.workspace.application.command_palette.command_palette_bloc.CommandPaletteBloc`:31-334
+- `frontend.appflowy_flutter.lib.workspace.application.tabs.tabs_bloc.TabsBloc`:23-304
 
 
 
@@ -13200,14 +13199,14 @@ Manages desktop workspaces, views, sidebars, navigation, user settings, and comm
   - `frontend.appflowy_flutter.lib.workspace.presentation.widgets.view_title_bar.<unnamed extension>.lockedPageButtonBackground` (L601-L606) - Method
 
 
-### Mobile Workspace Interface [[Expand]](./Mobile_Workspace_Interface.md)
-Implements mobile screens, view navigation, bottom sheets, mobile settings, and notifications.
+### Mobile Application Experience [[Expand]](./Mobile_Application_Experience.md)
+Provides mobile screens, bottom sheets, navigation routers, and touch interactions for document and database workflows.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.base.mobile_view_page.MobileViewPage`:35-64
-- `frontend.appflowy_flutter.lib.mobile.presentation.home.mobile_home_page.MobileHomePage`:88-100
+- `frontend.appflowy_flutter.lib.mobile.presentation.bottom_sheet.show_mobile_bottom_sheet.showMobileBottomSheet`:26-209
 
 
 
@@ -15221,15 +15220,15 @@ Implements mobile screens, view navigation, bottom sheets, mobile settings, and 
   - `frontend.appflowy_flutter.lib.mobile.presentation.widgets.show_flowy_mobile_confirm_dialog.showFlowyCupertinoConfirmDialog` (L91-L135) - Function
 
 
-### Core Infrastructure Packages [[Expand]](./Core_Infrastructure_Packages.md)
-Houses shared foundation packages including appflowy_backend, UI design system components, popover overlays, and result types.
+### Core Framework Packages [[Expand]](./Core_Framework_Packages.md)
+Supplies reusable UI widgets, popovers, backend FFI bindings, result abstractions, and styling infrastructure across packages.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.packages.appflowy_backend.lib.rust_stream.RustStreamReceiver`:11-57
 - `frontend.appflowy_flutter.packages.appflowy_backend.lib.log.Log`:10-83
 - `frontend.appflowy_flutter.packages.appflowy_result.lib.src.result.FlowyResult`:1-25
+- `frontend.appflowy_flutter.packages.appflowy_backend.lib.rust_stream.RustStreamReceiver`:11-57
 
 
 
@@ -17003,14 +17002,13 @@ Houses shared foundation packages including appflowy_backend, UI design system c
   - `frontend.appflowy_flutter.packages.flowy_svg.lib.src.flowy_svg.FlowySvg._normalized` (L133-L145) - Method
 
 
-### User Authentication and Accounts [[Expand]](./User_Authentication_and_Accounts.md)
-Handles user authentication, account sessions, login/signup flows, passwords, and user profile management.
+### User Authentication and Profiles [[Expand]](./User_Authentication_and_Profiles.md)
+Handles user onboarding, authentication flows, session persistence, account profiles, and user reminders.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.user.application.auth.af_cloud_auth_service.AppFlowyCloudAuthService`:17-129
-- `frontend.appflowy_flutter.lib.user.application.auth.auth_service.AuthService`:17-97
 - `frontend.appflowy_flutter.lib.user.application.user_service.UserBackendService`:27-310
 - `frontend.appflowy_flutter.lib.user.application.reminder.reminder_bloc.ReminderBloc`:31-561
 
@@ -17675,15 +17673,15 @@ Handles user authentication, account sessions, login/signup flows, passwords, an
   - `frontend.appflowy_flutter.lib.user.presentation.widgets.folder_widget._FolderCard.build` (L238-L318) - Method
 
 
-### Collaboration and Access Control [[Expand]](./Collaboration_and_Access_Control.md)
-Handles page sharing, access level control, user invitations, and shared folder views.
+### Collaboration and Access Features [[Expand]](./Collaboration_and_Access_Features.md)
+Coordinates collaboration features including page access levels, link sharing, shared workspace sections, and data storage locations.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.features.page_access_level.logic.page_access_level_bloc.PageAccessLevelBloc`:17-163
 - `frontend.appflowy_flutter.lib.features.share_tab.logic.share_tab_bloc.ShareTabBloc`:19-420
-- `frontend.appflowy_flutter.lib.features.shared_section.logic.shared_section_bloc.SharedSectionBloc`:16-195
+- `frontend.appflowy_flutter.lib.features.workspace.logic.workspace_bloc.UserWorkspaceBloc`:37-692
 
 
 
@@ -18231,16 +18229,15 @@ Handles page sharing, access level control, user invitations, and shared folder 
   - `frontend.appflowy_flutter.lib.features.workspace.logic.workspace_state.UserWorkspaceState.toString` (L100-L102) - Method
 
 
-### Shared UI Components and Utilities [[Expand]](./Shared_UI_Components_and_Utilities.md)
-Provides common application-wide UI widgets, icon/emoji pickers, caching, markdown converters, and error pages.
+### Shared UI and Utilities [[Expand]](./Shared_UI_and_Utilities.md)
+Delivers shared presentation widgets, icon and emoji pickers, error handling displays, and feature flag management.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.shared.markdown_to_document.customMarkdownToDocument`:13-24
-- `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.flowy_icon_emoji_picker.FlowyIconType`:48-52
 - `frontend.appflowy_flutter.lib.shared.feature_flags.FeatureFlag`:14-162
-- `frontend.appflowy_flutter.lib.shared.appflowy_cache_manager.FlowyCacheManager`:5-42
+- `frontend.appflowy_flutter.lib.shared.icon_emoji_picker.flowy_icon_emoji_picker.EmojiIconData`:58-91
 
 
 
@@ -18792,8 +18789,8 @@ Provides common application-wide UI widgets, icon/emoji pickers, caching, markdo
   - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.build` (L71-L108) - Method
 
 
-### Application Lifecycle and Startup [[Expand]](./Application_Lifecycle_and_Startup.md)
-Coordinates application bootstrap, dependency injection resolution, deep linking, background tasks, and plugin registration.
+### Application Bootstrap and Lifecycle [[Expand]](./Application_Bootstrap_and_Lifecycle.md)
+Orchestrates application initialization, dependency injection resolution, startup tasks, deep links, and plugin loading.
 
 
 **Related Classes/Methods**:
@@ -19151,8 +19148,8 @@ Coordinates application bootstrap, dependency injection resolution, deep linking
   - `frontend.appflowy_flutter.lib.startup.tasks.windows.InitAppWindowTask.dispose` (L138-L142) - Method
 
 
-### AI Assistance Service [[Expand]](./AI_Assistance_Service.md)
-Coordinates AI model selection, streaming prompt completions, context collection, and prompt selector dialogs.
+### AI Assistant and Prompts [[Expand]](./AI_Assistant_and_Prompts.md)
+Manages AI interactions, prompt templates, model selection, and prompt input controls across document and chat workflows.
 
 
 **Related Classes/Methods**:
@@ -19724,8 +19721,8 @@ Coordinates AI model selection, streaming prompt completions, context collection
   - `frontend.appflowy_flutter.lib.ai.widgets.view_selector.ViewSelector.build` (L19-L39) - Method
 
 
-### Common Foundation Utilities [[Expand]](./Common_Foundation_Utilities.md)
-Provides shared general utilities such as debounce, throttle, color conversion, string formatting, and date helpers.
+### Foundation Utility Extensions [[Expand]](./Foundation_Utility_Extensions.md)
+Supplies general helper utilities, color and string conversion tools, debounce timers, and view expansion registries.
 
 
 **Related Classes/Methods**:
@@ -19825,8 +19822,8 @@ Provides shared general utilities such as debounce, throttle, color conversion, 
   - `frontend.appflowy_flutter.lib.util.xfile_ext.ToMediaFileTypePB.toMediaFileTypePB` (L91-L108) - Method
 
 
-### Core Platform and Notification Services [[Expand]](./Core_Platform_and_Notification_Services.md)
-Supplies low-level key-value persistence, window framing, URL launching, and backend notification dispatchers.
+### Core Platform and Notifications [[Expand]](./Core_Platform_and_Notifications.md)
+Provides fundamental runtime services including key-value storage, deep URL launching, and backend event notification parsers.
 
 
 **Related Classes/Methods**:
@@ -19915,14 +19912,14 @@ Supplies low-level key-value persistence, window framing, URL launching, and bac
   - `frontend.appflowy_flutter.lib.core.notification.user_notification.UserNotificationParser.UserNotificationParser` (L11-L18) - Constructor
 
 
-### App Entry and Build Scripts
-Contains top-level build scripts, application entry points, and date NLP parsing services.
+### Application Entry and Build Tooling
+Defines the Flutter application entry point, date query services, and release packaging scripts.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.date.date_service.DateService`:6-25
 - `frontend.appflowy_flutter.lib.main.main`:5-11
+- `frontend.appflowy_flutter.lib.date.date_service.DateService`:6-25
 
 
 

@@ -3,107 +3,107 @@ graph LR
     Editor_Page_and_Slash_Commands["Editor Page and Slash Commands"]
     Simple_Table_Component["Simple Table Component"]
     Mobile_Toolbar_and_Media_Blocks["Mobile Toolbar and Media Blocks"]
-    Mention_and_Link_Embed_Components["Mention and Link Embed Components"]
-    Document_Page_and_Block_Operations["Document Page and Block Operations"]
-    Floating_Toolbars_and_Text_Formatting["Floating Toolbars and Text Formatting"]
+    Page_Mentions_and_Link_Embeds["Page Mentions and Link Embeds"]
+    Document_Page_and_Block_Actions["Document Page and Block Actions"]
+    Floating_Toolbar_and_Formatting_Controls["Floating Toolbar and Formatting Controls"]
     Image_and_Gallery_Components["Image and Gallery Components"]
-    Document_Cover_and_Page_Styling["Document Cover and Page Styling"]
-    Standard_Content_Blocks_and_Utilities["Standard Content Blocks and Utilities"]
-    Document_State_and_Synchronization["Document State and Synchronization"]
-    Clipboard_and_Paste_Management["Clipboard and Paste Management"]
-    Document_Shell_and_Drag_Drop["Document Shell and Drag Drop"]
-    Document_Plugin_Registration_and_Menus["Document Plugin Registration and Menus"]
-    Editor_Page_and_Slash_Commands -- "queries document state" --> Document_State_and_Synchronization
-    Editor_Page_and_Slash_Commands -- "copies code content to clipboard" --> Clipboard_and_Paste_Management
-    Editor_Page_and_Slash_Commands -- "creates simple table blocks" --> Simple_Table_Component
-    Editor_Page_and_Slash_Commands -- "renders mobile toolbar and parses media blocks" --> Mobile_Toolbar_and_Media_Blocks
-    Editor_Page_and_Slash_Commands -- "initializes localization and mention nodes" --> Mention_and_Link_Embed_Components
-    Editor_Page_and_Slash_Commands -- "configures block components and columns" --> Document_Page_and_Block_Operations
-    Editor_Page_and_Slash_Commands -- "embeds floating toolbars" --> Floating_Toolbars_and_Text_Formatting
-    Editor_Page_and_Slash_Commands -- "inserts and parses image gallery blocks" --> Image_and_Gallery_Components
-    Editor_Page_and_Slash_Commands -- "applies editor styling and cover configurations" --> Document_Cover_and_Page_Styling
-    Editor_Page_and_Slash_Commands -- "registers find-and-replace and keyboard interceptors" --> Standard_Content_Blocks_and_Utilities
-    Document_State_and_Synchronization -- "validates column hierarchy rules" --> Document_Page_and_Block_Operations
-    Clipboard_and_Paste_Management -- "checks local mode for pasted media" --> Document_State_and_Synchronization
-    Clipboard_and_Paste_Management -- "posts paste notifications" --> Document_Shell_and_Drag_Drop
-    Clipboard_and_Paste_Management -- "pastes HTML tables into simple tables" --> Simple_Table_Component
-    Clipboard_and_Paste_Management -- "drops file attachments into editor" --> Mobile_Toolbar_and_Media_Blocks
-    Clipboard_and_Paste_Management -- "pastes mentions and shows paste-as menus" --> Mention_and_Link_Embed_Components
-    Clipboard_and_Paste_Management -- "saves dropped image files" --> Image_and_Gallery_Components
-    Document_Shell_and_Drag_Drop -- "displays active document collaborators" --> Document_State_and_Synchronization
-    Document_Shell_and_Drag_Drop -- "delegates dropped files and images to paste handlers" --> Clipboard_and_Paste_Management
-    Document_Shell_and_Drag_Drop -- "drops view links as page mentions" --> Mention_and_Link_Embed_Components
-    Document_Plugin_Registration_and_Menus -- "renders collaborator bar item" --> Document_Shell_and_Drag_Drop
-    Document_Plugin_Registration_and_Menus -- "builds main document page widget" --> Document_Page_and_Block_Operations
-    Document_Plugin_Registration_and_Menus -- "applies tint styles to table options" --> Standard_Content_Blocks_and_Utilities
-    Simple_Table_Component -- "references editor page colors and string helpers" --> Editor_Page_and_Slash_Commands
-    Simple_Table_Component -- "copies table cell and row data to clipboard" --> Clipboard_and_Paste_Management
-    Simple_Table_Component -- "uses color picker widgets in table bottom sheet" --> Mobile_Toolbar_and_Media_Blocks
-    Simple_Table_Component -- "triggers block action option cubit" --> Document_Page_and_Block_Operations
-    Simple_Table_Component -- "reads editor style padding and offset metrics" --> Document_Cover_and_Page_Styling
-    Simple_Table_Component -- "queries tint color extensions" --> Standard_Content_Blocks_and_Utilities
-    Mobile_Toolbar_and_Media_Blocks -- "uses built-in editor font colors" --> Editor_Page_and_Slash_Commands
-    Mobile_Toolbar_and_Media_Blocks -- "uploads file attachments via document service" --> Document_State_and_Synchronization
-    Mobile_Toolbar_and_Media_Blocks -- "copies block content to clipboard" --> Clipboard_and_Paste_Management
-    Mobile_Toolbar_and_Media_Blocks -- "registers drop targets with drop manager" --> Document_Shell_and_Drag_Drop
-    Mobile_Toolbar_and_Media_Blocks -- "inserts table blocks from mobile menu" --> Simple_Table_Component
-    Mobile_Toolbar_and_Media_Blocks -- "creates date mentions and page selectors" --> Mention_and_Link_Embed_Components
-    Mobile_Toolbar_and_Media_Blocks -- "shows mobile block action buttons" --> Document_Page_and_Block_Operations
-    Mobile_Toolbar_and_Media_Blocks -- "opens link editing menus" --> Floating_Toolbars_and_Text_Formatting
-    Mobile_Toolbar_and_Media_Blocks -- "inserts and uploads images from mobile menu" --> Image_and_Gallery_Components
-    Mobile_Toolbar_and_Media_Blocks -- "renders block action delete button" --> Standard_Content_Blocks_and_Utilities
-    Mention_and_Link_Embed_Components -- "listens to document node changes" --> Document_State_and_Synchronization
-    Mention_and_Link_Embed_Components -- "subscribes to editor notification stream" --> Document_Shell_and_Drag_Drop
-    Mention_and_Link_Embed_Components -- "renders mobile block action buttons" --> Document_Page_and_Block_Operations
-    Mention_and_Link_Embed_Components -- "triggers link preview and replace menus" --> Floating_Toolbars_and_Text_Formatting
-    Mention_and_Link_Embed_Components -- "renders emoji icons and applies editor styles" --> Document_Cover_and_Page_Styling
-    Mention_and_Link_Embed_Components -- "calculates menu anchor rectangles" --> Standard_Content_Blocks_and_Utilities
-    Document_Page_and_Block_Operations -- "configures AI writer and editor page" --> Editor_Page_and_Slash_Commands
-    Document_Page_and_Block_Operations -- "dispatches document lifecycle events" --> Document_State_and_Synchronization
-    Document_Page_and_Block_Operations -- "copies block links to clipboard" --> Clipboard_and_Paste_Management
-    Document_Page_and_Block_Operations -- "attaches drop handler and displays banners" --> Document_Shell_and_Drag_Drop
-    Document_Page_and_Block_Operations -- "builds table block component menus" --> Document_Plugin_Registration_and_Menus
-    Document_Page_and_Block_Operations -- "verifies table container context and builds table blocks" --> Simple_Table_Component
-    Document_Page_and_Block_Operations -- "builds file and math block components" --> Mobile_Toolbar_and_Media_Blocks
-    Document_Page_and_Block_Operations -- "registers transaction service and link preview builders" --> Mention_and_Link_Embed_Components
-    Document_Page_and_Block_Operations -- "updates text suggestion blocks" --> Floating_Toolbars_and_Text_Formatting
-    Document_Page_and_Block_Operations -- "builds custom and multi-image block components" --> Image_and_Gallery_Components
-    Document_Page_and_Block_Operations -- "displays immersive cover and document headers" --> Document_Cover_and_Page_Styling
-    Document_Page_and_Block_Operations -- "builds callout, list, and quote block components" --> Standard_Content_Blocks_and_Utilities
-    Floating_Toolbars_and_Text_Formatting -- "checks narrow window layout and text types" --> Editor_Page_and_Slash_Commands
-    Floating_Toolbars_and_Text_Formatting -- "syncs font family with appearance cubit" --> Document_State_and_Synchronization
-    Floating_Toolbars_and_Text_Formatting -- "copies hover link URLs to clipboard" --> Clipboard_and_Paste_Management
-    Floating_Toolbars_and_Text_Formatting -- "triggers mobile link edit bottom sheet" --> Mobile_Toolbar_and_Media_Blocks
-    Floating_Toolbars_and_Text_Formatting -- "converts links to mentions and link previews" --> Mention_and_Link_Embed_Components
-    Floating_Toolbars_and_Text_Formatting -- "turns blocks into headings or text types" --> Document_Page_and_Block_Operations
-    Floating_Toolbars_and_Text_Formatting -- "renders raw emoji icons and hover colors" --> Document_Cover_and_Page_Styling
-    Image_and_Gallery_Components -- "uploads images via document service" --> Document_State_and_Synchronization
-    Image_and_Gallery_Components -- "copies image URLs to clipboard" --> Clipboard_and_Paste_Management
-    Image_and_Gallery_Components -- "queries drop manager status" --> Document_Shell_and_Drag_Drop
-    Image_and_Gallery_Components -- "shows mobile action buttons on image blocks" --> Document_Page_and_Block_Operations
-    Image_and_Gallery_Components -- "uses cover color picker options" --> Document_Cover_and_Page_Styling
-    Image_and_Gallery_Components -- "attaches block menu action buttons" --> Standard_Content_Blocks_and_Utilities
-    Document_Cover_and_Page_Styling -- "queries status bar height and built-in font colors" --> Editor_Page_and_Slash_Commands
-    Document_Cover_and_Page_Styling -- "checks local mode for cover image storage" --> Document_State_and_Synchronization
-    Document_Cover_and_Page_Styling -- "migrates and styles math equation blocks" --> Mobile_Toolbar_and_Media_Blocks
-    Document_Cover_and_Page_Styling -- "decorates mention block attributes" --> Mention_and_Link_Embed_Components
-    Document_Cover_and_Page_Styling -- "binds link hover menu trigger" --> Floating_Toolbars_and_Text_Formatting
-    Document_Cover_and_Page_Styling -- "opens upload image menu for covers" --> Image_and_Gallery_Components
-    Document_Cover_and_Page_Styling -- "migrates legacy callout and quote nodes" --> Standard_Content_Blocks_and_Utilities
-    Standard_Content_Blocks_and_Utilities -- "renders emoji picker button for callouts" --> Editor_Page_and_Slash_Commands
-    Standard_Content_Blocks_and_Utilities -- "intercepts delete commands within table cells" --> Simple_Table_Component
-    Standard_Content_Blocks_and_Utilities -- "renders mention blocks within outlines" --> Mention_and_Link_Embed_Components
-    Standard_Content_Blocks_and_Utilities -- "attaches mobile action buttons to outline blocks" --> Document_Page_and_Block_Operations
+    Document_Header_and_Styling["Document Header and Styling"]
+    Standard_Document_Blocks_and_Utilities["Standard Document Blocks and Utilities"]
+    Document_State_and_Collaboration_Service["Document State and Collaboration Service"]
+    Clipboard_and_Paste_Handlers["Clipboard and Paste Handlers"]
+    Editor_Drop_and_Notification_UI["Editor Drop and Notification UI"]
+    Document_Plugin_and_Table_Actions["Document Plugin and Table Actions"]
+    Editor_Page_and_Slash_Commands -- "queries document state and mode" --> Document_State_and_Collaboration_Service
+    Editor_Page_and_Slash_Commands -- "copies code content to clipboard" --> Clipboard_and_Paste_Handlers
+    Editor_Page_and_Slash_Commands -- "creates and parses simple table blocks" --> Simple_Table_Component
+    Editor_Page_and_Slash_Commands -- "embeds mobile toolbar and file or math nodes" --> Mobile_Toolbar_and_Media_Blocks
+    Editor_Page_and_Slash_Commands -- "parses and creates page mention blocks" --> Page_Mentions_and_Link_Embeds
+    Editor_Page_and_Slash_Commands -- "registers block builders and column components" --> Document_Page_and_Block_Actions
+    Editor_Page_and_Slash_Commands -- "displays desktop and mobile floating toolbars" --> Floating_Toolbar_and_Formatting_Controls
+    Editor_Page_and_Slash_Commands -- "inserts and parses image gallery nodes" --> Image_and_Gallery_Components
+    Editor_Page_and_Slash_Commands -- "applies editor styling and cover commands" --> Document_Header_and_Styling
+    Editor_Page_and_Slash_Commands -- "integrates keyboard interception and basic block nodes" --> Standard_Document_Blocks_and_Utilities
+    Document_State_and_Collaboration_Service -- "applies document rules to column structures" --> Document_Page_and_Block_Actions
+    Clipboard_and_Paste_Handlers -- "checks local mode for image upload on paste" --> Document_State_and_Collaboration_Service
+    Clipboard_and_Paste_Handlers -- "posts editor notifications on paste events" --> Editor_Drop_and_Notification_UI
+    Clipboard_and_Paste_Handlers -- "pastes content into simple table structures" --> Simple_Table_Component
+    Clipboard_and_Paste_Handlers -- "pastes files into file blocks and storage" --> Mobile_Toolbar_and_Media_Blocks
+    Clipboard_and_Paste_Handlers -- "pastes URLs into mention blocks and link previews" --> Page_Mentions_and_Link_Embeds
+    Clipboard_and_Paste_Handlers -- "pastes image data into custom image blocks" --> Image_and_Gallery_Components
+    Editor_Drop_and_Notification_UI -- "listens to collaborator state changes" --> Document_State_and_Collaboration_Service
+    Editor_Drop_and_Notification_UI -- "delegates drag-and-drop file and image handling" --> Clipboard_and_Paste_Handlers
+    Editor_Drop_and_Notification_UI -- "inserts page mention nodes from dropped views" --> Page_Mentions_and_Link_Embeds
+    Document_Plugin_and_Table_Actions -- "renders document collaborator avatars in right bar" --> Editor_Drop_and_Notification_UI
+    Document_Plugin_and_Table_Actions -- "builds document page widget" --> Document_Page_and_Block_Actions
+    Document_Plugin_and_Table_Actions -- "formats table tint colors using tint extensions" --> Standard_Document_Blocks_and_Utilities
+    Simple_Table_Component -- "references editor color palette and capitalization" --> Editor_Page_and_Slash_Commands
+    Simple_Table_Component -- "copies table cell, row, and column content" --> Clipboard_and_Paste_Handlers
+    Simple_Table_Component -- "uses color picker menus from mobile toolbar" --> Mobile_Toolbar_and_Media_Blocks
+    Simple_Table_Component -- "triggers block action option cubit from table actions" --> Document_Page_and_Block_Actions
+    Simple_Table_Component -- "reads layout padding from editor style customizer" --> Document_Header_and_Styling
+    Simple_Table_Component -- "resolves background colors using tint extension" --> Standard_Document_Blocks_and_Utilities
+    Mobile_Toolbar_and_Media_Blocks -- "uses font colors from editor base plugins" --> Editor_Page_and_Slash_Commands
+    Mobile_Toolbar_and_Media_Blocks -- "uploads files via document service and checks local mode" --> Document_State_and_Collaboration_Service
+    Mobile_Toolbar_and_Media_Blocks -- "copies file and error block content to clipboard" --> Clipboard_and_Paste_Handlers
+    Mobile_Toolbar_and_Media_Blocks -- "tracks drop state via editor drop manager" --> Editor_Drop_and_Notification_UI
+    Mobile_Toolbar_and_Media_Blocks -- "inserts simple table blocks from mobile menu" --> Simple_Table_Component
+    Mobile_Toolbar_and_Media_Blocks -- "inserts mentions and opens page selector sheets" --> Page_Mentions_and_Link_Embeds
+    Mobile_Toolbar_and_Media_Blocks -- "embeds mobile block action buttons" --> Document_Page_and_Block_Actions
+    Mobile_Toolbar_and_Media_Blocks -- "applies links using desktop toolbar link extensions" --> Floating_Toolbar_and_Formatting_Controls
+    Mobile_Toolbar_and_Media_Blocks -- "inserts and uploads images from mobile toolbar" --> Image_and_Gallery_Components
+    Mobile_Toolbar_and_Media_Blocks -- "creates quote, callout, and math equation blocks" --> Standard_Document_Blocks_and_Utilities
+    Page_Mentions_and_Link_Embeds -- "loads page content and listens for document updates" --> Document_State_and_Collaboration_Service
+    Page_Mentions_and_Link_Embeds -- "subscribes to editor notification events" --> Editor_Drop_and_Notification_UI
+    Page_Mentions_and_Link_Embeds -- "attaches mobile block action buttons to link previews" --> Document_Page_and_Block_Actions
+    Page_Mentions_and_Link_Embeds -- "copies and replaces links via hover menu commands" --> Floating_Toolbar_and_Formatting_Controls
+    Page_Mentions_and_Link_Embeds -- "decorates mention blocks with editor style and emoji icons" --> Document_Header_and_Styling
+    Page_Mentions_and_Link_Embeds -- "computes menu positioning bounds" --> Standard_Document_Blocks_and_Utilities
+    Document_Page_and_Block_Actions -- "wraps editor page and initializes AI writer block" --> Editor_Page_and_Slash_Commands
+    Document_Page_and_Block_Actions -- "dispatches document lifecycle events to bloc" --> Document_State_and_Collaboration_Service
+    Document_Page_and_Block_Actions -- "copies block links to clipboard" --> Clipboard_and_Paste_Handlers
+    Document_Page_and_Block_Actions -- "displays document banners and handles drop events" --> Editor_Drop_and_Notification_UI
+    Document_Page_and_Block_Actions -- "registers table menu and component builders" --> Document_Plugin_and_Table_Actions
+    Document_Page_and_Block_Actions -- "configures simple table component builders and extensions" --> Simple_Table_Component
+    Document_Page_and_Block_Actions -- "registers file, math equation, and toggle block builders" --> Mobile_Toolbar_and_Media_Blocks
+    Document_Page_and_Block_Actions -- "registers link preview and sub-page component builders" --> Page_Mentions_and_Link_Embeds
+    Document_Page_and_Block_Actions -- "refreshes text suggestions on turn-into actions" --> Floating_Toolbar_and_Formatting_Controls
+    Document_Page_and_Block_Actions -- "configures custom and multi-image block builders" --> Image_and_Gallery_Components
+    Document_Page_and_Block_Actions -- "renders document immersive cover and style context" --> Document_Header_and_Styling
+    Document_Page_and_Block_Actions -- "registers callout, list, and quote component builders" --> Standard_Document_Blocks_and_Utilities
+    Floating_Toolbar_and_Formatting_Controls -- "inspects window layout for narrow responsive toolbar display" --> Editor_Page_and_Slash_Commands
+    Floating_Toolbar_and_Formatting_Controls -- "synchronizes font families with appearance cubit" --> Document_State_and_Collaboration_Service
+    Floating_Toolbar_and_Formatting_Controls -- "copies link URLs to clipboard" --> Clipboard_and_Paste_Handlers
+    Floating_Toolbar_and_Formatting_Controls -- "triggers mobile link bottom sheet editor" --> Mobile_Toolbar_and_Media_Blocks
+    Floating_Toolbar_and_Formatting_Controls -- "converts links to mention nodes and previews" --> Page_Mentions_and_Link_Embeds
+    Floating_Toolbar_and_Formatting_Controls -- "invokes turn-into block options via cubit" --> Document_Page_and_Block_Actions
+    Floating_Toolbar_and_Formatting_Controls -- "styles toolbar items using editor style customizer" --> Document_Header_and_Styling
+    Image_and_Gallery_Components -- "uploads images through document service and verifies mode" --> Document_State_and_Collaboration_Service
+    Image_and_Gallery_Components -- "copies image links and plain text to clipboard" --> Clipboard_and_Paste_Handlers
+    Image_and_Gallery_Components -- "checks drag drop state via editor drop manager" --> Editor_Drop_and_Notification_UI
+    Image_and_Gallery_Components -- "attaches mobile block action buttons to images" --> Document_Page_and_Block_Actions
+    Image_and_Gallery_Components -- "picks cover colors from cover editor options" --> Document_Header_and_Styling
+    Image_and_Gallery_Components -- "renders block menu buttons on image controls" --> Standard_Document_Blocks_and_Utilities
+    Document_Header_and_Styling -- "obtains app bar dimensions and built-in font colors" --> Editor_Page_and_Slash_Commands
+    Document_Header_and_Styling -- "inspects document bloc for local mode operation" --> Document_State_and_Collaboration_Service
+    Document_Header_and_Styling -- "decorates inline math equation nodes" --> Mobile_Toolbar_and_Media_Blocks
+    Document_Header_and_Styling -- "decorates mention block attributes" --> Page_Mentions_and_Link_Embeds
+    Document_Header_and_Styling -- "attaches hover triggers to text span links" --> Floating_Toolbar_and_Formatting_Controls
+    Document_Header_and_Styling -- "shows upload image menu and deletes local image files" --> Image_and_Gallery_Components
+    Document_Header_and_Styling -- "migrates legacy callout and quote nodes" --> Standard_Document_Blocks_and_Utilities
+    Standard_Document_Blocks_and_Utilities -- "opens emoji picker button for callout blocks" --> Editor_Page_and_Slash_Commands
+    Standard_Document_Blocks_and_Utilities -- "checks table cell selection during keyboard delete interception" --> Simple_Table_Component
+    Standard_Document_Blocks_and_Utilities -- "creates mention blocks inside outline item widgets" --> Page_Mentions_and_Link_Embeds
+    Standard_Document_Blocks_and_Utilities -- "attaches mobile block action buttons to outline blocks" --> Document_Page_and_Block_Actions
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Implements the block-based document editor workspace, formatting toolbars, transaction handling, and collaborative document structures.
+Provides the block-based rich text document editor, including editing toolbars, block components, and collaborative document state.
 
 ### Editor Page and Slash Commands
-Hosts the main document editor view, slash command menu registry, AI writer integrations, and block parsers.
+Manages the main editor page view, slash command menu, node parsers, keyboard shortcuts, and embedded AI, code, and database blocks.
 
 
 **Related Classes/Methods**:
@@ -609,12 +609,13 @@ Hosts the main document editor view, slash command menu registry, AI writer inte
 
 
 ### Simple Table Component
-Implements editable grid tables including rows, cells, shortcuts, column resizing, and table styling actions.
+Implements tabular block components, cell and row manipulation, grid styling, and navigation shortcuts.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.simple_table.simple_table_block_component.SimpleTableBlockComponentBuilder`:143-173
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.simple_table.simple_table_block_component.createSimpleTableBlockNode`:120-141
 
 
 
@@ -1257,7 +1258,7 @@ Implements editable grid tables including rows, cells, shortcuts, column resizin
 
 
 ### Mobile Toolbar and Media Blocks
-Provides mobile editing toolbars along with file attachments, toggle lists, and math equation blocks.
+Provides mobile editing toolbars alongside block builders for attachments, math equations, toggles, and error nodes.
 
 
 **Related Classes/Methods**:
@@ -1720,13 +1721,15 @@ Provides mobile editing toolbars along with file attachments, toggle lists, and 
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.toggle.toggle_block_shortcuts._formatGreaterSymbol` (L254-L303) - Function
 
 
-### Mention and Link Embed Components
-Manages document mentions, sub-page references, link preview embeds, and transaction event handling.
+### Page Mentions and Link Embeds
+Handles page mentions, external link embeds and previews, sub-page navigation, and editor transaction services.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.mention.mention_block.MentionBlock`:97-178
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.mention.mention_page_bloc.MentionPageBloc`:22-219
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.sub_page.sub_page_block_component.SubPageBlockComponentBuilder`:51-68
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.transaction_handler.editor_transaction_service.EditorTransactionService`:28-43
 
 
@@ -2305,8 +2308,8 @@ Manages document mentions, sub-page references, link preview embeds, and transac
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.transaction_handler.mention_transaction_handler.MentionTransactionHandler.MentionTransactionHandler` (L15-L16) - Constructor
 
 
-### Document Page and Block Operations
-Coordinates the top-level document screen, block component configuration builders, action option menus, and column layouts.
+### Document Page and Block Actions
+Coordinates document page composition, block component builder configuration, block option action menus, and column layouts.
 
 
 **Related Classes/Methods**:
@@ -2662,14 +2665,15 @@ Coordinates the top-level document screen, block component configuration builder
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.columns.simple_columns_block_constant.SimpleColumnsBlockConstants.SimpleColumnsBlockConstants._` (L2-L2) - Constructor
 
 
-### Floating Toolbars and Text Formatting
-Provides desktop and mobile floating selection toolbars, link creation menus, and inline text formatting controls.
+### Floating Toolbar and Formatting Controls
+Provides floating text formatting toolbars and popover menus for typography, colors, headings, and link management.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.desktop_toolbar.desktop_floating_toolbar.DesktopFloatingToolbar`:8-24
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.mobile_floating_toolbar.custom_mobile_floating_toolbar.CustomMobileFloatingToolbar`:90-147
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.desktop_toolbar.link.link_hover_menu.LinkHoverTrigger`:33-55
 
 
 
@@ -3077,7 +3081,7 @@ Provides desktop and mobile floating selection toolbars, link creation menus, an
 
 
 ### Image and Gallery Components
-Handles single and multi-image blocks, image resizing, image picker dialogs, and cloud or local storage uploads.
+Manages image block components, multi-image galleries, upload dialogs, resizing controls, and image services.
 
 
 **Related Classes/Methods**:
@@ -3382,14 +3386,15 @@ Handles single and multi-image blocks, image resizing, image picker dialogs, and
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.image.upload_image_menu.widgets.upload_image_file_widget.UploadImageFileWidget._uploadImage` (L53-L74) - Method
 
 
-### Document Cover and Page Styling
-Controls document header covers, emoji icon selectors, page layout themes, and custom editor styling.
+### Document Header and Styling
+Configures document page styles, immersive cover images, header titles, emoji icons, and editor styling customizers.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_style.EditorStyleCustomizer`:31-606
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.header.document_cover_widget.DocumentCoverWidget`:70-88
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.header.emoji_icon_widget.EmojiIconWidget`:19-31
 
 
 
@@ -3711,13 +3716,14 @@ Controls document header covers, emoji icon selectors, page layout themes, and c
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_style.EditorStyleCustomizer._buildTextSpanOverlay` (L559-L605) - Method
 
 
-### Standard Content Blocks and Utilities
-Implements callouts, outlines, quotes, lists, video blocks, find-and-replace menus, and keyboard interceptors.
+### Standard Document Blocks and Utilities
+Renders standard blocks like callouts, quotes, outlines, lists, and video, and provides keyboard and find utilities.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.callout.callout_block_component.CalloutBlockComponentBuilder`:76-109
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.outline.outline_block_component.OutlineItemWidget`:276-369
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.keyboard_interceptor.keyboard_interceptor.EditorKeyboardInterceptor`:10-125
 
 
@@ -3885,14 +3891,15 @@ Implements callouts, outlines, quotes, lists, video blocks, find-and-replace men
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.video.video_block_component.VideoBlockKeys.VideoBlockKeys._` (L2-L2) - Constructor
 
 
-### Document State and Synchronization
-Provides business logic, document state BLoCs, transaction adapters, sync services, and collaboration metadata.
+### Document State and Collaboration Service
+Manages document application business logic, document synchronization, remote persistence, and collaborator awareness.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.application.document_bloc.DocumentBloc`:47-451
 - `frontend.appflowy_flutter.lib.plugins.document.application.document_service.DocumentService`:11-222
+- `frontend.appflowy_flutter.lib.plugins.document.application.document_collaborators_bloc.DocumentCollaboratorsBloc`:20-114
 
 
 
@@ -4068,8 +4075,8 @@ Provides business logic, document state BLoCs, transaction adapters, sync servic
   - `frontend.appflowy_flutter.lib.plugins.document.application.editor_transaction_adapter.BlockActionWrapper.BlockActionWrapper` (L451-L455) - Constructor
 
 
-### Clipboard and Paste Management
-Manages clipboard interactions and format-specific paste handlers for text, images, files, HTML, and blocks.
+### Clipboard and Paste Handlers
+Processes clipboard copy, cut, and paste actions for text, HTML, images, files, and structured JSON content.
 
 
 **Related Classes/Methods**:
@@ -4124,14 +4131,15 @@ Manages clipboard interactions and format-specific paste handlers for text, imag
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.copy_and_paste.paste_from_plain_text.PasteFromPlainText._getLinkFromNode` (L87-L95) - Method
 
 
-### Document Shell and Drag Drop
-Provides document shell overlays, collaborator indicators, editor notification dispatchers, and drag-and-drop managers.
+### Editor Drop and Notification UI
+Handles editor drag-and-drop operations, editor notification broadcasting, collaborator avatar stacks, and banner displays.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_drop_handler.EditorDropHandler`:24-178
-- `frontend.appflowy_flutter.lib.plugins.document.presentation.document_collaborators.DocumentCollaborators`:12-81
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_drop_manager.EditorDropManagerState`:3-19
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_notification.EditorNotification`:16-43
 
 
 
@@ -4193,14 +4201,15 @@ Provides document shell overlays, collaborator indicators, editor notification d
   - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_notification.EditorNotification.dispose` (L42-L42) - Method
 
 
-### Document Plugin Registration and Menus
-Defines the document plugin entry point and builders along with table option menus and text alignment commands.
+### Document Plugin and Table Actions
+Defines document plugin lifecycle widget building, table menus, and alignment toolbar actions.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.plugins.document.document.DocumentPluginWidgetBuilder`:106-231
 - `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.table.table_menu.TableMenu`:19-112
+- `frontend.appflowy_flutter.lib.plugins.document.presentation.editor_plugins.table.table_option_action.TableColorOptionAction`:75-157
 
 
 

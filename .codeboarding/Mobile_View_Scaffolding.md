@@ -1,26 +1,27 @@
 ```mermaid
 graph LR
-    Mobile_Base_UI_Components["Mobile Base UI Components"]
-    Mobile_View_Screen_Shell["Mobile View Screen Shell"]
-    View_Action_Header_Controls["View Action Header Controls"]
-    Mobile_View_Screen_Shell -- "configures view action controls" --> View_Action_Header_Controls
-    View_Action_Header_Controls -- "renders using app bar primitives" --> Mobile_View_Screen_Shell
+    Base_Mobile_UI_Controls["Base Mobile UI Controls"]
+    Mobile_View_Page_Container["Mobile View Page Container"]
+    View_Page_Action_Controls["View Page Action Controls"]
+    Mobile_View_Page_Container -- "embeds view action controls" --> View_Page_Action_Controls
+    View_Page_Action_Controls -- "renders base app bar components" --> Mobile_View_Page_Container
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Supplies the base view page scaffold, mobile app bar headers, and view-level action sheets.
+Provides top app bars, gesture handling, and the standard scaffold container for mobile view pages.
 
-### Mobile Base UI Components
-Provides reusable mobile UI widgets including gesture detectors, search text fields, color selectors, and menu items.
+### Base Mobile UI Controls
+Provides reusable mobile presentation widgets including animated gestures, search input fields, and option selection components.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.base.animated_gesture.AnimatedGestureDetector`:4-27
 - `frontend.appflowy_flutter.lib.mobile.presentation.base.flowy_search_text_field.FlowySearchTextField`:5-40
+- `frontend.appflowy_flutter.lib.mobile.presentation.base.option_color_list.OptionColorList`:7-58
 
 
 
@@ -56,8 +57,8 @@ Provides reusable mobile UI widgets including gesture detectors, search text fie
   - `frontend.appflowy_flutter.lib.mobile.presentation.base.type_option_menu_item.TypeOptionGridView.build` (L138-L161) - Method
 
 
-### Mobile View Screen Shell
-Hosts the mobile view screen scaffold and provides base navigation app bar components.
+### Mobile View Page Container
+Hosts the mobile view screen container and base application bar layout with navigation button actions.
 
 
 **Related Classes/Methods**:
@@ -125,8 +126,8 @@ Hosts the mobile view screen scaffold and provides base navigation app bar compo
   - `frontend.appflowy_flutter.lib.mobile.presentation.base.mobile_view_page._MobileViewPageState._onScrollNotification` (L439-L460) - Method
 
 
-### View Action Header Controls
-Provides immersive app bar buttons and contextual bottom sheets for view actions and styling.
+### View Page Action Controls
+Supplies immersive app bar headers, layout and more action buttons, and page options bottom sheets.
 
 
 **Related Classes/Methods**:

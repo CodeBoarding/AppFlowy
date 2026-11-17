@@ -1,39 +1,72 @@
 ```mermaid
 graph LR
-    Application_Initialization_Tasks["Application Initialization Tasks"]
-    Device_Information_and_Auto_Update["Device Information and Auto Update"]
-    Desktop_Window_Management["Desktop Window Management"]
-    Application_Launch_Orchestrator["Application Launch Orchestrator"]
-    Application_Initialization_Tasks -- "implements task lifecycle and consumes" --> Application_Launch_Orchestrator
-    Device_Information_and_Auto_Update -- "implements task interface from" --> Application_Launch_Orchestrator
-    Desktop_Window_Management -- "implements task interface and checks environment in" --> Application_Launch_Orchestrator
-    Application_Launch_Orchestrator -- "orchestrates lifecycle of" --> Application_Initialization_Tasks
-    Application_Launch_Orchestrator -- "instantiates and executes" --> Device_Information_and_Auto_Update
-    Application_Launch_Orchestrator -- "instantiates and executes" --> Desktop_Window_Management
+    Startup_Runner_and_Tasks["Startup Runner and Tasks"]
+    Dependency_Resolver_and_Configuration["Dependency Resolver and Configuration"]
+    Plugin_Registry_and_Sandbox["Plugin Registry and Sandbox"]
+    Startup_Runner_and_Tasks -- "resolves dependencies and configuration" --> Dependency_Resolver_and_Configuration
+    Startup_Runner_and_Tasks -- "registers plugins and sandbox" --> Plugin_Registry_and_Sandbox
+    Dependency_Resolver_and_Configuration -- "wires task and lifecycle services" --> Startup_Runner_and_Tasks
+    click Startup_Runner_and_Tasks href "./Startup_Runner_and_Tasks.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Orchestrates application launch sequencing, executes initialization tasks, and handles runtime lifecycle events.
+Orchestrates application initialization, dependency injection resolution, startup tasks, deep links, and plugin loading.
 
-### Application Initialization Tasks
-Implements concrete launch tasks for backend SDK initialization, cloud connectivity, plugin loading, deep linking, error catching, and Flutter widget setup.
+### Startup Runner and Tasks [[Expand]](./Startup_Runner_and_Tasks.md)
+Orchestrates application launch and sequentially executes bootstrap tasks such as SDK initialization, window management, routing, and deep link handling.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.startup.tasks.rust_sdk.InitRustSDKTask`:13-44
-- `frontend.appflowy_flutter.lib.startup.tasks.appflowy_cloud_task.InitAppFlowyCloudTask`:228-261
-- `frontend.appflowy_flutter.lib.startup.tasks.load_plugin.PluginLoadTask`:12-44
-- `frontend.appflowy_flutter.lib.startup.tasks.app_widget.InitAppWidgetTask`:41-125
-- `frontend.appflowy_flutter.lib.startup.tasks.app_widget.ApplicationWidget`:127-143
+- `frontend.appflowy_flutter.lib.startup.startup.FlowyRunner`:59-163
+- `frontend.appflowy_flutter.lib.startup.startup.AppLauncher`:234-289
+- `frontend.appflowy_flutter.lib.startup.startup.LaunchTask`:218-232
+- `frontend.appflowy_flutter.lib.startup.startup.runAppFlowy`:37-57
 
 
 
 **Source Files:**
 
+- `frontend/appflowy_flutter/lib/startup/startup.dart`
+  - `frontend.appflowy_flutter.lib.startup.startup.EntryPoint` (L27-L29) - Class
+  - `frontend.appflowy_flutter.lib.startup.startup.EntryPoint.create` (L28-L28) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunnerContext` (L31-L35) - Class
+  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunnerContext.FlowyRunnerContext` (L32-L32) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.startup.runAppFlowy` (L37-L57) - Function
+  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunner` (L59-L163) - Class
+  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunner.run` (L65-L162) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.initGetIt` (L165-L201) - Function
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchContext` (L203-L209) - Class
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchContext.LaunchContext` (L204-L204) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTaskType` (L211-L214) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTaskType.dataProcessing` (L212-L212) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTaskType.appLauncher` (L213-L213) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask` (L218-L232) - Class
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.LaunchTask` (L219-L219) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.type` (L221-L221) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.initialize` (L224-L226) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.dispose` (L229-L231) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher` (L234-L289) - Class
+  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.AppLauncher` (L235-L237) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.addTask` (L243-L248) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.addTasks` (L250-L255) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.launch` (L257-L274) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.dispose` (L276-L288) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode` (L291-L309) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.develop` (L292-L292) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.release` (L293-L293) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.unitTest` (L294-L294) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.integrationTest` (L295-L295) - Enum
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isTest` (L298-L298) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isUnitTest` (L300-L300) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isIntegrationTest` (L302-L302) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isRelease` (L305-L305) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isDevelop` (L308-L308) - Method
+  - `frontend.appflowy_flutter.lib.startup.startup.integrationMode` (L311-L321) - Function
+  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationTestHelper` (L324-L327) - Class
 - `frontend/appflowy_flutter/lib/startup/tasks/af_navigator_observer.dart`
   - `frontend.appflowy_flutter.lib.startup.tasks.af_navigator_observer.AFNavigatorObserver` (L3-L34) - Class
   - `frontend.appflowy_flutter.lib.startup.tasks.af_navigator_observer.AFNavigatorObserver.addListener` (L6-L8) - Method
@@ -66,6 +99,16 @@ Implements concrete launch tasks for backend SDK initialization, cloud connectiv
   - `frontend.appflowy_flutter.lib.startup.tasks.app_widget.AppGlobals.nav` (L306-L306) - Method
   - `frontend.appflowy_flutter.lib.startup.tasks.app_widget.AppGlobals.context` (L308-L308) - Method
   - `frontend.appflowy_flutter.lib.startup.tasks.app_widget.appTheme` (L311-L321) - Function
+- `frontend/appflowy_flutter/lib/startup/tasks/app_window_size_manager.dart`
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager` (L8-L108) - Class
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setSize` (L28-L38) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getSize` (L40-L57) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setPosition` (L59-L67) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getPosition` (L69-L76) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getScaleFactor` (L78-L85) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setScaleFactor` (L87-L92) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setWindowMaximized` (L95-L98) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getWindowMaximized` (L101-L107) - Method
 - `frontend/appflowy_flutter/lib/startup/tasks/appflowy_cloud_task.dart`
   - `frontend.appflowy_flutter.lib.startup.tasks.appflowy_cloud_task.AppFlowyCloudDeepLink` (L26-L226) - Class
   - `frontend.appflowy_flutter.lib.startup.tasks.appflowy_cloud_task.AppFlowyCloudDeepLink.AppFlowyCloudDeepLink` (L27-L49) - Constructor
@@ -85,6 +128,28 @@ Implements concrete launch tasks for backend SDK initialization, cloud connectiv
   - `frontend.appflowy_flutter.lib.startup.tasks.appflowy_cloud_task._AppLinkWrapper._AppLinkWrapper._` (L265-L269) - Constructor
   - `frontend.appflowy_flutter.lib.startup.tasks.appflowy_cloud_task._AppLinkWrapper.listen` (L277-L287) - Method
   - `frontend.appflowy_flutter.lib.startup.tasks.appflowy_cloud_task._AppLinkWrapper.dispose` (L289-L292) - Method
+- `frontend/appflowy_flutter/lib/startup/tasks/auto_update_task.dart`
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask` (L17-L102) - Class
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask.AutoUpdateTask` (L18-L18) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask.initialize` (L25-L39) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask.dispose` (L42-L50) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask._setupAutoUpdater` (L54-L78) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask._showCriticalUpdateDialog` (L80-L101) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener` (L104-L188) - Class
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterBeforeQuitForUpdate` (L106-L106) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterCheckingForUpdate` (L109-L136) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterError` (L139-L141) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateNotAvailable` (L144-L146) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateAvailable` (L149-L153) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateDownloaded` (L156-L158) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateCancelled` (L161-L165) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateInstalled` (L168-L172) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateSkipped` (L175-L179) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener._updateVersionNotifier` (L181-L187) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion` (L190-L209) - Class
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion.AppFlowyAutoUpdateVersion` (L191-L195) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion.AppFlowyAutoUpdateVersion.initial` (L197-L201) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion.isUpdateAvailable` (L208-L208) - Method
 - `frontend/appflowy_flutter/lib/startup/tasks/debug_task.dart`
   - `frontend.appflowy_flutter.lib.startup.tasks.debug_task.DebugTask` (L9-L47) - Class
   - `frontend.appflowy_flutter.lib.startup.tasks.debug_task.DebugTask.DebugTask` (L10-L10) - Constructor
@@ -127,6 +192,16 @@ Implements concrete launch tasks for backend SDK initialization, cloud connectiv
   - `frontend.appflowy_flutter.lib.startup.tasks.deeplink.payment_deeplink_handler.PaymentDeepLinkHandler` (L8-L24) - Class
   - `frontend.appflowy_flutter.lib.startup.tasks.deeplink.payment_deeplink_handler.PaymentDeepLinkHandler.canHandle` (L10-L12) - Method
   - `frontend.appflowy_flutter.lib.startup.tasks.deeplink.payment_deeplink_handler.PaymentDeepLinkHandler.handle` (L15-L23) - Method
+- `frontend/appflowy_flutter/lib/startup/tasks/device_info_task.dart`
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo` (L12-L53) - Class
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.latestVersion` (L27-L27) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.isUpdateAvailable` (L30-L39) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.latestAppcastItem` (L43-L43) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.latestAppcastItem=` (L44-L48) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.isCriticalUpdate` (L52-L52) - Method
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask` (L55-L124) - Class
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask.ApplicationInfoTask` (L56-L56) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask.initialize` (L59-L123) - Method
 - `frontend/appflowy_flutter/lib/startup/tasks/feature_flag_task.dart`
   - `frontend.appflowy_flutter.lib.startup.tasks.feature_flag_task.FeatureFlagTask` (L6-L20) - Class
   - `frontend.appflowy_flutter.lib.startup.tasks.feature_flag_task.FeatureFlagTask.FeatureFlagTask` (L7-L7) - Constructor
@@ -223,79 +298,6 @@ Implements concrete launch tasks for backend SDK initialization, cloud connectiv
   - `frontend.appflowy_flutter.lib.startup.tasks.rust_sdk.InitRustSDKTask.initialize` (L25-L43) - Method
   - `frontend.appflowy_flutter.lib.startup.tasks.rust_sdk._makeAppFlowyConfiguration` (L46-L66) - Function
   - `frontend.appflowy_flutter.lib.startup.tasks.rust_sdk.appFlowyApplicationDataDirectory` (L70-L83) - Function
-
-
-### Device Information and Auto Update
-Inspects host platform architecture and device identifiers while checking and applying application updates.
-
-
-**Related Classes/Methods**:
-
-- `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask`:17-102
-- `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo`:12-53
-- `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask`:55-124
-
-
-
-**Source Files:**
-
-- `frontend/appflowy_flutter/lib/startup/tasks/auto_update_task.dart`
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask` (L17-L102) - Class
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask.AutoUpdateTask` (L18-L18) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask.initialize` (L25-L39) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask.dispose` (L42-L50) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask._setupAutoUpdater` (L54-L78) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AutoUpdateTask._showCriticalUpdateDialog` (L80-L101) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener` (L104-L188) - Class
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterBeforeQuitForUpdate` (L106-L106) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterCheckingForUpdate` (L109-L136) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterError` (L139-L141) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateNotAvailable` (L144-L146) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateAvailable` (L149-L153) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateDownloaded` (L156-L158) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateCancelled` (L161-L165) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateInstalled` (L168-L172) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener.onUpdaterUpdateSkipped` (L175-L179) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task._AppFlowyAutoUpdaterListener._updateVersionNotifier` (L181-L187) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion` (L190-L209) - Class
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion.AppFlowyAutoUpdateVersion` (L191-L195) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion.AppFlowyAutoUpdateVersion.initial` (L197-L201) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.tasks.auto_update_task.AppFlowyAutoUpdateVersion.isUpdateAvailable` (L208-L208) - Method
-- `frontend/appflowy_flutter/lib/startup/tasks/device_info_task.dart`
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo` (L12-L53) - Class
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.latestVersion` (L27-L27) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.isUpdateAvailable` (L30-L39) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.latestAppcastItem` (L43-L43) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.latestAppcastItem=` (L44-L48) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfo.isCriticalUpdate` (L52-L52) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask` (L55-L124) - Class
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask.ApplicationInfoTask` (L56-L56) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.tasks.device_info_task.ApplicationInfoTask.initialize` (L59-L123) - Method
-
-
-### Desktop Window Management
-Configures application window dimensions, screen scaling factors, window positioning, and desktop display events.
-
-
-**Related Classes/Methods**:
-
-- `frontend.appflowy_flutter.lib.startup.tasks.windows.InitAppWindowTask`:12-143
-- `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager`:8-108
-
-
-
-**Source Files:**
-
-- `frontend/appflowy_flutter/lib/startup/tasks/app_window_size_manager.dart`
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager` (L8-L108) - Class
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setSize` (L28-L38) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getSize` (L40-L57) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setPosition` (L59-L67) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getPosition` (L69-L76) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getScaleFactor` (L78-L85) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setScaleFactor` (L87-L92) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.setWindowMaximized` (L95-L98) - Method
-  - `frontend.appflowy_flutter.lib.startup.tasks.app_window_size_manager.WindowSizeManager.getWindowMaximized` (L101-L107) - Method
 - `frontend/appflowy_flutter/lib/startup/tasks/windows.dart`
   - `frontend.appflowy_flutter.lib.startup.tasks.windows.InitAppWindowTask` (L12-L143) - Class
   - `frontend.appflowy_flutter.lib.startup.tasks.windows.InitAppWindowTask.InitAppWindowTask` (L13-L13) - Constructor
@@ -309,59 +311,100 @@ Configures application window dimensions, screen scaling factors, window positio
   - `frontend.appflowy_flutter.lib.startup.tasks.windows.InitAppWindowTask.dispose` (L138-L142) - Method
 
 
-### Application Launch Orchestrator
-Defines the launch task lifecycle, dependency injection setup, and sequential execution pipeline for application bootstrapping.
+### Dependency Resolver and Configuration
+Configures application launch settings, initial entry points, and dependency injection wiring across application services.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.startup.startup.FlowyRunner`:59-163
-- `frontend.appflowy_flutter.lib.startup.startup.AppLauncher`:234-289
-- `frontend.appflowy_flutter.lib.startup.startup.LaunchTask`:218-232
-- `frontend.appflowy_flutter.lib.startup.startup.LaunchContext`:203-209
-- `frontend.appflowy_flutter.lib.startup.startup.EntryPoint`:27-29
+- `frontend.appflowy_flutter.lib.startup.deps_resolver.DependencyResolver`:45-59
+- `frontend.appflowy_flutter.lib.startup.entry_point.AppFlowyApplication`:6-11
+- `frontend.appflowy_flutter.lib.startup.launch_configuration.LaunchConfiguration`:1-13
 
 
 
 **Source Files:**
 
-- `frontend/appflowy_flutter/lib/startup/startup.dart`
-  - `frontend.appflowy_flutter.lib.startup.startup.EntryPoint` (L27-L29) - Class
-  - `frontend.appflowy_flutter.lib.startup.startup.EntryPoint.create` (L28-L28) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunnerContext` (L31-L35) - Class
-  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunnerContext.FlowyRunnerContext` (L32-L32) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.startup.runAppFlowy` (L37-L57) - Function
-  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunner` (L59-L163) - Class
-  - `frontend.appflowy_flutter.lib.startup.startup.FlowyRunner.run` (L65-L162) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.initGetIt` (L165-L201) - Function
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchContext` (L203-L209) - Class
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchContext.LaunchContext` (L204-L204) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTaskType` (L211-L214) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTaskType.dataProcessing` (L212-L212) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTaskType.appLauncher` (L213-L213) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask` (L218-L232) - Class
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.LaunchTask` (L219-L219) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.type` (L221-L221) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.initialize` (L224-L226) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.LaunchTask.dispose` (L229-L231) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher` (L234-L289) - Class
-  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.AppLauncher` (L235-L237) - Constructor
-  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.addTask` (L243-L248) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.addTasks` (L250-L255) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.launch` (L257-L274) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.AppLauncher.dispose` (L276-L288) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode` (L291-L309) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.develop` (L292-L292) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.release` (L293-L293) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.unitTest` (L294-L294) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.integrationTest` (L295-L295) - Enum
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isTest` (L298-L298) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isUnitTest` (L300-L300) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isIntegrationTest` (L302-L302) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isRelease` (L305-L305) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationMode.isDevelop` (L308-L308) - Method
-  - `frontend.appflowy_flutter.lib.startup.startup.integrationMode` (L311-L321) - Function
-  - `frontend.appflowy_flutter.lib.startup.startup.IntegrationTestHelper` (L324-L327) - Class
+- `frontend/appflowy_flutter/lib/startup/deps_resolver.dart`
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver.DependencyResolver` (L45-L59) - Class
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver.DependencyResolver.resolve` (L46-L58) - Method
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver._resolveCloudDeps` (L61-L75) - Function
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver._resolveCommonService` (L77-L104) - Function
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver._resolveUserDeps` (L106-L140) - Function
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver._resolveHomeDeps` (L142-L163) - Function
+  - `frontend.appflowy_flutter.lib.startup.deps_resolver._resolveFolderDeps` (L165-L192) - Function
+- `frontend/appflowy_flutter/lib/startup/entry_point.dart`
+  - `frontend.appflowy_flutter.lib.startup.entry_point.AppFlowyApplication` (L6-L11) - Class
+  - `frontend.appflowy_flutter.lib.startup.entry_point.AppFlowyApplication.create` (L8-L10) - Method
+- `frontend/appflowy_flutter/lib/startup/launch_configuration.dart`
+  - `frontend.appflowy_flutter.lib.startup.launch_configuration.LaunchConfiguration` (L1-L13) - Class
+  - `frontend.appflowy_flutter.lib.startup.launch_configuration.LaunchConfiguration.LaunchConfiguration` (L2-L6) - Constructor
+
+
+### Plugin Registry and Sandbox
+Provides plugin registration, builder factories, and sandboxed execution for modular features.
+
+
+**Related Classes/Methods**:
+
+- `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox`:9-59
+- `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin`:26-40
+- `frontend.appflowy_flutter.lib.startup.plugin.plugin.registerPlugin`:93-96
+
+
+
+**Source Files:**
+
+- `frontend/appflowy_flutter/lib/startup/plugin/plugin.dart`
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType` (L13-L22) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.document` (L14-L14) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.blank` (L15-L15) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.trash` (L16-L16) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.grid` (L17-L17) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.board` (L18-L18) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.calendar` (L19-L19) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.databaseDocument` (L20-L20) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginType.chat` (L21-L21) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin` (L26-L40) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin.id` (L27-L27) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin.widgetBuilder` (L29-L29) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin.notifier` (L31-L31) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin.pluginType` (L33-L33) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin.init` (L35-L35) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.Plugin.dispose` (L37-L39) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginNotifier` (L42-L47) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginNotifier.isDeleted` (L44-L44) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginNotifier.dispose` (L46-L46) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginBuilder` (L49-L62) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginBuilder.build` (L50-L50) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginBuilder.menuName` (L52-L52) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginBuilder.icon` (L54-L54) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginBuilder.pluginType` (L57-L57) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginBuilder.layoutType` (L61-L61) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginConfig` (L64-L67) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginConfig.creatable` (L66-L66) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginWidgetBuilder` (L69-L80) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginWidgetBuilder.navigationItems` (L70-L70) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginWidgetBuilder.contentPadding` (L72-L73) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginWidgetBuilder.buildWidget` (L75-L79) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginContext` (L82-L91) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.PluginContext.PluginContext` (L83-L86) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.registerPlugin` (L93-L96) - Function
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.makePlugin` (L100-L103) - Function
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.pluginBuilders` (L105-L114) - Function
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.FlowyPluginException` (L116-L118) - Enum
+  - `frontend.appflowy_flutter.lib.startup.plugin.plugin.FlowyPluginException.invalidData` (L117-L117) - Enum
+- `frontend/appflowy_flutter/lib/startup/plugin/src/runner.dart`
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.runner.PluginRunner` (L1-L1) - Class
+- `frontend/appflowy_flutter/lib/startup/plugin/src/sandbox.dart`
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox` (L9-L59) - Class
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.PluginSandbox` (L10-L12) - Constructor
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.indexOf` (L20-L30) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.buildPlugin` (L34-L37) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.registerPlugin` (L39-L52) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.supportPluginTypes` (L54-L54) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.builders` (L56-L56) - Method
+  - `frontend.appflowy_flutter.lib.startup.plugin.src.sandbox.PluginSandbox.pluginConfigs` (L58-L58) - Method
 
 
 

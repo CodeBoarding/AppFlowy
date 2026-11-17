@@ -1,24 +1,24 @@
 ```mermaid
 graph LR
-    Mobile_Space_and_Folder_Views["Mobile Space and Folder Views"]
-    Mobile_State_and_Routing_Application["Mobile State and Routing Application"]
-    Mobile_Page_Item_Components["Mobile Page Item Components"]
-    Mobile_Favorites_Screen["Mobile Favorites Screen"]
-    Mobile_Space_and_Folder_Views -- "routes views and binds state" --> Mobile_State_and_Routing_Application
-    Mobile_Space_and_Folder_Views -- "renders pages using" --> Mobile_Page_Item_Components
-    Mobile_Page_Item_Components -- "navigates views through" --> Mobile_State_and_Routing_Application
-    Mobile_Favorites_Screen -- "embeds folder widgets from" --> Mobile_Space_and_Folder_Views
-    Mobile_Favorites_Screen -- "navigates views using" --> Mobile_State_and_Routing_Application
+    Home_Space_and_Folder_UI["Home Space and Folder UI"]
+    Mobile_Application_Routing_and_Bloc["Mobile Application Routing and Bloc"]
+    Mobile_Page_Item_List_Widgets["Mobile Page Item List Widgets"]
+    Mobile_Favorite_Pages_View["Mobile Favorite Pages View"]
+    Home_Space_and_Folder_UI -- "routes navigation and interacts with state blocs" --> Mobile_Application_Routing_and_Bloc
+    Home_Space_and_Folder_UI -- "displays view items using" --> Mobile_Page_Item_List_Widgets
+    Mobile_Page_Item_List_Widgets -- "navigates to page views via" --> Mobile_Application_Routing_and_Bloc
+    Mobile_Favorite_Pages_View -- "embeds header and folder components from" --> Home_Space_and_Folder_UI
+    Mobile_Favorite_Pages_View -- "opens target views using router" --> Mobile_Application_Routing_and_Bloc
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Coordinates mobile workspace navigation, home dashboard tabs, and top-level application BLoC routing.
+Manages mobile application routing, workspace navigation, folder hierarchies, and home view state.
 
-### Mobile Space and Folder Views
-Renders the mobile home dashboard tabs, workspace switcher, space folders, and recent views.
+### Home Space and Folder UI
+Provides UI screens, space views, folder containers, recents, and workspace navigation widgets for the mobile home view.
 
 
 **Related Classes/Methods**:
@@ -26,8 +26,8 @@ Renders the mobile home dashboard tabs, workspace switcher, space folders, and r
 - `frontend.appflowy_flutter.lib.mobile.presentation.home.mobile_home_page.MobileHomeScreen`:32-83
 - `frontend.appflowy_flutter.lib.mobile.presentation.home.mobile_home_page.MobileHomePage`:88-100
 - `frontend.appflowy_flutter.lib.mobile.presentation.home.mobile_home_page_header.MobileHomePageHeader`:23-61
-- `frontend.appflowy_flutter.lib.mobile.presentation.home.tab.mobile_space_tab.MobileHomePageTab`:27-37
 - `frontend.appflowy_flutter.lib.mobile.presentation.home.space.mobile_space.MobileSpace`:20-115
+- `frontend.appflowy_flutter.lib.mobile.presentation.home.favorite_folder.mobile_home_favorite_folder.MobileFavoriteFolder`:11-85
 
 
 
@@ -419,15 +419,15 @@ Renders the mobile home dashboard tabs, workspace switcher, space folders, and r
   - `frontend.appflowy_flutter.lib.mobile.presentation.home.workspaces.workspace_more_options.WorkspaceMenuMoreOptions._buildActionButton` (L38-L105) - Method
 
 
-### Mobile State and Routing Application
-Manages mobile app state BLoCs and navigation routing for pages and user profiles.
+### Mobile Application Routing and Bloc
+Manages mobile view routing and application state BLoCs for recent views, reminders, page styles, and user profiles.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.application.recent.recent_view_bloc.RecentViewBloc`:14-135
-- `frontend.appflowy_flutter.lib.mobile.application.page_style.document_page_style_bloc.DocumentPageStyleBloc`:15-213
 - `frontend.appflowy_flutter.lib.mobile.application.base.mobile_view_page_bloc.MobileViewPageBloc`:14-87
+- `frontend.appflowy_flutter.lib.mobile.application.user_profile.user_profile_bloc.UserProfileBloc`:11-48
 
 
 
@@ -558,8 +558,8 @@ Manages mobile app state BLoCs and navigation routing for pages and user profile
   - `frontend.appflowy_flutter.lib.mobile.application.user_profile.user_profile_bloc.UserProfileState.UserProfileState.success` (L60-L63) - Constructor
 
 
-### Mobile Page Item Components
-Provides interactive list item widgets with slide actions for displaying and adding workspace pages.
+### Mobile Page Item List Widgets
+Renders individual interactive page list items with slide action buttons and creation triggers.
 
 
 **Related Classes/Methods**:
@@ -601,8 +601,8 @@ Provides interactive list item widgets with slide actions for displaying and add
   - `frontend.appflowy_flutter.lib.mobile.presentation.page_item.mobile_view_item_add_button.MobileViewMoreButton.build` (L36-L45) - Method
 
 
-### Mobile Favorites Screen
-Presents the dedicated mobile favorite pages view and folder listings.
+### Mobile Favorite Pages View
+Displays dedicated mobile views and folder structures for favorited pages and spaces.
 
 
 **Related Classes/Methods**:

@@ -1,28 +1,29 @@
 ```mermaid
 graph LR
-    Search_Input_and_Screen["Search Input and Screen"]
+    Search_Screen_and_Input["Search Screen and Input"]
     Search_Results_Presentation["Search Results Presentation"]
     AI_Summary_and_References["AI Summary and References"]
-    View_Ancestor_Breadcrumbs["View Ancestor Breadcrumbs"]
-    Search_Icon_Rendering["Search Icon Rendering"]
-    Search_Input_and_Screen -- "renders search results with" --> Search_Results_Presentation
-    Search_Input_and_Screen -- "displays AI summary using" --> AI_Summary_and_References
-    Search_Results_Presentation -- "resolves view ancestors via" --> View_Ancestor_Breadcrumbs
-    AI_Summary_and_References -- "formats highlighted text with" --> Search_Results_Presentation
+    View_Ancestor_Path_Resolution["View Ancestor Path Resolution"]
+    Search_Entry_Icon_Display["Search Entry Icon Display"]
+    Search_Screen_and_Input -- "renders search results" --> Search_Results_Presentation
+    Search_Screen_and_Input -- "presents AI overview summaries" --> AI_Summary_and_References
+    Search_Results_Presentation -- "resolves view breadcrumb paths" --> View_Ancestor_Path_Resolution
+    AI_Summary_and_References -- "highlights search match strings" --> Search_Results_Presentation
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides full-text search, AI search entry points, and workspace search result navigation.
+Coordinates full-text search, ancestor path resolution, AI-assisted querying, and reference inspection sheets.
 
-### Search Input and Screen
-Hosts the main mobile search page, query input field, and entry point for AI overview search.
+### Search Screen and Input
+Coordinates the mobile search screen layout, handling search query text input and presenting the AI search entrance.
 
 
 **Related Classes/Methods**:
 
+- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_page.MobileSearchScreen`:18-66
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_page.MobileSearchPage`:68-80
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_textfield.MobileSearchTextfield`:14-30
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_ask_ai_entrance.MobileSearchAskAiEntrance`:14-31
@@ -73,12 +74,14 @@ Hosts the main mobile search page, query input field, and entry point for AI ove
 
 
 ### Search Results Presentation
-Renders search result lists and individual result cells with highlighted matched text.
+Displays search result lists and recent views, rendering individual result cells with matching text highlighting and navigation.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_result.MobileSearchResult`:18-30
+- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_result.MobileSearchResultList`:85-159
+- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_result.MobileSearchRecentList`:32-83
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_cell.MobileSearchResultCell`:15-140
 
 
@@ -111,7 +114,7 @@ Renders search result lists and individual result cells with highlighted matched
 
 
 ### AI Summary and References
-Displays AI-generated search result summaries and bottom sheet views of referenced source documents.
+Renders AI-generated search summaries with expandable snippets and presents underlying source references in a bottom sheet.
 
 
 **Related Classes/Methods**:
@@ -159,13 +162,14 @@ Displays AI-generated search result summaries and bottom sheet views of referenc
   - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_search_summary_cell._TextInfo._buildHighLightSpan` (L318-L339) - Method
 
 
-### View Ancestor Breadcrumbs
-Caches and resolves hierarchical parent views to display ancestor breadcrumb paths for search items.
+### View Ancestor Path Resolution
+Manages and caches document hierarchy ancestor chains to display breadcrumb navigation paths for search items.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_view_ancestors.ViewAncestorBloc`:11-43
+- `frontend.appflowy_flutter.lib.mobile.presentation.search.mobile_view_ancestors.ViewAncestorState`:51-62
 - `frontend.appflowy_flutter.lib.mobile.presentation.search.view_ancestor_cache.ViewAncestorCache`:9-47
 
 
@@ -197,8 +201,8 @@ Caches and resolves hierarchical parent views to display ancestor breadcrumb pat
   - `frontend.appflowy_flutter.lib.mobile.presentation.search.view_ancestor_cache.ViewParent.fromViewPB` (L63-L64) - Method
 
 
-### Search Icon Rendering
-Extends search result protobuf models to build and render emoji and icon widgets.
+### Search Entry Icon Display
+Provides visual icon presentation components for mobile search entry items.
 
 
 **Related Classes/Methods**: _None_

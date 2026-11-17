@@ -1,32 +1,32 @@
 ```mermaid
 graph LR
-    Collaborator_Sharing_Views["Collaborator Sharing Views"]
-    Collaborator_Data_Repositories["Collaborator Data Repositories"]
-    Page_Sharing_State_Management["Page Sharing State Management"]
-    Protobuf_Share_Model_Adapters["Protobuf Share Model Adapters"]
-    Collaborator_Sharing_Views -- "renders domain models from" --> Collaborator_Data_Repositories
-    Collaborator_Sharing_Views -- "dispatches user actions to" --> Page_Sharing_State_Management
-    Collaborator_Data_Repositories -- "encodes domain models with" --> Protobuf_Share_Model_Adapters
-    Page_Sharing_State_Management -- "queries and updates shared users through" --> Collaborator_Data_Repositories
-    Protobuf_Share_Model_Adapters -- "maps protobuf structures to" --> Collaborator_Data_Repositories
+    Share_Tab_Presentation["Share Tab Presentation"]
+    Share_Permissions_Data_Access["Share Permissions Data Access"]
+    Share_Tab_State_Management["Share Tab State Management"]
+    Share_Protobuf_Type_Adapters["Share Protobuf Type Adapters"]
+    Share_Tab_Presentation -- "renders domain models" --> Share_Permissions_Data_Access
+    Share_Tab_Presentation -- "dispatches events to" --> Share_Tab_State_Management
+    Share_Permissions_Data_Access -- "converts models with" --> Share_Protobuf_Type_Adapters
+    Share_Tab_State_Management -- "queries and updates data via" --> Share_Permissions_Data_Access
+    Share_Protobuf_Type_Adapters -- "maps protobuf messages to" --> Share_Permissions_Data_Access
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides UI dialogs, data models, and BLoC logic for inviting users, managing access levels, and generating share links for documents.
+Provides user interfaces, state management, and repositories for inviting collaborators, managing page permissions, and generating share links.
 
-### Collaborator Sharing Views
-Renders widgets and dialog sections for inviting collaborators, managing access levels, and copying share links.
+### Share Tab Presentation
+Renders collaborator lists, access level selectors, invitation forms, and link-sharing widgets for the share tab.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.features.share_tab.presentation.share_tab.ShareTab`:20-43
-- `frontend.appflowy_flutter.lib.features.share_tab.presentation.widgets.share_with_user_widget.ShareWithUserWidget`:9-25
-- `frontend.appflowy_flutter.lib.features.share_tab.presentation.widgets.people_with_access_section.PeopleWithAccessSection`:34-83
 - `frontend.appflowy_flutter.lib.features.share_tab.presentation.widgets.access_level_list_widget.AccessLevelListWidget`:55-136
+- `frontend.appflowy_flutter.lib.features.share_tab.presentation.widgets.people_with_access_section.PeopleWithAccessSection`:34-83
+- `frontend.appflowy_flutter.lib.features.share_tab.presentation.widgets.share_with_user_widget.ShareWithUserWidget`:9-25
 
 
 
@@ -117,17 +117,17 @@ Renders widgets and dialog sections for inviting collaborators, managing access 
   - `frontend.appflowy_flutter.lib.features.share_tab.presentation.widgets.upgrade_to_pro_widget.UpgradeToProWidget.build` (L22-L87) - Method
 
 
-### Collaborator Data Repositories
-Defines sharing domain models and repositories to manage shared users and permissions locally or via the Rust backend.
+### Share Permissions Data Access
+Defines sharing domain models and repositories to fetch and update collaborator permissions via local storage or backend services.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.share_with_user_repository.ShareWithUserRepository`:10-60
-- `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.rust_share_with_user_repository_impl.RustShareWithUserRepositoryImpl`:19-191
-- `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.local_share_with_user_repository_impl.LocalShareWithUserRepositoryImpl`:11-198
 - `frontend.appflowy_flutter.lib.features.share_tab.data.models.share_access_level.ShareAccessLevel`:6-57
 - `frontend.appflowy_flutter.lib.features.share_tab.data.models.shared_user.SharedUser`:7-47
+- `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.local_share_with_user_repository_impl.LocalShareWithUserRepositoryImpl`:11-198
+- `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.rust_share_with_user_repository_impl.RustShareWithUserRepositoryImpl`:19-191
+- `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.share_with_user_repository.ShareWithUserRepository`:10-60
 
 
 
@@ -200,8 +200,8 @@ Defines sharing domain models and repositories to manage shared users and permis
   - `frontend.appflowy_flutter.lib.features.share_tab.data.repositories.share_with_user_repository.ShareWithUserRepository.setUpgradeToProButtonClicked` (L57-L59) - Method
 
 
-### Page Sharing State Management
-Coordinates state management and handles BLoC events for collaborator invitations, permission changes, and link sharing.
+### Share Tab State Management
+Orchestrates share tab business logic, reacting to user events to update collaborator permissions, roles, and access lists.
 
 
 **Related Classes/Methods**:
@@ -281,8 +281,8 @@ Coordinates state management and handles BLoC events for collaborator invitation
   - `frontend.appflowy_flutter.lib.features.share_tab.logic.share_tab_state.ShareTabState.toString` (L123-L125) - Method
 
 
-### Protobuf Share Model Adapters
-Provides extension methods to convert between backend protobuf data structures and sharing domain models.
+### Share Protobuf Type Adapters
+Provides bidirectional translation extensions between backend protobuf messages and frontend sharing domain models.
 
 
 **Related Classes/Methods**: _None_

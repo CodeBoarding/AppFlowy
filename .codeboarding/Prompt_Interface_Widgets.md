@@ -1,27 +1,27 @@
 ```mermaid
 graph LR
-    Prompt_Input_Composer["Prompt Input Composer"]
-    Prompt_Library_Explorer["Prompt Library Explorer"]
-    Prompt_Input_Composer -- "launches prompt modal and configures view selector" --> Prompt_Library_Explorer
-    Prompt_Library_Explorer -- "renders view tree item components" --> Prompt_Input_Composer
+    Prompt_Input_and_Context_Selectors["Prompt Input and Context Selectors"]
+    Prompt_Template_Library_Modal["Prompt Template Library Modal"]
+    Prompt_Input_and_Context_Selectors -- "opens prompt modal and view selector" --> Prompt_Template_Library_Modal
+    Prompt_Template_Library_Modal -- "renders prompt source tree items" --> Prompt_Input_and_Context_Selectors
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides Flutter widgets and modal dialogs for prompt input, format toggles, mentioned page tagging, and prompt browsing.
+Renders input fields, mention menus, model pickers, and modal dialogs for composing, browsing, and selecting AI prompts.
 
-### Prompt Input Composer
-Renders the prompt text composition interface with controls for page mentions, file attachments, source filtering, and message submission.
+### Prompt Input and Context Selectors
+Renders the interactive AI prompt input bar, managing text editing, page mentions, source attachments, model switching, and submission.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.desktop_prompt_input.DesktopPromptInput`:25-51
 - `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.browse_prompts_button.BrowsePromptsButton`:11-67
-- `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.select_sources_menu.PromptInputDesktopSelectSourcesButton`:24-37
 - `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.select_sources_menu.ViewSelectorTreeItem`:279-314
+- `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.prompt_input_text_controller.AiPromptInputTextEditingController`:7-79
 
 
 
@@ -256,15 +256,14 @@ Renders the prompt text composition interface with controls for page mentions, f
   - `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.send_button.PromptInputSendButton._iconSize` (L84-L88) - Method
 
 
-### Prompt Library Explorer
-Provides modal dialogs and view selector wrappers for browsing, previewing, and configuring AI prompt templates and databases.
+### Prompt Template Library Modal
+Provides dialogs and preview widgets for discovering, previewing, and selecting predefined or custom AI prompt templates and sources.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.ai.widgets.ai_prompt_modal.ai_prompt_modal.AiPromptModal`:42-159
 - `frontend.appflowy_flutter.lib.ai.widgets.ai_prompt_modal.ai_prompt_modal.showAiPromptModal`:18-40
-- `frontend.appflowy_flutter.lib.ai.widgets.ai_prompt_modal.ai_prompt_database_modal.AiPromptDatabaseModal`:45-52
+- `frontend.appflowy_flutter.lib.ai.widgets.ai_prompt_modal.ai_prompt_modal.AiPromptModal`:42-159
 - `frontend.appflowy_flutter.lib.ai.widgets.view_selector.ViewSelector`:8-40
 
 

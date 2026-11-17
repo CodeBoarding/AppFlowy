@@ -1,29 +1,30 @@
 ```mermaid
 graph LR
-    Prompt_Input_and_Model_Selection["Prompt Input and Model Selection"]
-    Prompt_and_View_Selection["Prompt and View Selection"]
-    AI_Completion_and_Prompt_Service["AI Completion and Prompt Service"]
-    AI_Prompt_and_Stream_Entities["AI Prompt and Stream Entities"]
-    Prompt_Input_and_Model_Selection -- "configures output formats with" --> AI_Prompt_and_Stream_Entities
-    Prompt_and_View_Selection -- "queries prompts through" --> AI_Completion_and_Prompt_Service
-    Prompt_and_View_Selection -- "manages prompt configs with" --> AI_Prompt_and_Stream_Entities
-    AI_Completion_and_Prompt_Service -- "constructs prompt instances using" --> AI_Prompt_and_Stream_Entities
+    Model_Selection_and_Input_State["Model Selection and Input State"]
+    Prompt_Selection_Management["Prompt Selection Management"]
+    AI_Completion_Streaming_Service["AI Completion Streaming Service"]
+    AI_Prompt_Domain_Entities["AI Prompt Domain Entities"]
+    Model_Selection_and_Input_State -- "configures predefined format models" --> AI_Prompt_Domain_Entities
+    Prompt_Selection_Management -- "retrieves prompts from AI service" --> AI_Completion_Streaming_Service
+    Prompt_Selection_Management -- "structures prompt database configurations" --> AI_Prompt_Domain_Entities
+    AI_Completion_Streaming_Service -- "populates prompt data models" --> AI_Prompt_Domain_Entities
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Manages prompt input state, prompt selection, model switching, and AI completion stream execution.
+Manages state and business logic for prompt selection, model configurations, input buffers, and AI completion services.
 
-### Prompt Input and Model Selection
-Manages AI model state transitions, prompt text input, file attachments, and predefined response formatting.
+### Model Selection and Input State
+Manages active model selection, local and cloud model readiness, and prompt input state including attachments and format options.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.ai.service.ai_prompt_input_bloc.AIPromptInputBloc`:13-139
 - `frontend.appflowy_flutter.lib.ai.service.ai_model_state_notifier.AIModelStateNotifier`:42-208
+- `frontend.appflowy_flutter.lib.ai.service.ai_model_state_notifier.AIModelState`:19-40
+- `frontend.appflowy_flutter.lib.ai.service.ai_prompt_input_bloc.AIPromptInputBloc`:13-139
 - `frontend.appflowy_flutter.lib.ai.service.select_model_bloc.SelectModelBloc`:11-64
 
 
@@ -84,15 +85,14 @@ Manages AI model state transitions, prompt text input, file attachments, and pre
   - `frontend.appflowy_flutter.lib.ai.service.select_model_bloc.SelectModelState.SelectModelState.initial` (L85-L91) - Constructor
 
 
-### Prompt and View Selection
-Handles filtering and selection of built-in prompts, custom database prompts, and view configurations.
+### Prompt Selection Management
+Coordinates prompt browsing, category filtering, and custom prompt database configuration.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.ai.service.ai_prompt_selector_cubit.AiPromptSelectorCubit`:19-385
 - `frontend.appflowy_flutter.lib.ai.service.ai_prompt_database_selector_cubit.AiPromptDatabaseSelectorCubit`:11-146
-- `frontend.appflowy_flutter.lib.ai.service.view_selector_cubit.ViewSelectorCubit`:103-445
 
 
 
@@ -179,15 +179,16 @@ Handles filtering and selection of built-in prompts, custom database prompts, an
   - `frontend.appflowy_flutter.lib.ai.service.view_selector_cubit.ViewSelectorState.ViewSelectorState.initial` (L454-L457) - Constructor
 
 
-### AI Completion and Prompt Service
-Executes AI text completions over native streams and loads prompt definitions from bundles or database sources.
+### AI Completion Streaming Service
+Dispatches completion requests to the AI backend and streams responses and errors back to callers.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.ai.service.appflowy_ai_service.AppFlowyAIService`:54-145
-- `frontend.appflowy_flutter.lib.ai.service.appflowy_ai_service.AppFlowyCompletionStream`:166-259
 - `frontend.appflowy_flutter.lib.ai.service.appflowy_ai_service.AIRepository`:27-52
+- `frontend.appflowy_flutter.lib.ai.service.appflowy_ai_service.AppFlowyCompletionStream`:166-259
+- `frontend.appflowy_flutter.lib.ai.service.error.AIError`:7-15
 
 
 
@@ -226,16 +227,15 @@ Executes AI text completions over native streams and loads prompt definitions fr
   - `frontend.appflowy_flutter.lib.ai.service.error.AIErrorExtension.isLimitExceeded` (L27-L27) - Method
 
 
-### AI Prompt and Stream Entities
-Defines data models, categories, formatting rules, and stream event tokens for AI interactions.
+### AI Prompt Domain Entities
+Defines prompt data models, database configurations, and predefined format representations.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.ai.service.ai_entities.AiPrompt`:173-263
-- `frontend.appflowy_flutter.lib.ai.service.ai_entities.PredefinedFormat`:38-66
 - `frontend.appflowy_flutter.lib.ai.service.ai_entities.CustomPromptDatabaseConfig`:290-386
-- `frontend.appflowy_flutter.lib.ai.service.ai_entities.AIStreamEventPrefix`:15-28
+- `frontend.appflowy_flutter.lib.ai.service.ai_entities.PredefinedFormat`:38-66
 
 
 

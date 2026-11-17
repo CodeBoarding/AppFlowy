@@ -1,29 +1,27 @@
 ```mermaid
 graph LR
-    AI_Prompt_Interface_Widgets["AI Prompt Interface Widgets"]
-    AI_State_and_Service_Management["AI State and Service Management"]
-    AI_Prompt_Interface_Widgets -- "calls" --> AI_State_and_Service_Management
-    click AI_Prompt_Interface_Widgets href "./AI_Prompt_Interface_Widgets.md" "Details"
-    click AI_State_and_Service_Management href "./AI_State_and_Service_Management.md" "Details"
+    Prompt_Interface_Widgets["Prompt Interface Widgets"]
+    Prompt_State_and_Services["Prompt State and Services"]
+    Prompt_Interface_Widgets -- "dispatches events and consumes state" --> Prompt_State_and_Services
+    click Prompt_Interface_Widgets href "./Prompt_Interface_Widgets.md" "Details"
+    click Prompt_State_and_Services href "./Prompt_State_and_Services.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Coordinates AI model selection, streaming prompt completions, context collection, and prompt selector dialogs.
+Manages AI interactions, prompt templates, model selection, and prompt input controls across document and chat workflows.
 
-### AI Prompt Interface Widgets [[Expand]](./AI_Prompt_Interface_Widgets.md)
-Provides Flutter widgets and modal dialogs for prompt input, format toggles, mentioned page tagging, and prompt browsing.
+### Prompt Interface Widgets [[Expand]](./Prompt_Interface_Widgets.md)
+Renders input fields, mention menus, model pickers, and modal dialogs for composing, browsing, and selecting AI prompts.
 
 
 **Related Classes/Methods**:
 
+- `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.desktop_prompt_input.DesktopPromptInput`:25-51
 - `frontend.appflowy_flutter.lib.ai.widgets.ai_prompt_modal.ai_prompt_modal.AiPromptModal`:42-159
 - `frontend.appflowy_flutter.lib.ai.widgets.ai_prompt_modal.ai_prompt_modal.showAiPromptModal`:18-40
-- `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.desktop_prompt_input.DesktopPromptInput`:25-51
-- `frontend.appflowy_flutter.lib.ai.widgets.prompt_input.browse_prompts_button.BrowsePromptsButton`:11-67
-- `frontend.appflowy_flutter.lib.ai.widgets.view_selector.ViewSelector`:8-40
 
 
 
@@ -360,17 +358,16 @@ Provides Flutter widgets and modal dialogs for prompt input, format toggles, men
   - `frontend.appflowy_flutter.lib.ai.widgets.view_selector.ViewSelector.build` (L19-L39) - Method
 
 
-### AI State and Service Management [[Expand]](./AI_State_and_Service_Management.md)
-Manages prompt input state, prompt selection, model switching, and AI completion stream execution.
+### Prompt State and Services [[Expand]](./Prompt_State_and_Services.md)
+Manages state and business logic for prompt selection, model configurations, input buffers, and AI completion services.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.ai.service.appflowy_ai_service.AppFlowyAIService`:54-145
-- `frontend.appflowy_flutter.lib.ai.service.ai_prompt_input_bloc.AIPromptInputBloc`:13-139
 - `frontend.appflowy_flutter.lib.ai.service.ai_prompt_selector_cubit.AiPromptSelectorCubit`:19-385
+- `frontend.appflowy_flutter.lib.ai.service.ai_prompt_input_bloc.AIPromptInputBloc`:13-139
 - `frontend.appflowy_flutter.lib.ai.service.select_model_bloc.SelectModelBloc`:11-64
-- `frontend.appflowy_flutter.lib.ai.service.ai_entities.AiPrompt`:173-263
 
 
 

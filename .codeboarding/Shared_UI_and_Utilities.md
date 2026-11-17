@@ -1,18 +1,18 @@
 ```mermaid
 graph LR
-    Common_Widgets_and_Helpers["Common Widgets and Helpers"]
-    Error_Presentation_and_Mapping["Error Presentation and Mapping"]
-    click Common_Widgets_and_Helpers href "./Common_Widgets_and_Helpers.md" "Details"
+    Common_Widgets_and_Support_Utilities["Common Widgets and Support Utilities"]
+    Error_Display_and_Diagnostics["Error Display and Diagnostics"]
+    click Common_Widgets_and_Support_Utilities href "./Common_Widgets_and_Support_Utilities.md" "Details"
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Provides common application-wide UI widgets, icon/emoji pickers, caching, markdown converters, and error pages.
+Delivers shared presentation widgets, icon and emoji pickers, error handling displays, and feature flag management.
 
-### Common Widgets and Helpers [[Expand]](./Common_Widgets_and_Helpers.md)
-Provides reusable UI components, icon and emoji pickers, image rendering widgets, caching handlers, and utility extensions.
+### Common Widgets and Support Utilities [[Expand]](./Common_Widgets_and_Support_Utilities.md)
+Provides reusable interface components including icon and emoji pickers, cached network image widgets, and utilities for permissions, localization, and feature flags.
 
 
 **Related Classes/Methods**:
@@ -550,8 +550,8 @@ Provides reusable UI components, icon and emoji pickers, image rendering widgets
   - `frontend.appflowy_flutter.lib.shared.window_title_bar._WindowTitleBarState.build` (L71-L108) - Method
 
 
-### Error Presentation and Mapping
-Presents error pages with stack trace previews and issue reporting links while mapping backend error codes to localized user messages.
+### Error Display and Diagnostics
+Renders interactive error view screens with stack trace previews and issue reporting, and maps backend error codes to localized error messages.
 
 
 **Related Classes/Methods**:

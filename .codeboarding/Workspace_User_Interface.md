@@ -1,30 +1,30 @@
 ```mermaid
 graph LR
-    Settings_and_Preferences_Interface["Settings and Preferences Interface"]
-    Home_Layout_and_Navigation_Sidebar["Home Layout and Navigation Sidebar"]
-    Shared_Workspace_Presentation_Widgets["Shared Workspace Presentation Widgets"]
-    In_App_Notification_Center["In-App Notification Center"]
+    Workspace_Settings_and_Preferences["Workspace Settings and Preferences"]
+    Workspace_Navigation_and_Sidebar["Workspace Navigation and Sidebar"]
+    Common_Workspace_UI_Widgets["Common Workspace UI Widgets"]
+    Workspace_Notification_Center["Workspace Notification Center"]
     Command_Palette_and_Search["Command Palette and Search"]
-    Settings_and_Preferences_Interface -- "uses navigation confirmation widgets and toast displays" --> Home_Layout_and_Navigation_Sidebar
-    Settings_and_Preferences_Interface -- "invokes shared dialogs and notifications" --> Shared_Workspace_Presentation_Widgets
-    Home_Layout_and_Navigation_Sidebar -- "opens workspace settings dialogs and member management" --> Settings_and_Preferences_Interface
-    Home_Layout_and_Navigation_Sidebar -- "embeds shared layout and editing widgets" --> Shared_Workspace_Presentation_Widgets
-    Home_Layout_and_Navigation_Sidebar -- "hosts notification trigger button and panel" --> In_App_Notification_Center
-    Home_Layout_and_Navigation_Sidebar -- "mounts and triggers command palette overlay" --> Command_Palette_and_Search
-    Shared_Workspace_Presentation_Widgets -- "renders setting action cell popups" --> Settings_and_Preferences_Interface
-    Shared_Workspace_Presentation_Widgets -- "composes sidebar confirmation popup components" --> Home_Layout_and_Navigation_Sidebar
-    In_App_Notification_Center -- "displays feedback through shared dialog helpers" --> Shared_Workspace_Presentation_Widgets
-    Command_Palette_and_Search -- "updates active view in shared menu state" --> Home_Layout_and_Navigation_Sidebar
+    Workspace_Settings_and_Preferences -- "displays toast alerts and home widgets" --> Workspace_Navigation_and_Sidebar
+    Workspace_Settings_and_Preferences -- "triggers shared confirmation dialogs" --> Common_Workspace_UI_Widgets
+    Workspace_Navigation_and_Sidebar -- "opens settings and billing dialogs" --> Workspace_Settings_and_Preferences
+    Workspace_Navigation_and_Sidebar -- "renders common interface components" --> Common_Workspace_UI_Widgets
+    Workspace_Navigation_and_Sidebar -- "embeds notification controls and panel" --> Workspace_Notification_Center
+    Workspace_Navigation_and_Sidebar -- "invokes and binds command palette" --> Command_Palette_and_Search
+    Common_Workspace_UI_Widgets -- "references member action identifiers" --> Workspace_Settings_and_Preferences
+    Common_Workspace_UI_Widgets -- "constructs confirmation popups" --> Workspace_Navigation_and_Sidebar
+    Workspace_Notification_Center -- "displays toast feedback via dialogs" --> Common_Workspace_UI_Widgets
+    Command_Palette_and_Search -- "updates shared navigation state" --> Workspace_Navigation_and_Sidebar
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Renders the desktop workspace UI including the home screen, sidebar navigation, command palette, tabs, settings dialogs, and notification panels.
+Renders the desktop workspace visual components, including navigation sidebars, view stacks, command palettes, notification hubs, and settings views.
 
-### Settings and Preferences Interface
-Provides settings views and dialogs for user accounts, workspaces, cloud synchronization, AI providers, themes, and member management.
+### Workspace Settings and Preferences
+Manages user account configuration, billing plans, workspace preferences, cloud synchronization, AI model options, and theme customizations.
 
 
 **Related Classes/Methods**:
@@ -1192,15 +1192,14 @@ Provides settings views and dialogs for user accounts, workspaces, cloud synchro
   - `frontend.appflowy_flutter.lib.workspace.presentation.settings.widgets.web_url_hint_widget.WebUrlHintWidget.build` (L13-L33) - Method
 
 
-### Home Layout and Navigation Sidebar
-Renders the primary desktop workspace screen, sidebar navigation, space and view hierarchies, tab management, and window layout.
+### Workspace Navigation and Sidebar
+Provides the desktop home screen layout, workspace sidebar navigation, space and folder management, favorites, and tab switching.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.presentation.home.desktop_home_screen.DesktopHomeScreen`:44-331
 - `frontend.appflowy_flutter.lib.workspace.presentation.home.menu.menu_shared_state.MenuSharedState`:4-29
-- `frontend.appflowy_flutter.lib.workspace.presentation.home.menu.sidebar.space.shared_widget.ConfirmPopup`:274-337
 
 
 
@@ -2017,16 +2016,15 @@ Renders the primary desktop workspace screen, sidebar navigation, space and view
   - `frontend.appflowy_flutter.lib.workspace.presentation.home.toast.showSnackBarMessage` (L52-L78) - Function
 
 
-### Shared Workspace Presentation Widgets
-Supplies reusable UI widgets including modal dialogs, date pickers, image viewers, floating help bubbles, and sidebar resizers.
+### Common Workspace UI Widgets
+Supplies reusable interface components including dialogs, date pickers, popover actions, edit panels, and interactive viewers across the workspace.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.presentation.widgets.dialogs.showCancelAndConfirmDialog`:555-584
 - `frontend.appflowy_flutter.lib.workspace.presentation.widgets.dialogs.showToastNotification`:262-298
-- `frontend.appflowy_flutter.lib.workspace.presentation.widgets.sidebar_resizer.SidebarResizer`:6-11
-- `frontend.appflowy_flutter.lib.workspace.presentation.widgets.float_bubble.question_bubble.QuestionBubble`:17-27
+- `frontend.appflowy_flutter.lib.workspace.presentation.widgets.edit_panel.edit_panel.EditPanel`:12-44
 
 
 
@@ -2528,15 +2526,14 @@ Supplies reusable UI widgets including modal dialogs, date pickers, image viewer
   - `frontend.appflowy_flutter.lib.workspace.presentation.widgets.view_title_bar.<unnamed extension>.lockedPageButtonBackground` (L601-L606) - Method
 
 
-### In-App Notification Center
-Presents notifications, inbox activities, and reminder alerts via sidebar triggers and an overlay panel.
+### Workspace Notification Center
+Renders notification indicators, tabbed notification panels, reminders, and user activity updates within the workspace.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.presentation.notifications.notification_panel.NotificationPanel`:18-23
 - `frontend.appflowy_flutter.lib.workspace.presentation.notifications.widgets.notification_button.NotificationButton`:12-22
-- `frontend.appflowy_flutter.lib.workspace.presentation.notifications.widgets.notification_item_v2.NotificationItemV2`:27-263
 
 
 
@@ -2661,13 +2658,12 @@ Presents notifications, inbox activities, and reminder alerts via sidebar trigge
 
 
 ### Command Palette and Search
-Provides a quick-switcher search modal and command palette for finding views, executing workspace commands, and querying AI.
+Hosts the global command palette interface for searching views, previewing recent documents, and triggering workspace actions.
 
 
 **Related Classes/Methods**:
 
 - `frontend.appflowy_flutter.lib.workspace.presentation.command_palette.command_palette.CommandPalette`:27-74
-- `frontend.appflowy_flutter.lib.workspace.presentation.command_palette.command_palette.NoSearchResultsHint`:272-323
 
 
 

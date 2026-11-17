@@ -1,29 +1,29 @@
 ```mermaid
 graph LR
-    Shared_Pages_User_Interface["Shared Pages User Interface"]
-    Shared_Pages_Data_Repositories["Shared Pages Data Repositories"]
+    Shared_Section_UI_Components["Shared Section UI Components"]
+    Shared_Pages_Data_Access["Shared Pages Data Access"]
     Shared_Section_State_Management["Shared Section State Management"]
-    Shared_Page_Domain_Models["Shared Page Domain Models"]
-    Shared_Pages_User_Interface -- "instantiates shared repositories" --> Shared_Pages_Data_Repositories
-    Shared_Pages_User_Interface -- "dispatches events to bloc" --> Shared_Section_State_Management
-    Shared_Pages_Data_Repositories -- "constructs shared page models" --> Shared_Page_Domain_Models
-    Shared_Section_State_Management -- "queries and updates repositories" --> Shared_Pages_Data_Repositories
+    Shared_Page_Domain_Model["Shared Page Domain Model"]
+    Shared_Section_UI_Components -- "instantiates shared repositories" --> Shared_Pages_Data_Access
+    Shared_Section_UI_Components -- "dispatches events to bloc" --> Shared_Section_State_Management
+    Shared_Pages_Data_Access -- "constructs shared page models" --> Shared_Page_Domain_Model
+    Shared_Section_State_Management -- "fetches and mutates shared pages" --> Shared_Pages_Data_Access
 ```
 
 [![CodeBoarding](https://img.shields.io/badge/Generated%20by-CodeBoarding-9cf?style=flat-square)](https://github.com/CodeBoarding/CodeBoarding)[![Web platform](https://img.shields.io/badge/Open%20in-Web%20platform-2563EB?style=flat-square)](https://app.codeboarding.org)[![Demo](https://img.shields.io/badge/Try%20our-Demo-blue?style=flat-square)](https://www.codeboarding.org/diagrams)[![Contact](https://img.shields.io/badge/Contact%20us%20-%20contact@codeboarding.org-lightgrey?style=flat-square)](mailto:contact@codeboarding.org)
 
 ## Details
 
-Displays and manages the list of shared pages accessible to the user across desktop and mobile layouts.
+Manages and renders the collection of pages shared with the current user across desktop and mobile navigation sidebars.
 
-### Shared Pages User Interface
-Renders mobile and desktop UI widgets for browsing shared pages, loading indicators, headers, and action menus.
+### Shared Section UI Components
+Renders desktop and mobile UI elements, page lists, and action controls for viewing and interacting with shared documents.
 
 
 **Related Classes/Methods**:
 
-- `frontend.appflowy_flutter.lib.features.shared_section.presentation.shared_section.SharedSection`:26-159
 - `frontend.appflowy_flutter.lib.features.shared_section.presentation.m_shared_section.MSharedSection`:17-92
+- `frontend.appflowy_flutter.lib.features.shared_section.presentation.shared_section.SharedSection`:26-159
 
 
 
@@ -84,8 +84,8 @@ Renders mobile and desktop UI widgets for browsing shared pages, loading indicat
   - `frontend.appflowy_flutter.lib.features.shared_section.presentation.widgets.shared_section_loading.SharedSectionLoading.build` (L8-L15) - Method
 
 
-### Shared Pages Data Repositories
-Provides repository abstractions and implementations for fetching and managing shared pages from Rust and local sources.
+### Shared Pages Data Access
+Provides shared document repository interfaces and data access implementations for local cache and Rust backend services.
 
 
 **Related Classes/Methods**:
@@ -113,7 +113,7 @@ Provides repository abstractions and implementations for fetching and managing s
 
 
 ### Shared Section State Management
-Manages shared section business logic, event handling, and state transitions using the BLoC pattern.
+Orchestrates shared page loading, leave operations, and reactive UI state transitions using BLoC state management.
 
 
 **Related Classes/Methods**:
@@ -164,8 +164,8 @@ Manages shared section business logic, event handling, and state transitions usi
   - `frontend.appflowy_flutter.lib.features.shared_section.logic.shared_section_state.SharedSectionState.toString` (L53-L55) - Method
 
 
-### Shared Page Domain Models
-Defines data structures representing shared page entities.
+### Shared Page Domain Model
+Defines the domain entity and data structures representing shared documents.
 
 
 **Related Classes/Methods**:
